@@ -74,6 +74,7 @@ const App = (() => {
 
   function initModules() {
     if (window.AdaptiveLearningOS) window.AdaptiveLearningOS.init();
+    if (window.CurriculumEngine) window.CurriculumEngine.init();
     if (window.AlphabetModule) window.AlphabetModule.init();
     if (window.FlashcardModule) window.FlashcardModule.init();
     if (window.CasesMatrixModule) window.CasesMatrixModule.init();

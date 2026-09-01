@@ -1,5 +1,6 @@
 /**
  * WEB_USSR - Speaking Studio (Студия говорения)
+ * Method: Honest A/B Audio Replay Comparison & 6-Point Phonetic Self-Check
  */
 const SpeakingModule = (() => {
   let speakingTopics = [];
@@ -79,7 +80,7 @@ const SpeakingModule = (() => {
                 <span class="font-bold text-slate-800 dark:text-white text-xs sm:text-sm font-cyrillic">${p}</span>
                 <button class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors flex-shrink-0 ml-2"
                         onclick="RussianSpeech.speak('${p.split('(')[0].trim()}')">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                  🔊
                 </button>
               </div>
             `).join('')}
@@ -92,8 +93,7 @@ const SpeakingModule = (() => {
             <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Bài nói mẫu chuẩn bản xứ:</h4>
             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors"
                     onclick="RussianSpeech.speak('${topic.sample_speech}')">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
-              Nghe bài nói mẫu
+              🔊 Nghe bài nói mẫu
             </button>
           </div>
           <p class="font-bold text-slate-800 dark:text-white text-sm sm:text-base font-cyrillic leading-relaxed">
@@ -101,14 +101,17 @@ const SpeakingModule = (() => {
           </p>
         </div>
 
-        <!-- Recording Studio Section -->
-        <div class="p-6 rounded-2xl bg-slate-900 text-white text-center space-y-4 shadow-inner">
-          <h4 class="text-sm font-bold">Phòng Thu Âm Giọng Nói & Tự Đối Chiếu</h4>
-          <p class="text-xs text-slate-400">Bấm nút bên dưới để ghi âm bài nói của bạn. Nghe lại để đối chiếu phát âm với mẫu chuẩn.</p>
+        <!-- A/B Comparison Player & Recording Studio -->
+        <div class="p-6 rounded-3xl bg-slate-900 text-white space-y-6 shadow-inner">
+          <div class="text-center space-y-1">
+            <h4 class="text-base font-bold">Phòng Đối Chiếu Âm Thanh A / B (Replay Comparison)</h4>
+            <p class="text-xs text-slate-400">Thu âm giọng nói của bạn và so sánh trực tiếp với giọng đọc bản ngữ để tự chỉnh sửa phát âm.</p>
+          </div>
 
-          <div class="flex justify-center items-center gap-4">
+          <!-- Record Controls -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button id="speaking-record-btn"
-                    class="px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 transition-all shadow-lg ${
+                    class="px-6 py-3.5 rounded-2xl font-bold text-sm flex items-center gap-2 transition-all shadow-lg ${
                       isRecording 
                         ? 'bg-rose-600 text-white animate-pulse' 
                         : 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -116,23 +119,59 @@ const SpeakingModule = (() => {
               <span class="w-3 h-3 rounded-full ${isRecording ? 'bg-white' : 'bg-rose-400'}"></span>
               <span>${isRecording ? 'Đang ghi âm... (Bấm dừng)' : 'Bắt đầu ghi âm 🎙️'}</span>
             </button>
+          </div>
 
-            <div id="speaking-playback-container" class="${recordedAudioUrl ? '' : 'hidden'}">
-              <audio id="speaking-audio-player" src="${recordedAudioUrl || ''}" controls class="h-10 rounded-xl"></audio>
+          <!-- A/B Comparison Controls -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+            <!-- Audio A: Native Model -->
+            <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 space-y-2 text-center">
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block">Âm thanh A (Giọng bản xứ chuẩn)</span>
+              <button class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                      onclick="RussianSpeech.speak('${topic.sample_speech}', 0.85)">
+                <span>🔊 Nghe giọng mẫu (0.85x)</span>
+              </button>
+            </div>
+
+            <!-- Audio B: Learner Recording -->
+            <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 space-y-2 text-center">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Âm thanh B (Bản thu của bạn)</span>
+              ${recordedAudioUrl ? `
+                <audio src="${recordedAudioUrl}" controls class="w-full h-9 rounded-lg"></audio>
+              ` : `
+                <p class="text-xs text-slate-500 py-2">Chưa có bản ghi âm. Hãy bấm 'Bắt đầu ghi âm'.</p>
+              `}
             </div>
           </div>
         </div>
 
-        <!-- Evaluation Criteria Checklist -->
+        <!-- 6-Point Phonetic Self-Check Checklist -->
         <div class="space-y-3 pt-2">
-          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tiêu chí tự đánh giá phát âm:</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            ${topic.evaluation_criteria.map(crit => `
-              <label class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
-                <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
-                <span>${crit}</span>
-              </label>
-            `).join('')}
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tiêu chí tự đánh giá phát âm (6 Tiêu chuẩn âm vị học):</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>1. Nhấn đúng trọng âm từ (Ударение)?</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>2. Giảm âm chữ О không trọng âm thành [а]?</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>3. Phát âm chuẩn âm uốn lưỡi cứng [ж], [ш]?</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>4. Rung đầu lưỡi âm [р] rõ ràng?</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>5. Phân biệt đúng phụ âm cứng vs phụ âm mềm?</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 cursor-pointer">
+              <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+              <span>6. Ngữ điệu câu tự nhiên (Интонация ИК-1, ИК-2)?</span>
+            </label>
           </div>
         </div>
       </div>
@@ -182,7 +221,7 @@ const SpeakingModule = (() => {
     if (mediaRecorder && isRecording) {
       mediaRecorder.stop();
       isRecording = false;
-      App.showToast('Đã ghi âm thành công! Hãy nghe lại bản thu.', 'success');
+      App.showToast('Đã lưu bản thu âm! Hãy bấm nghe lại Âm thanh B.', 'success');
       if (window.AdaptiveLearningOS) {
         AdaptiveLearningOS.dailyState.speakingDone++;
         AdaptiveLearningOS.saveDailyState();

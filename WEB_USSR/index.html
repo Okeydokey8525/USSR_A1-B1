@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Русский A1–B1: Hệ Điều Hành Học Tiếng Nga Toàn Diện (TRKI A1 - B1)</title>
-  <meta name="description" content="Nền tảng học tiếng Nga toàn diện từ số 0 đến B1 chuẩn TRKI/TORFL: Bảng chữ cái Cyrillic, quy tắc trọng âm, 6 cách, thể động từ, động từ chuyển động, Reading Lab, Writing Studio, Speaking Studio và Survival Russian.">
+  <meta name="description" content="Nền tảng học tiếng Nga toàn diện từ số 0 đến B1 chuẩn TRKI/TORFL: Lộ trình bài học tuần tự, Bảng chữ cái Cyrillic, quy tắc trọng âm, 6 cách, thể động từ, động từ chuyển động, Reading Lab, Writing Studio, Speaking Studio và Survival Russian.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +47,7 @@
           🇷🇺
         </div>
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">TRKI A1 - B1</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">TRKI A0 - B1</span>
           <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 dark:text-white leading-none">
             Русский Master
           </h1>
@@ -96,6 +96,9 @@
         <button class="nav-tab-btn px-3.5 py-2 rounded-xl active bg-blue-600 text-white transition-all flex items-center gap-1.5" data-target="tab-home">
           <span>🏠</span><span>Tổng quan</span>
         </button>
+        <button class="nav-tab-btn px-3.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center gap-1.5" data-target="tab-curriculum">
+          <span>📚</span><span>Lộ trình bài học (Curriculum)</span>
+        </button>
         <button class="nav-tab-btn px-3.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center gap-1.5" data-target="tab-alphabet">
           <span>🔤</span><span>Bảng chữ cái & Ngữ âm</span>
         </button>
@@ -138,8 +141,34 @@
 
     <!-- TAB 1: DASHBOARD / HOME -->
     <section id="tab-home" class="tab-panel space-y-8">
-      <!-- Continue Learning Hero Banner -->
-      <div id="continue-learning-widget"></div>
+      
+      <!-- Guided Onboarding Hero Box -->
+      <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl space-y-6">
+        <div class="max-w-2xl space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 text-xs font-extrabold rounded-full bg-white/20 uppercase tracking-wider">
+              Lộ trình Sư phạm Tuyến tính (Linear Path)
+            </span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-cyrillic">
+            Học Tiếng Nga Chuẩn TRKI Từ Con Số 0
+          </h2>
+          <p class="text-sm sm:text-base text-blue-100 leading-relaxed">
+            Hệ điều hành học tập có thứ tự: Bảng chữ cái Cyrillic → Bậc thang ghép vần → Trọng âm → 6 Cách trong ngữ cảnh → Thể động từ & Động từ chuyển động.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+          <button class="w-full sm:w-auto px-8 py-4 bg-white text-blue-800 hover:bg-blue-50 font-extrabold rounded-2xl shadow-xl transition-all text-sm flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+                  onclick="CurriculumEngine.startFromZero()">
+            <span>Bắt đầu từ số 0 (Zero-to-A1) 🚀</span>
+          </button>
+          <button class="w-full sm:w-auto px-6 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-2xl transition-colors text-sm"
+                  onclick="App.switchTab('tab-placement')">
+            Kiểm tra xếp lớp chẩn đoán 🎯
+          </button>
+        </div>
+      </div>
 
       <!-- Weak Area Warning Banner -->
       <div id="weak-area-alert-banner" class="hidden"></div>
@@ -147,60 +176,107 @@
       <!-- Daily Mission Widget -->
       <div id="daily-mission-widget"></div>
 
-      <!-- Quick Curriculum Path Roadmap -->
+      <!-- Curriculum Roadmap Grid Overview -->
       <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
         <div class="flex items-center justify-between">
           <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Lộ trình học tập chuẩn TRKI</span>
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Bậc Thang Sư Phạm Từ Số 0 (Zero-to-B1)</h3>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Khung Chương Trình TRKI A0 - B1</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">6 Giai Đoạn Học Tập Tuyến Tính</h3>
           </div>
+          <button class="px-4 py-2 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-xl text-xs font-bold hover:bg-blue-100 transition-colors"
+                  onclick="App.switchTab('tab-curriculum')">
+            Xem toàn bộ bài học ➔
+          </button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Step 1 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Module 0 -->
           <div class="p-5 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30 space-y-2 cursor-pointer hover:border-blue-400 transition-all"
-               onclick="App.switchTab('tab-alphabet')">
-            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-600 text-white inline-block">Cấp 0: Pre-A1</span>
-            <h4 class="font-bold text-slate-800 dark:text-white text-base">Cyrillic & Ngữ Âm</h4>
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-600 text-white inline-block">Module 0: Pre-A1</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Cyrillic & Bậc Thang Đọc</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Bảng chữ cái, âm tiết ghép vần, quy tắc giảm âm chữ О, biến âm Е/Я và vô thanh hóa.
+              33 chữ cái, âm tiết ghép vần, quy tắc giảm âm chữ О, biến âm Е/Я và vô thanh hóa phụ âm cuối từ.
             </p>
           </div>
 
-          <!-- Step 2 -->
+          <!-- Module 1 -->
           <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-900/30 space-y-2 cursor-pointer hover:border-indigo-400 transition-all"
-               onclick="App.switchTab('tab-cases')">
-            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-indigo-600 text-white inline-block">Cấp 1: A1.1 - A1.2</span>
-            <h4 class="font-bold text-slate-800 dark:text-white text-base">Ma Trận 6 Cách</h4>
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-indigo-600 text-white inline-block">Module 1: A1.1</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Đại Từ, Giống & Thì Hiện Tại</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Dạy ý nghĩa và từ hỏi kích hoạt trước đuôi cách. Nắm chắc Cách 4 (Acc), Cách 6 (Prep) và Cách 2 (Gen).
+              Đại từ nhân xưng, 3 giống danh từ (он, она, оно), tạo số nhiều và chia động từ nhóm 1 (-ать/-ять).
             </p>
           </div>
 
-          <!-- Step 3 -->
+          <!-- Module 2 -->
           <div class="p-5 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 space-y-2 cursor-pointer hover:border-emerald-400 transition-all"
-               onclick="App.switchTab('tab-practice')">
-            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-emerald-600 text-white inline-block">Cấp 2: A2</span>
-            <h4 class="font-bold text-slate-800 dark:text-white text-base">Thể & Động Từ Chuyển Động</h4>
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-emerald-600 text-white inline-block">Module 2: A1.2</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Ma Trận 3 Cách: 4, 6, 2</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Phân biệt thể НСВ/СВ theo ngữ cảnh và 11 tiền tố chuyển động chỉ phương hướng.
+              Dạy ý nghĩa trước đuôi: Cách 4 (Đối cách trực tiếp), Cách 6 (Giới cách địa điểm), Cách 2 (Sinh cách & phủ định).
             </p>
           </div>
 
-          <!-- Step 4 -->
-          <div class="p-5 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-900/30 space-y-2 cursor-pointer hover:border-purple-400 transition-all"
-               onclick="App.switchTab('tab-reading')">
-            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-purple-600 text-white inline-block">Cấp 3: B1</span>
-            <h4 class="font-bold text-slate-800 dark:text-white text-base">4 Kỹ Năng & Thi TRKI-1</h4>
+          <!-- Module 3 -->
+          <div class="p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/30 space-y-2 cursor-pointer hover:border-amber-400 transition-all"
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-amber-600 text-white inline-block">Module 3: A2.1</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Cách 3, Cách 5 & Thể Động Từ</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Luyện đọc báo, viết luận, luyện nói và thi thử đề TRKI-1 chính thức có bấm giờ.
+              Cách 3 (Dữ cách tặng quà/tuổi tác), Cách 5 (Tạo cách nghề nghiệp/cùng với ai), Thể НСВ vs СВ theo ngữ cảnh.
+            </p>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="p-5 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-900/30 space-y-2 cursor-pointer hover:border-purple-400 transition-all"
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-purple-600 text-white inline-block">Module 4: A2.2</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Động Từ Chuyển Động & Tiền Tố</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Chuyển động 1 chiều (идти/ехать) vs đa chiều (ходить/ездить) và 11 tiền tố chỉ phương hướng.
+            </p>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="p-5 rounded-2xl bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30 space-y-2 cursor-pointer hover:border-rose-400 transition-all"
+               onclick="App.switchTab('tab-curriculum')">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-rose-600 text-white inline-block">Module 5: B1.1</span>
+            <h4 class="font-bold text-slate-800 dark:text-white text-base">Trung Cấp Độc Lập & TRKI-1</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Câu phức liên từ 'который', diễn đạt lập luận nghị luận, đọc báo chí và luyện đề thi chính thức TRKI-1.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 2: ALPHABET & PHONETICS -->
+    <!-- TAB 2: CURRICULUM (HỆ THỐNG BÀI HỌC TUYẾN TÍNH) -->
+    <section id="tab-curriculum" class="tab-panel hidden space-y-8">
+      <!-- Top Progress Bar -->
+      <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
+        <div class="flex items-center justify-between text-xs font-bold">
+          <span class="text-slate-700 dark:text-slate-300">Tiến Độ Lộ Trình Sư Phạm TRKI (A0 → B1)</span>
+          <span id="curriculum-overall-pct" class="text-blue-600 font-mono">0% Hoàn thành</span>
+        </div>
+        <div class="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+          <div id="curriculum-overall-bar" class="bg-blue-600 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Active Lesson 10-Step Viewer -->
+      <div id="active-lesson-container"></div>
+
+      <!-- Full Curriculum Modules & Lessons Grid -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Toàn Bộ Danh Sách Bài Học</h3>
+        <div id="curriculum-roadmap-list" class="space-y-6"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: ALPHABET & PHONETICS -->
     <section id="tab-alphabet" class="tab-panel hidden space-y-8">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -235,7 +311,7 @@
       </div>
     </section>
 
-    <!-- TAB 3: FLASHCARDS (SRS) -->
+    <!-- TAB 4: FLASHCARDS (SRS) -->
     <section id="tab-flashcard" class="tab-panel hidden space-y-6">
       <!-- Filter Bar -->
       <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -266,7 +342,7 @@
       <div id="flashcard-render-area" class="py-4"></div>
     </section>
 
-    <!-- TAB 4: 6 CASES MATRIX -->
+    <!-- TAB 5: 6 CASES MATRIX -->
     <section id="tab-cases" class="tab-panel hidden space-y-8">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Ngữ pháp cốt lõi</span>
@@ -289,7 +365,7 @@
       <div id="pronouns-declension-table"></div>
     </section>
 
-    <!-- TAB 5: GRAMMAR & MOTION VERBS -->
+    <!-- TAB 6: GRAMMAR & MOTION VERBS -->
     <section id="tab-practice" class="tab-panel hidden space-y-8">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Động từ học thuật</span>
@@ -331,7 +407,7 @@
       </div>
     </section>
 
-    <!-- TAB 6: READING LAB -->
+    <!-- TAB 7: READING LAB -->
     <section id="tab-reading" class="tab-panel hidden space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -352,7 +428,7 @@
       </div>
     </section>
 
-    <!-- TAB 7: WRITING STUDIO -->
+    <!-- TAB 8: WRITING STUDIO -->
     <section id="tab-writing" class="tab-panel hidden space-y-6">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Студия письма</span>
@@ -365,11 +441,11 @@
       </div>
     </section>
 
-    <!-- TAB 8: SPEAKING STUDIO -->
+    <!-- TAB 9: SPEAKING STUDIO -->
     <section id="tab-speaking" class="tab-panel hidden space-y-6">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Студия говорения</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Speaking Studio: Thu Âm & Tự Đối Chiếu Phát Âm</h2>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Speaking Studio: Thu Âm & Tự Đối Chiếu Phát Âm A/B</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -378,7 +454,7 @@
       </div>
     </section>
 
-    <!-- TAB 9: SURVIVAL RUSSIAN -->
+    <!-- TAB 10: SURVIVAL RUSSIAN -->
     <section id="tab-survival" class="tab-panel hidden space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -393,7 +469,7 @@
       <div id="survival-phrases-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </section>
 
-    <!-- TAB 10: LESSONS & DIALOGUES -->
+    <!-- TAB 11: LESSONS & DIALOGUES -->
     <section id="tab-lessons" class="tab-panel hidden space-y-6">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Уроки и диалоги</span>
@@ -405,7 +481,7 @@
       </div>
     </section>
 
-    <!-- TAB 11: TRKI EXAM SIMULATION -->
+    <!-- TAB 12: TRKI EXAM SIMULATION -->
     <section id="tab-exam" class="tab-panel hidden space-y-6">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Тестирование ТРKI</span>
@@ -419,7 +495,7 @@
       <div id="exam-main-container"></div>
     </section>
 
-    <!-- TAB 12: PLACEMENT TEST -->
+    <!-- TAB 13: PLACEMENT TEST -->
     <section id="tab-placement" class="tab-panel hidden space-y-6">
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Диагностический тест</span>
@@ -434,7 +510,7 @@
   <!-- FOOTER -->
   <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 space-y-2">
     <p class="font-bold text-slate-700 dark:text-slate-300">
-      🇷🇺 Русский Master — Nền tảng học tiếng Nga toàn diện từ số 0 đến B1 chuẩn TRKI/TORFL
+      🇷🇺 Русский Master — Hệ điều hành học tiếng Nga toàn diện từ số 0 đến B1 chuẩn TRKI/TORFL
     </p>
     <p>Kho học liệu chuẩn Viện Pushkin, Đại học Tổng hợp St. Petersburg (СПбГУ), Doroga v Rossiyu & Poekhali!</p>
   </footer>
@@ -442,6 +518,7 @@
   <!-- MODULE SCRIPTS -->
   <script src="js/speech.js"></script>
   <script src="js/adaptive_learning.js"></script>
+  <script src="js/curriculum_engine.js"></script>
   <script src="js/alphabet.js"></script>
   <script src="js/flashcard.js"></script>
   <script src="js/cases_matrix.js"></script>

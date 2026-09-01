@@ -291,7 +291,15 @@
     "example_vi": "Mẹ tôi nấu ăn rất ngon.",
     "audio_text": "мама",
     "plural_form": "ма́мы",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Моя мама — врач. (Nom)",
+      "case_2": "У меня нет подарка для мамы. (Gen)",
+      "case_3": "Я дарю цветы маме. (Dat)",
+      "case_4": "Я очень люблю маму. (Acc)",
+      "case_5": "Я гуляю с мамой. (Inst)",
+      "case_6": "Я часто рассказываю о маме. (Prep)"
+    }
   },
   {
     "id": "v022",
@@ -305,7 +313,15 @@
     "example_vi": "Bố tôi làm kỹ sư.",
     "audio_text": "папа",
     "plural_form": "па́пы",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это па́па. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (па́па). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (па́па). (Dat - Hướng đến)",
+      "case_4": "Я вижу (па́па). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (па́па). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (па́па). (Prep - Về)"
+    }
   },
   {
     "id": "v023",
@@ -319,7 +335,15 @@
     "example_vi": "Tôi có một gia đình lớn và hòa thuận.",
     "audio_text": "семья",
     "plural_form": "семьяы/и",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это семья́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (семья́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (семья́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (семья́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (семья́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (семья́). (Prep - Về)"
+    }
   },
   {
     "id": "v024",
@@ -333,7 +357,15 @@
     "example_vi": "Anh trai tôi học ở Moscow.",
     "audio_text": "брат",
     "plural_form": "бра́тья",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Мой брат учится в школе. (Nom)",
+      "case_2": "У меня нет старшего брата. (Gen)",
+      "case_3": "Я помогаю брату. (Dat)",
+      "case_4": "Я вижу своего брата. (Acc animate)",
+      "case_5": "Я горжусь своим братом. (Inst)",
+      "case_6": "Я забочусь о брате. (Prep)"
+    }
   },
   {
     "id": "v025",
@@ -347,7 +379,15 @@
     "example_vi": "Em gái tôi thích đọc sách.",
     "audio_text": "сестра",
     "plural_form": "сёстры",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это сестра́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (сестра́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (сестра́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (сестра́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (сестра́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (сестра́). (Prep - Về)"
+    }
   },
   {
     "id": "v026",
@@ -361,7 +401,15 @@
     "example_vi": "Ông đang đọc báo bên cửa sổ.",
     "audio_text": "дедушка",
     "plural_form": "де́душки",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это де́душка. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (де́душка). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (де́душка). (Dat - Hướng đến)",
+      "case_4": "Я вижу (де́душка). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (де́душка). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (де́душка). (Prep - Về)"
+    }
   },
   {
     "id": "v027",
@@ -375,7 +423,15 @@
     "example_vi": "Bà nướng những chiếc bánh pirog rất ngon.",
     "audio_text": "бабушка",
     "plural_form": "ба́бушки",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это ба́бушка. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ба́бушка). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ба́бушка). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ба́бушка). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ба́бушка). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ба́бушка). (Prep - Về)"
+    }
   },
   {
     "id": "v028",
@@ -389,7 +445,15 @@
     "example_vi": "Con trai họ đi học trường phổ thông.",
     "audio_text": "сын",
     "plural_form": "сыновья́",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это сын. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (сын). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (сын). (Dat - Hướng đến)",
+      "case_4": "Я вижу (сын). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (сын). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (сын). (Prep - Về)"
+    }
   },
   {
     "id": "v029",
@@ -403,7 +467,15 @@
     "example_vi": "Con gái tôi vẽ rất đẹp.",
     "audio_text": "дочь",
     "plural_form": "до́чери",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это дочь. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (дочь). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (дочь). (Dat - Hướng đến)",
+      "case_4": "Я вижу (дочь). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (дочь). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (дочь). (Prep - Về)"
+    }
   },
   {
     "id": "v030",
@@ -417,7 +489,15 @@
     "example_vi": "Anton là người bạn thân nhất của tôi.",
     "audio_text": "друг",
     "plural_form": "друзья́",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Мой друг живёт здесь. (Nom)",
+      "case_2": "У меня нет лучшего друга. (Gen)",
+      "case_3": "Я звоню своему другу. (Dat)",
+      "case_4": "Я жду старого друга. (Acc animate)",
+      "case_5": "Я гуляю с другом. (Inst)",
+      "case_6": "Я часто думаю о друге. (Prep)"
+    }
   },
   {
     "id": "v031",
@@ -431,7 +511,15 @@
     "example_vi": "Bạn gái cậu ấy sống ở Saint Petersburg.",
     "audio_text": "подруга",
     "plural_form": "подругаы/и",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это подру́га. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (подру́га). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (подру́га). (Dat - Hướng đến)",
+      "case_4": "Я вижу (подру́га). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (подру́га). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (подру́га). (Prep - Về)"
+    }
   },
   {
     "id": "v032",
@@ -445,7 +533,15 @@
     "example_vi": "Anh ấy là một người rất tốt bụng.",
     "audio_text": "человек",
     "plural_form": "лю́ди",
-    "sub_level": "Pre-A1 / A1.1"
+    "sub_level": "Pre-A1 / A1.1",
+    "case_contexts": {
+      "case_1": "Это челове́к. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (челове́к). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (челове́к). (Dat - Hướng đến)",
+      "case_4": "Я вижу (челове́к). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (челове́к). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (челове́к). (Prep - Về)"
+    }
   },
   {
     "id": "v033",
@@ -459,7 +555,15 @@
     "example_vi": "Tôi muốn gọi món súp củ dền nóng ăn kèm kem chua smetana.",
     "audio_text": "борщ",
     "plural_form": "борщи́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это борщ. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (борщ). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (борщ). (Dat - Hướng đến)",
+      "case_4": "Я вижу (борщ). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (борщ). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (борщ). (Prep - Về)"
+    }
   },
   {
     "id": "v034",
@@ -473,7 +577,15 @@
     "example_vi": "Bánh pelmeni vùng Siberia rất ngon.",
     "audio_text": "пельмени",
     "plural_form": "пельме́ни",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это пельме́ни. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (пельме́ни). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (пельме́ни). (Dat - Hướng đến)",
+      "case_4": "Я вижу (пельме́ни). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (пельме́ни). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (пельме́ни). (Prep - Về)"
+    }
   },
   {
     "id": "v035",
@@ -487,7 +599,15 @@
     "example_vi": "Bánh mì đen của Nga rất phổ biến.",
     "audio_text": "хлеб",
     "plural_form": "хлеба́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это хлеб. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (хлеб). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (хлеб). (Dat - Hướng đến)",
+      "case_4": "Я вижу (хлеб). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (хлеб). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (хлеб). (Prep - Về)"
+    }
   },
   {
     "id": "v036",
@@ -501,7 +621,15 @@
     "example_vi": "Làm ơn cho tôi một tách trà đen kèm chanh.",
     "audio_text": "чай",
     "plural_form": "чаи́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это чай. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (чай). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (чай). (Dat - Hướng đến)",
+      "case_4": "Я вижу (чай). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (чай). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (чай). (Prep - Về)"
+    }
   },
   {
     "id": "v037",
@@ -515,7 +643,15 @@
     "example_vi": "Buổi sáng tôi luôn uống cà phê đậm.",
     "audio_text": "кофе",
     "plural_form": "кофеы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это ко́фе. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ко́фе). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ко́фе). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ко́фе). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ко́фе). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ко́фе). (Prep - Về)"
+    }
   },
   {
     "id": "v038",
@@ -529,7 +665,15 @@
     "example_vi": "Làm ơn mua một hộp sữa tươi nhé.",
     "audio_text": "молоко",
     "plural_form": "молокоы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это молоко́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (молоко́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (молоко́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (молоко́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (молоко́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (молоко́). (Prep - Về)"
+    }
   },
   {
     "id": "v039",
@@ -543,7 +687,15 @@
     "example_vi": "Bánh mì kẹp bơ và phô mai.",
     "audio_text": "сыр",
     "plural_form": "сыры́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это сыр. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (сыр). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (сыр). (Dat - Hướng đến)",
+      "case_4": "Я вижу (сыр). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (сыр). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (сыр). (Prep - Về)"
+    }
   },
   {
     "id": "v040",
@@ -557,7 +709,15 @@
     "example_vi": "Bữa tối chúng tôi ăn thịt nướng.",
     "audio_text": "мясо",
     "plural_form": "мясоы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это мя́со. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (мя́со). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (мя́со). (Dat - Hướng đến)",
+      "case_4": "Я вижу (мя́со). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (мя́со). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (мя́со). (Prep - Về)"
+    }
   },
   {
     "id": "v041",
@@ -571,7 +731,15 @@
     "example_vi": "Cá tươi rất tốt cho sức khỏe.",
     "audio_text": "рыба",
     "plural_form": "ры́бы",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это ры́ба. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ры́ба). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ры́ба). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ры́ба). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ры́ба). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ры́ба). (Prep - Về)"
+    }
   },
   {
     "id": "v042",
@@ -585,7 +753,15 @@
     "example_vi": "Vào lễ Maslenitsa ở Nga người ta làm bánh blini.",
     "audio_text": "блины",
     "plural_form": "блины́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это блины́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (блины́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (блины́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (блины́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (блины́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (блины́). (Prep - Về)"
+    }
   },
   {
     "id": "v043",
@@ -599,7 +775,15 @@
     "example_vi": "Sa-lát Olivier là món ăn chính trong dịp năm mới.",
     "audio_text": "салат",
     "plural_form": "сала́ты",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это сала́т. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (сала́т). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (сала́т). (Dat - Hướng đến)",
+      "case_4": "Я вижу (сала́т). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (сала́т). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (сала́т). (Prep - Về)"
+    }
   },
   {
     "id": "v044",
@@ -613,7 +797,15 @@
     "example_vi": "Tối nay chúng tôi sẽ đi ăn ở nhà hàng.",
     "audio_text": "ресторан",
     "plural_form": "рестора́ны",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это рестора́н. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (рестора́н). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (рестора́н). (Dat - Hướng đến)",
+      "case_4": "Я вижу (рестора́н). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (рестора́н). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (рестора́н). (Prep - Về)"
+    }
   },
   {
     "id": "v045",
@@ -627,7 +819,15 @@
     "example_vi": "Chúng ta gặp nhau ở quán cà phê sinh viên nhé.",
     "audio_text": "кафе",
     "plural_form": "кафеы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это кафе́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (кафе́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (кафе́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (кафе́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (кафе́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (кафе́). (Prep - Về)"
+    }
   },
   {
     "id": "v046",
@@ -641,7 +841,15 @@
     "example_vi": "Làm ơn cho tôi xem thực đơn.",
     "audio_text": "меню",
     "plural_form": "менюы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это меню́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (меню́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (меню́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (меню́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (меню́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (меню́). (Prep - Về)"
+    }
   },
   {
     "id": "v047",
@@ -655,7 +863,15 @@
     "example_vi": "Làm ơn mang hóa đơn thanh toán giúp tôi.",
     "audio_text": "счёт",
     "plural_form": "счёты/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это счёт. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (счёт). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (счёт). (Dat - Hướng đến)",
+      "case_4": "Я вижу (счёт). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (счёт). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (счёт). (Prep - Về)"
+    }
   },
   {
     "id": "v048",
@@ -669,7 +885,15 @@
     "example_vi": "Tôi là sinh viên năm thứ nhất.",
     "audio_text": "студент",
     "plural_form": "студе́нты",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это студе́нт. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (студе́нт). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (студе́нт). (Dat - Hướng đến)",
+      "case_4": "Я вижу (студе́нт). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (студе́нт). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (студе́нт). (Prep - Về)"
+    }
   },
   {
     "id": "v049",
@@ -683,7 +907,15 @@
     "example_vi": "Maria là một nữ sinh viên xuất sắc.",
     "audio_text": "студентка",
     "plural_form": "студе́нтки",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это студе́нтка. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (студе́нтка). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (студе́нтка). (Dat - Hướng đến)",
+      "case_4": "Я вижу (студе́нтка). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (студе́нтка). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (студе́нтка). (Prep - Về)"
+    }
   },
   {
     "id": "v050",
@@ -697,7 +929,15 @@
     "example_vi": "Trường Đại học Tổng hợp Quốc gia Moscow (MSU).",
     "audio_text": "университет",
     "plural_form": "университеты/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это университе́т. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (университе́т). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (университе́т). (Dat - Hướng đến)",
+      "case_4": "Я вижу (университе́т). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (университе́т). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (университе́т). (Prep - Về)"
+    }
   },
   {
     "id": "v051",
@@ -711,7 +951,15 @@
     "example_vi": "Một cuốn sách khoa học thú vị.",
     "audio_text": "книга",
     "plural_form": "кни́ги",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это интересная книга. (Nom - Đây là cuốn sách hay)",
+      "case_2": "У меня нет этой книги. (Gen - Tôi không có cuốn sách này)",
+      "case_3": "Я подхожу к книге. (Dat - Hướng tới cuốn sách)",
+      "case_4": "Я читаю интересную книгу. (Acc - Tôi đọc cuốn sách)",
+      "case_5": "Я интересуюсь этой книгой. (Inst - Tôi hứng thú với cuốn sách)",
+      "case_6": "Мы говорим об этой книге. (Prep - Chúng tôi nói về cuốn sách)"
+    }
   },
   {
     "id": "v052",
@@ -725,7 +973,15 @@
     "example_vi": "Sách giáo trình tiếng Nga «Đường đến nước Nga».",
     "audio_text": "учебник",
     "plural_form": "учебникы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это уче́бник. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (уче́бник). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (уче́бник). (Dat - Hướng đến)",
+      "case_4": "Я вижу (уче́бник). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (уче́бник). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (уче́бник). (Prep - Về)"
+    }
   },
   {
     "id": "v053",
@@ -739,7 +995,15 @@
     "example_vi": "Từ điển Nga - Việt.",
     "audio_text": "словарь",
     "plural_form": "словари́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это русско-вьетнамский словарь. (Nom)",
+      "case_2": "Без словаря трудно переводить. (Gen)",
+      "case_3": "Я обращаюсь к словарю. (Dat)",
+      "case_4": "Я купил новый словарь. (Acc)",
+      "case_5": "Я пользуюсь словарём. (Inst)",
+      "case_6": "В словаре много новых слов. (Prep)"
+    }
   },
   {
     "id": "v054",
@@ -753,7 +1017,15 @@
     "example_vi": "Tôi làm bài tập trong vở.",
     "audio_text": "тетрадь",
     "plural_form": "тетра́ди",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это тетра́дь. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (тетра́дь). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (тетра́дь). (Dat - Hướng đến)",
+      "case_4": "Я вижу (тетра́дь). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (тетра́дь). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (тетра́дь). (Prep - Về)"
+    }
   },
   {
     "id": "v055",
@@ -767,7 +1039,15 @@
     "example_vi": "Cho tôi mượn cây bút màu xanh nhé.",
     "audio_text": "ручка",
     "plural_form": "ру́чки",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это ру́чка. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ру́чка). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ру́чка). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ру́чка). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ру́чка). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ру́чка). (Prep - Về)"
+    }
   },
   {
     "id": "v056",
@@ -781,7 +1061,15 @@
     "example_vi": "Vẽ bằng bút chì đen.",
     "audio_text": "карандаш",
     "plural_form": "карандаши́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это каранда́ш. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (каранда́ш). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (каранда́ш). (Dat - Hướng đến)",
+      "case_4": "Я вижу (каранда́ш). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (каранда́ш). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (каранда́ш). (Prep - Về)"
+    }
   },
   {
     "id": "v057",
@@ -795,7 +1083,15 @@
     "example_vi": "Tiết học tiếng Nga bắt đầu lúc 9 giờ.",
     "audio_text": "урок",
     "plural_form": "урокы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это уро́к. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (уро́к). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (уро́к). (Dat - Hướng đến)",
+      "case_4": "Я вижу (уро́к). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (уро́к). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (уро́к). (Prep - Về)"
+    }
   },
   {
     "id": "v058",
@@ -809,7 +1105,15 @@
     "example_vi": "Đỗ kỳ thi quốc gia TRKI đạt điểm xuất sắc.",
     "audio_text": "экзамен",
     "plural_form": "экзамены/и",
-    "sub_level": "A2.1"
+    "sub_level": "A2.1",
+    "case_contexts": {
+      "case_1": "Это экза́мен. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (экза́мен). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (экза́мен). (Dat - Hướng đến)",
+      "case_4": "Я вижу (экза́мен). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (экза́мен). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (экза́мен). (Prep - Về)"
+    }
   },
   {
     "id": "v059",
@@ -823,7 +1127,15 @@
     "example_vi": "Giảng viên của chúng tôi rất kiên nhẫn.",
     "audio_text": "преподаватель",
     "plural_form": "преподава́тели",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это преподава́тель. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (преподава́тель). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (преподава́тель). (Dat - Hướng đến)",
+      "case_4": "Я вижу (преподава́тель). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (преподава́тель). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (преподава́тель). (Prep - Về)"
+    }
   },
   {
     "id": "v060",
@@ -837,7 +1149,15 @@
     "example_vi": "Moscow là một thành phố đẹp và cổ kính.",
     "audio_text": "город",
     "plural_form": "города́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Москва — красивый город. (Nom)",
+      "case_2": "Я приехал из другого города. (Gen)",
+      "case_3": "Мы гуляем по городу. (Dat)",
+      "case_4": "Я люблю этот город. (Acc)",
+      "case_5": "Перед городом течёт река. (Inst)",
+      "case_6": "Мы живём в городе. (Prep)"
+    }
   },
   {
     "id": "v061",
@@ -851,7 +1171,15 @@
     "example_vi": "Tôi sống trên phố Tverskaya.",
     "audio_text": "улица",
     "plural_form": "у́лицы",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это у́лица. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (у́лица). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (у́лица). (Dat - Hướng đến)",
+      "case_4": "Я вижу (у́лица). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (у́лица). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (у́лица). (Prep - Về)"
+    }
   },
   {
     "id": "v062",
@@ -865,7 +1193,15 @@
     "example_vi": "Quảng trường Đỏ là trái tim của nước Nga.",
     "audio_text": "площадь",
     "plural_form": "пло́щади",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это пло́щадь. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (пло́щадь). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (пло́щадь). (Dat - Hướng đến)",
+      "case_4": "Я вижу (пло́щадь). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (пло́щадь). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (пло́щадь). (Prep - Về)"
+    }
   },
   {
     "id": "v063",
@@ -879,7 +1215,15 @@
     "example_vi": "Tàu điện ngầm Moscow đẹp nhất thế giới.",
     "audio_text": "метро",
     "plural_form": "метроы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это метро́. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (метро́). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (метро́). (Dat - Hướng đến)",
+      "case_4": "Я вижу (метро́). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (метро́). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (метро́). (Prep - Về)"
+    }
   },
   {
     "id": "v064",
@@ -893,7 +1237,15 @@
     "example_vi": "Đi xe buýt đến trung tâm.",
     "audio_text": "автобус",
     "plural_form": "автобусы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это авто́бус. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (авто́бус). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (авто́бус). (Dat - Hướng đến)",
+      "case_4": "Я вижу (авто́бус). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (авто́бус). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (авто́бус). (Prep - Về)"
+    }
   },
   {
     "id": "v065",
@@ -907,7 +1259,15 @@
     "example_vi": "Tàu cao tốc «Sapsan» đi Saint Petersburg.",
     "audio_text": "поезд",
     "plural_form": "поезда́",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это по́езд. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (по́езд). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (по́езд). (Dat - Hướng đến)",
+      "case_4": "Я вижу (по́езд). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (по́езд). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (по́езд). (Prep - Về)"
+    }
   },
   {
     "id": "v066",
@@ -921,7 +1281,15 @@
     "example_vi": "Chúng ta gặp nhau ở ga Leningradsky nhé.",
     "audio_text": "вокзал",
     "plural_form": "вокза́лы",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это вокза́л. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (вокза́л). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (вокза́л). (Dat - Hướng đến)",
+      "case_4": "Я вижу (вокза́л). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (вокза́л). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (вокза́л). (Prep - Về)"
+    }
   },
   {
     "id": "v067",
@@ -935,7 +1303,15 @@
     "example_vi": "Máy bay đã hạ cánh tại sân bay Sheremetyevo.",
     "audio_text": "аэропорт",
     "plural_form": "аэропо́рты",
-    "sub_level": "A2.1"
+    "sub_level": "A2.1",
+    "case_contexts": {
+      "case_1": "Это аэропо́рт. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (аэропо́рт). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (аэропо́рт). (Dat - Hướng đến)",
+      "case_4": "Я вижу (аэропо́рт). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (аэропо́рт). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (аэропо́рт). (Prep - Về)"
+    }
   },
   {
     "id": "v068",
@@ -949,7 +1325,15 @@
     "example_vi": "Mua vé máy bay khứ hồi.",
     "audio_text": "билет",
     "plural_form": "биле́ты",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это биле́т. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (биле́т). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (биле́т). (Dat - Hướng đến)",
+      "case_4": "Я вижу (биле́т). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (биле́т). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (биле́т). (Prep - Về)"
+    }
   },
   {
     "id": "v069",
@@ -963,7 +1347,15 @@
     "example_vi": "Đặt phòng đơn tại khách sạn.",
     "audio_text": "гостиница",
     "plural_form": "гости́ницы",
-    "sub_level": "A2.1"
+    "sub_level": "A2.1",
+    "case_contexts": {
+      "case_1": "Это гости́ница. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (гости́ница). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (гости́ница). (Dat - Hướng đến)",
+      "case_4": "Я вижу (гости́ница). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (гости́ница). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (гости́ница). (Prep - Về)"
+    }
   },
   {
     "id": "v070",
@@ -1019,7 +1411,15 @@
     "example_vi": "Một rúp, một quyển sách, một cửa sổ.",
     "audio_text": "один",
     "plural_form": "одины/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это оди́н. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (оди́н). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (оди́н). (Dat - Hướng đến)",
+      "case_4": "Я вижу (оди́н). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (оди́н). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (оди́н). (Prep - Về)"
+    }
   },
   {
     "id": "v074",
@@ -1033,7 +1433,15 @@
     "example_vi": "Hai nam sinh viên và hai nữ sinh viên.",
     "audio_text": "два",
     "plural_form": "дваы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это два. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (два). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (два). (Dat - Hướng đến)",
+      "case_4": "Я вижу (два). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (два). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (два). (Prep - Về)"
+    }
   },
   {
     "id": "v075",
@@ -1159,7 +1567,15 @@
     "example_vi": "Chào buổi sáng!",
     "audio_text": "утро",
     "plural_form": "утроы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это у́тро. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (у́тро). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (у́тро). (Dat - Hướng đến)",
+      "case_4": "Я вижу (у́тро). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (у́тро). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (у́тро). (Prep - Về)"
+    }
   },
   {
     "id": "v084",
@@ -1173,7 +1589,15 @@
     "example_vi": "Xin chào (buổi chiều)!",
     "audio_text": "день",
     "plural_form": "деньы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это де́нь. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (де́нь). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (де́нь). (Dat - Hướng đến)",
+      "case_4": "Я вижу (де́нь). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (де́нь). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (де́нь). (Prep - Về)"
+    }
   },
   {
     "id": "v085",
@@ -1187,7 +1611,15 @@
     "example_vi": "Chào buổi tối!",
     "audio_text": "вечер",
     "plural_form": "вечеры/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это ве́чер. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ве́чер). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ве́чер). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ве́чер). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ве́чер). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ве́чер). (Prep - Về)"
+    }
   },
   {
     "id": "v086",
@@ -1201,7 +1633,15 @@
     "example_vi": "Chúc ngủ ngon!",
     "audio_text": "ночь",
     "plural_form": "ночьы/и",
-    "sub_level": "A1.2"
+    "sub_level": "A1.2",
+    "case_contexts": {
+      "case_1": "Это ночь. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (ночь). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (ночь). (Dat - Hướng đến)",
+      "case_4": "Я вижу (ночь). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (ночь). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (ночь). (Prep - Về)"
+    }
   },
   {
     "id": "v087",
@@ -1411,7 +1851,15 @@
     "example_vi": "Vai trò của giới trẻ trong xã hội hiện đại.",
     "audio_text": "общество",
     "plural_form": "о́бщества",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это о́бщество. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (о́бщество). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (о́бщество). (Dat - Hướng đến)",
+      "case_4": "Я вижу (о́бщество). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (о́бщество). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (о́бщество). (Prep - Về)"
+    }
   },
   {
     "id": "v102",
@@ -1425,7 +1873,15 @@
     "example_vi": "Hiến pháp là đạo luật cơ bản của nhà nước.",
     "audio_text": "государство",
     "plural_form": "госуда́рства",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это госуда́рство. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (госуда́рство). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (госуда́рство). (Dat - Hướng đến)",
+      "case_4": "Я вижу (госуда́рство). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (госуда́рство). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (госуда́рство). (Prep - Về)"
+    }
   },
   {
     "id": "v103",
@@ -1439,7 +1895,15 @@
     "example_vi": "Sự phát triển của nền kinh tế số trên thế giới.",
     "audio_text": "экономика",
     "plural_form": "экономикаы/и",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это эконо́мика. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (эконо́мика). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (эконо́мика). (Dat - Hướng đến)",
+      "case_4": "Я вижу (эконо́мика). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (эконо́мика). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (эконо́мика). (Prep - Về)"
+    }
   },
   {
     "id": "v104",
@@ -1453,7 +1917,15 @@
     "example_vi": "Nền văn hóa phong phú và các truyền thống của các dân tộc Nga.",
     "audio_text": "культура",
     "plural_form": "культураы/и",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это культу́ра. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (культу́ра). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (культу́ра). (Dat - Hướng đến)",
+      "case_4": "Я вижу (культу́ра). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (культу́ра). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (культу́ра). (Prep - Về)"
+    }
   },
   {
     "id": "v105",
@@ -1467,7 +1939,15 @@
     "example_vi": "Đóng góp của các nhà khoa học vào sự phát triển khoa học thế giới.",
     "audio_text": "наука",
     "plural_form": "наукаы/и",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это нау́ка. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (нау́ка). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (нау́ка). (Dat - Hướng đến)",
+      "case_4": "Я вижу (нау́ка). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (нау́ка). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (нау́ка). (Prep - Về)"
+    }
   },
   {
     "id": "v106",
@@ -1481,7 +1961,15 @@
     "example_vi": "Tiến hành công trình nghiên cứu khoa học.",
     "audio_text": "исследование",
     "plural_form": "иссле́дования",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это иссле́дование. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (иссле́дование). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (иссле́дование). (Dat - Hướng đến)",
+      "case_4": "Я вижу (иссле́дование). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (иссле́дование). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (иссле́дование). (Prep - Về)"
+    }
   },
   {
     "id": "v107",
@@ -1495,7 +1983,15 @@
     "example_vi": "Bảo vệ môi trường xung quanh và sinh thái.",
     "audio_text": "экология",
     "plural_form": "экологияы/и",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это эколо́гия. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (эколо́гия). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (эколо́гия). (Dat - Hướng đến)",
+      "case_4": "Я вижу (эколо́гия). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (эколо́гия). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (эколо́гия). (Prep - Về)"
+    }
   },
   {
     "id": "v108",
@@ -1509,7 +2005,15 @@
     "example_vi": "Những thành tựu xuất sắc trong lĩnh vực vũ trụ.",
     "audio_text": "достижение",
     "plural_form": "достиже́ния",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это достиже́ние. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (достиже́ние). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (достиже́ние). (Dat - Hướng đến)",
+      "case_4": "Я вижу (достиже́ние). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (достиже́ние). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (достиже́ние). (Prep - Về)"
+    }
   },
   {
     "id": "v109",
@@ -1523,7 +2027,15 @@
     "example_vi": "Tác động của công nghệ tới đời sống hiện đại.",
     "audio_text": "влияние",
     "plural_form": "влияниеы/и",
-    "sub_level": "B1.1"
+    "sub_level": "B1.1",
+    "case_contexts": {
+      "case_1": "Это влия́ние. (Nom - Chủ ngữ)",
+      "case_2": "У меня нет этого (влия́ние). (Gen - Phủ định)",
+      "case_3": "Я подхожу к (влия́ние). (Dat - Hướng đến)",
+      "case_4": "Я вижу (влия́ние). (Acc - Bổ ngữ)",
+      "case_5": "Я работаю с (влия́ние). (Inst - Cùng với)",
+      "case_6": "Мы думаем о (влия́ние). (Prep - Về)"
+    }
   },
   {
     "id": "v110",

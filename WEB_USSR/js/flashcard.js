@@ -1,5 +1,6 @@
 /**
  * WEB_USSR - 3D Flashcards & Leitner SRS Multi-Mode Study Engine
+ * With 6-Case Contextual Sentences Drill-Down
  */
 const FlashcardModule = (() => {
   let vocabList = [];
@@ -9,6 +10,7 @@ const FlashcardModule = (() => {
   let currentTopic = 'all';
   let searchTerm = '';
   let studyMode = 'flip'; // 'flip', 'quiz_ru_vi', 'quiz_audio'
+  let activeCaseDrawerItem = null;
 
   async function init() {
     try {
@@ -135,7 +137,7 @@ const FlashcardModule = (() => {
         </div>
 
         <!-- 3D Card Container -->
-        <div class="perspective-1000 w-full h-80 sm:h-96 cursor-pointer select-none" onclick="FlashcardModule.toggleFlip()">
+        <div class="perspective-1000 w-full h-84 sm:h-96 cursor-pointer select-none" onclick="FlashcardModule.toggleFlip()">
           <div class="relative w-full h-full duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}">
             
             <!-- Front -->
@@ -169,21 +171,30 @@ const FlashcardModule = (() => {
                 <span class="uppercase tracking-widest text-[10px]">Tiếng Việt</span>
               </div>
 
-              <div class="my-auto space-y-4">
+              <div class="my-auto space-y-3">
                 <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
                   ${item.meaning}
                 </h3>
                 
-                <div class="p-3.5 rounded-2xl bg-white/10 border border-white/15 text-left text-xs space-y-1 font-cyrillic">
-                  <p class="font-bold text-blue-100">Ví dụ: ${item.example_ru}</p>
+                <div class="p-3 rounded-2xl bg-white/10 border border-white/15 text-left text-xs space-y-0.5 font-cyrillic">
+                  <p class="font-bold text-blue-100">${item.example_ru}</p>
                   <p class="text-blue-200 italic font-sans font-normal">${item.example_vi}</p>
                 </div>
               </div>
 
-              <button class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
-                      onclick="event.stopPropagation(); RussianSpeech.speak('${item.audio_text}')">
-                🔊 Nghe phát âm
-              </button>
+              <div class="w-full flex items-center justify-between gap-2">
+                <button class="px-3.5 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
+                        onclick="event.stopPropagation(); RussianSpeech.speak('${item.audio_text}')">
+                  🔊 Nghe đọc
+                </button>
+
+                ${item.case_contexts ? `
+                  <button class="px-3.5 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-xl text-xs font-bold transition-colors"
+                          onclick="event.stopPropagation(); FlashcardModule.showCaseModal('${item.id}')">
+                    📐 6 Cách trong ngữ cảnh
+                  </button>
+                ` : ''}
+              </div>
             </div>
 
           </div>
@@ -211,12 +222,74 @@ const FlashcardModule = (() => {
             ▶
           </button>
         </div>
+
+        <!-- 6-Case Context Modal Container -->
+        <div id="flashcard-case-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div id="flashcard-case-modal-content" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-slate-200 dark:border-slate-700 shadow-2xl space-y-4">
+            <!-- Modal dynamic content -->
+          </div>
+        </div>
       </div>
     `;
   }
 
+  function showCaseModal(itemId) {
+    const item = vocabList.find(v => v.id === itemId);
+    if (!item || !item.case_contexts) return;
+
+    const modal = document.getElementById('flashcard-case-modal');
+    const content = document.getElementById('flashcard-case-modal-content');
+    if (!modal || !content) return;
+
+    const caseNames = {
+      case_1: "Cách 1 (Chủ cách - Nom)",
+      case_2: "Cách 2 (Sinh cách - Gen)",
+      case_3: "Cách 3 (Dữ cách - Dat)",
+      case_4: "Cách 4 (Đối cách - Acc)",
+      case_5: "Cách 5 (Tạo cách - Inst)",
+      case_6: "Cách 6 (Giới cách - Prep)"
+    };
+
+    content.innerHTML = `
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-700">
+        <div>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Từ vựng đi cùng ngữ pháp</span>
+          <h4 class="text-xl font-extrabold text-slate-900 dark:text-white font-cyrillic">${item.word} trong 6 Cách</h4>
+        </div>
+        <button class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200 flex items-center justify-center font-bold"
+                onclick="FlashcardModule.hideCaseModal()">✕</button>
+      </div>
+
+      <div class="space-y-2.5 max-h-96 overflow-y-auto">
+        ${Object.entries(item.case_contexts).map(([cKey, cSentence]) => `
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 block">${caseNames[cKey] || cKey}</span>
+              <p class="text-sm font-bold text-slate-800 dark:text-white font-cyrillic mt-0.5">${cSentence}</p>
+            </div>
+            <button class="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center flex-shrink-0 ml-2"
+                    onclick="RussianSpeech.speak('${cSentence.split('(')[0].trim()}')">
+              🔊
+            </button>
+          </div>
+        `).join('')}
+      </div>
+
+      <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-colors text-xs"
+              onclick="FlashcardModule.hideCaseModal()">
+        Đóng cửa sổ
+      </button>
+    `;
+
+    modal.classList.remove('hidden');
+  }
+
+  function hideCaseModal() {
+    const modal = document.getElementById('flashcard-case-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
   function renderQuizCard(container, item, list) {
-    // Generate 3 wrong options
     const otherMeanings = list.filter(v => v.id !== item.id).map(v => v.meaning);
     const shuffledWrong = otherMeanings.sort(() => 0.5 - Math.random()).slice(0, 3);
     const options = [item.meaning, ...shuffledWrong].sort(() => 0.5 - Math.random());
@@ -267,7 +340,6 @@ const FlashcardModule = (() => {
       </div>
     `;
 
-    // Auto play audio once
     setTimeout(() => RussianSpeech.speak(item.audio_text), 300);
   }
 
@@ -327,9 +399,7 @@ const FlashcardModule = (() => {
     }
   }
 
-  function updateStats() {
-    //
-  }
+  function updateStats() {}
 
   return {
     init,
@@ -337,7 +407,9 @@ const FlashcardModule = (() => {
     nextCard,
     prevCard,
     handleCardAction,
-    checkQuizAnswer
+    checkQuizAnswer,
+    showCaseModal,
+    hideCaseModal
   };
 })();
 
