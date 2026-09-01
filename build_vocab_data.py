@@ -1,0 +1,690 @@
+import json
+import os
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+vocab_list = [
+    # --- CHỦ ĐỀ 1: ĐẠI TỪ & CHÀO HỎI GIAO TIẾP HÀNG NGÀY (A1) ---
+    {
+        "id": "v001", "word": "я́", "phonetic": "[ya]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "tôi / mình / tao",
+        "example_ru": "Я живу́ в Москве́.", "example_vi": "Tôi sống ở Moscow.",
+        "audio_text": "я"
+    },
+    {
+        "id": "v002", "word": "ты́", "phonetic": "[ty]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "bạn / mày / cậu (thân mật)",
+        "example_ru": "Ты говори́шь по-ру́сски?", "example_vi": "Bạn có nói tiếng Nga không?",
+        "audio_text": "ты"
+    },
+    {
+        "id": "v003", "word": "он", "phonetic": "[on]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "anh ấy / ông ấy / nó (giống đực)",
+        "example_ru": "Он мой лу́чший друг.", "example_vi": "Anh ấy là bạn thân nhất của tôi.",
+        "audio_text": "он"
+    },
+    {
+        "id": "v004", "word": "она́", "phonetic": "[a-na]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "cô ấy / bà ấy / nó (giống cái)",
+        "example_ru": "Она́ студе́нтка университе́та.", "example_vi": "Cô ấy là sinh viên đại học.",
+        "audio_text": "она"
+    },
+    {
+        "id": "v005", "word": "оно́", "phonetic": "[a-no]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "nó (giống trung)",
+        "example_ru": "Оно́ стои́т на столе́.", "example_vi": "Nó đang đặt trên bàn.",
+        "audio_text": "оно"
+    },
+    {
+        "id": "v006", "word": "мы́", "phonetic": "[my]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "chúng tôi / chúng ta",
+        "example_ru": "Мы у́чимся вме́сте.", "example_vi": "Chúng tôi học cùng nhau.",
+        "audio_text": "мы"
+    },
+    {
+        "id": "v007", "word": "вы́", "phonetic": "[vy]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "các bạn (số nhiều) / ngài, bác (lịch sự)",
+        "example_ru": "Вы зна́ете э́того челове́ка?", "example_vi": "Ngài có biết người này không?",
+        "audio_text": "вы"
+    },
+    {
+        "id": "v008", "word": "они́", "phonetic": "[a-ni]", "gender": "pron", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "họ / chúng nó",
+        "example_ru": "Они́ гуля́ют в па́рке.", "example_vi": "Họ đang đi dạo trong công viên.",
+        "audio_text": "они"
+    },
+    {
+        "id": "v009", "word": "здра́вствуйте", "phonetic": "[zdra-stvuy-tye]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "xin chào (trang trọng / lịch sự)",
+        "example_ru": "Здра́вствуйте, Ива́н Петро́вич!", "example_vi": "Kính chào ông Ivan Petrovich!",
+        "audio_text": "здравствуйте"
+    },
+    {
+        "id": "v010", "word": "приве́т", "phonetic": "[pri-vyet]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "chào / xin chào (thân mật)",
+        "example_ru": "Приве́т, как дела́?", "example_vi": "Chào cậu, dạo này thế nào?",
+        "audio_text": "привет"
+    },
+    {
+        "id": "v011", "word": "спаси́бо", "phonetic": "[spa-si-ba]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "cảm ơn",
+        "example_ru": "Большо́е спаси́бо за по́мощь!", "example_vi": "Cảm ơn rất nhiều vì sự giúp đỡ!",
+        "audio_text": "спасибо"
+    },
+    {
+        "id": "v012", "word": "пожа́луйста", "phonetic": "[pa-zha-luy-sta]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "làm ơn / xin mời / không có gì",
+        "example_ru": "Да́йте, пожа́луйста, меню́.", "example_vi": "Làm ơn cho tôi xin thực đơn.",
+        "audio_text": "пожалуйста"
+    },
+    {
+        "id": "v013", "word": "до свида́ния", "phonetic": "[da svi-da-ni-ya]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "tạm biệt (hẹn gặp lại)",
+        "example_ru": "До свида́ния, до за́втра!", "example_vi": "Tạm biệt nhé, hẹn gặp lại vào ngày mai!",
+        "audio_text": "до свидания"
+    },
+    {
+        "id": "v014", "word": "пока́", "phonetic": "[pa-ka]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "tạm biệt (thân mật)",
+        "example_ru": "Ну ла́дно, пока́!", "example_vi": "Thôi được rồi, tạm biệt nhé!",
+        "audio_text": "пока"
+    },
+    {
+        "id": "v015", "word": "да", "phonetic": "[da]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "vâng / có / đúng",
+        "example_ru": "Да, я согла́сен с ва́ми.", "example_vi": "Vâng, tôi đồng ý với bạn.",
+        "audio_text": "да"
+    },
+    {
+        "id": "v016", "word": "нет", "phonetic": "[nyet]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "không / không có",
+        "example_ru": "Нет, я не зна́ю э́то сло́во.", "example_vi": "Không, tôi không biết từ này.",
+        "audio_text": "нет"
+    },
+    {
+        "id": "v017", "word": "извини́те", "phonetic": "[iz-vi-ni-tye]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "xin lỗi / thứ lỗi",
+        "example_ru": "Извини́те, где нахо́дится метро́?", "example_vi": "Xin lỗi, ga tàu điện ngầm ở đâu vậy?",
+        "audio_text": "извините"
+    },
+    {
+        "id": "v018", "word": "как вас зову́т?", "phonetic": "[kak vas za-vut]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "bạn tên là gì? (lịch sự)",
+        "example_ru": "Здра́вствуйте! Как вас зову́т?", "example_vi": "Xin chào! Bạn tên là gì ạ?",
+        "audio_text": "как вас зовут"
+    },
+    {
+        "id": "v019", "word": "меня́ зову́т...", "phonetic": "[me-nya za-vut]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "tên tôi là...",
+        "example_ru": "Меня́ зову́т Луо́нг.", "example_vi": "Tên tôi là Lương.",
+        "audio_text": "меня зовут"
+    },
+    {
+        "id": "v020", "word": "о́чень прия́тно", "phonetic": "[o-chen pri-yat-na]", "gender": "phrase", "level": "A1",
+        "topic": "Đại từ & Chào hỏi", "meaning": "rất vui được làm quen",
+        "example_ru": "— Меня зовут Анна. — Очень приятно!", "example_vi": "— Tôi tên là Anna. — Rất hân hạnh được gặp bạn!",
+        "audio_text": "очень приятно"
+    },
+
+    # --- CHỦ ĐỀ 2: GIA ĐÌNH & CON NGƯỜI (A1) ---
+    {
+        "id": "v021", "word": "ма́ма", "phonetic": "[ma-ma]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "mẹ / má",
+        "example_ru": "Моя́ ма́ма вку́сно гото́вит.", "example_vi": "Mẹ tôi nấu ăn rất ngon.",
+        "audio_text": "мама"
+    },
+    {
+        "id": "v022", "word": "па́па", "phonetic": "[pa-pa]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "bố / ba (đuôi -a nhưng giống đực)",
+        "example_ru": "Мой па́па рабо́тает инжене́ром.", "example_vi": "Bố tôi làm kỹ sư.",
+        "audio_text": "папа"
+    },
+    {
+        "id": "v023", "word": "семья́", "phonetic": "[syem-ya]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "gia đình",
+        "example_ru": "У меня́ больша́я и дру́жная семья́.", "example_vi": "Tôi có một gia đình lớn và hòa thuận.",
+        "audio_text": "семья"
+    },
+    {
+        "id": "v024", "word": "брат", "phonetic": "[brat]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "anh trai / em trai",
+        "example_ru": "Мой ста́рший брат у́чится в Москве́.", "example_vi": "Anh trai tôi học ở Moscow.",
+        "audio_text": "брат"
+    },
+    {
+        "id": "v025", "word": "сестра́", "phonetic": "[sye-stra]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "chị gái / em gái",
+        "example_ru": "Моя́ мла́дшая сестра́ лю́бит чита́ть.", "example_vi": "Em gái tôi thích đọc sách.",
+        "audio_text": "сестра"
+    },
+    {
+        "id": "v026", "word": "де́душка", "phonetic": "[dye-dush-ka]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "ông nội / ông ngoại (giống đực)",
+        "example_ru": "Де́душка чита́ет газе́ту у окна́.", "example_vi": "Ông đang đọc báo bên cửa sổ.",
+        "audio_text": "дедушка"
+    },
+    {
+        "id": "v027", "word": "ба́бушка", "phonetic": "[ba-bush-ka]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "bà nội / bà ngoại",
+        "example_ru": "Ба́бушка печёт вку́сные пироги́.", "example_vi": "Bà nướng những chiếc bánh pirog rất ngon.",
+        "audio_text": "бабушка"
+    },
+    {
+        "id": "v028", "word": "сын", "phonetic": "[syn]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "con trai",
+        "example_ru": "Их сын хо́дит в шко́лу.", "example_vi": "Con trai họ đi học trường phổ thông.",
+        "audio_text": "сын"
+    },
+    {
+        "id": "v029", "word": "дочь", "phonetic": "[doch]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "con gái (đuôi -ь giống cái)",
+        "example_ru": "Моя́ дочь краси́во рису́ет.", "example_vi": "Con gái tôi vẽ rất đẹp.",
+        "audio_text": "дочь"
+    },
+    {
+        "id": "v030", "word": "друг", "phonetic": "[druk]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "người bạn (nam)",
+        "example_ru": "Анто́н — мой лу́чший друг.", "example_vi": "Anton là người bạn thân nhất của tôi.",
+        "audio_text": "друг"
+    },
+    {
+        "id": "v031", "word": "подру́га", "phonetic": "[pad-ru-ga]", "gender": "она", "level": "A1",
+        "topic": "Gia đình", "meaning": "bạn gái (nữ)",
+        "example_ru": "Его́ подру́га живёт в Санкт-Петербу́рге.", "example_vi": "Bạn gái cậu ấy sống ở Saint Petersburg.",
+        "audio_text": "подруга"
+    },
+    {
+        "id": "v032", "word": "челове́к", "phonetic": "[che-la-vyek]", "gender": "он", "level": "A1",
+        "topic": "Gia đình", "meaning": "con người / người",
+        "example_ru": "Он о́чень до́брый челове́к.", "example_vi": "Anh ấy là một người rất tốt bụng.",
+        "audio_text": "человек"
+    },
+
+    # --- CHỦ ĐỀ 3: ẨM THỰC & NHÀ HÀNG NGA (A1 - A2) ---
+    {
+        "id": "v033", "word": "борщ", "phonetic": "[borshch]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "súp củ dền truyền thống Nga",
+        "example_ru": "Я хочу́ заказа́ть горя́чий борщ со смета́ной.", "example_vi": "Tôi muốn gọi món súp củ dền nóng ăn kèm kem chua smetana.",
+        "audio_text": "борщ"
+    },
+    {
+        "id": "v034", "word": "пельме́ни", "phonetic": "[pel-mye-ni]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "bánh há cảo/sủi cảo kiểu Nga (thường dùng số nhiều)",
+        "example_ru": "Сиби́рские пельме́ни о́чень вку́сные.", "example_vi": "Bánh pelmeni vùng Siberia rất ngon.",
+        "audio_text": "пельмени"
+    },
+    {
+        "id": "v035", "word": "хлеб", "phonetic": "[khlyep]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "bánh mì",
+        "example_ru": "Ру́сский чёрный хлеб о́чень популя́рен.", "example_vi": "Bánh mì đen của Nga rất phổ biến.",
+        "audio_text": "хлеб"
+    },
+    {
+        "id": "v036", "word": "чай", "phonetic": "[chay]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "trà / chè",
+        "example_ru": "Да́йте, пожа́луйста, чёрный чай с лимо́ном.", "example_vi": "Làm ơn cho tôi một tách trà đen kèm chanh.",
+        "audio_text": "чай"
+    },
+    {
+        "id": "v037", "word": "ко́фе", "phonetic": "[ko-fye]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "cà phê (từ mượn, giống đực)",
+        "example_ru": "У́тром я всегда́ пью кре́пкий ко́фе.", "example_vi": "Buổi sáng tôi luôn uống cà phê đậm.",
+        "audio_text": "кофе"
+    },
+    {
+        "id": "v038", "word": "молоко́", "phonetic": "[ma-la-ko]", "gender": "оно", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "sữa (giống trung)",
+        "example_ru": "Купи́, пожа́луйста, све́жее молоко́.", "example_vi": "Làm ơn mua một hộp sữa tươi nhé.",
+        "audio_text": "молоко"
+    },
+    {
+        "id": "v039", "word": "сыр", "phonetic": "[syr]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "phô mai / pho mát",
+        "example_ru": "Бутербро́д с сы́ром и ма́слом.", "example_vi": "Bánh mì kẹp bơ và phô mai.",
+        "audio_text": "сыр"
+    },
+    {
+        "id": "v040", "word": "мя́со", "phonetic": "[mya-sa]", "gender": "оно", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "thịt",
+        "example_ru": "На у́жин мы еди́м жа́реное мя́со.", "example_vi": "Bữa tối chúng tôi ăn thịt nướng.",
+        "audio_text": "мясо"
+    },
+    {
+        "id": "v041", "word": "ры́ба", "phonetic": "[ry-ba]", "gender": "она", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "cá",
+        "example_ru": "Све́жая ры́ба о́чень поле́зна.", "example_vi": "Cá tươi rất tốt cho sức khỏe.",
+        "audio_text": "рыба"
+    },
+    {
+        "id": "v042", "word": "блины́", "phonetic": "[bli-ny]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "bánh kếp blini truyền thống Nga",
+        "example_ru": "На Ма́сленицу в Росси́и пеку́т блины́.", "example_vi": "Vào lễ Maslenitsa ở Nga người ta làm bánh blini.",
+        "audio_text": "блины"
+    },
+    {
+        "id": "v043", "word": "сала́т", "phonetic": "[sa-lat]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "món sa-lát",
+        "example_ru": "Сала́т Оливье́ — гла́вное блю́до на Но́вый год.", "example_vi": "Sa-lát Olivier là món ăn chính trong dịp năm mới.",
+        "audio_text": "салат"
+    },
+    {
+        "id": "v044", "word": "рестора́н", "phonetic": "[res-ta-ran]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "nhà hàng",
+        "example_ru": "Ве́чером мы пойдём в рестора́н.", "example_vi": "Tối nay chúng tôi sẽ đi ăn ở nhà hàng.",
+        "audio_text": "ресторан"
+    },
+    {
+        "id": "v045", "word": "кафе́", "phonetic": "[ka-fe]", "gender": "оно", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "quán cà phê / tiệm ăn nhanh (giống trung)",
+        "example_ru": "Встре́тимся в студе́нческом кафе́.", "example_vi": "Chúng ta gặp nhau ở quán cà phê sinh viên nhé.",
+        "audio_text": "кафе"
+    },
+    {
+        "id": "v046", "word": "меню́", "phonetic": "[me-nyu]", "gender": "оно", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "thực đơn (giống trung không đổi)",
+        "example_ru": "Покажи́те, пожа́луйста, меню́.", "example_vi": "Làm ơn cho tôi xem thực đơn.",
+        "audio_text": "меню"
+    },
+    {
+        "id": "v047", "word": "счёт", "phonetic": "[shchot]", "gender": "он", "level": "A1",
+        "topic": "Ẩm thực & Nhà hàng", "meaning": "hóa đơn thanh toán / tài khoản",
+        "example_ru": "Принеси́те, пожа́луйста, счёт.", "example_vi": "Làm ơn mang hóa đơn thanh toán giúp tôi.",
+        "audio_text": "счёт"
+    },
+
+    # --- CHỦ ĐỀ 4: TRƯỜNG HỌC & HỌC TẬP (A1 - A2) ---
+    {
+        "id": "v048", "word": "студе́нт", "phonetic": "[stu-dyent]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "nam sinh viên",
+        "example_ru": "Я студе́нт пе́рвого ку́рса.", "example_vi": "Tôi là sinh viên năm thứ nhất.",
+        "audio_text": "студент"
+    },
+    {
+        "id": "v049", "word": "студе́нтка", "phonetic": "[stu-dyent-ka]", "gender": "она", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "nữ sinh viên",
+        "example_ru": "Мари́я — отли́чная студе́нтка.", "example_vi": "Maria là một nữ sinh viên xuất sắc.",
+        "audio_text": "студентка"
+    },
+    {
+        "id": "v050", "word": "университе́т", "phonetic": "[u-ni-ver-si-tyet]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "trường đại học tổng hợp",
+        "example_ru": "Моско́вский госуда́рственный университе́т (МГУ).", "example_vi": "Trường Đại học Tổng hợp Quốc gia Moscow (MSU).",
+        "audio_text": "университет"
+    },
+    {
+        "id": "v051", "word": "кни́га", "phonetic": "[kni-ga]", "gender": "она", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "quyển sách",
+        "example_ru": "Интере́сная нау́чная кни́га.", "example_vi": "Một cuốn sách khoa học thú vị.",
+        "audio_text": "книга"
+    },
+    {
+        "id": "v052", "word": "уче́бник", "phonetic": "[u-chyeb-nik]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "sách giáo trình / sách giáo khoa",
+        "example_ru": "Уче́бник по ру́сскому языку́ «Доро́га в Росси́ю».", "example_vi": "Sách giáo trình tiếng Nga «Đường đến nước Nga».",
+        "audio_text": "учебник"
+    },
+    {
+        "id": "v053", "word": "слова́рь", "phonetic": "[sla-var]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "từ điển (đuôi -ь giống đực)",
+        "example_ru": "Ру́сско-вьетна́мский слова́рь.", "example_vi": "Từ điển Nga - Việt.",
+        "audio_text": "словарь"
+    },
+    {
+        "id": "v054", "word": "тетра́дь", "phonetic": "[tye-trat]", "gender": "она", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "vở viết (đuôi -ь giống cái)",
+        "example_ru": "Я пишу́ уражне́ния в тетра́ди.", "example_vi": "Tôi làm bài tập trong vở.",
+        "audio_text": "тетрадь"
+    },
+    {
+        "id": "v055", "word": "ру́чка", "phonetic": "[ruch-ka]", "gender": "она", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "cây bút bi / bút mực",
+        "example_ru": "Дай мне, пожа́луйста, си́нюю ру́чку.", "example_vi": "Cho tôi mượn cây bút màu xanh nhé.",
+        "audio_text": "ручка"
+    },
+    {
+        "id": "v056", "word": "каранда́ш", "phonetic": "[ka-ran-dash]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "bút chì",
+        "example_ru": "Рисова́nть просты́м карандашо́м.", "example_vi": "Vẽ bằng bút chì đen.",
+        "audio_text": "карандаш"
+    },
+    {
+        "id": "v057", "word": "уро́к", "phonetic": "[u-rok]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "bài học / tiết học",
+        "example_ru": "Уро́к ру́сского языка́ начина́ется в 9 часо́в.", "example_vi": "Tiết học tiếng Nga bắt đầu lúc 9 giờ.",
+        "audio_text": "урок"
+    },
+    {
+        "id": "v058", "word": "экза́мен", "phonetic": "[ek-za-myen]", "gender": "он", "level": "A2",
+        "topic": "Trường học & Học tập", "meaning": "kỳ thi / bài kiểm tra",
+        "example_ru": "Сдать госуда́рственный экза́мен ТРКИ на отли́чно.", "example_vi": "Đỗ kỳ thi quốc gia TRKI đạt điểm xuất sắc.",
+        "audio_text": "экзамен"
+    },
+    {
+        "id": "v059", "word": "преподава́тель", "phonetic": "[pre-pa-da-va-tyel]", "gender": "он", "level": "A1",
+        "topic": "Trường học & Học tập", "meaning": "giảng viên đại học",
+        "example_ru": "Наш преподава́тель о́чень терпели́вый.", "example_vi": "Giảng viên của chúng tôi rất kiên nhẫn.",
+        "audio_text": "преподаватель"
+    },
+
+    # --- CHỦ ĐỀ 5: THÀNH PHỐ & CHỈ ĐƯỜNG GIAO THÔNG (A1 - A2) ---
+    {
+        "id": "v060", "word": "го́род", "phonetic": "[go-rat]", "gender": "он", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "thành phố",
+        "example_ru": "Москва́ — краси́вый и дре́вний го́род.", "example_vi": "Moscow là một thành phố đẹp và cổ kính.",
+        "audio_text": "город"
+    },
+    {
+        "id": "v061", "word": "у́лица", "phonetic": "[u-li-tsa]", "gender": "она", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "đường phố / con đường",
+        "example_ru": "Я живу́ на Тверско́й у́лице.", "example_vi": "Tôi sống trên phố Tverskaya.",
+        "audio_text": "улица"
+    },
+    {
+        "id": "v062", "word": "пло́щадь", "phonetic": "[plo-shchat]", "gender": "она", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "quảng trường (đuôi -ь giống cái)",
+        "example_ru": "Кра́сная пло́щадь — се́рдце Росси́и.", "example_vi": "Quảng trường Đỏ là trái tim của nước Nga.",
+        "audio_text": "площадь"
+    },
+    {
+        "id": "v063", "word": "метро́", "phonetic": "[myet-ro]", "gender": "оно", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "tàu điện ngầm (giống trung không biến cách)",
+        "example_ru": "Моско́вское метро́ — са́мое краси́вое в ми́ре.", "example_vi": "Tàu điện ngầm Moscow đẹp nhất thế giới.",
+        "audio_text": "метро"
+    },
+    {
+        "id": "v064", "word": "авто́бус", "phonetic": "[af-to-bus]", "gender": "он", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "xe buýt",
+        "example_ru": "Пое́хать на авто́бусе до центра.", "example_vi": "Đi xe buýt đến trung tâm.",
+        "audio_text": "автобус"
+    },
+    {
+        "id": "v065", "word": "по́езд", "phonetic": "[po-yest]", "gender": "он", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "tàu hỏa",
+        "example_ru": "Ско́рый по́езд «Сапса́н» в Санкт-Петербу́рг.", "example_vi": "Tàu cao tốc «Sapsan» đi Saint Petersburg.",
+        "audio_text": "поезд"
+    },
+    {
+        "id": "v066", "word": "вокза́л", "phonetic": "[vag-zal]", "gender": "он", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "nhà ga xe lửa",
+        "example_ru": "Встре́тимся на Ленингра́дском вокза́ле.", "example_vi": "Chúng ta gặp nhau ở ga Leningradsky nhé.",
+        "audio_text": "вокзал"
+    },
+    {
+        "id": "v067", "word": "аэропо́рт", "phonetic": "[a-e-ra-port]", "gender": "он", "level": "A2",
+        "topic": "Thành phố & Giao thông", "meaning": "sân bay (trong cách 6: в аэропорту́)",
+        "example_ru": "Самолёт приземли́лся в аэропорту́ Шереме́тьево.", "example_vi": "Máy bay đã hạ cánh tại sân bay Sheremetyevo.",
+        "audio_text": "аэропорт"
+    },
+    {
+        "id": "v068", "word": "биле́т", "phonetic": "[bi-lyet]", "gender": "он", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "vé (vé tàu, vé xe, vé xem phim)",
+        "example_ru": "Купи́ть биле́т на самолёт туда́ и обра́тно.", "example_vi": "Mua vé máy bay khứ hồi.",
+        "audio_text": "билет"
+    },
+    {
+        "id": "v069", "word": "гости́ница", "phonetic": "[gas-ti-ni-tsa]", "gender": "она", "level": "A2",
+        "topic": "Thành phố & Giao thông", "meaning": "khách sạn",
+        "example_ru": "Заброни́ровать одноме́стный но́мер в гости́нице.", "example_vi": "Đặt phòng đơn tại khách sạn.",
+        "audio_text": "гостиница"
+    },
+    {
+        "id": "v070", "word": "пря́мо", "phonetic": "[prya-ma]", "gender": "adv", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "đi thẳng",
+        "example_ru": "Иди́те пря́мо, пото́m поверни́те напра́во.", "example_vi": "Hãy đi thẳng, sau đó rẽ phải.",
+        "audio_text": "прямо"
+    },
+    {
+        "id": "v071", "word": "напра́во", "phonetic": "[nap-ra-va]", "gender": "adv", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "ở bên phải / rẽ phải",
+        "example_ru": "Апте́ка нахо́дится напра́во.", "example_vi": "Hiệu thuốc nằm ở phía bên phải.",
+        "audio_text": "направо"
+    },
+    {
+        "id": "v072", "word": "нале́во", "phonetic": "[na-lye-va]", "gender": "adv", "level": "A1",
+        "topic": "Thành phố & Giao thông", "meaning": "ở bên trái / rẽ trái",
+        "example_ru": "Поверни́те нале́во на перекрёстке.", "example_vi": "Hãy rẽ trái ở ngã tư.",
+        "audio_text": "налево"
+    },
+
+    # --- CHỦ ĐỀ 6: SỐ ĐẾM & THỜI GIAN (A1 - A2) ---
+    {
+        "id": "v073", "word": "оди́н", "phonetic": "[a-din]", "gender": "он", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 1 (один, одна, одно, одни)",
+        "example_ru": "Оди́н рубль, одна́ кни́га, одно́ окно́.", "example_vi": "Một rúp, một quyển sách, một cửa sổ.",
+        "audio_text": "один"
+    },
+    {
+        "id": "v074", "word": "два", "phonetic": "[dva]", "gender": "он", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 2 (два - đực/trung; две - cái)",
+        "example_ru": "Два студе́нта и две студе́нтки.", "example_vi": "Hai nam sinh viên và hai nữ sinh viên.",
+        "audio_text": "два"
+    },
+    {
+        "id": "v075", "word": "три", "phonetic": "[tri]", "gender": "pron", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 3",
+        "example_ru": "Три часа́ дня.", "example_vi": "3 giờ chiều.",
+        "audio_text": "три"
+    },
+    {
+        "id": "v076", "word": "четы́ре", "phonetic": "[che-ty-rye]", "gender": "pron", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 4",
+        "example_ru": "Четы́ре го́да тому́ наза́д.", "example_vi": "Bốn năm trước đây.",
+        "audio_text": "четыре"
+    },
+    {
+        "id": "v077", "word": "пять", "phonetic": "[pyat]", "gender": "pron", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 5",
+        "example_ru": "Пять студе́нтов (cách 2 số nhiều).", "example_vi": "Năm sinh viên.",
+        "audio_text": "пять"
+    },
+    {
+        "id": "v078", "word": "де́сять", "phonetic": "[dye-syat]", "gender": "pron", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 10",
+        "example_ru": "Де́сять мину́т пешко́м.", "example_vi": "Mười phút đi bộ.",
+        "audio_text": "десять"
+    },
+    {
+        "id": "v079", "word": "сто", "phonetic": "[sto]", "gender": "pron", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "số 100",
+        "example_ru": "Сто рубле́й.", "example_vi": "Một trăm rúp.",
+        "audio_text": "сто"
+    },
+    {
+        "id": "v080", "word": "сего́дня", "phonetic": "[sye-vod-nya]", "gender": "adv", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "hôm nay (chữ 'г' phát âm thành [в])",
+        "example_ru": "Сего́дня прекра́сная пого́да.", "example_vi": "Hôm nay thời tiết thật tuyệt vời.",
+        "audio_text": "сегодня"
+    },
+    {
+        "id": "v081", "word": "вчера́", "phonetic": "[fche-ra]", "gender": "adv", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "hôm qua",
+        "example_ru": "Вчера́ я был в библиоте́ке.", "example_vi": "Hôm qua tôi ở thư viện.",
+        "audio_text": "вчера"
+    },
+    {
+        "id": "v082", "word": "за́втра", "phonetic": "[zaf-tra]", "gender": "adv", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "ngày mai",
+        "example_ru": "За́втра у нас бу́дет контро́льная рабо́та.", "example_vi": "Ngày mai chúng tôi sẽ có bài kiểm tra.",
+        "audio_text": "завтра"
+    },
+    {
+        "id": "v083", "word": "у́тро", "phonetic": "[u-tra]", "gender": "оно", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "buổi sáng (у́тром: vào buổi sáng)",
+        "example_ru": "До́брое у́тро!", "example_vi": "Chào buổi sáng!",
+        "audio_text": "утро"
+    },
+    {
+        "id": "v084", "word": "де́нь", "phonetic": "[dyen]", "gender": "он", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "ngày / buổi chiều (днём: vào ban ngày)",
+        "example_ru": "До́брый день!", "example_vi": "Xin chào (buổi chiều)!",
+        "audio_text": "день"
+    },
+    {
+        "id": "v085", "word": "ве́чер", "phonetic": "[vye-chyer]", "gender": "он", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "buổi tối (ве́чером: vào buổi tối)",
+        "example_ru": "До́брый ве́чер!", "example_vi": "Chào buổi tối!",
+        "audio_text": "вечер"
+    },
+    {
+        "id": "v086", "word": "ночь", "phonetic": "[noch]", "gender": "она", "level": "A1",
+        "topic": "Số đếm & Thời gian", "meaning": "đêm (но́чью: vào ban đêm)",
+        "example_ru": "Споко́йной но́чи!", "example_vi": "Chúc ngủ ngon!",
+        "audio_text": "ночь"
+    },
+
+    # --- CHỦ ĐỀ 7: ĐỘNG TỪ THÔNG DỤNG CỐT LÕI (A1 - A2) ---
+    {
+        "id": "v087", "word": "чита́ть / прочита́ть", "phonetic": "[chi-tat / pra-chi-tat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "đọc (НСВ / СВ)",
+        "example_ru": "Я прочита́л весь рома́н за два дня.", "example_vi": "Tôi đã đọc hết cả cuốn tiểu thuyết trong 2 ngày.",
+        "audio_text": "читать прочитать"
+    },
+    {
+        "id": "v088", "word": "писа́ть / написа́ть", "phonetic": "[pi-sat / na-pi-sat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "viết (НСВ: пишу́, пи́шешь / СВ: напишу́)",
+        "example_ru": "Студе́нт напи́шет эссе́ за́втра.", "example_vi": "Sinh viên sẽ viết bài tiểu luận vào ngày mai.",
+        "audio_text": "писать написать"
+    },
+    {
+        "id": "v089", "word": "говори́ть / сказа́ть", "phonetic": "[ga-va-rit / ska-zat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "nói / bảo (НСВ: говорю́ / СV: скажу́, ска́жешь)",
+        "example_ru": "Скажи́те, пожа́луйста, ско́лько вре́мени?", "example_vi": "Làm ơn cho tôi biết mấy giờ rồi ạ?",
+        "audio_text": "говорить сказать"
+    },
+    {
+        "id": "v090", "word": "понима́ть / поня́ть", "phonetic": "[pa-ni-mat / pa-nyat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "hiểu (НСВ / СВ: пойму́, поймёшь)",
+        "example_ru": "Вы меня́ поняли́?", "example_vi": "Bạn đã hiểu ý tôi chưa?",
+        "audio_text": "понимать понять"
+    },
+    {
+        "id": "v091", "word": "де́лать / сде́лать", "phonetic": "[dye-lat / sdye-lat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "làm (НСВ / СВ)",
+        "example_ru": "Что вы де́лаете сего́дня ве́чером?", "example_vi": "Bạn làm gì tối nay?",
+        "audio_text": "делать сделать"
+    },
+    {
+        "id": "v092", "word": "учи́ть / вы́учить", "phonetic": "[u-chit / vy-u-chit]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "học thuộc lòng / dạy ai (НСВ / СВ)",
+        "example_ru": "Я вы́учил все 33 ру́сские бу́квы.", "example_vi": "Tôi đã học thuộc toàn bộ 33 chữ cái tiếng Nga.",
+        "audio_text": "учить выучить"
+    },
+    {
+        "id": "v093", "word": "учи́ться", "phonetic": "[u-chit-sya]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "học tập (ở đâu: где? в университете)",
+        "example_ru": "Мой брат у́чится в институ́те.", "example_vi": "Anh trai tôi học ở học viện.",
+        "audio_text": "учиться"
+    },
+    {
+        "id": "v094", "word": "жить", "phonetic": "[zhit]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "sống / sinh sống (живу́, живёшь, живу́т)",
+        "example_ru": "Мы живём в общежи́тии.", "example_vi": "Chúng tôi sống trong ký túc xá.",
+        "audio_text": "жить"
+    },
+    {
+        "id": "v095", "word": "люби́ть", "phonetic": "[lyu-bit]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "yêu / thích (люблю́, лю́бишь, лю́бят)",
+        "example_ru": "Я люблю́ ру́сскую литерату́ру.", "example_vi": "Tôi yêu văn học Nga.",
+        "audio_text": "любить"
+    },
+    {
+        "id": "v096", "word": "хоте́ть / захоте́ть", "phonetic": "[kha-tyet / za-kha-tyet]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "muốn (хочу́, хо́чешь, хо́чет, хоти́м, хотя́т)",
+        "example_ru": "Я хочу́ поеха́ть в Санкт-Петербу́рг.", "example_vi": "Tôi muốn đi du lịch Saint Petersburg.",
+        "audio_text": "хотеть"
+    },
+    {
+        "id": "v097", "word": "идти́ / пойти́", "phonetic": "[id-ti / pay-ti]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "đi bộ 1 chiều (иду́, идёшь, иду́т)",
+        "example_ru": "Куда́ ты идёшь? — Я иду́ в библиоте́ку.", "example_vi": "Bạn đi đâu đấy? — Tôi đang đi đến thư viện.",
+        "audio_text": "идти"
+    },
+    {
+        "id": "v098", "word": "ходи́ть", "phonetic": "[kha-dit]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "đi bộ đa chiều / thói quen (хожу́, хо́дишь)",
+        "example_ru": "Ка́ждое у́тро я хожу́ в бассе́йн.", "example_vi": "Mỗi sáng tôi đều đi đến hồ bơi.",
+        "audio_text": "ходить"
+    },
+    {
+        "id": "v099", "word": "е́хать / пое́хать", "phonetic": "[ye-khat / pa-ye-khat]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "đi bằng phương tiện 1 chiều (е́ду, е́дешь)",
+        "example_ru": "За́втра мы е́дем на экску́рсию.", "example_vi": "Ngày mai chúng tôi đi tham quan bằng xe.",
+        "audio_text": "ехать"
+    },
+    {
+        "id": "v100", "word": "е́здить", "phonetic": "[yez-dit]", "gender": "verb", "level": "A1",
+        "topic": "Động từ thông dụng", "meaning": "đi lại bằng phương tiện đa chiều (е́зжу, е́здишь)",
+        "example_ru": "Ле́том я ча́сто е́зжу на мо́ре.", "example_vi": "Mùa hè tôi thường xuyên đi biển.",
+        "audio_text": "ездить"
+    },
+
+    # --- CHỦ ĐỀ 8: XÃ HỘI & HỌC THUẬT NÂNG CAO (B1) ---
+    {
+        "id": "v101", "word": "о́бщество", "phonetic": "[op-shche-stva]", "gender": "оно", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "xã hội",
+        "example_ru": "Роль молодёжи в совреме́нном о́бществе.", "example_vi": "Vai trò của giới trẻ trong xã hội hiện đại.",
+        "audio_text": "общество"
+    },
+    {
+        "id": "v102", "word": "госуда́рство", "phonetic": "[ga-su-dar-stva]", "gender": "оно", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "nhà nước / quốc gia",
+        "example_ru": "Конститу́ция — гла́вный зако́н госуда́рства.", "example_vi": "Hiến pháp là đạo luật cơ bản của nhà nước.",
+        "audio_text": "государство"
+    },
+    {
+        "id": "v103", "word": "эконо́мика", "phonetic": "[e-ka-no-mi-ka]", "gender": "она", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "kinh tế / nền kinh tế",
+        "example_ru": "Разви́тие цифрово́й эконо́мики в ми́ре.", "example_vi": "Sự phát triển của nền kinh tế số trên thế giới.",
+        "audio_text": "экономика"
+    },
+    {
+        "id": "v104", "word": "культу́ра", "phonetic": "[kul-tu-ra]", "gender": "она", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "văn hóa",
+        "example_ru": "Бога́тая культу́ра и тради́ции наро́дов Росси́и.", "example_vi": "Nền văn hóa phong phú và các truyền thống của các dân tộc Nga.",
+        "audio_text": "культура"
+    },
+    {
+        "id": "v105", "word": "нау́ка", "phonetic": "[na-u-ka]", "gender": "она", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "khoa học",
+        "example_ru": "Вклад учёных в разви́тие мирово́й нау́ки.", "example_vi": "Đóng góp của các nhà khoa học vào sự phát triển khoa học thế giới.",
+        "audio_text": "наука"
+    },
+    {
+        "id": "v106", "word": "иссле́дование", "phonetic": "[is-slye-da-va-ni-ye]", "gender": "оно", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "công trình nghiên cứu",
+        "example_ru": "Проводи́ть нау́чное иссле́дование.", "example_vi": "Tiến hành công trình nghiên cứu khoa học.",
+        "audio_text": "исследование"
+    },
+    {
+        "id": "v107", "word": "эколо́гия", "phonetic": "[e-ka-lo-gi-ya]", "gender": "она", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "môi trường sinh thái",
+        "example_ru": "Защи́та окружа́ющей среды́ и эколо́гия.", "example_vi": "Bảo vệ môi trường xung quanh và sinh thái.",
+        "audio_text": "экология"
+    },
+    {
+        "id": "v108", "word": "достиже́ние", "phonetic": "[das-ti-zhe-ni-ye]", "gender": "оно", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "thành tựu / kết quả đạt được",
+        "example_ru": "Выдаю́щиеся достиже́ния в ко́смосе.", "example_vi": "Những thành tựu xuất sắc trong lĩnh vực vũ trụ.",
+        "audio_text": "достижение"
+    },
+    {
+        "id": "v109", "word": "влия́ние", "phonetic": "[vli-ya-ni-ye]", "gender": "оно", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "ảnh hưởng / tác động (на кого? на что?)",
+        "example_ru": "Влия́ние техноло́гий на совреме́нную жизнь.", "example_vi": "Tác động của công nghệ tới đời sống hiện đại.",
+        "audio_text": "влияние"
+    },
+    {
+        "id": "v110", "word": "то́чка зре́ния", "phonetic": "[toch-ka zrye-ni-ya]", "gender": "phrase", "level": "B1",
+        "topic": "Xã hội & Học thuật B1", "meaning": "quan điểm / góc nhìn",
+        "example_ru": "С то́чки зре́ния а́втора статьи́...", "example_vi": "Theo quan điểm của tác giả bài viết...",
+        "audio_text": "точка зрения"
+    }
+]
+
+out_path = r"c:\LeDucLuong\HK VII\USSR_Study\WEB_USSR\data\vocab_lexical_min.json"
+os.makedirs(os.path.dirname(out_path), exist_ok=True)
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(vocab_list, f, ensure_ascii=False, indent=2)
+
+print(f"Generated {len(vocab_list)} curated vocabulary records at: {out_path}", flush=True)

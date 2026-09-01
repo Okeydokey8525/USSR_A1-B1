@@ -1,0 +1,236 @@
+{
+  "aspect_rules": {
+    "title": "Quy tắc cốt lõi về Thể động từ tiếng Nga (Виды глаголов)",
+    "nsv_meaning": "Thể chưa hoàn thành (НСВ): Diễn tả quá trình kéo dài, thói quen lặp lại (часто, каждый день, обычно), hành động song song, hoặc chỉ đơn thuần nêu tên sự việc mà không nhấn mạnh kết quả.",
+    "sv_meaning": "Thể hoàn thành (СВ): Diễn tả hành động đạt kết quả trọn vẹn (сделать, прочитать), hành động đơn lẻ trong một khoảnh khắc (вдруг, наконец), hoặc chuỗi hành động nối tiếp nhau theo thứ tự."
+  },
+  "aspect_pairs": [
+    {
+      "id": 1,
+      "nsv": "делать",
+      "sv": "сделать",
+      "meaning": "làm",
+      "governance": "что (Acc)",
+      "example": "Вчера я долго делал (quá trình) домашнее задание и наконец сделал (kết quả) его."
+    },
+    {
+      "id": 2,
+      "nsv": "читать",
+      "sv": "прочитать",
+      "meaning": "đọc",
+      "governance": "что (Acc)",
+      "example": "Каждый день я читаю газету. Вчера я прочитал интересную статью."
+    },
+    {
+      "id": 3,
+      "nsv": "писать",
+      "sv": "написать",
+      "meaning": "viết",
+      "governance": "что (Acc) кому (Dat)",
+      "example": "Студент пишет письмо родителям уже два часа."
+    },
+    {
+      "id": 4,
+      "nsv": "учить",
+      "sv": "выучить",
+      "meaning": "học thuộc",
+      "governance": "что (Acc)",
+      "example": "Я целый вечер учил слова и выучил их."
+    },
+    {
+      "id": 5,
+      "nsv": "покупать",
+      "sv": "купить",
+      "meaning": "mua",
+      "governance": "что (Acc) кому (Dat)",
+      "example": "Мы часто покупаем фрукты здесь. Сегодня я купил яблоки."
+    },
+    {
+      "id": 6,
+      "nsv": "решать",
+      "sv": "решить",
+      "meaning": "giải / quyết định",
+      "governance": "что (Acc) / inf",
+      "example": "Мы долго решали эту проблему и наконец решили её."
+    },
+    {
+      "id": 7,
+      "nsv": "помогать",
+      "sv": "помочь",
+      "meaning": "giúp đỡ",
+      "governance": "кому (Dat)",
+      "example": "Друг всегда помогает мне, когда мне трудно."
+    },
+    {
+      "id": 8,
+      "nsv": "объяснять",
+      "sv": "объяснить",
+      "meaning": "giải thích",
+      "governance": "кому что",
+      "example": "Преподаватель объяснил новое грамматическое правило."
+    },
+    {
+      "id": 9,
+      "nsv": "открывать",
+      "sv": "открыть",
+      "meaning": "mở",
+      "governance": "что (Acc)",
+      "example": "Откройте, пожалуйста, окно."
+    },
+    {
+      "id": 10,
+      "nsv": "закрывать",
+      "sv": "закрыть",
+      "meaning": "đóng",
+      "governance": "что (Acc)",
+      "example": "Магазин закрылся в 9 часов вечера."
+    },
+    {
+      "id": 11,
+      "nsv": "начинать",
+      "sv": "начать",
+      "meaning": "bắt đầu",
+      "governance": "что (Acc) / inf",
+      "example": "Урок начался ровно в девять часов."
+    },
+    {
+      "id": 12,
+      "nsv": "кончать",
+      "sv": "кончить",
+      "meaning": "kết thúc",
+      "governance": "что (Acc)",
+      "example": "Мы закончили работу вовремя."
+    },
+    {
+      "id": 13,
+      "nsv": "говорить",
+      "sv": "сказать",
+      "meaning": "nói / bảo",
+      "governance": "что / кому (Dat)",
+      "example": "Он сказал правду."
+    },
+    {
+      "id": 14,
+      "nsv": "брать",
+      "sv": "взять",
+      "meaning": "lấy / cầm",
+      "governance": "что (Acc)",
+      "example": "Возьмите эту книгу с собой."
+    },
+    {
+      "id": 15,
+      "nsv": "встречать",
+      "sv": "встретить",
+      "meaning": "gặp gỡ",
+      "governance": "кого (Acc)",
+      "example": "Я встретил друга на вокзале."
+    }
+  ],
+  "motion_verbs": [
+    {
+      "type": "Đi bộ (пешком)",
+      "unidirectional": "идти (иду, идёшь)",
+      "multidirectional": "ходить (хожу, ходишь)",
+      "meaning": "đi bộ"
+    },
+    {
+      "type": "Đi bằng xe (на транспорте)",
+      "unidirectional": "ехать (еду, едешь)",
+      "multidirectional": "ездить (езжу, ездишь)",
+      "meaning": "đi bằng xe/tàu/máy bay"
+    },
+    {
+      "type": "Chạy (бегом)",
+      "unidirectional": "бежать (бегу, бежишь, бегут)",
+      "multidirectional": "бегать (бегаю, бегаешь)",
+      "meaning": "chạy"
+    },
+    {
+      "type": "Bay (по воздуху)",
+      "unidirectional": "лететь (лечу, летишь)",
+      "multidirectional": "летать (летаю, летаешь)",
+      "meaning": "bay"
+    },
+    {
+      "type": "Bơi (по воде)",
+      "unidirectional": "плыть (плыву, плывёшь)",
+      "multidirectional": "плавать (плаваю, плаваешь)",
+      "meaning": "bơi / trôi"
+    },
+    {
+      "type": "Mang / vác (в руках)",
+      "unidirectional": "нести (несу, несёшь)",
+      "multidirectional": "носить (ношу, носишь)",
+      "meaning": "mang, xách"
+    },
+    {
+      "type": "Chở (на транспорте)",
+      "unidirectional": "везти (везу, везёшь)",
+      "multidirectional": "возить (вожу, возишь)",
+      "meaning": "chở, vận chuyển"
+    },
+    {
+      "type": "Dẫn dắt (вести)",
+      "unidirectional": "вести (веду, ведёшь)",
+      "multidirectional": "водить (вожу, водишь)",
+      "meaning": "dẫn đường, lái xe"
+    }
+  ],
+  "prefixes": [
+    {
+      "prefix": "в- (во-)",
+      "meaning": "Đi vào bên trong",
+      "example": "войти в комнату (bước vào phòng)"
+    },
+    {
+      "prefix": "вы-",
+      "meaning": "Đi ra bên ngoài",
+      "example": "выйти из здания (bước ra khỏi tòa nhà)"
+    },
+    {
+      "prefix": "при-",
+      "meaning": "Đến nơi / tới nơi",
+      "example": "приехать в Москву (đến Moscow)"
+    },
+    {
+      "prefix": "у-",
+      "meaning": "Rời đi / đi hẳn",
+      "example": "уйти с работы (rời khỏi chỗ làm)"
+    },
+    {
+      "prefix": "под- (подо-)",
+      "meaning": "Tiến lại gần",
+      "example": "подойти к окну (tiến lại gần cửa sổ)"
+    },
+    {
+      "prefix": "от- (ото-)",
+      "meaning": "Lùi ra xa / rời xa",
+      "example": "отойти от двери (lùi xa cửa)"
+    },
+    {
+      "prefix": "до-",
+      "meaning": "Đi đến tận / tới đích",
+      "example": "дойти до вокзала (đi đến tận nhà ga)"
+    },
+    {
+      "prefix": "пере-",
+      "meaning": "Băng qua / chuyển chỗ",
+      "example": "перейти через улицу (sang đường)"
+    },
+    {
+      "prefix": "про-",
+      "meaning": "Đi ngang qua",
+      "example": "пройти мимо парка (đi ngang qua công viên)"
+    },
+    {
+      "prefix": "за-",
+      "meaning": "Ghé vào / tạt qua",
+      "example": "зайти в аптеку (tạt vào hiệu thuốc)"
+    },
+    {
+      "prefix": "по-",
+      "meaning": "Bắt đầu đi (khởi hành)",
+      "example": "поехать на экскурсию (khởi hành đi tham quan)"
+    }
+  ]
+}

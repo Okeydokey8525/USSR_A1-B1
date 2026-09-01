@@ -1,0 +1,83 @@
+{
+  "letters": [
+    { "letter": "А а", "name": "а", "type": "vowel", "sound_vi": "a", "example_ru": "а́дрес", "example_vi": "địa chỉ", "example_phonetic": "[a-dres]", "cursive": "Viết nét tròn như chữ a La-tinh" },
+    { "letter": "Б б", "name": "бэ", "type": "consonant_voiced", "sound_vi": "b (bờ)", "example_ru": "брат", "example_vi": "anh/em trai", "example_phonetic": "[brat]", "cursive": "Nét cong dưới và gạch ngang trên đầu" },
+    { "letter": "В в", "name": "вэ", "type": "consonant_voiced", "sound_vi": "v (vờ)", "example_ru": "вода́", "example_vi": "nước", "example_phonetic": "[va-da]", "cursive": "Tương tự chữ B La-tinh viết thường" },
+    { "letter": "Г г", "name": "гэ", "type": "consonant_voiced", "sound_vi": "g (gờ)", "example_ru": "го́род", "example_vi": "thành phố", "example_phonetic": "[go-rat]", "cursive": "Nét móc cong nhẹ trên đầu" },
+    { "letter": "Д д", "name": "дэ", "type": "consonant_voiced", "sound_vi": "d (đờ)", "example_ru": "дом", "example_vi": "ngôi nhà", "example_phonetic": "[dom]", "cursive": "Viết giống chữ g hoặc d La-tinh viết hoa" },
+    { "letter": "Е е", "name": "е", "type": "vowel_iotated", "sound_vi": "ye / e (dê / e mềm)", "example_ru": "еда́", "example_vi": "thức ăn", "example_phonetic": "[ye-da]", "cursive": "Viết như chữ e La-tinh" },
+    { "letter": "Ё ё", "name": "ё", "type": "vowel_iotated", "sound_vi": "yo (dô) - luôn mang trọng âm", "example_ru": "ёлка", "example_vi": "cây thông", "example_phonetic": "[yol-ka]", "cursive": "Chữ e có 2 dấu chấm phía trên" },
+    { "letter": "Ж ж", "name": "жэ", "type": "consonant_voiced_hard", "sound_vi": "zh (gi/dơ uốn lưỡi sâu)", "example_ru": "журна́л", "example_vi": "tạp chí", "example_phonetic": "[zhur-nal]", "cursive": "Hình con bướm 6 cánh" },
+    { "letter": "З з", "name": "зэ", "type": "consonant_voiced", "sound_vi": "z (dờ rung răng)", "example_ru": "зима́", "example_vi": "mùa đông", "example_phonetic": "[zi-ma]", "cursive": "Viết giống số 3" },
+    { "letter": "И и", "name": "и", "type": "vowel", "sound_vi": "i", "example_ru": "и́мя", "example_vi": "tên", "example_phonetic": "[i-mya]", "cursive": "Viết như chữ u La-tinh" },
+    { "letter": "Й й", "name": "и краткое", "type": "semivowel", "sound_vi": "y ngắn (i-crát-côi-e)", "example_ru": "мой", "example_vi": "của tôi (giống đực)", "example_phonetic": "[moy]", "cursive": "Chữ u có dấu móc lưỡi liềm trên đầu" },
+    { "letter": "К к", "name": "ка", "type": "consonant_voiceless", "sound_vi": "k (cờ/ca)", "example_ru": "кни́га", "example_vi": "quyển sách", "example_phonetic": "[kni-ga]", "cursive": "Viết như chữ k La-tinh" },
+    { "letter": "Л л", "name": "эль", "type": "consonant_voiced", "sound_vi": "l (lờ)", "example_ru": "луна́", "example_vi": "mặt trăng", "example_phonetic": "[lu-na]", "cursive": "Nét móc cong giống chữ л mềm" },
+    { "letter": "М м", "name": "эм", "type": "consonant_voiced", "sound_vi": "m (mờ)", "example_ru": "ма́ма", "example_vi": "mẹ", "example_phonetic": "[ma-ma]", "cursive": "Viết như chữ m La-tinh" },
+    { "letter": "Н н", "name": "эн", "type": "consonant_voiced", "sound_vi": "n (nờ)", "example_ru": "нос", "example_vi": "mũi", "example_phonetic": "[nos]", "cursive": "Viết chữ H La-tinh nhưng nối mềm" },
+    { "letter": "О о", "name": "о", "type": "vowel", "sound_vi": "o (khi có trọng âm) / a (khi không trọng âm)", "example_ru": "окно́", "example_vi": "cửa sổ", "example_phonetic": "[ak-no]", "cursive": "Viết như chữ o La-tinh" },
+    { "letter": "П п", "name": "пэ", "type": "consonant_voiceless", "sound_vi": "p (pờ)", "example_ru": "па́па", "example_vi": "bố/ba", "example_phonetic": "[pa-pa]", "cursive": "Viết như chữ n La-tinh" },
+    { "letter": "Р р", "name": "эр", "type": "consonant_voiced", "sound_vi": "r (rờ rung đầu lưỡi)", "example_ru": "ру́чка", "example_vi": "cây bút", "example_phonetic": "[ruch-ka]", "cursive": "Viết như chữ p La-tinh kéo đuôi dài" },
+    { "letter": "С с", "name": "эс", "type": "consonant_voiceless", "sound_vi": "s (sờ/xờ nhẹ)", "example_ru": "стол", "example_vi": "cái bàn", "example_phonetic": "[stol]", "cursive": "Viết như chữ c La-tinh" },
+    { "letter": "Т т", "name": "тэ", "type": "consonant_voiceless", "sound_vi": "t (tờ)", "example_ru": "тетра́дь", "example_vi": "vở ghi bài", "example_phonetic": "[tye-trat]", "cursive": "Viết như chữ m La-tinh nhỏ 3 nét" },
+    { "letter": "У у", "name": "у", "type": "vowel", "sound_vi": "u", "example_ru": "у́тро", "example_vi": "buổi sáng", "example_phonetic": "[u-tra]", "cursive": "Viết như chữ y La-tinh kéo đuôi móc" },
+    { "letter": "Ф ф", "name": "эф", "type": "consonant_voiceless", "sound_vi": "f (phờ)", "example_ru": "фото", "example_vi": "bức ảnh", "example_phonetic": "[fo-ta]", "cursive": "Một trục dọc ở giữa và 2 bầu cong 2 bên" },
+    { "letter": "Х х", "name": "ха", "type": "consonant_voiceless", "sound_vi": "kh (khờ sâu trong họng)", "example_ru": "хлеб", "example_vi": "bánh mì", "example_phonetic": "[khlyep]", "cursive": "Viết như chữ x La-tinh" },
+    { "letter": "Ц ц", "name": "цэ", "type": "consonant_voiceless_hard", "sound_vi": "ts (t-xờ bật mạnh đầu lưỡi)", "example_ru": "центр", "example_vi": "trung tâm", "example_phonetic": "[tsentr]", "cursive": "Viết như chữ u có móc nhỏ dưới góc phải" },
+    { "letter": "Ч ч", "name": "че", "type": "consonant_voiceless_soft", "sound_vi": "ch (chờ nhẹ/luôn mềm)", "example_ru": "чай", "example_vi": "trà", "example_phonetic": "[chay]", "cursive": "Viết giống số 4 lật ngược" },
+    { "letter": "Ш ш", "name": "ша", "type": "consonant_voiceless_hard", "sound_vi": "sh (sờ nặng uốn lưỡi/luôn cứng)", "example_ru": "шко́ла", "example_vi": "trường học", "example_phonetic": "[shko-la]", "cursive": "Chữ w lật ngược hoặc chữ u 3 nét" },
+    { "letter": "Щ щ", "name": "ща", "type": "consonant_voiceless_soft", "sound_vi": "shch (sờ kéo dài mềm)", "example_ru": "борщ", "example_vi": "súp củ dền Nga", "example_phonetic": "[borshch]", "cursive": "Chữ ш có thêm đuôi móc nhỏ bên phải" },
+    { "letter": "Ъ ъ", "name": "твёрдый знак", "type": "sign", "sound_vi": "Dấu cứng (không phát âm, tách âm)", "example_ru": "объе́кт", "example_vi": "đối tượng", "example_phonetic": "[ab-yekt]", "cursive": "Chữ ь có nét gạch ngang trên đầu" },
+    { "letter": "Ы ы", "name": "ы", "type": "vowel", "sound_vi": "ư (ư sâu từ cuống họng)", "example_ru": "сыр", "example_vi": "phô mai", "example_phonetic": "[syr]", "cursive": "Một nét tròn dưới nối với gạch thẳng" },
+    { "letter": "Ь ь", "name": "мягкий знак", "type": "sign", "sound_vi": "Dấu mềm (làm mềm phụ âm đứng trước)", "example_ru": "день", "example_vi": "ngày", "example_phonetic": "[dyen]", "cursive": "Viết như chữ b nhỏ không đuôi" },
+    { "letter": "Э э", "name": "э оборотное", "type": "vowel", "sound_vi": "e (e cứng / e mở)", "example_ru": "э́то", "example_vi": "đây là / cái này", "example_phonetic": "[e-ta]", "cursive": "Chữ c ngược có gạch ngang giữa" },
+    { "letter": "Ю ю", "name": "ю", "type": "vowel_iotated", "sound_vi": "yu (du)", "example_ru": "юг", "example_vi": "phía nam", "example_phonetic": "[yuk]", "cursive": "Gạch thẳng nối nét tròn" },
+    { "letter": "Я я", "name": "я", "type": "vowel_iotated", "sound_vi": "ya (da)", "example_ru": "я́блоко", "example_vi": "quả táo", "example_phonetic": "[yab-la-ka]", "cursive": "Chữ R La-tinh viết ngược" }
+  ],
+  "phonetic_rules": [
+    {
+      "id": "rule_o_reduction",
+      "title": "1. Quy tắc biến âm chữ 'О' (Редукция О)",
+      "description": "Khi chữ 'О' KHÔNG mang trọng âm, nó bị giảm âm và phát âm thành âm [а] nhẹ. Khi mang trọng âm, phát âm rõ là [о].",
+      "examples": [
+        { "word": "молоко́", "pronunciation": "[ма-ла-ко́]", "meaning": "sữa (2 chữ 'o' đầu không trọng âm đọc là [a], chữ 'o' cuối có trọng âm đọc là [o])" },
+        { "word": "хорошо́", "pronunciation": "[ха-ра-шо́]", "meaning": "tốt / được" },
+        { "word": "соба́ка", "pronunciation": "[са-ба́-ка]", "meaning": "con chó" },
+        { "word": "окно́", "pronunciation": "[ак-но́]", "meaning": "cửa sổ" }
+      ]
+    },
+    {
+      "id": "rule_e_ya_reduction",
+      "title": "2. Quy tắc biến âm chữ 'Е' và 'Я' (Редукция Е / Я)",
+      "description": "Khi chữ 'Е' và 'Я' đứng ở vị trí KHÔNG có trọng âm (đặc biệt đứng trước âm tiết mang trọng âm), chúng bị giảm âm và đọc gần như âm [и] mềm.",
+      "examples": [
+        { "word": "язы́к", "pronunciation": "[и-зы́к]", "meaning": "ngôn ngữ / cái lưỡi" },
+        { "word": "метро́", "pronunciation": "[мь-тро́]", "meaning": "tàu điện ngầm" },
+        { "word": "сестра́", "pronunciation": "[си-стра́]", "meaning": "chị / em gái" },
+        { "word": "часы́", "pronunciation": "[чи-сы́]", "meaning": "đồng hồ / giờ giấc" }
+      ]
+    },
+    {
+      "id": "rule_devoicing",
+      "title": "3. Quy tắc vô thanh hóa phụ âm cuối từ (Оглушение звонких согласных)",
+      "description": "Các phụ âm hữu thanh (б, в, г, д, ж, з) khi đứng ở cuối từ sẽ bị phát âm thành phụ âm vô thanh tương ứng (п, ф, к, т, ш, с).",
+      "examples": [
+        { "word": "хлеб", "pronunciation": "[хлеп]", "meaning": "bánh mì (chữ 'б' cuối từ đọc thành [п])" },
+        { "word": "друг", "pronunciation": "[друк]", "meaning": "người bạn (chữ 'г' cuối từ đọc thành [к])" },
+        { "word": "город", "pronunciation": "[го́-рат]", "meaning": "thành phố (chữ 'д' cuối từ đọc thành [т])" },
+        { "word": "нож", "pronunciation": "[нош]", "meaning": "con dao (chữ 'ж' cuối từ đọc thành [ш])" }
+      ]
+    },
+    {
+      "id": "rule_assimilation",
+      "title": "4. Quy tắc đồng hóa phụ âm (Уподобление согласных)",
+      "description": "Phụ âm hữu thanh đứng trước phụ âm vô thanh sẽ bị vô thanh hóa (biến thành âm nhẹ). Ngược lại, phụ âm vô thanh đứng trước phụ âm hữu thanh sẽ bị hữu thanh hóa (biến thành âm trầm/rung).",
+      "examples": [
+        { "word": "авто́бус", "pronunciation": "[аф-то́-бус]", "meaning": "xe buýt ('в' đứng trước 'т' biến thành [ф])" },
+        { "word": "вокза́л", "pronunciation": "[ваг-за́л]", "meaning": "nhà ga ('к' đứng trước 'з' biến thành [г])" },
+        { "word": "футбо́л", "pronunciation": "[фуд-бо́л]", "meaning": "bóng đá ('т' đứng trước 'б' biến thành [д])" },
+        { "word": "ло́жка", "pronunciation": "[ло́ш-ка]", "meaning": "cái thìa ('ж' đứng trước 'к' biến thành [ш])" }
+      ]
+    }
+  ]
+}

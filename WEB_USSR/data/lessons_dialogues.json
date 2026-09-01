@@ -1,0 +1,101 @@
+{
+  "lessons": [
+    {
+      "id": "lesson_01",
+      "title": "Урок 1: Знакомство и первые фразы (Làm quen & Chào hỏi)",
+      "level": "A1",
+      "source": "Дорога в Россию 1 / Поехали! 1",
+      "description": "Học cách chào hỏi, tự giới thiệu tên, quốc tịch và hỏi thăm đối phương.",
+      "dialogue": [
+        { "speaker": "Антон", "avatar": "👨‍🎓", "ru": "Здра́вствуйте! Меня́ зову́т Анто́н. А как вас зову́т?", "vi": "Xin chào! Tên tôi là Anton. Còn bạn tên là gì ạ?", "audio": "Здравствуйте! Меня зовут Антон. А как вас зовут?" },
+        { "speaker": "Анна", "avatar": "👩‍🎓", "ru": "Здра́вствуйте! О́чень прия́тно. Меня́ зову́т А́нна.", "vi": "Xin chào! Rất hân hạnh được làm quen. Tên tôi là Anna.", "audio": "Здравствуйте! Очень приятно. Меня зовут Анна." },
+        { "speaker": "Антон", "avatar": "👨‍🎓", "ru": "А́нна, отку́да вы прие́хали?", "vi": "Anna, bạn đến từ đâu vậy?", "audio": "Анна, откуда вы приехали?" },
+        { "speaker": "Анна", "avatar": "👩‍🎓", "ru": "Я прие́хала из Санкт-Петербу́рга. А вы́?", "vi": "Tôi đến từ Saint Petersburg. Còn bạn thì sao?", "audio": "Я приехала из Санкт-Петербурга. А вы?" },
+        { "speaker": "Антон", "avatar": "👨‍🎓", "ru": "А я прие́хал из Вьетна́ма. Я изуча́ю ру́сский язы́к в МГУ.", "vi": "Còn tôi đến từ Việt Nam. Tôi đang học tiếng Nga tại MSU.", "audio": "А я приехал из Вьетнама. Я изучаю русский язык в МГУ." },
+        { "speaker": "Анна", "avatar": "👩‍🎓", "ru": "Прекра́сно! Вы уже́ о́чень хорошо́ говори́те по-ру́сски!", "vi": "Tuyệt vời quá! Bạn đã nói tiếng Nga rất tốt rồi đấy!", "audio": "Прекрасно! Вы уже очень хорошо говорите по-русски!" }
+      ],
+      "key_vocab": [
+        { "word": "Здра́вствуйте", "meaning": "Xin chào (lịch sự)" },
+        { "word": "Как вас зову́т?", "meaning": "Bạn tên là gì?" },
+        { "word": "О́чень прия́тно", "meaning": "Rất vui được làm quen" },
+        { "word": "Отку́да вы?", "meaning": "Bạn từ đâu đến?" }
+      ]
+    },
+    {
+      "id": "lesson_02",
+      "title": "Урок 2: В кафе и ресторане (Tại quán cà phê & Nhà hàng)",
+      "level": "A1",
+      "source": "Дорога в Россию 1",
+      "description": "Thực hành gọi món ăn Nga truyền thống, hỏi giá và thanh toán hóa đơn.",
+      "dialogue": [
+        { "speaker": "Официант", "avatar": "👨‍🍳", "ru": "До́брый день! Что вы бу́дете зака́зывать?", "vi": "Kính chào quý khách! Quý khách muốn dùng món gì ạ?", "audio": "Добрый день! Что вы будете заказывать?" },
+        { "speaker": "Студент", "avatar": "👨‍🎓", "ru": "Скажи́те, пожа́луйста, у вас есть горя́чий борщ?", "vi": "Làm ơn cho tôi hỏi, ở đây có món súp củ dền nóng không?", "audio": "Скажите, пожалуйста, у вас есть горячий борщ?" },
+        { "speaker": "Официант", "avatar": "👨‍🍳", "ru": "Да, коне́чно! Све́жий борщ со смета́ной и зе́ленью.", "vi": "Dạ có chứ ạ! Súp củ dền tươi ăn kèm kem chua smetana và rau thơm.", "audio": "Да, конечно! Свежий борщ со сметаной и зеленью." },
+        { "speaker": "Студент", "avatar": "👨‍🎓", "ru": "Отли́чно. Да́йте, пожа́луйста, порци́ю борща́ и пельме́ни.", "vi": "Tuyệt quá. Làm ơn cho tôi một phần súp củ dền và bánh sủi cảo pelmeni.", "audio": "Отлично. Дайте, пожалуйста, порцию борща и пельмени." },
+        { "speaker": "Официант", "avatar": "👨‍🍳", "ru": "А что вы бу́дете пить?", "vi": "Còn đồ uống quý khách dùng gì ạ?", "audio": "А что вы будете пить?" },
+        { "speaker": "Студент", "avatar": "👨‍🎓", "ru": "Чёрный чай с лимо́ном без са́хара, пожа́луйста.", "vi": "Cho tôi một tách trà đen với chanh không đường nhé.", "audio": "Чёрный чай с лимоном без сахара, пожалуйста." },
+        { "speaker": "Студент", "avatar": "👨‍🎓", "ru": "Принеси́те, пожа́луйста, счёт.", "vi": "Làm ơn mang hóa đơn thanh toán giúp tôi.", "audio": "Принесите, пожалуйста, счёт." }
+      ],
+      "key_vocab": [
+        { "word": "Зака́зывать / Заказа́ть", "meaning": "Gọi món / đặt hàng" },
+        { "word": "Смета́на", "meaning": "Kem chua Nga" },
+        { "word": "Счёт", "meaning": "Hóa đơn tính tiền" }
+      ]
+    },
+    {
+      "id": "lesson_03",
+      "title": "Урок 3: В городе и ориентирование (Hỏi đường trong thành phố)",
+      "level": "A2",
+      "source": "Поехали! 1 / Дорога в Россию 2",
+      "description": "Cách hỏi đường đến các địa điểm du lịch, trạm tàu điện ngầm và rẽ hướng.",
+      "dialogue": [
+        { "speaker": "Турист", "avatar": "👨‍💼", "ru": "Извини́те, пожа́луйста, вы не подска́жете, как пройти́ к Кра́сной пло́щади?", "vi": "Xin lỗi, bạn có thể chỉ giúp tôi đường đến Quảng trường Đỏ được không ạ?", "audio": "Извините, пожалуйста, вы не подскажете, как пройти к Красной площади?" },
+        { "speaker": "Прохожий", "avatar": "🚶‍♂️", "ru": "Да, коне́чно. Иди́те пря́мо по э́той у́лице до светофо́ра.", "vi": "Được chứ. Bạn hãy đi thẳng theo con phố này tới cột đèn giao thông.", "audio": "Да, конечно. Идите прямо по этой улице до светофора." },
+        { "speaker": "Турист", "avatar": "👨‍💼", "ru": "А пото́м куда́ повора́чивать?", "vi": "Sau đó thì rẽ hướng nào ạ?", "audio": "А потом куда поворачивать?" },
+        { "speaker": "Прохожий", "avatar": "🚶‍♂️", "ru": "На светофо́ре поверни́те нале́во. Та́м бу́дет ста́нция метро́ «Охо́тный ряд».", "vi": "Tại đèn giao thông bạn rẽ trái. Ở đó sẽ có ga tàu điện ngầm Okhotny Ryad.", "audio": "На светофоре поверните налево. Там будет станция метро Охотный ряд." },
+        { "speaker": "Турист", "avatar": "👨‍💼", "ru": "Э́то далеко́ отсю́да?", "vi": "Chỗ đó có xa đây không ạ?", "audio": "Это далеко отсюда?" },
+        { "speaker": "Прохожий", "avatar": "🚶‍♂️", "ru": "Нет, совсе́м бли́зко, мину́т пять пешко́м.", "vi": "Không, rất gần, chỉ khoảng năm phút đi bộ thôi.", "audio": "Нет, совсем близко, минут пять пешком." }
+      ],
+      "key_vocab": [
+        { "word": "Подскажи́те", "meaning": "Xin hãy chỉ giúp / mách nước" },
+        { "word": "Пря́мо / Нале́во / Напра́во", "meaning": "Đi thẳng / Rẽ trái / Rẽ phải" },
+        { "word": "Пешко́м", "meaning": "Đi bộ" }
+      ]
+    },
+    {
+      "id": "lesson_04",
+      "title": "Урок 4: Планы на выходные и погода (Kế hoạch cuối tuần & Thời tiết)",
+      "level": "A2",
+      "source": "Поехали! 1.2",
+      "description": "Thảo luận về thời tiết, thể động từ trong quá khứ và tương lai.",
+      "dialogue": [
+        { "speaker": "Марина", "avatar": "👩‍🦰", "ru": "Иван, какие у тебя планы на эти выходные?", "vi": "Ivan, cuối tuần này cậu có kế hoạch gì chưa?", "audio": "Иван, какие у тебя планы на эти выходные?" },
+        { "speaker": "Иван", "avatar": "👨‍🦱", "ru": "Если погода будет хорошей, я поеду за город на дачу.", "vi": "Nếu thời tiết đẹp, tớ sẽ đi về ngôi nhà ngoại ô (dacha).", "audio": "Если погода будет хорошей, я поеду за город на дачу." },
+        { "speaker": "Марина", "avatar": "👩‍🦰", "ru": "Синоптики обещают, что в субботу будет тепло и солнечно.", "vi": "Dự báo thời tiết hứa hẹn thứ bảy sẽ ấm áp và có nắng.", "audio": "Синоптики обещают, что в субботу будет тепло и солнечно." },
+        { "speaker": "Иван", "avatar": "👨‍🦱", "ru": "Отлично! Мы будем жарить шашлыки и отдыхать на природе.", "vi": "Tuyệt quá! Chúng tớ sẽ nướng thịt shashlik và thư giãn giữa thiên nhiên.", "audio": "Отлично! Мы будем жарить шашлыки и отдыхать на природе." }
+      ],
+      "key_vocab": [
+        { "word": "Да́ча", "meaning": "Nhà vườn nghỉ dưỡng ngoại ô Nga" },
+        { "word": "Пого́да", "meaning": "Thời tiết" },
+        { "word": "Шашлы́к", "meaning": "Thịt xiên nướng kiểu Nga/Kavkaz" }
+      ]
+    },
+    {
+      "id": "lesson_05",
+      "title": "Урок 5: Наука и высшее образование (Khoa học & Giáo dục Đại học)",
+      "level": "B1",
+      "source": "Дорога в Россию 3 (B1)",
+      "description": "Thảo luận học thuật, công trình nghiên cứu và vai trò của khoa học hiện đại.",
+      "dialogue": [
+        { "speaker": "Профессор", "avatar": "👨‍🏫", "ru": "Коллеги, тема нашего сегодняшнего семинара — влияние цифровых технологий на современную науку.", "vi": "Thưa các đồng nghiệp, chủ đề buổi hội thảo hôm nay là tác động của công nghệ số tới khoa học hiện đại.", "audio": "Коллеги, тема нашего сегодняшнего семинара — влияние цифровых технологий на современную науку." },
+        { "speaker": "Студент", "avatar": "👨‍🎓", "ru": "По моему мнению, использование искусственного интеллекта значительно ускоряет обработку данных.", "vi": "Theo quan điểm của tôi, việc sử dụng trí tuệ nhân tạo đẩy nhanh đáng kể quá trình xử lý dữ liệu.", "audio": "По моему мнению, использование искусственного интеллекта значительно ускоряет обработку данных." },
+        { "speaker": "Профессор", "avatar": "👨‍🏫", "ru": "Безусловно. Однако важно уделять внимание и вопросам научной этики.", "vi": "Chắc chắn rồi. Tuy nhiên, điều quan trọng là cũng phải chú ý đến các vấn đề đạo đức khoa học.", "audio": "Безусловно. Однако важно уделять внимание и вопросам научной этики." }
+      ],
+      "key_vocab": [
+        { "word": "По моему́ мне́нию", "meaning": "Theo ý kiến của tôi" },
+        { "word": "Уделя́ть внима́ние", "meaning": "Dành sự chú ý cho..." },
+        { "word": "Иску́сственный интелле́кт", "meaning": "Trí tuệ nhân tạo (AI)" }
+      ]
+    }
+  ]
+}
