@@ -1,0 +1,149 @@
+{
+  "scenarios": [
+    {
+      "id": "surv_shop",
+      "icon": "🛒",
+      "title": "В магазине и супермаркете (Mua sắm)",
+      "phrases": [
+        {
+          "ru": "Сколько это стоит?",
+          "vi": "Cái này giá bao nhiêu?",
+          "phonetic": "[skol-ka e-ta sto-it]"
+        },
+        {
+          "ru": "Взвесьте, пожалуйста, один килограмм яблок.",
+          "vi": "Làm ơn cân cho tôi 1 kg táo.",
+          "phonetic": "[vzves-tye pa-zha-luy-sta a-din ki-la-gram yab-lak]"
+        },
+        {
+          "ru": "Можно оплатить картой?",
+          "vi": "Có thể thanh toán bằng thẻ không?",
+          "phonetic": "[mozh-na ap-la-tit kar-tay]"
+        },
+        {
+          "ru": "Пакет нужен?",
+          "vi": "Bạn có cần túi ni-lông không?",
+          "phonetic": "[pa-kyet nu-zhen]"
+        },
+        {
+          "ru": "Спасибо, пакет не нужен.",
+          "vi": "Cảm ơn, tôi không cần túi.",
+          "phonetic": "[spa-si-ba pa-kyet nye nu-zhen]"
+        }
+      ]
+    },
+    {
+      "id": "surv_metro",
+      "icon": "🚇",
+      "title": "В метро и на транспорте (Tàu điện ngầm & Xe buýt)",
+      "phrases": [
+        {
+          "ru": "Где находится ближайшая станция метро?",
+          "vi": "Trạm tàu điện ngầm gần nhất ở đâu?",
+          "phonetic": "[gdye na-kho-dit-sya bli-zhay-sha-ya stan-tsi-ya myet-ro]"
+        },
+        {
+          "ru": "Как доехать до Красной площади?",
+          "vi": "Làm sao để đi đến Quảng trường Đỏ?",
+          "phonetic": "[kak da-ye-khat da kras-nay plo-shcha-di]"
+        },
+        {
+          "ru": "Осторожно, двери закрываются!",
+          "vi": "Chú ý, cửa đang đóng lại!",
+          "phonetic": "[as-ta-rozh-na dvye-ri zak-ry-va-yut-sya]"
+        },
+        {
+          "ru": "Следующая станция — «Театральная».",
+          "vi": "Ga tiếp theo là ga Teatralnaya.",
+          "phonetic": "[slye-du-yu-shcha-ya stan-tsi-ya tye-at-ral-na-ya]"
+        },
+        {
+          "ru": "Вы сейчас выходите?",
+          "vi": "Bác/bạn có xuống ở ga này không?",
+          "phonetic": "[vy sey-chas vy-kho-di-tye]"
+        }
+      ]
+    },
+    {
+      "id": "surv_pharmacy",
+      "icon": "💊",
+      "title": "В аптеке и у врача (Hiệu thuốc & Khám bệnh)",
+      "phrases": [
+        {
+          "ru": "У вас есть лекарство от головной боли?",
+          "vi": "Ở đây có thuốc đau đầu không?",
+          "phonetic": "[u vas yest lye-kar-stva at ga-lav-noy bo-li]"
+        },
+        {
+          "ru": "У меня высокая температура и кашель.",
+          "vi": "Tôi bị sốt cao và ho.",
+          "phonetic": "[u me-nya vy-so-ka-ya tyem-pye-ra-tu-ra i ka-shel]"
+        },
+        {
+          "ru": "Как принимать эти таблетки?",
+          "vi": "Thuốc viên này uống như thế nào?",
+          "phonetic": "[kak pri-ni-mat e-ti tab-lyet-ki]"
+        },
+        {
+          "ru": "Принимайте по одной таблетке два раза в день.",
+          "vi": "Uống mỗi lần 1 viên, ngày 2 lần.",
+          "phonetic": "[pri-ni-may-tye pa ad-noy tab-lyet-kye dva ra-za v dyen]"
+        }
+      ]
+    },
+    {
+      "id": "surv_restaurant",
+      "icon": "🍽️",
+      "title": "В ресторане и кафе (Nhà hàng & Quán ăn)",
+      "phrases": [
+        {
+          "ru": "Дайте, пожалуйста, меню.",
+          "vi": "Làm ơn cho tôi xem thực đơn.",
+          "phonetic": "[day-tye pa-zha-luy-sta me-nyu]"
+        },
+        {
+          "ru": "Что вы посоветуете?",
+          "vi": "Bạn có gợi ý món nào ngon không?",
+          "phonetic": "[shto vy pa-sa-vye-tu-ye-tye]"
+        },
+        {
+          "ru": "Принесите, пожалуйста, счёт.",
+          "vi": "Làm ơn mang hóa đơn tính tiền.",
+          "phonetic": "[pri-nye-si-tye pa-zha-luy-sta shchot]"
+        },
+        {
+          "ru": "Всё было очень вкусно, спасибо!",
+          "vi": "Mọi thứ đều rất ngon, cảm ơn!",
+          "phonetic": "[vsyo by-la o-chen vkus-na spa-si-ba]"
+        }
+      ]
+    },
+    {
+      "id": "surv_emergency",
+      "icon": "🚨",
+      "title": "Срочная помощь и полиция (Khẩn cấp)",
+      "phrases": [
+        {
+          "ru": "Помогите, пожалуйста!",
+          "vi": "Làm ơn cứu tôi với / giúp tôi với!",
+          "phonetic": "[pa-ma-gi-tye pa-zha-luy-sta]"
+        },
+        {
+          "ru": "Вызовите скорую помощь! (112)",
+          "vi": "Hãy gọi xe cấp cứu giúp tôi! (112)",
+          "phonetic": "[vy-za-vi-tye sko-ru-yu po-moshch]"
+        },
+        {
+          "ru": "Я потерял паспорт и кошелёк.",
+          "vi": "Tôi bị mất hộ chiếu và ví tiền.",
+          "phonetic": "[ya pa-tye-ryal pas-part i ka-she-lyok]"
+        },
+        {
+          "ru": "Где находится посольство Вьетнама?",
+          "vi": "Đại sứ quán Việt Nam ở đâu?",
+          "phonetic": "[gdye na-kho-dit-sya pa-sol-stva vyet-na-ma]"
+        }
+      ]
+    }
+  ]
+}

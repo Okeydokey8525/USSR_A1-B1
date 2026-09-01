@@ -1,149 +1,109 @@
 /**
- * WEB_USSR - Interactive 6 Russian Cases Matrix (Падежи)
+ * WEB_USSR - Progressive Case Trainer (Падежи русского языка)
+ * Method: Meaning & Trigger Questions FIRST, Endings SECOND.
  */
 const CasesMatrixModule = (() => {
-  let casesData = [];
-  let pronounsData = [];
-  let interactiveWords = [];
-  let currentCaseId = 1;
+  let casesData = null;
+  let activeCaseId = 1; // 1 to 6
+  let activeWordIndex = 0;
 
   async function init() {
     try {
       const resp = await fetch('data/cases_rules.json');
-      const data = await resp.json();
-      casesData = data.cases;
-      pronounsData = data.pronouns_declension;
-      interactiveWords = data.interactive_words;
+      casesData = await resp.json();
 
-      setupCaseTabs();
-      setupWordSelector();
-      renderCurrentCase(1);
+      setupCaseButtons();
+      renderCaseOverview();
+      renderDeclensionTable();
+      renderInteractiveWordDeclension();
       renderPronounsTable();
-      renderSelectedWordDeclension(interactiveWords[0]);
     } catch (e) {
       console.error('Failed to load cases data:', e);
     }
   }
 
-  function setupCaseTabs() {
-    const tabs = document.querySelectorAll('.case-tab-btn');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const caseId = parseInt(tab.dataset.case);
-        tabs.forEach(t => {
-          t.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md');
-          t.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        });
-        tab.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md');
-        tab.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        currentCaseId = caseId;
-        renderCurrentCase(caseId);
-      });
-    });
+  function setupCaseButtons() {
+    const container = document.getElementById('case-selector-tabs');
+    if (!container || !casesData || !casesData.cases) return;
+
+    container.innerHTML = casesData.cases.map(c => {
+      const isActive = c.id === activeCaseId;
+      const questionText = c.question || c.questions || '';
+      return `
+        <button class="px-4 py-3 rounded-2xl border text-xs sm:text-sm font-bold flex flex-col items-start gap-1 transition-all ${
+          isActive 
+            ? 'bg-blue-600 text-white border-blue-600 shadow-md' 
+            : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-blue-400'
+        }" onclick="CasesMatrixModule.selectCase(${c.id})">
+          <div class="flex items-center justify-between w-full">
+            <span>Cách ${c.id}: ${c.name_vi.split('-')[0].trim()}</span>
+            <span class="text-[10px] opacity-75 font-cyrillic font-normal">${c.name_ru.split('(')[0].trim()}</span>
+          </div>
+          <span class="text-[11px] font-mono opacity-80 truncate w-full text-left ${isActive ? 'text-blue-100' : 'text-blue-600 dark:text-blue-400'}">
+            ${questionText}
+          </span>
+        </button>
+      `;
+    }).join('');
   }
 
-  function renderCurrentCase(caseId) {
-    const caseItem = casesData.find(c => c.id === caseId);
-    if (!caseItem) return;
+  function selectCase(id) {
+    activeCaseId = id;
+    setupCaseButtons();
+    renderCaseOverview();
+    renderDeclensionTable();
+  }
 
-    const container = document.getElementById('case-detail-container');
-    if (!container) return;
+  function renderCaseOverview() {
+    const container = document.getElementById('case-overview-panel');
+    if (!container || !casesData || !casesData.cases) return;
+
+    const currentCase = casesData.cases.find(c => c.id === activeCaseId);
+    if (!currentCase) return;
+
+    const questionText = currentCase.question || currentCase.questions || '';
 
     container.innerHTML = `
       <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
         <!-- Header -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-700">
           <div>
-            <div class="flex items-center gap-3">
-              <span class="w-10 h-10 rounded-2xl bg-blue-600 text-white font-extrabold text-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
-                P${caseItem.id}
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                Cách ${currentCase.id}
               </span>
-              <div>
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white font-cyrillic">${caseItem.name_ru}</h3>
-                <p class="text-sm font-semibold text-blue-600 dark:text-blue-400">${caseItem.name_vi}</p>
-              </div>
+              <span class="text-xs text-slate-400 font-cyrillic font-bold">${currentCase.name_ru}</span>
             </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">${currentCase.name_vi}</h3>
           </div>
-          <div class="bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-800/60 rounded-xl px-4 py-2">
-            <span class="text-xs text-slate-500 dark:text-slate-400 block font-medium">Câu hỏi đặc trưng:</span>
-            <span class="font-bold text-blue-700 dark:text-blue-300 text-base font-cyrillic">${caseItem.question}</span>
-          </div>
-        </div>
-
-        <!-- Function & Prepositions -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60">
-            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Chức năng & Ngữ nghĩa cốt lõi
-            </h5>
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${caseItem.function}</p>
-          </div>
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60">
-            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-              Giới từ đi kèm (Предлоги)
-            </h5>
-            <p class="text-sm font-semibold text-amber-700 dark:text-amber-300 leading-relaxed font-cyrillic">${caseItem.prepositions}</p>
+          <div class="p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/30 text-xs">
+            <span class="text-slate-400 block">Câu hỏi kích hoạt:</span>
+            <span class="font-bold text-blue-700 dark:text-blue-300 font-cyrillic text-sm">${questionText}</span>
           </div>
         </div>
 
-        <!-- Endings Table -->
-        <div>
-          <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider mb-3">Quy tắc đuôi biến cách (Окончания)</h4>
-          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700">
-            <table class="w-full text-left text-sm">
-              <thead class="bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-700">
-                <tr>
-                  <th class="p-3">Loại từ</th>
-                  <th class="p-3 text-blue-600 dark:text-blue-400">Giống đực (он)</th>
-                  <th class="p-3 text-rose-600 dark:text-rose-400">Giống cái (она)</th>
-                  <th class="p-3 text-emerald-600 dark:text-emerald-400">Giống trung (оно)</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 font-mono text-xs sm:text-sm">
-                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/30">
-                  <td class="p-3 font-sans font-bold text-slate-700 dark:text-slate-200">Danh từ số ít</td>
-                  <td class="p-3 text-blue-700 dark:text-blue-300 font-bold">${caseItem.endings.noun_sg.masc}</td>
-                  <td class="p-3 text-rose-700 dark:text-rose-300 font-bold">${caseItem.endings.noun_sg.fem}</td>
-                  <td class="p-3 text-emerald-700 dark:text-emerald-300 font-bold">${caseItem.endings.noun_sg.neut}</td>
-                </tr>
-                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/30">
-                  <td class="p-3 font-sans font-bold text-slate-700 dark:text-slate-200">Danh từ số nhiều</td>
-                  <td class="p-3 text-blue-700 dark:text-blue-300 font-bold" colspan="${typeof caseItem.endings.noun_pl === 'string' ? 3 : 1}">${typeof caseItem.endings.noun_pl === 'string' ? caseItem.endings.noun_pl : caseItem.endings.noun_pl.masc}</td>
-                  ${typeof caseItem.endings.noun_pl === 'object' ? `
-                    <td class="p-3 text-rose-700 dark:text-rose-300 font-bold">${caseItem.endings.noun_pl.fem}</td>
-                    <td class="p-3 text-emerald-700 dark:text-emerald-300 font-bold">${caseItem.endings.noun_pl.neut || caseItem.endings.noun_pl.inanimate || ''}</td>
-                  ` : ''}
-                </tr>
-                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/30">
-                  <td class="p-3 font-sans font-bold text-slate-700 dark:text-slate-200">Tính từ số ít</td>
-                  <td class="p-3 text-purple-700 dark:text-purple-300 font-bold">${caseItem.endings.adj_sg.masc}</td>
-                  <td class="p-3 text-purple-700 dark:text-purple-300 font-bold">${caseItem.endings.adj_sg.fem}</td>
-                  <td class="p-3 text-purple-700 dark:text-purple-300 font-bold">${caseItem.endings.adj_sg.neut}</td>
-                </tr>
-                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/30">
-                  <td class="p-3 font-sans font-bold text-slate-700 dark:text-slate-200">Tính từ số nhiều</td>
-                  <td class="p-3 text-purple-700 dark:text-purple-300 font-bold" colspan="3">${typeof caseItem.endings.adj_pl === 'string' ? caseItem.endings.adj_pl : `${caseItem.endings.adj_pl.inanimate} (vật) / ${caseItem.endings.adj_pl.animate} (người)`}</td>
-                </tr>
-              </tbody>
-            </table>
+        <!-- Triggers and Usage -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Ý nghĩa ngữ pháp & Giới từ đi kèm:</h4>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">${currentCase.function || currentCase.usage_vi || ''}</p>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-xs font-mono text-blue-600 dark:text-blue-400">
+            Giới từ thường gặp: <strong>${currentCase.prepositions || 'Không có giới từ riêng'}</strong>
           </div>
         </div>
 
-        <!-- Example Sentences -->
-        <div>
-          <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider mb-3">Ví dụ thực tế</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            ${caseItem.examples.map(ex => `
-              <div class="p-3.5 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-800/40 flex items-center justify-between">
+        <!-- Examples -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Ví dụ mẫu câu thực tế:</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            ${(currentCase.examples || []).map(ex => `
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
                 <div>
-                  <p class="font-bold text-slate-800 dark:text-white font-cyrillic text-sm">${ex.ru}</p>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">${ex.vi}</p>
+                  <span class="font-bold text-slate-800 dark:text-white font-cyrillic text-sm block">${ex.ru}</span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">${ex.vi}</span>
                 </div>
-                <button class="w-8 h-8 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition-colors flex-shrink-0 ml-2"
-                        onclick="RussianSpeech.speak('${ex.ru}')" title="Nghe câu này">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                <button class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors flex-shrink-0 ml-2"
+                        onclick="RussianSpeech.speak('${ex.ru}')">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
                 </button>
               </div>
             `).join('')}
@@ -153,113 +113,153 @@ const CasesMatrixModule = (() => {
     `;
   }
 
-  function setupWordSelector() {
-    const select = document.getElementById('declension-word-select');
-    if (!select) return;
+  function renderDeclensionTable() {
+    const container = document.getElementById('declension-endings-table');
+    if (!container || !casesData || !casesData.cases) return;
 
-    select.innerHTML = interactiveWords.map(w => `
-      <option value="${w.word}">${w.word} (${w.meaning} - ${w.gender})</option>
-    `).join('');
+    const currentCase = casesData.cases.find(c => c.id === activeCaseId);
+    if (!currentCase || !currentCase.endings) return;
 
-    select.addEventListener('change', () => {
-      const selectedWord = interactiveWords.find(w => w.word === select.value);
-      if (selectedWord) {
-        renderSelectedWordDeclension(selectedWord);
-      }
-    });
-  }
-
-  function renderSelectedWordDeclension(wordObj) {
-    const container = document.getElementById('word-declension-result');
-    if (!container || !wordObj) return;
-
-    const caseNames = [
-      'Cách 1 (Именительный)',
-      'Cách 2 (Родительный)',
-      'Cách 3 (Дательный)',
-      'Cách 4 (Винительный)',
-      'Cách 5 (Творительный)',
-      'Cách 6 (Предложный)'
-    ];
+    const e = currentCase.endings;
+    const nSg = e.noun_sg || {};
+    const nPl = e.noun_pl || {};
 
     container.innerHTML = `
-      <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-        <div class="p-4 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
-          <div>
-            <span class="text-xl font-bold text-blue-600 dark:text-blue-400 font-cyrillic">${wordObj.word}</span>
-            <span class="text-xs ml-2 text-slate-500 font-medium">${wordObj.meaning} • Giống: ${wordObj.gender}</span>
-          </div>
-          <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors"
-                  onclick="RussianSpeech.speak('${wordObj.word}')">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
-            Phát âm
-          </button>
-        </div>
-        <table class="w-full text-left text-sm">
-          <thead class="bg-slate-100 dark:bg-slate-900/50 text-slate-600 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-700">
-            <tr>
-              <th class="p-3">Cách</th>
-              <th class="p-3">Số ít (Единственное число)</th>
-              <th class="p-3">Số nhiều (Множественное число)</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 font-mono text-sm">
-            ${caseNames.map((name, idx) => `
-              <tr class="hover:bg-blue-50/40 dark:hover:bg-slate-700/30">
-                <td class="p-3 font-sans font-bold text-slate-700 dark:text-slate-300 text-xs">${name}</td>
-                <td class="p-3 text-blue-600 dark:text-blue-400 font-bold font-cyrillic">
-                  <span class="cursor-pointer hover:underline" onclick="RussianSpeech.speak('${wordObj.forms.sg[idx]}')">${wordObj.forms.sg[idx]}</span>
-                </td>
-                <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold font-cyrillic">
-                  <span class="cursor-pointer hover:underline" onclick="RussianSpeech.speak('${wordObj.forms.pl[idx]}')">${wordObj.forms.pl[idx]}</span>
-                </td>
+      <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Bảng quy tắc đuôi biến cách (Окончания):</h4>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-400">
+                <th class="pb-3 font-bold">Giống danh từ</th>
+                <th class="pb-3 font-bold font-cyrillic">Số ít (Единственное число)</th>
+                <th class="pb-3 font-bold font-cyrillic">Số nhiều (Множественное число)</th>
               </tr>
-            `).join('')}
-          </tbody>
-        </table>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 font-cyrillic text-slate-800 dark:text-slate-200">
+              <tr>
+                <td class="py-3.5 font-bold font-sans text-blue-600">Giống đực (Мужской род)</td>
+                <td class="py-3.5 font-bold text-blue-700 dark:text-blue-400">${nSg.masc || nSg.animate || '-'}</td>
+                <td class="py-3.5">${nPl.masc || nPl.animate || '-'}</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-bold font-sans text-rose-600">Giống cái (Женский род)</td>
+                <td class="py-3.5 font-bold text-rose-700 dark:text-rose-400">${nSg.fem || '-'}</td>
+                <td class="py-3.5">${nPl.fem || nPl.inanimate || '-'}</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-bold font-sans text-emerald-600">Giống trung (Средний род)</td>
+                <td class="py-3.5 font-bold text-emerald-700 dark:text-emerald-400">${nSg.neut || '-'}</td>
+                <td class="py-3.5">${nPl.neut || '-'}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     `;
   }
 
-  function renderPronounsTable() {
-    const container = document.getElementById('pronouns-declension-table');
-    if (!container) return;
+  function renderInteractiveWordDeclension() {
+    const container = document.getElementById('interactive-word-declension-panel');
+    if (!container || !casesData || !casesData.interactive_words) return;
+
+    const words = casesData.interactive_words;
+    const activeWord = words[activeWordIndex] || words[0];
+    if (!activeWord) return;
+
+    const caseNames = [
+      "Cách 1 (Chủ cách - Nom)",
+      "Cách 2 (Sinh cách - Gen)",
+      "Cách 3 (Dữ cách - Dat)",
+      "Cách 4 (Đối cách - Acc)",
+      "Cách 5 (Tạo cách - Inst)",
+      "Cách 6 (Giới cách - Prep)"
+    ];
 
     container.innerHTML = `
-      <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-        <table class="w-full text-left text-xs sm:text-sm">
-          <thead class="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-200 dark:border-slate-700">
-            <tr>
-              <th class="p-3">Đại từ gốc</th>
-              <th class="p-3">C1 (Nom)</th>
-              <th class="p-3">C2 (Gen)</th>
-              <th class="p-3">C3 (Dat)</th>
-              <th class="p-3">C4 (Acc)</th>
-              <th class="p-3">C5 (Inst)</th>
-              <th class="p-3">C6 (Prep)</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 font-mono">
-            ${pronounsData.map(p => `
-              <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/40">
-                <td class="p-3 font-sans font-bold text-slate-800 dark:text-white">${p.base}</td>
-                <td class="p-3 font-bold text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.nom}')">${p.nom}</td>
-                <td class="p-3 text-slate-700 dark:text-slate-300 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.gen}')">${p.gen}</td>
-                <td class="p-3 text-slate-700 dark:text-slate-300 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.dat}')">${p.dat}</td>
-                <td class="p-3 text-slate-700 dark:text-slate-300 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.acc}')">${p.acc}</td>
-                <td class="p-3 text-slate-700 dark:text-slate-300 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.inst.split(' / ')[0]}')">${p.inst}</td>
-                <td class="p-3 text-slate-700 dark:text-slate-300 cursor-pointer hover:underline" onclick="RussianSpeech.speak('${p.prep}')">${p.prep}</td>
+      <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Công cụ biến cách động</span>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white">Tra cứu đầy đủ 6 cách của một từ cụ thể</h4>
+          </div>
+          
+          <select id="case-word-select" class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 font-cyrillic font-bold text-sm text-slate-800 dark:text-slate-200"
+                  onchange="CasesMatrixModule.selectInteractiveWord(parseInt(this.value, 10))">
+            ${words.map((w, idx) => `<option value="${idx}" ${idx === activeWordIndex ? 'selected' : ''}>${w.word} (${w.meaning})</option>`).join('')}
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          ${[0, 1, 2, 3, 4, 5].map(idx => {
+            const formSg = activeWord.forms?.sg?.[idx] || '-';
+            const formPl = activeWord.forms?.pl?.[idx] || '-';
+            return `
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 space-y-2">
+                <span class="text-[11px] font-bold text-slate-400 block">${caseNames[idx]}</span>
+                <div>
+                  <span class="text-[10px] text-slate-400 block">Số ít:</span>
+                  <h5 class="text-base font-bold text-blue-600 dark:text-blue-400 font-cyrillic">${formSg}</h5>
+                </div>
+                <div>
+                  <span class="text-[10px] text-slate-400 block">Số nhiều:</span>
+                  <h5 class="text-sm font-semibold text-slate-700 dark:text-slate-300 font-cyrillic">${formPl}</h5>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function selectInteractiveWord(index) {
+    activeWordIndex = index;
+    renderInteractiveWordDeclension();
+  }
+
+  function renderPronounsTable() {
+    const container = document.getElementById('pronouns-declension-table');
+    if (!container || !casesData || !casesData.pronouns_declension) return;
+
+    container.innerHTML = `
+      <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Bảng biến cách đại từ nhân xưng (Местоимения):</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm font-cyrillic">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-400 font-sans">
+                <th class="pb-3 font-bold">Đại từ (N)</th>
+                <th class="pb-3 font-bold">C.2 (Gen)</th>
+                <th class="pb-3 font-bold">C.3 (Dat)</th>
+                <th class="pb-3 font-bold">C.4 (Acc)</th>
+                <th class="pb-3 font-bold">C.5 (Inst)</th>
+                <th class="pb-3 font-bold">C.6 (Prep)</th>
               </tr>
-            `).join('')}
-          </tbody>
-        </table>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 text-slate-800 dark:text-slate-200">
+              ${casesData.pronouns_declension.map(p => `
+                <tr>
+                  <td class="py-3 font-bold text-blue-600">${p.nom}</td>
+                  <td class="py-3">${p.gen}</td>
+                  <td class="py-3">${p.dat}</td>
+                  <td class="py-3">${p.acc}</td>
+                  <td class="py-3">${p.inst}</td>
+                  <td class="py-3">${p.prep}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
       </div>
     `;
   }
 
   return {
     init,
-    renderCurrentCase
+    selectCase,
+    selectInteractiveWord
   };
 })();
 

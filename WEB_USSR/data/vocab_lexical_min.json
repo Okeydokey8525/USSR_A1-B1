@@ -9,7 +9,9 @@
     "meaning": "tôi / mình / tao",
     "example_ru": "Я живу́ в Москве́.",
     "example_vi": "Tôi sống ở Moscow.",
-    "audio_text": "я"
+    "audio_text": "я",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v002",
@@ -21,7 +23,9 @@
     "meaning": "bạn / mày / cậu (thân mật)",
     "example_ru": "Ты говори́шь по-ру́сски?",
     "example_vi": "Bạn có nói tiếng Nga không?",
-    "audio_text": "ты"
+    "audio_text": "ты",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v003",
@@ -33,7 +37,9 @@
     "meaning": "anh ấy / ông ấy / nó (giống đực)",
     "example_ru": "Он мой лу́чший друг.",
     "example_vi": "Anh ấy là bạn thân nhất của tôi.",
-    "audio_text": "он"
+    "audio_text": "он",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v004",
@@ -45,7 +51,9 @@
     "meaning": "cô ấy / bà ấy / nó (giống cái)",
     "example_ru": "Она́ студе́нтка университе́та.",
     "example_vi": "Cô ấy là sinh viên đại học.",
-    "audio_text": "она"
+    "audio_text": "она",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v005",
@@ -57,7 +65,9 @@
     "meaning": "nó (giống trung)",
     "example_ru": "Оно́ стои́т на столе́.",
     "example_vi": "Nó đang đặt trên bàn.",
-    "audio_text": "оно"
+    "audio_text": "оно",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v006",
@@ -69,7 +79,9 @@
     "meaning": "chúng tôi / chúng ta",
     "example_ru": "Мы у́чимся вме́сте.",
     "example_vi": "Chúng tôi học cùng nhau.",
-    "audio_text": "мы"
+    "audio_text": "мы",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v007",
@@ -81,7 +93,9 @@
     "meaning": "các bạn (số nhiều) / ngài, bác (lịch sự)",
     "example_ru": "Вы зна́ете э́того челове́ка?",
     "example_vi": "Ngài có biết người này không?",
-    "audio_text": "вы"
+    "audio_text": "вы",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v008",
@@ -93,7 +107,9 @@
     "meaning": "họ / chúng nó",
     "example_ru": "Они́ гуля́ют в па́рке.",
     "example_vi": "Họ đang đi dạo trong công viên.",
-    "audio_text": "они"
+    "audio_text": "они",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v009",
@@ -105,7 +121,9 @@
     "meaning": "xin chào (trang trọng / lịch sự)",
     "example_ru": "Здра́вствуйте, Ива́н Петро́вич!",
     "example_vi": "Kính chào ông Ivan Petrovich!",
-    "audio_text": "здравствуйте"
+    "audio_text": "здравствуйте",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v010",
@@ -117,7 +135,9 @@
     "meaning": "chào / xin chào (thân mật)",
     "example_ru": "Приве́т, как дела́?",
     "example_vi": "Chào cậu, dạo này thế nào?",
-    "audio_text": "привет"
+    "audio_text": "привет",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v011",
@@ -129,7 +149,9 @@
     "meaning": "cảm ơn",
     "example_ru": "Большо́е спаси́бо за по́мощь!",
     "example_vi": "Cảm ơn rất nhiều vì sự giúp đỡ!",
-    "audio_text": "спасибо"
+    "audio_text": "спасибо",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v012",
@@ -141,7 +163,9 @@
     "meaning": "làm ơn / xin mời / không có gì",
     "example_ru": "Да́йте, пожа́луйста, меню́.",
     "example_vi": "Làm ơn cho tôi xin thực đơn.",
-    "audio_text": "пожалуйста"
+    "audio_text": "пожалуйста",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v013",
@@ -153,7 +177,9 @@
     "meaning": "tạm biệt (hẹn gặp lại)",
     "example_ru": "До свида́ния, до за́втра!",
     "example_vi": "Tạm biệt nhé, hẹn gặp lại vào ngày mai!",
-    "audio_text": "до свидания"
+    "audio_text": "до свидания",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v014",
@@ -165,7 +191,9 @@
     "meaning": "tạm biệt (thân mật)",
     "example_ru": "Ну ла́дно, пока́!",
     "example_vi": "Thôi được rồi, tạm biệt nhé!",
-    "audio_text": "пока"
+    "audio_text": "пока",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v015",
@@ -177,7 +205,9 @@
     "meaning": "vâng / có / đúng",
     "example_ru": "Да, я согла́сен с ва́ми.",
     "example_vi": "Vâng, tôi đồng ý với bạn.",
-    "audio_text": "да"
+    "audio_text": "да",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v016",
@@ -189,7 +219,9 @@
     "meaning": "không / không có",
     "example_ru": "Нет, я не зна́ю э́то сло́во.",
     "example_vi": "Không, tôi không biết từ này.",
-    "audio_text": "нет"
+    "audio_text": "нет",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v017",
@@ -201,7 +233,9 @@
     "meaning": "xin lỗi / thứ lỗi",
     "example_ru": "Извини́те, где нахо́дится метро́?",
     "example_vi": "Xin lỗi, ga tàu điện ngầm ở đâu vậy?",
-    "audio_text": "извините"
+    "audio_text": "извините",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v018",
@@ -213,7 +247,9 @@
     "meaning": "bạn tên là gì? (lịch sự)",
     "example_ru": "Здра́вствуйте! Как вас зову́т?",
     "example_vi": "Xin chào! Bạn tên là gì ạ?",
-    "audio_text": "как вас зовут"
+    "audio_text": "как вас зовут",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v019",
@@ -225,7 +261,9 @@
     "meaning": "tên tôi là...",
     "example_ru": "Меня́ зову́т Луо́нг.",
     "example_vi": "Tên tôi là Lương.",
-    "audio_text": "меня зовут"
+    "audio_text": "меня зовут",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v020",
@@ -237,7 +275,9 @@
     "meaning": "rất vui được làm quen",
     "example_ru": "— Меня зовут Анна. — Очень приятно!",
     "example_vi": "— Tôi tên là Anna. — Rất hân hạnh được gặp bạn!",
-    "audio_text": "очень приятно"
+    "audio_text": "очень приятно",
+    "plural_form": "-",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v021",
@@ -249,7 +289,9 @@
     "meaning": "mẹ / má",
     "example_ru": "Моя́ ма́ма вку́сно гото́вит.",
     "example_vi": "Mẹ tôi nấu ăn rất ngon.",
-    "audio_text": "мама"
+    "audio_text": "мама",
+    "plural_form": "ма́мы",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v022",
@@ -261,7 +303,9 @@
     "meaning": "bố / ba (đuôi -a nhưng giống đực)",
     "example_ru": "Мой па́па рабо́тает инжене́ром.",
     "example_vi": "Bố tôi làm kỹ sư.",
-    "audio_text": "папа"
+    "audio_text": "папа",
+    "plural_form": "па́пы",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v023",
@@ -273,7 +317,9 @@
     "meaning": "gia đình",
     "example_ru": "У меня́ больша́я и дру́жная семья́.",
     "example_vi": "Tôi có một gia đình lớn và hòa thuận.",
-    "audio_text": "семья"
+    "audio_text": "семья",
+    "plural_form": "семьяы/и",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v024",
@@ -285,7 +331,9 @@
     "meaning": "anh trai / em trai",
     "example_ru": "Мой ста́рший брат у́чится в Москве́.",
     "example_vi": "Anh trai tôi học ở Moscow.",
-    "audio_text": "брат"
+    "audio_text": "брат",
+    "plural_form": "бра́тья",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v025",
@@ -297,7 +345,9 @@
     "meaning": "chị gái / em gái",
     "example_ru": "Моя́ мла́дшая сестра́ лю́бит чита́ть.",
     "example_vi": "Em gái tôi thích đọc sách.",
-    "audio_text": "сестра"
+    "audio_text": "сестра",
+    "plural_form": "сёстры",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v026",
@@ -309,7 +359,9 @@
     "meaning": "ông nội / ông ngoại (giống đực)",
     "example_ru": "Де́душка чита́ет газе́ту у окна́.",
     "example_vi": "Ông đang đọc báo bên cửa sổ.",
-    "audio_text": "дедушка"
+    "audio_text": "дедушка",
+    "plural_form": "де́душки",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v027",
@@ -321,7 +373,9 @@
     "meaning": "bà nội / bà ngoại",
     "example_ru": "Ба́бушка печёт вку́сные пироги́.",
     "example_vi": "Bà nướng những chiếc bánh pirog rất ngon.",
-    "audio_text": "бабушка"
+    "audio_text": "бабушка",
+    "plural_form": "ба́бушки",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v028",
@@ -333,7 +387,9 @@
     "meaning": "con trai",
     "example_ru": "Их сын хо́дит в шко́лу.",
     "example_vi": "Con trai họ đi học trường phổ thông.",
-    "audio_text": "сын"
+    "audio_text": "сын",
+    "plural_form": "сыновья́",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v029",
@@ -345,7 +401,9 @@
     "meaning": "con gái (đuôi -ь giống cái)",
     "example_ru": "Моя́ дочь краси́во рису́ет.",
     "example_vi": "Con gái tôi vẽ rất đẹp.",
-    "audio_text": "дочь"
+    "audio_text": "дочь",
+    "plural_form": "до́чери",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v030",
@@ -357,7 +415,9 @@
     "meaning": "người bạn (nam)",
     "example_ru": "Анто́н — мой лу́чший друг.",
     "example_vi": "Anton là người bạn thân nhất của tôi.",
-    "audio_text": "друг"
+    "audio_text": "друг",
+    "plural_form": "друзья́",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v031",
@@ -369,7 +429,9 @@
     "meaning": "bạn gái (nữ)",
     "example_ru": "Его́ подру́га живёт в Санкт-Петербу́рге.",
     "example_vi": "Bạn gái cậu ấy sống ở Saint Petersburg.",
-    "audio_text": "подруга"
+    "audio_text": "подруга",
+    "plural_form": "подругаы/и",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v032",
@@ -381,7 +443,9 @@
     "meaning": "con người / người",
     "example_ru": "Он о́чень до́брый челове́к.",
     "example_vi": "Anh ấy là một người rất tốt bụng.",
-    "audio_text": "человек"
+    "audio_text": "человек",
+    "plural_form": "лю́ди",
+    "sub_level": "Pre-A1 / A1.1"
   },
   {
     "id": "v033",
@@ -393,7 +457,9 @@
     "meaning": "súp củ dền truyền thống Nga",
     "example_ru": "Я хочу́ заказа́ть горя́чий борщ со смета́ной.",
     "example_vi": "Tôi muốn gọi món súp củ dền nóng ăn kèm kem chua smetana.",
-    "audio_text": "борщ"
+    "audio_text": "борщ",
+    "plural_form": "борщи́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v034",
@@ -405,7 +471,9 @@
     "meaning": "bánh há cảo/sủi cảo kiểu Nga (thường dùng số nhiều)",
     "example_ru": "Сиби́рские пельме́ни о́чень вку́сные.",
     "example_vi": "Bánh pelmeni vùng Siberia rất ngon.",
-    "audio_text": "пельмени"
+    "audio_text": "пельмени",
+    "plural_form": "пельме́ни",
+    "sub_level": "A1.2"
   },
   {
     "id": "v035",
@@ -417,7 +485,9 @@
     "meaning": "bánh mì",
     "example_ru": "Ру́сский чёрный хлеб о́чень популя́рен.",
     "example_vi": "Bánh mì đen của Nga rất phổ biến.",
-    "audio_text": "хлеб"
+    "audio_text": "хлеб",
+    "plural_form": "хлеба́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v036",
@@ -429,7 +499,9 @@
     "meaning": "trà / chè",
     "example_ru": "Да́йте, пожа́луйста, чёрный чай с лимо́ном.",
     "example_vi": "Làm ơn cho tôi một tách trà đen kèm chanh.",
-    "audio_text": "чай"
+    "audio_text": "чай",
+    "plural_form": "чаи́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v037",
@@ -441,7 +513,9 @@
     "meaning": "cà phê (từ mượn, giống đực)",
     "example_ru": "У́тром я всегда́ пью кре́пкий ко́фе.",
     "example_vi": "Buổi sáng tôi luôn uống cà phê đậm.",
-    "audio_text": "кофе"
+    "audio_text": "кофе",
+    "plural_form": "кофеы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v038",
@@ -453,7 +527,9 @@
     "meaning": "sữa (giống trung)",
     "example_ru": "Купи́, пожа́луйста, све́жее молоко́.",
     "example_vi": "Làm ơn mua một hộp sữa tươi nhé.",
-    "audio_text": "молоко"
+    "audio_text": "молоко",
+    "plural_form": "молокоы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v039",
@@ -465,7 +541,9 @@
     "meaning": "phô mai / pho mát",
     "example_ru": "Бутербро́д с сы́ром и ма́слом.",
     "example_vi": "Bánh mì kẹp bơ và phô mai.",
-    "audio_text": "сыр"
+    "audio_text": "сыр",
+    "plural_form": "сыры́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v040",
@@ -477,7 +555,9 @@
     "meaning": "thịt",
     "example_ru": "На у́жин мы еди́м жа́реное мя́со.",
     "example_vi": "Bữa tối chúng tôi ăn thịt nướng.",
-    "audio_text": "мясо"
+    "audio_text": "мясо",
+    "plural_form": "мясоы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v041",
@@ -489,7 +569,9 @@
     "meaning": "cá",
     "example_ru": "Све́жая ры́ба о́чень поле́зна.",
     "example_vi": "Cá tươi rất tốt cho sức khỏe.",
-    "audio_text": "рыба"
+    "audio_text": "рыба",
+    "plural_form": "ры́бы",
+    "sub_level": "A1.2"
   },
   {
     "id": "v042",
@@ -501,7 +583,9 @@
     "meaning": "bánh kếp blini truyền thống Nga",
     "example_ru": "На Ма́сленицу в Росси́и пеку́т блины́.",
     "example_vi": "Vào lễ Maslenitsa ở Nga người ta làm bánh blini.",
-    "audio_text": "блины"
+    "audio_text": "блины",
+    "plural_form": "блины́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v043",
@@ -513,7 +597,9 @@
     "meaning": "món sa-lát",
     "example_ru": "Сала́т Оливье́ — гла́вное блю́до на Но́вый год.",
     "example_vi": "Sa-lát Olivier là món ăn chính trong dịp năm mới.",
-    "audio_text": "салат"
+    "audio_text": "салат",
+    "plural_form": "сала́ты",
+    "sub_level": "A1.2"
   },
   {
     "id": "v044",
@@ -525,7 +611,9 @@
     "meaning": "nhà hàng",
     "example_ru": "Ве́чером мы пойдём в рестора́н.",
     "example_vi": "Tối nay chúng tôi sẽ đi ăn ở nhà hàng.",
-    "audio_text": "ресторан"
+    "audio_text": "ресторан",
+    "plural_form": "рестора́ны",
+    "sub_level": "A1.2"
   },
   {
     "id": "v045",
@@ -537,7 +625,9 @@
     "meaning": "quán cà phê / tiệm ăn nhanh (giống trung)",
     "example_ru": "Встре́тимся в студе́нческом кафе́.",
     "example_vi": "Chúng ta gặp nhau ở quán cà phê sinh viên nhé.",
-    "audio_text": "кафе"
+    "audio_text": "кафе",
+    "plural_form": "кафеы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v046",
@@ -549,7 +639,9 @@
     "meaning": "thực đơn (giống trung không đổi)",
     "example_ru": "Покажи́те, пожа́луйста, меню́.",
     "example_vi": "Làm ơn cho tôi xem thực đơn.",
-    "audio_text": "меню"
+    "audio_text": "меню",
+    "plural_form": "менюы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v047",
@@ -561,7 +653,9 @@
     "meaning": "hóa đơn thanh toán / tài khoản",
     "example_ru": "Принеси́те, пожа́луйста, счёт.",
     "example_vi": "Làm ơn mang hóa đơn thanh toán giúp tôi.",
-    "audio_text": "счёт"
+    "audio_text": "счёт",
+    "plural_form": "счёты/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v048",
@@ -573,7 +667,9 @@
     "meaning": "nam sinh viên",
     "example_ru": "Я студе́нт пе́рвого ку́рса.",
     "example_vi": "Tôi là sinh viên năm thứ nhất.",
-    "audio_text": "студент"
+    "audio_text": "студент",
+    "plural_form": "студе́нты",
+    "sub_level": "A1.2"
   },
   {
     "id": "v049",
@@ -585,7 +681,9 @@
     "meaning": "nữ sinh viên",
     "example_ru": "Мари́я — отли́чная студе́нтка.",
     "example_vi": "Maria là một nữ sinh viên xuất sắc.",
-    "audio_text": "студентка"
+    "audio_text": "студентка",
+    "plural_form": "студе́нтки",
+    "sub_level": "A1.2"
   },
   {
     "id": "v050",
@@ -597,7 +695,9 @@
     "meaning": "trường đại học tổng hợp",
     "example_ru": "Моско́вский госуда́рственный университе́т (МГУ).",
     "example_vi": "Trường Đại học Tổng hợp Quốc gia Moscow (MSU).",
-    "audio_text": "университет"
+    "audio_text": "университет",
+    "plural_form": "университеты/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v051",
@@ -609,7 +709,9 @@
     "meaning": "quyển sách",
     "example_ru": "Интере́сная нау́чная кни́га.",
     "example_vi": "Một cuốn sách khoa học thú vị.",
-    "audio_text": "книга"
+    "audio_text": "книга",
+    "plural_form": "кни́ги",
+    "sub_level": "A1.2"
   },
   {
     "id": "v052",
@@ -621,7 +723,9 @@
     "meaning": "sách giáo trình / sách giáo khoa",
     "example_ru": "Уче́бник по ру́сскому языку́ «Доро́га в Росси́ю».",
     "example_vi": "Sách giáo trình tiếng Nga «Đường đến nước Nga».",
-    "audio_text": "учебник"
+    "audio_text": "учебник",
+    "plural_form": "учебникы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v053",
@@ -633,7 +737,9 @@
     "meaning": "từ điển (đuôi -ь giống đực)",
     "example_ru": "Ру́сско-вьетна́мский слова́рь.",
     "example_vi": "Từ điển Nga - Việt.",
-    "audio_text": "словарь"
+    "audio_text": "словарь",
+    "plural_form": "словари́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v054",
@@ -645,7 +751,9 @@
     "meaning": "vở viết (đuôi -ь giống cái)",
     "example_ru": "Я пишу́ уражне́ния в тетра́ди.",
     "example_vi": "Tôi làm bài tập trong vở.",
-    "audio_text": "тетрадь"
+    "audio_text": "тетрадь",
+    "plural_form": "тетра́ди",
+    "sub_level": "A1.2"
   },
   {
     "id": "v055",
@@ -657,7 +765,9 @@
     "meaning": "cây bút bi / bút mực",
     "example_ru": "Дай мне, пожа́луйста, си́нюю ру́чку.",
     "example_vi": "Cho tôi mượn cây bút màu xanh nhé.",
-    "audio_text": "ручка"
+    "audio_text": "ручка",
+    "plural_form": "ру́чки",
+    "sub_level": "A1.2"
   },
   {
     "id": "v056",
@@ -669,7 +779,9 @@
     "meaning": "bút chì",
     "example_ru": "Рисова́nть просты́м карандашо́м.",
     "example_vi": "Vẽ bằng bút chì đen.",
-    "audio_text": "карандаш"
+    "audio_text": "карандаш",
+    "plural_form": "карандаши́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v057",
@@ -681,7 +793,9 @@
     "meaning": "bài học / tiết học",
     "example_ru": "Уро́к ру́сского языка́ начина́ется в 9 часо́в.",
     "example_vi": "Tiết học tiếng Nga bắt đầu lúc 9 giờ.",
-    "audio_text": "урок"
+    "audio_text": "урок",
+    "plural_form": "урокы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v058",
@@ -693,7 +807,9 @@
     "meaning": "kỳ thi / bài kiểm tra",
     "example_ru": "Сдать госуда́рственный экза́мен ТРКИ на отли́чно.",
     "example_vi": "Đỗ kỳ thi quốc gia TRKI đạt điểm xuất sắc.",
-    "audio_text": "экзамен"
+    "audio_text": "экзамен",
+    "plural_form": "экзамены/и",
+    "sub_level": "A2.1"
   },
   {
     "id": "v059",
@@ -705,7 +821,9 @@
     "meaning": "giảng viên đại học",
     "example_ru": "Наш преподава́тель о́чень терпели́вый.",
     "example_vi": "Giảng viên của chúng tôi rất kiên nhẫn.",
-    "audio_text": "преподаватель"
+    "audio_text": "преподаватель",
+    "plural_form": "преподава́тели",
+    "sub_level": "A1.2"
   },
   {
     "id": "v060",
@@ -717,7 +835,9 @@
     "meaning": "thành phố",
     "example_ru": "Москва́ — краси́вый и дре́вний го́род.",
     "example_vi": "Moscow là một thành phố đẹp và cổ kính.",
-    "audio_text": "город"
+    "audio_text": "город",
+    "plural_form": "города́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v061",
@@ -729,7 +849,9 @@
     "meaning": "đường phố / con đường",
     "example_ru": "Я живу́ на Тверско́й у́лице.",
     "example_vi": "Tôi sống trên phố Tverskaya.",
-    "audio_text": "улица"
+    "audio_text": "улица",
+    "plural_form": "у́лицы",
+    "sub_level": "A1.2"
   },
   {
     "id": "v062",
@@ -741,7 +863,9 @@
     "meaning": "quảng trường (đuôi -ь giống cái)",
     "example_ru": "Кра́сная пло́щадь — се́рдце Росси́и.",
     "example_vi": "Quảng trường Đỏ là trái tim của nước Nga.",
-    "audio_text": "площадь"
+    "audio_text": "площадь",
+    "plural_form": "пло́щади",
+    "sub_level": "A1.2"
   },
   {
     "id": "v063",
@@ -753,7 +877,9 @@
     "meaning": "tàu điện ngầm (giống trung không biến cách)",
     "example_ru": "Моско́вское метро́ — са́мое краси́вое в ми́ре.",
     "example_vi": "Tàu điện ngầm Moscow đẹp nhất thế giới.",
-    "audio_text": "метро"
+    "audio_text": "метро",
+    "plural_form": "метроы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v064",
@@ -765,7 +891,9 @@
     "meaning": "xe buýt",
     "example_ru": "Пое́хать на авто́бусе до центра.",
     "example_vi": "Đi xe buýt đến trung tâm.",
-    "audio_text": "автобус"
+    "audio_text": "автобус",
+    "plural_form": "автобусы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v065",
@@ -777,7 +905,9 @@
     "meaning": "tàu hỏa",
     "example_ru": "Ско́рый по́езд «Сапса́н» в Санкт-Петербу́рг.",
     "example_vi": "Tàu cao tốc «Sapsan» đi Saint Petersburg.",
-    "audio_text": "поезд"
+    "audio_text": "поезд",
+    "plural_form": "поезда́",
+    "sub_level": "A1.2"
   },
   {
     "id": "v066",
@@ -789,7 +919,9 @@
     "meaning": "nhà ga xe lửa",
     "example_ru": "Встре́тимся на Ленингра́дском вокза́ле.",
     "example_vi": "Chúng ta gặp nhau ở ga Leningradsky nhé.",
-    "audio_text": "вокзал"
+    "audio_text": "вокзал",
+    "plural_form": "вокза́лы",
+    "sub_level": "A1.2"
   },
   {
     "id": "v067",
@@ -801,7 +933,9 @@
     "meaning": "sân bay (trong cách 6: в аэропорту́)",
     "example_ru": "Самолёт приземли́лся в аэропорту́ Шереме́тьево.",
     "example_vi": "Máy bay đã hạ cánh tại sân bay Sheremetyevo.",
-    "audio_text": "аэропорт"
+    "audio_text": "аэропорт",
+    "plural_form": "аэропо́рты",
+    "sub_level": "A2.1"
   },
   {
     "id": "v068",
@@ -813,7 +947,9 @@
     "meaning": "vé (vé tàu, vé xe, vé xem phim)",
     "example_ru": "Купи́ть биле́т на самолёт туда́ и обра́тно.",
     "example_vi": "Mua vé máy bay khứ hồi.",
-    "audio_text": "билет"
+    "audio_text": "билет",
+    "plural_form": "биле́ты",
+    "sub_level": "A1.2"
   },
   {
     "id": "v069",
@@ -825,7 +961,9 @@
     "meaning": "khách sạn",
     "example_ru": "Заброни́ровать одноме́стный но́мер в гости́нице.",
     "example_vi": "Đặt phòng đơn tại khách sạn.",
-    "audio_text": "гостиница"
+    "audio_text": "гостиница",
+    "plural_form": "гости́ницы",
+    "sub_level": "A2.1"
   },
   {
     "id": "v070",
@@ -837,7 +975,9 @@
     "meaning": "đi thẳng",
     "example_ru": "Иди́те пря́мо, пото́m поверни́те напра́во.",
     "example_vi": "Hãy đi thẳng, sau đó rẽ phải.",
-    "audio_text": "прямо"
+    "audio_text": "прямо",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v071",
@@ -849,7 +989,9 @@
     "meaning": "ở bên phải / rẽ phải",
     "example_ru": "Апте́ка нахо́дится напра́во.",
     "example_vi": "Hiệu thuốc nằm ở phía bên phải.",
-    "audio_text": "направо"
+    "audio_text": "направо",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v072",
@@ -861,7 +1003,9 @@
     "meaning": "ở bên trái / rẽ trái",
     "example_ru": "Поверни́те нале́во на перекрёстке.",
     "example_vi": "Hãy rẽ trái ở ngã tư.",
-    "audio_text": "налево"
+    "audio_text": "налево",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v073",
@@ -873,7 +1017,9 @@
     "meaning": "số 1 (один, одна, одно, одни)",
     "example_ru": "Оди́н рубль, одна́ кни́га, одно́ окно́.",
     "example_vi": "Một rúp, một quyển sách, một cửa sổ.",
-    "audio_text": "один"
+    "audio_text": "один",
+    "plural_form": "одины/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v074",
@@ -885,7 +1031,9 @@
     "meaning": "số 2 (два - đực/trung; две - cái)",
     "example_ru": "Два студе́нта и две студе́нтки.",
     "example_vi": "Hai nam sinh viên và hai nữ sinh viên.",
-    "audio_text": "два"
+    "audio_text": "два",
+    "plural_form": "дваы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v075",
@@ -897,7 +1045,9 @@
     "meaning": "số 3",
     "example_ru": "Три часа́ дня.",
     "example_vi": "3 giờ chiều.",
-    "audio_text": "три"
+    "audio_text": "три",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v076",
@@ -909,7 +1059,9 @@
     "meaning": "số 4",
     "example_ru": "Четы́ре го́да тому́ наза́д.",
     "example_vi": "Bốn năm trước đây.",
-    "audio_text": "четыре"
+    "audio_text": "четыре",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v077",
@@ -921,7 +1073,9 @@
     "meaning": "số 5",
     "example_ru": "Пять студе́нтов (cách 2 số nhiều).",
     "example_vi": "Năm sinh viên.",
-    "audio_text": "пять"
+    "audio_text": "пять",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v078",
@@ -933,7 +1087,9 @@
     "meaning": "số 10",
     "example_ru": "Де́сять мину́т пешко́м.",
     "example_vi": "Mười phút đi bộ.",
-    "audio_text": "десять"
+    "audio_text": "десять",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v079",
@@ -945,7 +1101,9 @@
     "meaning": "số 100",
     "example_ru": "Сто рубле́й.",
     "example_vi": "Một trăm rúp.",
-    "audio_text": "сто"
+    "audio_text": "сто",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v080",
@@ -957,7 +1115,9 @@
     "meaning": "hôm nay (chữ 'г' phát âm thành [в])",
     "example_ru": "Сего́дня прекра́сная пого́да.",
     "example_vi": "Hôm nay thời tiết thật tuyệt vời.",
-    "audio_text": "сегодня"
+    "audio_text": "сегодня",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v081",
@@ -969,7 +1129,9 @@
     "meaning": "hôm qua",
     "example_ru": "Вчера́ я был в библиоте́ке.",
     "example_vi": "Hôm qua tôi ở thư viện.",
-    "audio_text": "вчера"
+    "audio_text": "вчера",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v082",
@@ -981,7 +1143,9 @@
     "meaning": "ngày mai",
     "example_ru": "За́втра у нас бу́дет контро́льная рабо́та.",
     "example_vi": "Ngày mai chúng tôi sẽ có bài kiểm tra.",
-    "audio_text": "завтра"
+    "audio_text": "завтра",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v083",
@@ -993,7 +1157,9 @@
     "meaning": "buổi sáng (у́тром: vào buổi sáng)",
     "example_ru": "До́брое у́тро!",
     "example_vi": "Chào buổi sáng!",
-    "audio_text": "утро"
+    "audio_text": "утро",
+    "plural_form": "утроы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v084",
@@ -1005,7 +1171,9 @@
     "meaning": "ngày / buổi chiều (днём: vào ban ngày)",
     "example_ru": "До́брый день!",
     "example_vi": "Xin chào (buổi chiều)!",
-    "audio_text": "день"
+    "audio_text": "день",
+    "plural_form": "деньы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v085",
@@ -1017,7 +1185,9 @@
     "meaning": "buổi tối (ве́чером: vào buổi tối)",
     "example_ru": "До́брый ве́чер!",
     "example_vi": "Chào buổi tối!",
-    "audio_text": "вечер"
+    "audio_text": "вечер",
+    "plural_form": "вечеры/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v086",
@@ -1029,7 +1199,9 @@
     "meaning": "đêm (но́чью: vào ban đêm)",
     "example_ru": "Споко́йной но́чи!",
     "example_vi": "Chúc ngủ ngon!",
-    "audio_text": "ночь"
+    "audio_text": "ночь",
+    "plural_form": "ночьы/и",
+    "sub_level": "A1.2"
   },
   {
     "id": "v087",
@@ -1041,7 +1213,9 @@
     "meaning": "đọc (НСВ / СВ)",
     "example_ru": "Я прочита́л весь рома́н за два дня.",
     "example_vi": "Tôi đã đọc hết cả cuốn tiểu thuyết trong 2 ngày.",
-    "audio_text": "читать прочитать"
+    "audio_text": "читать прочитать",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v088",
@@ -1053,7 +1227,9 @@
     "meaning": "viết (НСВ: пишу́, пи́шешь / СВ: напишу́)",
     "example_ru": "Студе́нт напи́шет эссе́ за́втра.",
     "example_vi": "Sinh viên sẽ viết bài tiểu luận vào ngày mai.",
-    "audio_text": "писать написать"
+    "audio_text": "писать написать",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v089",
@@ -1065,7 +1241,9 @@
     "meaning": "nói / bảo (НСВ: говорю́ / СV: скажу́, ска́жешь)",
     "example_ru": "Скажи́те, пожа́луйста, ско́лько вре́мени?",
     "example_vi": "Làm ơn cho tôi biết mấy giờ rồi ạ?",
-    "audio_text": "говорить сказать"
+    "audio_text": "говорить сказать",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v090",
@@ -1077,7 +1255,9 @@
     "meaning": "hiểu (НСВ / СВ: пойму́, поймёшь)",
     "example_ru": "Вы меня́ поняли́?",
     "example_vi": "Bạn đã hiểu ý tôi chưa?",
-    "audio_text": "понимать понять"
+    "audio_text": "понимать понять",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v091",
@@ -1089,7 +1269,9 @@
     "meaning": "làm (НСВ / СВ)",
     "example_ru": "Что вы де́лаете сего́дня ве́чером?",
     "example_vi": "Bạn làm gì tối nay?",
-    "audio_text": "делать сделать"
+    "audio_text": "делать сделать",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v092",
@@ -1101,7 +1283,9 @@
     "meaning": "học thuộc lòng / dạy ai (НСВ / СВ)",
     "example_ru": "Я вы́учил все 33 ру́сские бу́квы.",
     "example_vi": "Tôi đã học thuộc toàn bộ 33 chữ cái tiếng Nga.",
-    "audio_text": "учить выучить"
+    "audio_text": "учить выучить",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v093",
@@ -1113,7 +1297,9 @@
     "meaning": "học tập (ở đâu: где? в университете)",
     "example_ru": "Мой брат у́чится в институ́те.",
     "example_vi": "Anh trai tôi học ở học viện.",
-    "audio_text": "учиться"
+    "audio_text": "учиться",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v094",
@@ -1125,7 +1311,9 @@
     "meaning": "sống / sinh sống (живу́, живёшь, живу́т)",
     "example_ru": "Мы живём в общежи́тии.",
     "example_vi": "Chúng tôi sống trong ký túc xá.",
-    "audio_text": "жить"
+    "audio_text": "жить",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v095",
@@ -1137,7 +1325,9 @@
     "meaning": "yêu / thích (люблю́, лю́бишь, лю́бят)",
     "example_ru": "Я люблю́ ру́сскую литерату́ру.",
     "example_vi": "Tôi yêu văn học Nga.",
-    "audio_text": "любить"
+    "audio_text": "любить",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v096",
@@ -1149,7 +1339,9 @@
     "meaning": "muốn (хочу́, хо́чешь, хо́чет, хоти́м, хотя́т)",
     "example_ru": "Я хочу́ поеха́ть в Санкт-Петербу́рг.",
     "example_vi": "Tôi muốn đi du lịch Saint Petersburg.",
-    "audio_text": "хотеть"
+    "audio_text": "хотеть",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v097",
@@ -1161,7 +1353,9 @@
     "meaning": "đi bộ 1 chiều (иду́, идёшь, иду́т)",
     "example_ru": "Куда́ ты идёшь? — Я иду́ в библиоте́ку.",
     "example_vi": "Bạn đi đâu đấy? — Tôi đang đi đến thư viện.",
-    "audio_text": "идти"
+    "audio_text": "идти",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v098",
@@ -1173,7 +1367,9 @@
     "meaning": "đi bộ đa chiều / thói quen (хожу́, хо́дишь)",
     "example_ru": "Ка́ждое у́тро я хожу́ в бассе́йн.",
     "example_vi": "Mỗi sáng tôi đều đi đến hồ bơi.",
-    "audio_text": "ходить"
+    "audio_text": "ходить",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v099",
@@ -1185,7 +1381,9 @@
     "meaning": "đi bằng phương tiện 1 chiều (е́ду, е́дешь)",
     "example_ru": "За́втра мы е́дем на экску́рсию.",
     "example_vi": "Ngày mai chúng tôi đi tham quan bằng xe.",
-    "audio_text": "ехать"
+    "audio_text": "ехать",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v100",
@@ -1197,7 +1395,9 @@
     "meaning": "đi lại bằng phương tiện đa chiều (е́зжу, е́здишь)",
     "example_ru": "Ле́том я ча́сто е́зжу на мо́ре.",
     "example_vi": "Mùa hè tôi thường xuyên đi biển.",
-    "audio_text": "ездить"
+    "audio_text": "ездить",
+    "plural_form": "-",
+    "sub_level": "A1.2"
   },
   {
     "id": "v101",
@@ -1209,7 +1409,9 @@
     "meaning": "xã hội",
     "example_ru": "Роль молодёжи в совреме́нном о́бществе.",
     "example_vi": "Vai trò của giới trẻ trong xã hội hiện đại.",
-    "audio_text": "общество"
+    "audio_text": "общество",
+    "plural_form": "о́бщества",
+    "sub_level": "B1.1"
   },
   {
     "id": "v102",
@@ -1221,7 +1423,9 @@
     "meaning": "nhà nước / quốc gia",
     "example_ru": "Конститу́ция — гла́вный зако́н госуда́рства.",
     "example_vi": "Hiến pháp là đạo luật cơ bản của nhà nước.",
-    "audio_text": "государство"
+    "audio_text": "государство",
+    "plural_form": "госуда́рства",
+    "sub_level": "B1.1"
   },
   {
     "id": "v103",
@@ -1233,7 +1437,9 @@
     "meaning": "kinh tế / nền kinh tế",
     "example_ru": "Разви́тие цифрово́й эконо́мики в ми́ре.",
     "example_vi": "Sự phát triển của nền kinh tế số trên thế giới.",
-    "audio_text": "экономика"
+    "audio_text": "экономика",
+    "plural_form": "экономикаы/и",
+    "sub_level": "B1.1"
   },
   {
     "id": "v104",
@@ -1245,7 +1451,9 @@
     "meaning": "văn hóa",
     "example_ru": "Бога́тая культу́ра и тради́ции наро́дов Росси́и.",
     "example_vi": "Nền văn hóa phong phú và các truyền thống của các dân tộc Nga.",
-    "audio_text": "культура"
+    "audio_text": "культура",
+    "plural_form": "культураы/и",
+    "sub_level": "B1.1"
   },
   {
     "id": "v105",
@@ -1257,7 +1465,9 @@
     "meaning": "khoa học",
     "example_ru": "Вклад учёных в разви́тие мирово́й нау́ки.",
     "example_vi": "Đóng góp của các nhà khoa học vào sự phát triển khoa học thế giới.",
-    "audio_text": "наука"
+    "audio_text": "наука",
+    "plural_form": "наукаы/и",
+    "sub_level": "B1.1"
   },
   {
     "id": "v106",
@@ -1269,7 +1479,9 @@
     "meaning": "công trình nghiên cứu",
     "example_ru": "Проводи́ть нау́чное иссле́дование.",
     "example_vi": "Tiến hành công trình nghiên cứu khoa học.",
-    "audio_text": "исследование"
+    "audio_text": "исследование",
+    "plural_form": "иссле́дования",
+    "sub_level": "B1.1"
   },
   {
     "id": "v107",
@@ -1281,7 +1493,9 @@
     "meaning": "môi trường sinh thái",
     "example_ru": "Защи́та окружа́ющей среды́ и эколо́гия.",
     "example_vi": "Bảo vệ môi trường xung quanh và sinh thái.",
-    "audio_text": "экология"
+    "audio_text": "экология",
+    "plural_form": "экологияы/и",
+    "sub_level": "B1.1"
   },
   {
     "id": "v108",
@@ -1293,7 +1507,9 @@
     "meaning": "thành tựu / kết quả đạt được",
     "example_ru": "Выдаю́щиеся достиже́ния в ко́смосе.",
     "example_vi": "Những thành tựu xuất sắc trong lĩnh vực vũ trụ.",
-    "audio_text": "достижение"
+    "audio_text": "достижение",
+    "plural_form": "достиже́ния",
+    "sub_level": "B1.1"
   },
   {
     "id": "v109",
@@ -1305,7 +1521,9 @@
     "meaning": "ảnh hưởng / tác động (на кого? на что?)",
     "example_ru": "Влия́ние техноло́гий на совреме́нную жизнь.",
     "example_vi": "Tác động của công nghệ tới đời sống hiện đại.",
-    "audio_text": "влияние"
+    "audio_text": "влияние",
+    "plural_form": "влияниеы/и",
+    "sub_level": "B1.1"
   },
   {
     "id": "v110",
@@ -1317,6 +1535,8 @@
     "meaning": "quan điểm / góc nhìn",
     "example_ru": "С то́чки зре́ния а́втора статьи́...",
     "example_vi": "Theo quan điểm của tác giả bài viết...",
-    "audio_text": "точка зрения"
+    "audio_text": "точка зрения",
+    "plural_form": "-",
+    "sub_level": "B1.1"
   }
 ]

@@ -1,40 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+/* 
+ * WEB_USSR - Russian Master CSS Design System
+ */
 
-:root {
-  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
+/* Hide scrollbar for clean tab navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-body {
-  font-family: var(--font-main);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font-cyrillic {
-  font-feature-settings: "locl" 1;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 9999px;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* 3D Flip Card Styles */
+/* 3D Flashcard Animation Styles */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -52,47 +29,37 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Animation utilities */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Global View Preferences: Hide Stress Markings */
+body.hide-stress * {
+  /* Remove unicode combining acute accent if toggle disabled */
 }
 
-.fade-in {
-  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+/* Custom Russian Cyrillic Typography Enhancements */
+.font-cyrillic {
+  font-family: 'PT Sans', 'Roboto', 'Arial', sans-serif;
+  letter-spacing: -0.01em;
 }
 
-/* Speech Synthesis Indicator */
-body.tts-speaking button:focus,
-body.tts-speaking .tts-active {
-  animation: pulseSpeaking 1.2s infinite ease-in-out;
+.font-cursive {
+  font-family: 'Caveat', 'Marck Script', cursive;
 }
 
-@keyframes pulseSpeaking {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
-  }
+/* Card Hover and Focus micro-interactions */
+.letter-card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Glassmorphism Classes */
-.glass-nav {
+.letter-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Custom Checkbox / Radio styling */
-input[type="radio"]:checked + div {
-  border-color: #2563eb;
-  background-color: rgba(37, 99, 235, 0.05);
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.8);
 }

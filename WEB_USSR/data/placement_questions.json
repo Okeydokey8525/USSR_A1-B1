@@ -1,0 +1,118 @@
+{
+  "skills": [
+    "Alphabet & Phonetics",
+    "Vocabulary",
+    "Grammar & Cases",
+    "Reading Comprehension",
+    "Listening"
+  ],
+  "questions": [
+    {
+      "id": "pl_01",
+      "skill": "Alphabet & Phonetics",
+      "level": "Pre-A1",
+      "question": "Trong từ «молоко́» (sữa), chữ 'o' nào được phát âm rõ là [o]?",
+      "options": [
+        "Chữ 'o' thứ nhất",
+        "Chữ 'o' thứ hai",
+        "Chữ 'o' thứ ba mang trọng âm"
+      ],
+      "correct": 2,
+      "weight": 1
+    },
+    {
+      "id": "pl_02",
+      "skill": "Vocabulary",
+      "level": "A1.1",
+      "question": "Từ nào sau đây là danh từ giống cái (женский род)?",
+      "options": [
+        "дом",
+        "книга",
+        "окно",
+        "студент"
+      ],
+      "correct": 1,
+      "weight": 1
+    },
+    {
+      "id": "pl_03",
+      "skill": "Grammar & Cases",
+      "level": "A1.2",
+      "question": "Điền dạng đúng: «Я вижу красивую ... (девушка).»",
+      "options": [
+        "девушка",
+        "девушку",
+        "девушке",
+        "девушкой"
+      ],
+      "correct": 1,
+      "weight": 2
+    },
+    {
+      "id": "pl_04",
+      "skill": "Grammar & Cases",
+      "level": "A1.2",
+      "question": "Điền dạng đúng: «Мы живём в ... (Россия).»",
+      "options": [
+        "России",
+        "Россию",
+        "Россией",
+        "Россия"
+      ],
+      "correct": 0,
+      "weight": 2
+    },
+    {
+      "id": "pl_05",
+      "skill": "Grammar & Cases",
+      "level": "A2.1",
+      "question": "Chọn thể động từ phù hợp: «Вчера я весь вечер ... (читать / прочитать) роман.»",
+      "options": [
+        "читал (НСВ)",
+        "прочитал (СВ)",
+        "прочитаю"
+      ],
+      "correct": 0,
+      "weight": 2
+    },
+    {
+      "id": "pl_06",
+      "skill": "Grammar & Cases",
+      "level": "A2.2",
+      "question": "Chọn động từ chuyển động: «Каждое лето мы ... (ехать / ездить) на море.»",
+      "options": [
+        "едем (một chiều)",
+        "ездим (đa chiều / lặp lại)",
+        "поехали"
+      ],
+      "correct": 1,
+      "weight": 2
+    },
+    {
+      "id": "pl_07",
+      "skill": "Reading Comprehension",
+      "level": "A2.2",
+      "question": "Đọc câu: «Поезд прибывает на станцию в 15:45.» Tàu đến ga lúc mấy giờ?",
+      "options": [
+        "15 giờ 15 phút",
+        "15 giờ 45 phút",
+        "16 giờ 45 phút"
+      ],
+      "correct": 1,
+      "weight": 2
+    },
+    {
+      "id": "pl_08",
+      "skill": "Grammar & Cases",
+      "level": "B1.1",
+      "question": "Điền liên từ học thuật: «... трудных условий, студенты успешно сдали экзамен.»",
+      "options": [
+        "Несмотря на (Acc)",
+        "Благодаря (Dat)",
+        "Из-за (Gen)"
+      ],
+      "correct": 0,
+      "weight": 3
+    }
+  ]
+}

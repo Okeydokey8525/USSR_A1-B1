@@ -1,387 +1,343 @@
 /**
- * WEB_USSR - Interactive 3D Flashcard & Vocabulary Engine
+ * WEB_USSR - 3D Flashcards & Leitner SRS Multi-Mode Study Engine
  */
 const FlashcardModule = (() => {
-  let allVocab = [];
-  let filteredVocab = [];
+  let vocabList = [];
   let currentIndex = 0;
   let isFlipped = false;
-  let masteredIds = new Set();
-  let viewMode = 'card'; // 'card' or 'grid'
+  let currentLevel = 'all';
+  let currentTopic = 'all';
+  let searchTerm = '';
+  let studyMode = 'flip'; // 'flip', 'quiz_ru_vi', 'quiz_audio'
 
   async function init() {
     try {
-      loadMasteredFromStorage();
       const resp = await fetch('data/vocab_lexical_min.json');
-      allVocab = await resp.json();
-      filteredVocab = [...allVocab];
-      
+      vocabList = await resp.json();
+
       setupFilters();
-      setupCardEvents();
-      renderCurrentCard();
-      renderStats();
+      setupStudyModes();
+      renderCard();
+      updateStats();
     } catch (e) {
-      console.error('Failed to load vocab data:', e);
+      console.error('Failed to load vocabulary data:', e);
     }
-  }
-
-  function loadMasteredFromStorage() {
-    try {
-      const saved = localStorage.getItem('ussr_mastered_words');
-      if (saved) {
-        masteredIds = new Set(JSON.parse(saved));
-      }
-    } catch (e) {
-      masteredIds = new Set();
-    }
-  }
-
-  function saveMasteredToStorage() {
-    localStorage.setItem('ussr_mastered_words', JSON.stringify(Array.from(masteredIds)));
-    renderStats();
   }
 
   function setupFilters() {
-    const levelSelect = document.getElementById('vocab-level-filter');
-    const topicSelect = document.getElementById('vocab-topic-filter');
-    const searchInput = document.getElementById('vocab-search-input');
-    const viewCardBtn = document.getElementById('view-card-btn');
-    const viewGridBtn = document.getElementById('view-grid-btn');
-
-    // Populate topics dropdown
+    // Topic filter
+    const topicSelect = document.getElementById('flashcard-topic-select');
     if (topicSelect) {
-      const topics = Array.from(new Set(allVocab.map(v => v.topic)));
-      topicSelect.innerHTML = '<option value="all">Tất cả chủ đề</option>' + 
-        topics.map(t => `<option value="${t}">${t}</option>`).join('');
+      const topics = ['all', ...new Set(vocabList.map(v => v.topic))];
+      topicSelect.innerHTML = topics.map(t => `<option value="${t}">${t === 'all' ? 'Tất cả chủ đề' : t}</option>`).join('');
+      topicSelect.addEventListener('change', (e) => {
+        currentTopic = e.target.value;
+        currentIndex = 0;
+        isFlipped = false;
+        renderCard();
+      });
     }
 
-    const applyFilter = () => {
-      const level = levelSelect ? levelSelect.value : 'all';
-      const topic = topicSelect ? topicSelect.value : 'all';
-      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-
-      filteredVocab = allVocab.filter(item => {
-        const matchLevel = level === 'all' || item.level === level;
-        const matchTopic = topic === 'all' || item.topic === topic;
-        const matchQuery = !query || 
-          item.word.toLowerCase().includes(query) || 
-          item.meaning.toLowerCase().includes(query) ||
-          item.phonetic.toLowerCase().includes(query);
-        return matchLevel && matchTopic && matchQuery;
+    // Level filter
+    const levelSelect = document.getElementById('flashcard-level-select');
+    if (levelSelect) {
+      levelSelect.addEventListener('change', (e) => {
+        currentLevel = e.target.value;
+        currentIndex = 0;
+        isFlipped = false;
+        renderCard();
       });
+    }
 
-      currentIndex = 0;
-      isFlipped = false;
-      if (viewMode === 'card') {
-        renderCurrentCard();
-      } else {
-        renderGridView();
-      }
-      updateCardCounter();
-    };
-
-    if (levelSelect) levelSelect.addEventListener('change', applyFilter);
-    if (topicSelect) topicSelect.addEventListener('change', applyFilter);
-    if (searchInput) searchInput.addEventListener('input', applyFilter);
-
-    if (viewCardBtn && viewGridBtn) {
-      viewCardBtn.addEventListener('click', () => {
-        viewMode = 'card';
-        viewCardBtn.classList.add('bg-blue-600', 'text-white');
-        viewCardBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        viewGridBtn.classList.remove('bg-blue-600', 'text-white');
-        viewGridBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        document.getElementById('flashcard-single-view').classList.remove('hidden');
-        document.getElementById('flashcard-grid-view').classList.add('hidden');
-        renderCurrentCard();
-      });
-
-      viewGridBtn.addEventListener('click', () => {
-        viewMode = 'grid';
-        viewGridBtn.classList.add('bg-blue-600', 'text-white');
-        viewGridBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        viewCardBtn.classList.remove('bg-blue-600', 'text-white');
-        viewCardBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-        document.getElementById('flashcard-single-view').classList.add('hidden');
-        document.getElementById('flashcard-grid-view').classList.remove('hidden');
-        renderGridView();
+    // Search
+    const searchInput = document.getElementById('flashcard-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value.toLowerCase().trim();
+        currentIndex = 0;
+        isFlipped = false;
+        renderCard();
       });
     }
   }
 
-  function setupCardEvents() {
-    const card = document.getElementById('main-flashcard');
-    if (card) {
-      card.addEventListener('click', (e) => {
-        // Prevent flipping if clicked on sound button or mastered button
-        if (e.target.closest('button')) return;
-        flipCard();
+  function setupStudyModes() {
+    const modeBtns = document.querySelectorAll('.fc-mode-btn');
+    modeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeBtns.forEach(b => {
+          b.classList.remove('active', 'bg-blue-600', 'text-white');
+          b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        });
+        btn.classList.add('active', 'bg-blue-600', 'text-white');
+        btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        studyMode = btn.dataset.mode;
+        renderCard();
       });
-    }
-
-    const prevBtn = document.getElementById('card-prev-btn');
-    const nextBtn = document.getElementById('card-next-btn');
-    const shuffleBtn = document.getElementById('card-shuffle-btn');
-    const flipBtn = document.getElementById('card-flip-btn');
-
-    if (prevBtn) prevBtn.addEventListener('click', prevCard);
-    if (nextBtn) nextBtn.addEventListener('click', nextCard);
-    if (shuffleBtn) shuffleBtn.addEventListener('click', shuffleCards);
-    if (flipBtn) flipBtn.addEventListener('click', flipCard);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      // only active if in flashcard tab
-      const activeTab = document.querySelector('.tab-content:not(.hidden)');
-      if (!activeTab || activeTab.id !== 'tab-flashcard') return;
-
-      if (e.code === 'Space') {
-        e.preventDefault();
-        flipCard();
-      } else if (e.code === 'ArrowLeft') {
-        prevCard();
-      } else if (e.code === 'ArrowRight') {
-        nextCard();
-      }
     });
   }
 
-  function getGenderBorderClass(gender) {
-    switch (gender) {
-      case 'он': return 'border-blue-500 shadow-blue-500/10 text-blue-600 dark:text-blue-400';
-      case 'она': return 'border-rose-500 shadow-rose-500/10 text-rose-600 dark:text-rose-400';
-      case 'оно': return 'border-emerald-500 shadow-emerald-500/10 text-emerald-600 dark:text-emerald-400';
-      case 'verb': return 'border-amber-500 shadow-amber-500/10 text-amber-600 dark:text-amber-400';
-      case 'adj': return 'border-purple-500 shadow-purple-500/10 text-purple-600 dark:text-purple-400';
-      default: return 'border-indigo-500 shadow-indigo-500/10 text-indigo-600 dark:text-indigo-400';
-    }
+  function getFilteredList() {
+    return vocabList.filter(item => {
+      const matchLevel = currentLevel === 'all' || item.level === currentLevel;
+      const matchTopic = currentTopic === 'all' || item.topic === currentTopic;
+      const matchSearch = !searchTerm || 
+        item.word.toLowerCase().includes(searchTerm) || 
+        item.meaning.toLowerCase().includes(searchTerm) ||
+        item.phonetic.toLowerCase().includes(searchTerm);
+      return matchLevel && matchTopic && matchSearch;
+    });
   }
 
-  function getGenderBadge(gender) {
-    switch (gender) {
-      case 'он': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">Giống đực (он)</span>';
-      case 'она': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300">Giống cái (она)</span>';
-      case 'оно': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">Giống trung (оно)</span>';
-      case 'verb': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">Động từ</span>';
-      case 'adj': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">Tính từ</span>';
-      case 'adv': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300">Trạng từ</span>';
-      case 'pron': return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">Đại từ</span>';
-      default: return '<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Cụm từ</span>';
-    }
-  }
+  function renderCard() {
+    const container = document.getElementById('flashcard-render-area');
+    if (!container) return;
 
-  function flipCard() {
-    const cardInner = document.getElementById('flashcard-inner');
-    if (!cardInner) return;
-    isFlipped = !isFlipped;
-    if (isFlipped) {
-      cardInner.classList.add('rotate-y-180');
-    } else {
-      cardInner.classList.remove('rotate-y-180');
-    }
-  }
-
-  function renderCurrentCard() {
-    const cardContainer = document.getElementById('flashcard-card-content');
-    if (!cardContainer) return;
-
-    if (filteredVocab.length === 0) {
-      cardContainer.innerHTML = `
-        <div class="text-center py-16 text-slate-500">
-          <p class="text-lg font-medium">Không tìm thấy từ vựng phù hợp với bộ lọc.</p>
+    const filtered = getFilteredList();
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="py-16 text-center text-slate-400 space-y-2">
+          <span class="text-4xl">🔍</span>
+          <p class="font-bold text-sm">Không tìm thấy từ vựng nào phù hợp với bộ lọc hiện tại.</p>
         </div>
       `;
       return;
     }
 
-    const item = filteredVocab[currentIndex];
-    const isMastered = masteredIds.has(item.id);
-    const borderClass = getGenderBorderClass(item.gender);
-    const genderBadge = getGenderBadge(item.gender);
+    if (currentIndex >= filtered.length) currentIndex = 0;
+    const item = filtered[currentIndex];
 
-    const cardInner = document.getElementById('flashcard-inner');
-    if (cardInner && isFlipped) {
-      isFlipped = false;
-      cardInner.classList.remove('rotate-y-180');
+    // Gender styling
+    const genderBorder = {
+      'он': 'border-blue-500 bg-blue-500/10 text-blue-600',
+      'она': 'border-rose-500 bg-rose-500/10 text-rose-600',
+      'оно': 'border-emerald-500 bg-emerald-500/10 text-emerald-600',
+      'động từ': 'border-amber-500 bg-amber-500/10 text-amber-600',
+      'tính từ': 'border-purple-500 bg-purple-500/10 text-purple-600'
+    }[item.gender] || 'border-slate-300 bg-slate-100 text-slate-600';
+
+    if (studyMode === 'flip') {
+      renderFlipCard(container, item, genderBorder, filtered.length);
+    } else if (studyMode === 'quiz_ru_vi') {
+      renderQuizCard(container, item, filtered);
+    } else if (studyMode === 'quiz_audio') {
+      renderAudioQuizCard(container, item, filtered);
     }
-
-    // Front Side
-    document.getElementById('card-front-word').textContent = item.word;
-    document.getElementById('card-front-phonetic').textContent = item.phonetic;
-    document.getElementById('card-front-topic').textContent = `${item.level} • ${item.topic}`;
-    document.getElementById('card-front-gender').innerHTML = genderBadge;
-
-    const frontCard = document.getElementById('card-front');
-    if (frontCard) {
-      frontCard.className = `flashcard-face absolute inset-0 w-full h-full bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-2 ${borderClass} shadow-xl backface-hidden`;
-    }
-
-    // Back Side
-    document.getElementById('card-back-meaning').textContent = item.meaning;
-    document.getElementById('card-back-example-ru').textContent = item.example_ru;
-    document.getElementById('card-back-example-vi').textContent = item.example_vi;
-
-    const backCard = document.getElementById('card-back');
-    if (backCard) {
-      backCard.className = `flashcard-face absolute inset-0 w-full h-full bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-2 ${borderClass} shadow-xl rotate-y-180 backface-hidden`;
-    }
-
-    // Mastered button state
-    const masterBtn = document.getElementById('card-master-btn');
-    if (masterBtn) {
-      if (isMastered) {
-        masterBtn.innerHTML = `
-          <svg class="w-5 h-5 text-emerald-500 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Đã thuộc</span>
-        `;
-        masterBtn.classList.add('border-emerald-500/50', 'bg-emerald-50', 'dark:bg-emerald-950/30');
-      } else {
-        masterBtn.innerHTML = `
-          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Đánh dấu đã thuộc</span>
-        `;
-        masterBtn.classList.remove('border-emerald-500/50', 'bg-emerald-50', 'dark:bg-emerald-950/30');
-      }
-
-      masterBtn.onclick = (e) => {
-        e.stopPropagation();
-        toggleMastered(item.id);
-      };
-    }
-
-    // Sound button bindings
-    const soundFrontBtn = document.getElementById('card-front-sound-btn');
-    const soundBackBtn = document.getElementById('card-back-sound-btn');
-
-    if (soundFrontBtn) {
-      soundFrontBtn.onclick = (e) => {
-        e.stopPropagation();
-        RussianSpeech.speak(item.word);
-      };
-    }
-    if (soundBackBtn) {
-      soundBackBtn.onclick = (e) => {
-        e.stopPropagation();
-        RussianSpeech.speak(item.example_ru);
-      };
-    }
-
-    updateCardCounter();
   }
 
-  function toggleMastered(id) {
-    if (masteredIds.has(id)) {
-      masteredIds.delete(id);
-    } else {
-      masteredIds.add(id);
+  function renderFlipCard(container, item, genderBorder, total) {
+    container.innerHTML = `
+      <div class="max-w-md mx-auto space-y-6">
+        <!-- Progress Counter -->
+        <div class="flex items-center justify-between text-xs font-bold text-slate-400">
+          <span>Thẻ ${currentIndex + 1} / ${total}</span>
+          <span class="px-2.5 py-0.5 rounded-full ${genderBorder} font-bold text-[11px]">${item.gender}</span>
+        </div>
+
+        <!-- 3D Card Container -->
+        <div class="perspective-1000 w-full h-80 sm:h-96 cursor-pointer select-none" onclick="FlashcardModule.toggleFlip()">
+          <div class="relative w-full h-full duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}">
+            
+            <!-- Front -->
+            <div class="absolute inset-0 w-full h-full bg-white dark:bg-slate-800 rounded-3xl p-8 border-2 border-slate-200 dark:border-slate-700 shadow-xl flex flex-col justify-between items-center text-center backface-hidden">
+              <div class="w-full flex justify-between items-center text-xs">
+                <span class="px-2.5 py-1 rounded-lg bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-extrabold">${item.level}</span>
+                <span class="text-slate-400 font-medium">${item.topic}</span>
+              </div>
+
+              <div class="my-auto space-y-2">
+                <h3 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white font-cyrillic tracking-tight">
+                  ${item.word}
+                </h3>
+                <p class="text-sm font-mono text-blue-600 dark:text-blue-400">${item.phonetic}</p>
+                ${item.plural_form && item.plural_form !== '-' ? `
+                  <div class="pt-2 text-xs text-slate-500 font-cyrillic">
+                    Số nhiều: <strong class="text-slate-800 dark:text-slate-200">${item.plural_form}</strong>
+                  </div>
+                ` : ''}
+              </div>
+
+              <div class="w-full flex items-center justify-center gap-2 text-xs text-slate-400">
+                <span>Bấm vào thẻ để xem nghĩa ↻</span>
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-700 to-indigo-900 rounded-3xl p-8 text-white shadow-xl flex flex-col justify-between items-center text-center rotate-y-180 backface-hidden">
+              <div class="w-full flex justify-between items-center text-xs text-blue-200">
+                <span class="font-bold font-cyrillic">${item.word}</span>
+                <span class="uppercase tracking-widest text-[10px]">Tiếng Việt</span>
+              </div>
+
+              <div class="my-auto space-y-4">
+                <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                  ${item.meaning}
+                </h3>
+                
+                <div class="p-3.5 rounded-2xl bg-white/10 border border-white/15 text-left text-xs space-y-1 font-cyrillic">
+                  <p class="font-bold text-blue-100">Ví dụ: ${item.example_ru}</p>
+                  <p class="text-blue-200 italic font-sans font-normal">${item.example_vi}</p>
+                </div>
+              </div>
+
+              <button class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
+                      onclick="event.stopPropagation(); RussianSpeech.speak('${item.audio_text}')">
+                🔊 Nghe phát âm
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-between gap-3">
+          <button class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-400 text-slate-700 dark:text-slate-200 flex items-center justify-center shadow-sm"
+                  onclick="FlashcardModule.prevCard()">
+            ◀
+          </button>
+
+          <button class="flex-1 py-3.5 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md transition-colors"
+                  onclick="FlashcardModule.handleCardAction(false)">
+            Chưa thuộc (Hộp 1) ❌
+          </button>
+
+          <button class="flex-1 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition-colors"
+                  onclick="FlashcardModule.handleCardAction(true)">
+            Đã nhớ (+1 Hộp) ✓
+          </button>
+
+          <button class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-400 text-slate-700 dark:text-slate-200 flex items-center justify-center shadow-sm"
+                  onclick="FlashcardModule.nextCard()">
+            ▶
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderQuizCard(container, item, list) {
+    // Generate 3 wrong options
+    const otherMeanings = list.filter(v => v.id !== item.id).map(v => v.meaning);
+    const shuffledWrong = otherMeanings.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const options = [item.meaning, ...shuffledWrong].sort(() => 0.5 - Math.random());
+
+    container.innerHTML = `
+      <div class="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-xl space-y-6 text-center">
+        <div class="space-y-1">
+          <span class="text-xs font-bold text-slate-400">Chọn nghĩa tiếng Việt đúng:</span>
+          <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white font-cyrillic">${item.word}</h3>
+          <p class="text-xs font-mono text-blue-600">${item.phonetic}</p>
+        </div>
+
+        <div class="space-y-2.5 text-left">
+          ${options.map(opt => `
+            <button class="w-full p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-950/30 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 transition-all"
+                    onclick="FlashcardModule.checkQuizAnswer('${item.id}', '${opt}', '${item.meaning}', this)">
+              ${opt}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderAudioQuizCard(container, item, list) {
+    const otherWords = list.filter(v => v.id !== item.id).map(v => v.word);
+    const shuffledWrong = otherWords.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const options = [item.word, ...shuffledWrong].sort(() => 0.5 - Math.random());
+
+    container.innerHTML = `
+      <div class="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-xl space-y-6 text-center">
+        <div class="space-y-3">
+          <span class="text-xs font-bold text-slate-400">Nghe âm thanh và chọn từ đúng:</span>
+          <button class="w-16 h-16 rounded-3xl bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center mx-auto text-2xl shadow-lg transition-transform hover:scale-105"
+                  onclick="RussianSpeech.speak('${item.audio_text}')">
+            🔊
+          </button>
+        </div>
+
+        <div class="space-y-2.5 text-left">
+          ${options.map(opt => `
+            <button class="w-full p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-950/30 text-sm sm:text-base font-bold font-cyrillic text-slate-800 dark:text-slate-200 transition-all"
+                    onclick="FlashcardModule.checkQuizAnswer('${item.id}', '${opt}', '${item.word}', this)">
+              ${opt}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    // Auto play audio once
+    setTimeout(() => RussianSpeech.speak(item.audio_text), 300);
+  }
+
+  function checkQuizAnswer(cardId, selected, correct, btnEl) {
+    const isCorrect = selected === correct;
+    const parent = btnEl.closest('.space-y-2\\.5');
+    const allBtns = parent.querySelectorAll('button');
+    allBtns.forEach(b => b.disabled = true);
+
+    if (isCorrect) {
+      btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-700');
       App.triggerConfetti();
+      handleCardAction(true);
+    } else {
+      btnEl.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-700');
+      handleCardAction(false);
     }
-    saveMasteredToStorage();
-    renderCurrentCard();
+
+    setTimeout(() => {
+      nextCard();
+    }, 1200);
   }
 
-  function updateCardCounter() {
-    const counter = document.getElementById('card-counter');
-    if (counter) {
-      const total = filteredVocab.length;
-      const current = total > 0 ? currentIndex + 1 : 0;
-      counter.textContent = `${current} / ${total}`;
+  function handleCardAction(isCorrect) {
+    const filtered = getFilteredList();
+    const item = filtered[currentIndex];
+    if (item && window.AdaptiveLearningOS) {
+      AdaptiveLearningOS.recordSRSAnswer(item.id, isCorrect);
+      if (isCorrect) {
+        AdaptiveLearningOS.dailyState.vocabLearned++;
+        AdaptiveLearningOS.saveDailyState();
+      }
+    }
+    nextCard();
+  }
+
+  function toggleFlip() {
+    isFlipped = !isFlipped;
+    renderCard();
+  }
+
+  function nextCard() {
+    const filtered = getFilteredList();
+    if (filtered.length > 0) {
+      currentIndex = (currentIndex + 1) % filtered.length;
+      isFlipped = false;
+      renderCard();
     }
   }
 
   function prevCard() {
-    if (filteredVocab.length === 0) return;
-    currentIndex = (currentIndex - 1 + filteredVocab.length) % filteredVocab.length;
-    renderCurrentCard();
-  }
-
-  function nextCard() {
-    if (filteredVocab.length === 0) return;
-    currentIndex = (currentIndex + 1) % filteredVocab.length;
-    renderCurrentCard();
-  }
-
-  function shuffleCards() {
-    for (let i = filteredVocab.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [filteredVocab[i], filteredVocab[j]] = [filteredVocab[j], filteredVocab[i]];
+    const filtered = getFilteredList();
+    if (filtered.length > 0) {
+      currentIndex = (currentIndex - 1 + filtered.length) % filtered.length;
+      isFlipped = false;
+      renderCard();
     }
-    currentIndex = 0;
-    renderCurrentCard();
-    App.showToast('Đã xáo trộn thứ tự từ vựng!', 'info');
   }
 
-  function renderGridView() {
-    const container = document.getElementById('flashcard-grid-container');
-    if (!container) return;
-
-    if (filteredVocab.length === 0) {
-      container.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">Không tìm thấy từ vựng.</div>`;
-      return;
-    }
-
-    container.innerHTML = filteredVocab.map(item => {
-      const isMastered = masteredIds.has(item.id);
-      return `
-        <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between mb-2">
-              <div>
-                <span class="text-lg font-bold text-slate-800 dark:text-white font-cyrillic">${item.word}</span>
-                <span class="block text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400">${item.phonetic}</span>
-              </div>
-              <button class="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors"
-                      onclick="RussianSpeech.speak('${item.word}')">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
-              </button>
-            </div>
-            <p class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2">${item.meaning}</p>
-            <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400">
-              <p class="italic text-slate-700 dark:text-slate-300">${item.example_ru}</p>
-              <p class="text-[11px] text-slate-500 mt-0.5">${item.example_vi}</p>
-            </div>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-400">${item.level} • ${item.topic}</span>
-            <button class="text-xs ${isMastered ? 'text-emerald-500 font-bold' : 'text-slate-400 hover:text-slate-600'}"
-                    onclick="FlashcardModule.toggleMasteredFromGrid('${item.id}')">
-              ${isMastered ? '✓ Đã thuộc' : '+ Đánh dấu'}
-            </button>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function toggleMasteredFromGrid(id) {
-    toggleMastered(id);
-    renderGridView();
-  }
-
-  function renderStats() {
-    const totalCountEl = document.getElementById('stat-vocab-total');
-    const masteredCountEl = document.getElementById('stat-vocab-mastered');
-    const progressBar = document.getElementById('stat-vocab-progress-bar');
-    const progressText = document.getElementById('stat-vocab-percent');
-
-    const total = allVocab.length || 110;
-    const mastered = masteredIds.size;
-    const percent = Math.min(100, Math.round((mastered / total) * 100));
-
-    if (totalCountEl) totalCountEl.textContent = total;
-    if (masteredCountEl) masteredCountEl.textContent = mastered;
-    if (progressBar) progressBar.style.width = `${percent}%`;
-    if (progressText) progressText.textContent = `${percent}%`;
+  function updateStats() {
+    //
   }
 
   return {
     init,
-    prevCard,
+    toggleFlip,
     nextCard,
-    flipCard,
-    shuffleCards,
-    toggleMastered,
-    toggleMasteredFromGrid
+    prevCard,
+    handleCardAction,
+    checkQuizAnswer
   };
 })();
 

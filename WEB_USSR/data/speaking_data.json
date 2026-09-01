@@ -1,0 +1,56 @@
+{
+  "topics": [
+    {
+      "id": "speak_01",
+      "level": "A1",
+      "title": "1. Рассказ о себе (Tự giới thiệu bản thân)",
+      "guide_vi": "Nói trong vòng 1-2 phút giới thiệu tên, tuổi, quê quán, nghề nghiệp hiện tại và sở thích.",
+      "target_phrases": [
+        "Меня зовут... (Tên tôi là...)",
+        "Я родился и вырос во Вьетнаме. (Tôi sinh ra và lớn lên ở Việt Nam.)",
+        "По профессии я... / Сейчас я студент... (Nghề nghiệp của tôi là... / Hiện tôi là sinh viên...)",
+        "В свободное время я увлекаюсь спортом. (Lúc rảnh tôi đam mê thể thao.)"
+      ],
+      "sample_speech": "Здравствуйте! Меня зовут Луонг. Мне двадцать лет. Я приехал из Вьетнама. Сейчас я живу в Москве и изучаю русский язык в университете. Я люблю читать книги и играть в футбол.",
+      "evaluation_criteria": [
+        "Phát âm rõ ràng các âm [р], [ш], [щ]",
+        "Nhấn đúng trọng âm trong từ (молоко́, студе́нт)",
+        "Giảm âm chính xác của chữ О thành [а] khi không có trọng âm"
+      ]
+    },
+    {
+      "id": "speak_02",
+      "level": "A1",
+      "title": "2. Моя семья (Gia đình của tôi)",
+      "guide_vi": "Mô tả về gia đình: Có bao nhiêu người, bố mẹ làm nghề gì, anh chị em học ở đâu.",
+      "target_phrases": [
+        "У меня большая и дружная семья. (Tôi có gia đình lớn và hòa thuận.)",
+        "Мой папа работает инженером. (Bố tôi làm kỹ sư.)",
+        "Моя мама — учительница в школе. (Mẹ tôi là giáo viên trường học.)",
+        "Мы любим проводить выходные вместе. (Chúng tôi thích dành ngày cuối tuần bên nhau.)"
+      ],
+      "sample_speech": "Моя семья состоит из четырёх человек: папа, мама, младшая сестра и я. Мой папа работает инженером, а мама — врачом. Моя сестра учится в школе. Мы очень дружная семья.",
+      "evaluation_criteria": [
+        "Dùng đúng Cách 5 chỉ nghề nghiệp (работает инженером, врачом)",
+        "Dùng đúng đại từ sở hữu (мой папа, моя мама)"
+      ]
+    },
+    {
+      "id": "speak_03",
+      "level": "A1",
+      "title": "3. Мой рабочий день (Một ngày làm việc & học tập)",
+      "guide_vi": "Kể lại lịch trình hàng ngày: Thức dậy lúc mấy giờ, ăn sáng, đi học, học bài và đi ngủ.",
+      "target_phrases": [
+        "Я обычно встаю в семь часов утра. (Tôi thường dậy lúc 7 giờ sáng.)",
+        "После завтрака я еду на учёбу на метро. (Sau bữa sáng tôi đi học bằng metro.)",
+        "Вечером я делаю домашнее задание. (Buổi tối tôi làm bài tập về nhà.)",
+        "Я ложусь спать в одиннадцать вечера. (Tôi đi ngủ lúc 11 giờ đêm.)"
+      ],
+      "sample_speech": "Каждый день я встаю в семь часов. Утром я завтракаю и еду в университет. Занятия начинаются в девять утра. Вечером я гуляю с друзьями, делаю уроки и ложусь спать в одиннадцать часов.",
+      "evaluation_criteria": [
+        "Chia đúng động từ phản thân (встаю, ложусь)",
+        "Dùng đúng từ chỉ thời gian (утром, днём, вечером)"
+      ]
+    }
+  ]
+}
