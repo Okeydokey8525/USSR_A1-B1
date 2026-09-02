@@ -232,5 +232,29 @@
       "meaning": "Bắt đầu đi (khởi hành)",
       "example": "поехать на экскурсию (khởi hành đi tham quan)"
     }
-  ]
+  ],
+  "pedagogical_guide": {
+    "title": "Hệ Thống Thể Động Từ (НСВ vs СВ) Theo Tình Huống",
+    "core_principles": [
+      "1. Quá trình kéo dài vs Kết quả: 'Я читал 2 часа (НСВ)' vs 'Я прочитал книгу за 2 часа (СВ)'.",
+      "2. Thói quen lặp lại vs Một lần duy nhất: 'Каждый день я делаю зарядку (НСВ)' vs 'Вчера я сделал зарядку (СВ)'.",
+      "3. Sau động từ khiếm khuyết: 'Я хочу читать (thích quá trình đọc)' vs 'Я хочу прочитать эту книгу (muốn đọc xong để biết kết thúc)'.",
+      "4. Thì tương lai: НСВ dùng 'буду + Inf' (sẽ làm việc gì đó), СВ dùng 'chia trực tiếp' (sẽ làm xong việc gì đó)."
+    ]
+  },
+  "motion_timeline_guide": {
+    "title": "Dòng Thời Gian Động Từ Chuyển Động (Motion Verbs Timeline)",
+    "unidirectional": {
+      "symbol": "➔",
+      "name": "Một chiều (Однонаправленные: идти, ехать)",
+      "meaning": "Chuyển động đang diễn ra tại một thời điểm cụ thể hướng tới một đích đến xác định.",
+      "example": "Сейчас я иду в университет (Tôi đang đi bộ đến trường)."
+    },
+    "multidirectional": {
+      "symbol": "⇄",
+      "name": "Đa chiều / Khứ hồi (Неоднонаправленные: ходить, ездить)",
+      "meaning": "Chuyển động lặp đi lặp lại thường xuyên (thói quen), đi lại tự do không định hướng, hoặc đi rồi quay về.",
+      "example": "Каждый день я хожу в университет (Mỗi ngày tôi đều đi bộ đến trường rồi về)."
+    }
+  }
 }

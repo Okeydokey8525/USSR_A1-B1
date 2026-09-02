@@ -550,110 +550,56 @@
   ],
   "phonetic_rules": [
     {
-      "id": "rule_o_reduction",
-      "title": "1. Xu hướng giảm âm của chữ 'О' (Редукция О)",
-      "description": "Khi chữ 'О' KHÔNG mang trọng âm, nó thường có xu hướng giảm âm và phát âm thành âm [а] nhẹ. Mức độ giảm âm phụ thuộc vào vị trí âm tiết đứng trước hay sau trọng âm.",
+      "id": "rule_vowel_reduction",
+      "title": "Quy Luật Giảm Âm Vị Trí (Позиционная редукция гласных)",
+      "description": "Trong tiếng Nga, nguyên âm không mang trọng âm không được phát âm đầy đủ mà bị giảm âm (biến đổi khẩu hình và thời lượng) tùy theo vị trí so với trọng âm: \n1. Vị trí tiền trọng âm bậc 1: chữ О phát âm thành [ʌ] (A mở ngắn).\n2. Các vị trí không trọng âm khác: chữ О/А giảm sâu thành Schwa [ə] (âm trung tính lướt nhanh).\n3. Sau phụ âm mềm: chữ Е và Я không trọng âm chuyển thành âm [иэ] (âm I ngả E).",
       "examples": [
-        {
-          "word": "молоко́",
-          "pronunciation": "[ма-ла-ко́]",
-          "meaning": "sữa (chữ 'o' cuối mang trọng âm, 2 chữ 'o' đầu giảm âm)"
-        },
-        {
-          "word": "хорошо́",
-          "pronunciation": "[ха-ра-шо́]",
-          "meaning": "tốt / được"
-        },
-        {
-          "word": "соба́ка",
-          "pronunciation": "[са-ба́-ка]",
-          "meaning": "con chó"
-        },
         {
           "word": "окно́",
-          "pronunciation": "[ак-но́]",
-          "meaning": "cửa sổ"
-        }
-      ]
-    },
-    {
-      "id": "rule_e_ya_reduction",
-      "title": "2. Xu hướng giảm âm của chữ 'Е' và 'Я' (Редукция Е / Я)",
-      "description": "Khi chữ 'Е' và 'Я' đứng ở vị trí KHÔNG có trọng âm (đặc biệt đứng trước âm tiết mang trọng âm), chúng bị giảm âm và phát âm gần như âm [и] mềm nhẹ.",
-      "examples": [
-        {
-          "word": "язы́к",
-          "pronunciation": "[и-зы́к]",
-          "meaning": "ngôn ngữ / cái lưỡi"
+          "pronunciation": "[ʌк-но́]",
+          "meaning": "cửa sổ (O tiền trọng âm bậc 1 -> [ʌ])"
         },
         {
-          "word": "метро́",
-          "pronunciation": "[мь-тро́]",
-          "meaning": "tàu điện ngầm"
+          "word": "молоко́",
+          "pronunciation": "[мә-лʌ-ко́]",
+          "meaning": "sữa (O tiền trọng âm bậc 2 -> [ə], bậc 1 -> [ʌ])"
         },
         {
           "word": "сестра́",
-          "pronunciation": "[си-стра́]",
-          "meaning": "chị / em gái"
+          "pronunciation": "[с'иэ-стра́]",
+          "meaning": "chị/em gái (E sau phụ âm mềm -> [иэ])"
         },
         {
-          "word": "часы́",
-          "pronunciation": "[чи-сы́]",
-          "meaning": "đồng hồ / giờ giấc"
+          "word": "язы́к",
+          "pronunciation": "[й'иэ-зы́к]",
+          "meaning": "ngôn ngữ (Я không trọng âm -> [иэ])"
         }
       ]
     },
     {
-      "id": "rule_devoicing",
-      "title": "3. Vô thanh hóa phụ âm cuối từ (Оглушение согласных)",
-      "description": "Các phụ âm hữu thanh (б, в, г, д, ж, з) khi đứng ở vị trí kết thúc từ sẽ bị vô thanh hóa thành các âm tương ứng (п, ф, к, т, ш, с).",
+      "id": "rule_voicing_assimilation",
+      "title": "Định Luật Đồng Hóa Ngược Phụ Âm (Регрессивная ассимиляция согласных)",
+      "description": "Khi hai phụ âm đứng cạnh nhau, phụ âm đứng sau chi phối phụ âm đứng trước: \n1. Vô thanh hóa (Оглушение): Phụ âm hữu thanh đứng trước phụ âm vô thanh bị mất độ rung thanh đới (б->п, в->ф, г->к, д->т, ж->ш, з->с). Cuối từ luôn bị vô thanh hóa.\n2. Hữu thanh hóa (Озвончение): Phụ âm vô thanh đứng trước phụ âm hữu thanh (trừ в, р, л, м, н, й) sẽ bị kích hoạt rung thanh đới.",
       "examples": [
         {
           "word": "хлеб",
           "pronunciation": "[хлеп]",
-          "meaning": "bánh mì (chữ 'б' cuối đọc thành [п])"
-        },
-        {
-          "word": "друг",
-          "pronunciation": "[друк]",
-          "meaning": "người bạn (chữ 'г' cuối đọc thành [к])"
-        },
-        {
-          "word": "город",
-          "pronunciation": "[го́-рат]",
-          "meaning": "thành phố (chữ 'д' cuối đọc thành [т])"
-        },
-        {
-          "word": "нож",
-          "pronunciation": "[нош]",
-          "meaning": "con dao (chữ 'ж' cuối đọc thành [ш])"
-        }
-      ]
-    },
-    {
-      "id": "rule_assimilation",
-      "title": "4. Quy tắc đồng hóa phụ âm (Уподобление согласных)",
-      "description": "Phụ âm hữu thanh đứng trước phụ âm vô thanh bị vô thanh hóa; ngược lại phụ âm vô thanh đứng trước phụ âm hữu thanh bị hữu thanh hóa (rung âm).",
-      "examples": [
-        {
-          "word": "авто́бус",
-          "pronunciation": "[аф-то́-бус]",
-          "meaning": "xe buýt ('в' đứng trước 'т' đọc thành [ф])"
-        },
-        {
-          "word": "вокза́л",
-          "pronunciation": "[ваг-за́л]",
-          "meaning": "nhà ga ('к' đứng trước 'з' đọc thành [г])"
-        },
-        {
-          "word": "футбо́л",
-          "pronunciation": "[фуд-бо́л]",
-          "meaning": "bóng đá ('т' đứng trước 'б' đọc thành [д])"
+          "meaning": "bánh mì (chữ 'б' cuối từ vô thanh hóa thành [п])"
         },
         {
           "word": "ло́жка",
-          "pronunciation": "[ло́ш-ка]",
-          "meaning": "cái thìa ('ж' đứng trước 'к' đọc thành [ш])"
+          "pronunciation": "[ло́шка]",
+          "meaning": "cái thìa (chữ 'ж' đứng trước 'к' vô thanh biến thành [ш])"
+        },
+        {
+          "word": "футбо́л",
+          "pronunciation": "[фудбо́л]",
+          "meaning": "bóng đá (chữ 'т' vô thanh đứng trước 'б' hữu thanh biến thành [д])"
+        },
+        {
+          "word": "сдать",
+          "pronunciation": "[здать]",
+          "meaning": "nộp bài/thi đỗ (chữ 'с' đứng trước 'д' hữu thanh biến thành [з])"
         }
       ]
     }
@@ -696,6 +642,168 @@
         "Âm tiết 3 (мо-ло-ко́)"
       ],
       "correct": 2
+    }
+  ],
+  "stress_pairs": [
+    {
+      "word1": "замо́к",
+      "meaning1": "ổ khóa 🔒",
+      "phonetic1": "[за-мо́к]",
+      "word2": "за́мок",
+      "meaning2": "lâu đài 🏰",
+      "phonetic2": "[за́-мак]",
+      "explanation": "Thay đổi vị trí trọng âm thay đổi hoàn toàn ý nghĩa của từ!"
+    },
+    {
+      "word1": "му́ка",
+      "meaning1": "sự khổ ải / nỗi đau",
+      "phonetic1": "[му́-ка]",
+      "word2": "мука́",
+      "meaning2": "bột mì 🌾",
+      "phonetic2": "[му-ка́]",
+      "explanation": "Chữ 'у' mang trọng âm so với chữ 'а' mang trọng âm."
+    },
+    {
+      "word1": "плачу́",
+      "meaning1": "tôi thanh toán tiền 💳 (платить)",
+      "phonetic1": "[пла-чу́]",
+      "word2": "пла́чу",
+      "meaning2": "tôi đang khóc 😭 (плакать)",
+      "phonetic2": "[пла́-чу]",
+      "explanation": "Phân biệt hai động từ khác nhau trong cùng dạng ngôi 'Я'."
+    }
+  ],
+  "pronunciation_ladder": [
+    {
+      "step": 1,
+      "title": "Bậc 1: Mặt chữ & Âm cơ bản (Буквы и основные звуки)",
+      "guide": "Nhận diện đúng 33 chữ cái Cyrillic in hoa, in thường, chữ viết tay và các âm vị gốc.",
+      "sample_words": [
+        "а́дрес",
+        "брат",
+        "дом",
+        "кот",
+        "ма́ма"
+      ],
+      "practice_tip": "Nhìn mặt chữ, lắng nghe âm chuẩn và phát âm bật rõ từng âm vị."
+    },
+    {
+      "step": 2,
+      "title": "Bậc 2: Trọng âm từ (Ударение в слове)",
+      "guide": "Trọng âm tiếng Nga có tính tự do và động lượng. Âm tiết mang trọng âm luôn đọc to, rõ, ngân dài gấp 1.5 - 2 lần âm tiết không trọng âm.",
+      "sample_words": [
+        "до́ма (ở nhà)",
+        "дома́ (những ngôi nhà)",
+        "молоко́"
+      ],
+      "practice_tip": "Nhấn mạnh cơ môi và ngân dài hơn ở nguyên âm có dấu trọng âm."
+    },
+    {
+      "step": 3,
+      "title": "Bậc 3: Quy luật giảm âm vị trí (Позиционная редукция гласных О, Е, Я)",
+      "guide": "Giảm âm không phải thay chữ bừa bãi mà tuân theo bậc âm vị: Tiền trọng âm bậc 1 phát âm thành [ʌ] (A mở ngắn: окно [ʌк-но́]); Các âm tiết xa hơn giảm sâu thành Schwa [ə] (молоко [мә-лʌ-ко́]); E/Я không trọng âm giảm thành [иэ] (сестра [с'иэ-стра́]).",
+      "sample_words": [
+        "окно́ [ʌк-но́]",
+        "молоко́ [мә-лʌ-ко́]",
+        "сестра́ [с'иэ-стра́]",
+        "язы́к [й'иэ-зы́к]"
+      ],
+      "practice_tip": "Thả lỏng cơ hàm ở âm tiết Schwa và dồn khẩu hình vào âm tiết mang trọng âm."
+    },
+    {
+      "step": 4,
+      "title": "Bậc 4: Cặp phụ âm Cứng vs Mềm (Твёрдые и мягкие согласные)",
+      "guide": "15 cặp phụ âm đối lập cứng/mềm: Đứng trước nguyên âm mềm (Я, Е, Ё, Ю, И) hoặc Dấu mềm (Ь), thân lưỡi nâng lên ngạc cứng (Palatalization).",
+      "sample_words": [
+        "мат [mat] (cứng)",
+        "мать [mat'] (mềm)",
+        "был [byl]",
+        "бил [b'il]"
+      ],
+      "practice_tip": "Nâng phần giữa của lưỡi ép sát lên ngạc cứng phía trên khi phát âm phụ âm mềm."
+    },
+    {
+      "step": 5,
+      "title": "Bậc 5: Luyện âm đặc trưng [Ы] vs [И]",
+      "guide": "Âm [ы] là nguyên âm hàng sau, ngạc sâu (cơ lưỡi rút về phía sau cuống họng), khác hoàn toàn với [и] đầu lưỡi ở hàng trước.",
+      "sample_words": [
+        "мы [my]",
+        "вы [vy]",
+        "сыр [syr]",
+        "ры́ба [ry-ba]"
+      ],
+      "practice_tip": "Cắn nhẹ hàm răng, kéo cuống lưỡi lùi về sau vòm họng để tạo âm vang trầm [ы]."
+    },
+    {
+      "step": 6,
+      "title": "Bậc 6: Phụ âm uốn lưỡi [Ж, Ш] vs Vòm họng [Щ, Ч, Ц]",
+      "guide": "[ж, ш, ц] luôn luôn cứng (không bao giờ bị làm mềm); [ч, щ] luôn luôn mềm.",
+      "sample_words": [
+        "журна́л",
+        "шко́ла",
+        "чай",
+        "борщ",
+        "центр"
+      ],
+      "practice_tip": "Uốn đầu lưỡi cong lên vòm miệng khi đọc [ж, ш]; khép răng xát mạnh đầu lưỡi khi đọc [щ]."
+    },
+    {
+      "step": 7,
+      "title": "Bậc 7: Rung đầu lưỡi âm [Р] (Alveolar Trill)",
+      "guide": "Âm [р] tiếng Nga là âm rung bật đầu lưỡi tạo bởi luồng khí thổi qua rãnh lợi trên.",
+      "sample_words": [
+        "Росси́я",
+        "ру́сский",
+        "рабо́та",
+        "хорошо́"
+      ],
+      "practice_tip": "Đặt đầu lưỡi chạm nhẹ lợi trên và thổi luồng hơi mạnh để đầu lưỡi rung bật liên tục."
+    },
+    {
+      "step": 8,
+      "title": "Bậc 8: Cụm phụ âm liền kề (Стечение согласных)",
+      "guide": "Khẩu hình chuyển tiếp dứt khoát giữa các phụ âm liền kề (2-4 phụ âm) mà tuyệt đối không chèn nguyên âm đệm 'ơ' vào giữa.",
+      "sample_words": [
+        "встре́ча",
+        "здра́вствуйте",
+        "взве́сьте",
+        "взгляд"
+      ],
+      "practice_tip": "Phát âm các phụ âm dính liền trong một cử động môi duy nhất."
+    },
+    {
+      "step": 9,
+      "title": "Bậc 9: Định luật đồng hóa ngược phụ âm (Регрессивная ассимиляция согласных)",
+      "guide": "Phụ âm đứng sau quyết định tính thanh của phụ âm đứng trước: Hữu thanh đứng trước vô thanh bị vô thanh hóa (ложка -> [ло́шка]); Vô thanh đứng trước hữu thanh bị hữu thanh hóa (футбол -> [фудбо́л], сдать -> [здать]). Cuối từ luôn bị vô thanh hóa (хлеб -> [хлеп], друг -> [друк]).",
+      "sample_words": [
+        "хлеб [хлеп]",
+        "ло́жка [ло́шка]",
+        "футбо́л [фудбо́л]",
+        "сдать [здать]"
+      ],
+      "practice_tip": "Quan sát phụ âm đi liền phía sau để điều chỉnh độ rung thanh đới phù hợp."
+    },
+    {
+      "step": 10,
+      "title": "Bậc 10: Ngữ điệu câu chuẩn (Интонационные конструкции ИК-1, ИК-2, ИК-3)",
+      "guide": "IK-1 (câu trần thuật: giọng hạ thấp ở âm tiết trọng tâm cuối câu ↘); IK-2 (câu hỏi có từ hỏi: nhấn mạnh giọng vào từ để hỏi Кто/Где ↘); IK-3 (câu hỏi xác nhận không từ hỏi: giọng vút cao vút ở từ trọng tâm ↗).",
+      "sample_words": [
+        "Это дом. (ИК-1 ↘)",
+        "Кто это? (ИК-2 ↘)",
+        "Это чай? (ИК-3 ↗)"
+      ],
+      "practice_tip": "Lắng nghe đường nét cao độ (pitch contour) và bắt chước độ lên/xuống của giọng nói."
+    },
+    {
+      "step": 11,
+      "title": "Bậc 11: Nối âm trong cụm lời nói liền (Слитное произношение)",
+      "guide": "Giới từ một âm tiết (в, с, к, о, из, от) gắn liền vào danh từ đi sau như một tiền tố ngữ âm duy nhất.",
+      "sample_words": [
+        "в_институ́те [вин-сти-ту́-ти]",
+        "с_дру́гом [здру́-гам]",
+        "об_э́том [аб-э́-там]"
+      ],
+      "practice_tip": "Phát âm giới từ và danh từ đi kèm liền mạch trong cùng một nhịp thở."
     }
   ]
 }

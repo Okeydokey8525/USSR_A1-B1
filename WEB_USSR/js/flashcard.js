@@ -1,6 +1,6 @@
 /**
  * WEB_USSR - 3D Flashcards & Leitner SRS Multi-Mode Study Engine
- * With 6-Case Contextual Sentences Drill-Down
+ * With 6-Case Contextual Sentences Drill-Down & Gender Agreement Chain
  */
 const FlashcardModule = (() => {
   let vocabList = [];
@@ -10,7 +10,6 @@ const FlashcardModule = (() => {
   let currentTopic = 'all';
   let searchTerm = '';
   let studyMode = 'flip'; // 'flip', 'quiz_ru_vi', 'quiz_audio'
-  let activeCaseDrawerItem = null;
 
   async function init() {
     try {
@@ -27,7 +26,6 @@ const FlashcardModule = (() => {
   }
 
   function setupFilters() {
-    // Topic filter
     const topicSelect = document.getElementById('flashcard-topic-select');
     if (topicSelect) {
       const topics = ['all', ...new Set(vocabList.map(v => v.topic))];
@@ -40,7 +38,6 @@ const FlashcardModule = (() => {
       });
     }
 
-    // Level filter
     const levelSelect = document.getElementById('flashcard-level-select');
     if (levelSelect) {
       levelSelect.addEventListener('change', (e) => {
@@ -51,7 +48,6 @@ const FlashcardModule = (() => {
       });
     }
 
-    // Search
     const searchInput = document.getElementById('flashcard-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
@@ -86,7 +82,7 @@ const FlashcardModule = (() => {
       const matchSearch = !searchTerm || 
         item.word.toLowerCase().includes(searchTerm) || 
         item.meaning.toLowerCase().includes(searchTerm) ||
-        item.phonetic.toLowerCase().includes(searchTerm);
+        (item.phonetic && item.phonetic.toLowerCase().includes(searchTerm));
       return matchLevel && matchTopic && matchSearch;
     });
   }
@@ -112,8 +108,11 @@ const FlashcardModule = (() => {
     // Gender styling
     const genderBorder = {
       'он': 'border-blue-500 bg-blue-500/10 text-blue-600',
+      'masculine': 'border-blue-500 bg-blue-500/10 text-blue-600',
       'она': 'border-rose-500 bg-rose-500/10 text-rose-600',
+      'feminine': 'border-rose-500 bg-rose-500/10 text-rose-600',
       'оно': 'border-emerald-500 bg-emerald-500/10 text-emerald-600',
+      'neuter': 'border-emerald-500 bg-emerald-500/10 text-emerald-600',
       'động từ': 'border-amber-500 bg-amber-500/10 text-amber-600',
       'tính từ': 'border-purple-500 bg-purple-500/10 text-purple-600'
     }[item.gender] || 'border-slate-300 bg-slate-100 text-slate-600';
@@ -137,8 +136,8 @@ const FlashcardModule = (() => {
         </div>
 
         <!-- 3D Card Container -->
-        <div class="perspective-1000 w-full h-84 sm:h-96 cursor-pointer select-none" onclick="FlashcardModule.toggleFlip()">
-          <div class="relative w-full h-full duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}">
+        <div class="perspective-1000 w-full min-h-[380px] cursor-pointer select-none" onclick="FlashcardModule.toggleFlip()">
+          <div class="relative w-full h-full min-h-[380px] duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}">
             
             <!-- Front -->
             <div class="absolute inset-0 w-full h-full bg-white dark:bg-slate-800 rounded-3xl p-8 border-2 border-slate-200 dark:border-slate-700 shadow-xl flex flex-col justify-between items-center text-center backface-hidden">
@@ -151,27 +150,27 @@ const FlashcardModule = (() => {
                 <h3 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white font-cyrillic tracking-tight">
                   ${item.word}
                 </h3>
-                <p class="text-sm font-mono text-blue-600 dark:text-blue-400">${item.phonetic}</p>
+                <p class="text-sm font-mono text-blue-600 dark:text-blue-400">${item.phonetic || ''}</p>
                 ${item.plural_form && item.plural_form !== '-' ? `
                   <div class="pt-2 text-xs text-slate-500 font-cyrillic">
-                    Số nhiều: <strong class="text-slate-800 dark:text-slate-200">${item.plural_form}</strong>
+                    Số nhiều: <strong class="text-slate-800 dark:text-slate-200">${item.plural_stress || item.plural_form}</strong>
                   </div>
                 ` : ''}
               </div>
 
               <div class="w-full flex items-center justify-center gap-2 text-xs text-slate-400">
-                <span>Bấm vào thẻ để xem nghĩa ↻</span>
+                <span>Bấm vào thẻ để xem nghĩa & ví dụ ↻</span>
               </div>
             </div>
 
             <!-- Back -->
-            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-700 to-indigo-900 rounded-3xl p-8 text-white shadow-xl flex flex-col justify-between items-center text-center rotate-y-180 backface-hidden">
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-700 to-indigo-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between items-center text-center rotate-y-180 backface-hidden overflow-y-auto">
               <div class="w-full flex justify-between items-center text-xs text-blue-200">
                 <span class="font-bold font-cyrillic">${item.word}</span>
                 <span class="uppercase tracking-widest text-[10px]">Tiếng Việt</span>
               </div>
 
-              <div class="my-auto space-y-3">
+              <div class="my-auto space-y-3 py-2">
                 <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
                   ${item.meaning}
                 </h3>
@@ -180,18 +179,25 @@ const FlashcardModule = (() => {
                   <p class="font-bold text-blue-100">${item.example_ru}</p>
                   <p class="text-blue-200 italic font-sans font-normal">${item.example_vi}</p>
                 </div>
+
+                ${item.gender_chain ? `
+                  <div class="p-2.5 rounded-xl bg-indigo-950/60 border border-indigo-400/30 text-left text-[11px] space-y-0.5 font-cyrillic">
+                    <span class="text-[10px] font-bold text-blue-300 block uppercase font-sans">Gender Agreement Chain:</span>
+                    <span>${item.gender_chain.pronoun || ''} ➔ ${item.gender_chain.possessive || ''} ➔ ${item.gender_chain.adjective || ''}</span>
+                  </div>
+                ` : ''}
               </div>
 
-              <div class="w-full flex items-center justify-between gap-2">
+              <div class="w-full flex items-center justify-between gap-2 pt-2">
                 <button class="px-3.5 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
-                        onclick="event.stopPropagation(); RussianSpeech.speak('${item.audio_text}')">
+                        onclick="event.stopPropagation(); RussianSpeech.speak('${item.audio_text || item.base_form || item.word}')">
                   🔊 Nghe đọc
                 </button>
 
                 ${item.case_contexts ? `
                   <button class="px-3.5 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-xl text-xs font-bold transition-colors"
                           onclick="event.stopPropagation(); FlashcardModule.showCaseModal('${item.id}')">
-                    📐 6 Cách trong ngữ cảnh
+                    📐 6 Cách trong câu
                   </button>
                 ` : ''}
               </div>
@@ -209,12 +215,12 @@ const FlashcardModule = (() => {
 
           <button class="flex-1 py-3.5 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md transition-colors"
                   onclick="FlashcardModule.handleCardAction(false)">
-            Chưa thuộc (Hộp 1) ❌
+            Chưa thuộc ❌
           </button>
 
           <button class="flex-1 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition-colors"
                   onclick="FlashcardModule.handleCardAction(true)">
-            Đã nhớ (+1 Hộp) ✓
+            Đã thuộc (+1 Hộp) ✓
           </button>
 
           <button class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-400 text-slate-700 dark:text-slate-200 flex items-center justify-center shadow-sm"
@@ -224,8 +230,8 @@ const FlashcardModule = (() => {
         </div>
 
         <!-- 6-Case Context Modal Container -->
-        <div id="flashcard-case-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div id="flashcard-case-modal-content" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-slate-200 dark:border-slate-700 shadow-2xl space-y-4">
+        <div id="flashcard-case-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="FlashcardModule.hideCaseModal()">
+          <div id="flashcard-case-modal-content" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-slate-200 dark:border-slate-700 shadow-2xl space-y-4" onclick="event.stopPropagation()">
             <!-- Modal dynamic content -->
           </div>
         </div>
@@ -242,6 +248,12 @@ const FlashcardModule = (() => {
     if (!modal || !content) return;
 
     const caseNames = {
+      nom: "Cách 1 (Chủ cách - Nom)",
+      gen: "Cách 2 (Sinh cách - Gen)",
+      dat: "Cách 3 (Dữ cách - Dat)",
+      acc: "Cách 4 (Đối cách - Acc)",
+      inst: "Cách 5 (Tạo cách - Inst)",
+      prep: "Cách 6 (Giới cách - Prep)",
       case_1: "Cách 1 (Chủ cách - Nom)",
       case_2: "Cách 2 (Sinh cách - Gen)",
       case_3: "Cách 3 (Dữ cách - Dat)",
@@ -261,18 +273,28 @@ const FlashcardModule = (() => {
       </div>
 
       <div class="space-y-2.5 max-h-96 overflow-y-auto">
-        ${Object.entries(item.case_contexts).map(([cKey, cSentence]) => `
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div>
-              <span class="text-[10px] font-bold text-slate-400 block">${caseNames[cKey] || cKey}</span>
-              <p class="text-sm font-bold text-slate-800 dark:text-white font-cyrillic mt-0.5">${cSentence}</p>
+        ${Object.entries(item.case_contexts).map(([cKey, val]) => {
+          const sentence = typeof val === 'object' ? val.sentence : val;
+          const sentenceVi = typeof val === 'object' ? val.sentence_vi : '';
+          const formText = typeof val === 'object' && val.form ? `(${val.form})` : '';
+
+          return `
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-bold text-slate-400 block">${caseNames[cKey] || cKey}</span>
+                  <span class="text-xs font-bold text-blue-600 font-cyrillic">${formText}</span>
+                </div>
+                <p class="text-sm font-bold text-slate-800 dark:text-white font-cyrillic mt-0.5">${sentence}</p>
+                ${sentenceVi ? `<span class="text-[11px] text-slate-500 block">${sentenceVi}</span>` : ''}
+              </div>
+              <button class="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center flex-shrink-0 ml-2"
+                      onclick="RussianSpeech.speak('${sentence.split('(')[0].trim()}')">
+                🔊
+              </button>
             </div>
-            <button class="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center flex-shrink-0 ml-2"
-                    onclick="RussianSpeech.speak('${cSentence.split('(')[0].trim()}')">
-              🔊
-            </button>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
 
       <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-colors text-xs"
@@ -299,7 +321,7 @@ const FlashcardModule = (() => {
         <div class="space-y-1">
           <span class="text-xs font-bold text-slate-400">Chọn nghĩa tiếng Việt đúng:</span>
           <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white font-cyrillic">${item.word}</h3>
-          <p class="text-xs font-mono text-blue-600">${item.phonetic}</p>
+          <p class="text-xs font-mono text-blue-600">${item.phonetic || ''}</p>
         </div>
 
         <div class="space-y-2.5 text-left">
@@ -322,17 +344,17 @@ const FlashcardModule = (() => {
     container.innerHTML = `
       <div class="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-xl space-y-6 text-center">
         <div class="space-y-3">
-          <span class="text-xs font-bold text-slate-400">Nghe âm thanh và chọn từ đúng:</span>
-          <button class="w-16 h-16 rounded-3xl bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center mx-auto text-2xl shadow-lg transition-transform hover:scale-105"
-                  onclick="RussianSpeech.speak('${item.audio_text}')">
+          <span class="text-xs font-bold text-slate-400">Nghe và chọn từ tiếng Nga tương ứng:</span>
+          <button class="w-16 h-16 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center mx-auto text-2xl shadow-lg transition-transform hover:scale-105"
+                  onclick="RussianSpeech.speak('${item.audio_text || item.base_form || item.word}')">
             🔊
           </button>
         </div>
 
-        <div class="space-y-2.5 text-left">
+        <div class="space-y-2.5 text-left pt-2">
           ${options.map(opt => `
-            <button class="w-full p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-950/30 text-sm sm:text-base font-bold font-cyrillic text-slate-800 dark:text-slate-200 transition-all"
-                    onclick="FlashcardModule.checkQuizAnswer('${item.id}', '${opt}', '${item.word}', this)">
+            <button class="w-full p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-950/30 text-base font-bold text-slate-800 dark:text-slate-200 font-cyrillic transition-all"
+                    onclick="FlashcardModule.checkAudioQuizAnswer('${item.id}', '${opt}', '${item.word}', this)">
               ${opt}
             </button>
           `).join('')}
@@ -340,35 +362,48 @@ const FlashcardModule = (() => {
       </div>
     `;
 
-    setTimeout(() => RussianSpeech.speak(item.audio_text), 300);
-  }
-
-  function checkQuizAnswer(cardId, selected, correct, btnEl) {
-    const isCorrect = selected === correct;
-    const parent = btnEl.closest('.space-y-2\\.5');
-    const allBtns = parent.querySelectorAll('button');
-    allBtns.forEach(b => b.disabled = true);
-
-    if (isCorrect) {
-      btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-700');
-      App.triggerConfetti();
-      handleCardAction(true);
-    } else {
-      btnEl.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-700');
-      handleCardAction(false);
-    }
-
+    // Auto speak once on quiz card render
     setTimeout(() => {
-      nextCard();
-    }, 1200);
+      RussianSpeech.speak(item.audio_text || item.base_form || item.word);
+    }, 200);
   }
 
-  function handleCardAction(isCorrect) {
+  function toggleFlip() {
+    isFlipped = !isFlipped;
+    const cardInner = document.querySelector('.transform-style-3d');
+    if (cardInner) {
+      cardInner.classList.toggle('rotate-y-180', isFlipped);
+    }
+  }
+
+  function nextCard() {
+    const filtered = getFilteredList();
+    if (currentIndex < filtered.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    isFlipped = false;
+    renderCard();
+  }
+
+  function prevCard() {
+    const filtered = getFilteredList();
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = filtered.length - 1;
+    }
+    isFlipped = false;
+    renderCard();
+  }
+
+  function handleCardAction(isKnown) {
     const filtered = getFilteredList();
     const item = filtered[currentIndex];
     if (item && window.AdaptiveLearningOS) {
-      AdaptiveLearningOS.recordSRSAnswer(item.id, isCorrect);
-      if (isCorrect) {
+      AdaptiveLearningOS.recordSRSAnswer(item.id, isKnown);
+      if (isKnown) {
         AdaptiveLearningOS.dailyState.vocabLearned++;
         AdaptiveLearningOS.saveDailyState();
       }
@@ -376,30 +411,47 @@ const FlashcardModule = (() => {
     nextCard();
   }
 
-  function toggleFlip() {
-    isFlipped = !isFlipped;
-    renderCard();
-  }
-
-  function nextCard() {
-    const filtered = getFilteredList();
-    if (filtered.length > 0) {
-      currentIndex = (currentIndex + 1) % filtered.length;
-      isFlipped = false;
-      renderCard();
+  function checkQuizAnswer(itemId, selected, correct, btnEl) {
+    const isRight = selected === correct;
+    if (isRight) {
+      btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-700', 'font-bold');
+      App.triggerConfetti();
+      if (window.AdaptiveLearningOS) {
+        AdaptiveLearningOS.recordSRSAnswer(itemId, true);
+        AdaptiveLearningOS.dailyState.vocabLearned++;
+        AdaptiveLearningOS.saveDailyState();
+      }
+      setTimeout(nextCard, 900);
+    } else {
+      btnEl.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-700');
+      if (window.AdaptiveLearningOS) {
+        AdaptiveLearningOS.recordSRSAnswer(itemId, false);
+      }
     }
   }
 
-  function prevCard() {
-    const filtered = getFilteredList();
-    if (filtered.length > 0) {
-      currentIndex = (currentIndex - 1 + filtered.length) % filtered.length;
-      isFlipped = false;
-      renderCard();
+  function checkAudioQuizAnswer(itemId, selected, correct, btnEl) {
+    const isRight = selected === correct;
+    if (isRight) {
+      btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-700', 'font-bold');
+      App.triggerConfetti();
+      if (window.AdaptiveLearningOS) {
+        AdaptiveLearningOS.recordSRSAnswer(itemId, true);
+        AdaptiveLearningOS.dailyState.vocabLearned++;
+        AdaptiveLearningOS.saveDailyState();
+      }
+      setTimeout(nextCard, 900);
+    } else {
+      btnEl.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-700');
+      if (window.AdaptiveLearningOS) {
+        AdaptiveLearningOS.recordSRSAnswer(itemId, false);
+      }
     }
   }
 
-  function updateStats() {}
+  function updateStats() {
+    // Stats hook
+  }
 
   return {
     init,
@@ -407,9 +459,10 @@ const FlashcardModule = (() => {
     nextCard,
     prevCard,
     handleCardAction,
-    checkQuizAnswer,
     showCaseModal,
-    hideCaseModal
+    hideCaseModal,
+    checkQuizAnswer,
+    checkAudioQuizAnswer
   };
 })();
 

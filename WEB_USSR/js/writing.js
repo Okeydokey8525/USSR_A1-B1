@@ -83,6 +83,23 @@ const WritingModule = (() => {
           </ul>
         </div>
 
+        <!-- CEFR Rubric Accordion -->
+        ${task.rubric ? `
+          <div class="p-5 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/40 space-y-3">
+            <h4 class="text-xs font-extrabold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">
+              📊 ${task.rubric.title} (Tiêu chí chấm điểm tham chiếu):
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              ${task.rubric.criteria.map(c => `
+                <div class="p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-indigo-100 dark:border-indigo-900/40 space-y-0.5">
+                  <span class="text-xs font-bold text-indigo-900 dark:text-indigo-200 block">${c.name}</span>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-400">${c.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
         <!-- Live Writing Textarea -->
         <div class="space-y-2">
           <div class="flex items-center justify-between text-xs font-semibold">

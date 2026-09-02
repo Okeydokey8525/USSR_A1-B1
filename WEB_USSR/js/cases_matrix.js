@@ -1,11 +1,52 @@
 /**
  * WEB_USSR - Progressive Case Trainer (Падежи русского языка)
  * Method: Meaning & Trigger Questions FIRST, Endings SECOND.
+ * Gender Agreement Chain: Noun Gender -> Pronoun -> Possessive -> Adjective -> Past Tense -> Case Endings.
  */
 const CasesMatrixModule = (() => {
   let casesData = null;
   let activeCaseId = 1; // 1 to 6
   let activeWordIndex = 0;
+  let activeGenderKey = 'masc'; // 'masc', 'fem', 'neut', 'pl'
+
+  const genderChainsData = {
+    masc: {
+      title: "Giống Đực (Мужской род — ОН)",
+      noun: "дом (ngôi nhà)",
+      pronoun: "он",
+      possessive: "мой дом (nhà của tôi)",
+      adjective: "но́вый дом (ngôi nhà mới)",
+      past_tense: "дом стоя́л (ngôi nhà đã đứng đó)",
+      case_sample: "в но́вом до́ме (trong ngôi nhà mới - C6)"
+    },
+    fem: {
+      title: "Giống Cái (Женский род — ОНА)",
+      noun: "кни́га (quyển sách)",
+      pronoun: "она́",
+      possessive: "моя́ кни́га (sách của tôi)",
+      adjective: "но́вая кни́га (quyển sách mới)",
+      past_tense: "кни́га лежа́ла (quyển sách đã nằm ở đó)",
+      case_sample: "в но́вой кни́ге (trong quyển sách mới - C6)"
+    },
+    neut: {
+      title: "Giống Trung (Средний род — ОНО)",
+      noun: "окно́ (cửa sổ)",
+      pronoun: "оно́",
+      possessive: "моё окно́ (cửa sổ của tôi)",
+      adjective: "но́вое окно́ (cửa sổ mới)",
+      past_tense: "окно́ стоя́ло (cửa sổ đã mở)",
+      case_sample: "на но́вом окне́ (trên cửa sổ mới - C6)"
+    },
+    pl: {
+      title: "Số Nhiều (Множественное число — ОНИ)",
+      noun: "дома́ / кни́ги / о́кна",
+      pronoun: "они́",
+      possessive: "мои́ кни́ги (sách của tôi)",
+      adjective: "но́вые кни́ги (những cuốn sách mới)",
+      past_tense: "кни́ги лежа́ли (những cuốn sách đã nằm đó)",
+      case_sample: "в но́вых кни́гах (trong các cuốn sách mới - C6)"
+    }
+  };
 
   async function init() {
     try {
@@ -15,6 +56,7 @@ const CasesMatrixModule = (() => {
       setupCaseButtons();
       renderCaseOverview();
       renderDeclensionTable();
+      renderGenderAgreementChain();
       renderInteractiveWordDeclension();
       renderPronounsTable();
     } catch (e) {
@@ -28,7 +70,7 @@ const CasesMatrixModule = (() => {
 
     container.innerHTML = casesData.cases.map(c => {
       const isActive = c.id === activeCaseId;
-      const questionText = c.question || c.questions || '';
+      const questionText = c.trigger_question || c.question || c.questions || '';
       return `
         <button class="px-4 py-3 rounded-2xl border text-xs sm:text-sm font-bold flex flex-col items-start gap-1 transition-all ${
           isActive 
@@ -61,7 +103,7 @@ const CasesMatrixModule = (() => {
     const currentCase = casesData.cases.find(c => c.id === activeCaseId);
     if (!currentCase) return;
 
-    const questionText = currentCase.question || currentCase.questions || '';
+    const questionText = currentCase.trigger_question || currentCase.question || currentCase.questions || '';
 
     container.innerHTML = `
       <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
@@ -76,16 +118,20 @@ const CasesMatrixModule = (() => {
             </div>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">${currentCase.name_vi}</h3>
           </div>
-          <div class="p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/30 text-xs">
-            <span class="text-slate-400 block">Câu hỏi kích hoạt:</span>
-            <span class="font-bold text-blue-700 dark:text-blue-300 font-cyrillic text-sm">${questionText}</span>
+          <div class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-xs sm:text-sm">
+            <span class="text-slate-500 dark:text-slate-400 block font-bold uppercase text-[10px]">Câu hỏi kích hoạt:</span>
+            <span class="font-extrabold text-blue-700 dark:text-blue-300 font-cyrillic text-base sm:text-lg">${questionText}</span>
           </div>
         </div>
 
-        <!-- Triggers and Usage -->
+        <!-- Pedagogical Rationale & Triggers -->
+        <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/50 text-xs sm:text-sm text-amber-950 dark:text-amber-200 space-y-1">
+          <strong>🎯 Nguyên tắc nhận diện & Ý nghĩa giao tiếp:</strong>
+          <p>${currentCase.communicative_role || currentCase.usage_vi || ''}</p>
+          <p class="text-xs font-bold text-amber-800 dark:text-amber-300 pt-1">👉 Quy tắc vàng: ${currentCase.pedagogical_rule || ''}</p>
+        </div>
+
         <div class="space-y-3">
-          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Ý nghĩa ngữ pháp & Giới từ đi kèm:</h4>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">${currentCase.function || currentCase.usage_vi || ''}</p>
           <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-xs font-mono text-blue-600 dark:text-blue-400">
             Giới từ thường gặp: <strong>${currentCase.prepositions || 'Không có giới từ riêng'}</strong>
           </div>
@@ -103,7 +149,7 @@ const CasesMatrixModule = (() => {
                 </div>
                 <button class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors flex-shrink-0 ml-2"
                         onclick="RussianSpeech.speak('${ex.ru}')">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                  🔊
                 </button>
               </div>
             `).join('')}
@@ -158,6 +204,86 @@ const CasesMatrixModule = (() => {
         </div>
       </div>
     `;
+  }
+
+  function renderGenderAgreementChain() {
+    let container = document.getElementById('gender-agreement-chain-panel');
+    if (!container) {
+      // Create and insert before interactive word declension if not present in html
+      const table = document.getElementById('declension-endings-table');
+      if (table && table.parentNode) {
+        container = document.createElement('div');
+        container.id = 'gender-agreement-chain-panel';
+        table.parentNode.insertBefore(container, table.nextSibling);
+      } else {
+        return;
+      }
+    }
+
+    const currentChain = genderChainsData[activeGenderKey];
+
+    container.innerHTML = `
+      <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6 mt-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Gender System: Chuỗi liên kết Giống</span>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">
+              Hòa hợp có hệ thống: Giống ➔ Đại từ ➔ Sở hữu ➔ Tính từ ➔ Quá khứ ➔ Biến cách
+            </h4>
+          </div>
+
+          <div class="flex items-center gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-bold">
+            <button class="px-3 py-1.5 rounded-xl transition-all ${activeGenderKey === 'masc' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}"
+                    onclick="CasesMatrixModule.selectGenderChain('masc')">Giống đực (ОН)</button>
+            <button class="px-3 py-1.5 rounded-xl transition-all ${activeGenderKey === 'fem' ? 'bg-rose-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}"
+                    onclick="CasesMatrixModule.selectGenderChain('fem')">Giống cái (ОНА)</button>
+            <button class="px-3 py-1.5 rounded-xl transition-all ${activeGenderKey === 'neut' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}"
+                    onclick="CasesMatrixModule.selectGenderChain('neut')">Giống trung (ОНО)</button>
+            <button class="px-3 py-1.5 rounded-xl transition-all ${activeGenderKey === 'pl' ? 'bg-purple-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}"
+                    onclick="CasesMatrixModule.selectGenderChain('pl')">Số nhiều (ОНИ)</button>
+          </div>
+        </div>
+
+        <!-- 5-Step Visual Chain Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-center">
+          <!-- Step 1: Noun -->
+          <div class="p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">1. Danh từ (Существительное)</span>
+            <h5 class="text-base font-bold text-blue-700 dark:text-blue-300 font-cyrillic">${currentChain.noun}</h5>
+          </div>
+
+          <!-- Step 2: Pronoun -->
+          <div class="p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-900/30 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">2. Đại từ nhân xưng</span>
+            <h5 class="text-base font-bold text-indigo-700 dark:text-indigo-300 font-cyrillic">${currentChain.pronoun}</h5>
+          </div>
+
+          <!-- Step 3: Possessive & Adjective -->
+          <div class="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-900/30 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">3. Sở hữu & Tính từ</span>
+            <h5 class="text-sm font-bold text-purple-700 dark:text-purple-300 font-cyrillic">${currentChain.possessive}</h5>
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-400 font-cyrillic block">${currentChain.adjective}</span>
+          </div>
+
+          <!-- Step 4: Past Tense -->
+          <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/30 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">4. Động từ quá khứ</span>
+            <h5 class="text-sm font-bold text-amber-700 dark:text-amber-300 font-cyrillic">${currentChain.past_tense}</h5>
+          </div>
+
+          <!-- Step 5: Case Sample -->
+          <div class="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">5. Đuôi biến cách mẫu</span>
+            <h5 class="text-sm font-bold text-emerald-700 dark:text-emerald-300 font-cyrillic">${currentChain.case_sample}</h5>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function selectGenderChain(key) {
+    activeGenderKey = key;
+    renderGenderAgreementChain();
   }
 
   function renderInteractiveWordDeclension() {
@@ -259,6 +385,7 @@ const CasesMatrixModule = (() => {
   return {
     init,
     selectCase,
+    selectGenderChain,
     selectInteractiveWord
   };
 })();

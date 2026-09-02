@@ -1,6 +1,6 @@
 /**
  * WEB_USSR - Speaking Studio (Студия говорения)
- * Method: Honest A/B Audio Replay Comparison & 6-Point Phonetic Self-Check
+ * Method: 6-Step Shadowing Mode & Honest A/B Audio Replay Comparison & 6-Point Phonetic Checklist
  */
 const SpeakingModule = (() => {
   let speakingTopics = [];
@@ -9,6 +9,7 @@ const SpeakingModule = (() => {
   let audioChunks = [];
   let recordedAudioUrl = null;
   let isRecording = false;
+  let shadowingStep = 1; // 1 to 6
 
   async function init() {
     try {
@@ -51,7 +52,13 @@ const SpeakingModule = (() => {
     currentTopicId = id;
     recordedAudioUrl = null;
     isRecording = false;
+    shadowingStep = 1;
     renderTopicSelector();
+    renderActiveTopic();
+  }
+
+  function setShadowingStep(step) {
+    shadowingStep = step;
     renderActiveTopic();
   }
 
@@ -66,9 +73,37 @@ const SpeakingModule = (() => {
       <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
         <!-- Header -->
         <div class="pb-6 border-b border-slate-100 dark:border-slate-700">
-          <span class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">${topic.level}</span>
-          <h3 class="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mt-1">${topic.title}</h3>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">${topic.level}</span>
+            <span class="text-[11px] font-bold text-slate-400">Chế độ Luyện Nói Shadowing 6 Bước</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">${topic.title}</h3>
           <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">${topic.guide_vi}</p>
+        </div>
+
+        <!-- 6-Step Shadowing Progression Bar -->
+        <div class="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 space-y-2">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-blue-700 dark:text-blue-300">Quy trình Shadowing chuẩn âm vị học:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1.5 text-center text-xs font-bold">
+            ${[
+              { s: 1, label: "① Nghe mẫu" },
+              { s: 2, label: "② Đọc thầm" },
+              { s: 3, label: "③ Nghe + Đọc" },
+              { s: 4, label: "④ Shadowing" },
+              { s: 5, label: "⑤ Thu âm" },
+              { s: 6, label: "⑥ Đối chiếu A/B" }
+            ].map(step => `
+              <button class="py-2 px-2 rounded-xl transition-all ${
+                shadowingStep === step.s 
+                  ? 'bg-blue-600 text-white shadow-sm ring-2 ring-blue-300' 
+                  : shadowingStep > step.s 
+                    ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300' 
+                    : 'bg-white dark:bg-slate-800 text-slate-500 border border-slate-200 dark:border-slate-700'
+              }" onclick="SpeakingModule.setShadowingStep(${step.s})">
+                ${step.label}
+              </button>
+            `).join('')}
+          </div>
         </div>
 
         <!-- Target Useful Phrases -->
@@ -87,16 +122,25 @@ const SpeakingModule = (() => {
           </div>
         </div>
 
-        <!-- Sample Speech -->
-        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
-          <div class="flex items-center justify-between">
-            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Bài nói mẫu chuẩn bản xứ:</h4>
-            <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors"
-                    onclick="RussianSpeech.speak('${topic.sample_speech}')">
-              🔊 Nghe bài nói mẫu
-            </button>
+        <!-- Sample Speech & Shadowing Text -->
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Bài đọc mẫu chuẩn phát âm</span>
+              <span class="text-[11px] text-slate-400 italic font-sans font-normal">*Âm thanh phát bằng công nghệ tổng hợp Synthetic SpeechSynthesis</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
+                      onclick="RussianSpeech.speak('${topic.sample_speech}', 0.85)">
+                🔊 Nghe mẫu (0.85x)
+              </button>
+              <button class="px-3 py-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold hover:bg-slate-300 transition-colors"
+                      onclick="RussianSpeech.speak('${topic.sample_speech}', 1.0)">
+                1.0x Chuẩn
+              </button>
+            </div>
           </div>
-          <p class="font-bold text-slate-800 dark:text-white text-sm sm:text-base font-cyrillic leading-relaxed">
+          <p class="font-bold text-slate-900 dark:text-white text-base sm:text-lg font-cyrillic leading-relaxed p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
             ${topic.sample_speech}
           </p>
         </div>
@@ -105,7 +149,7 @@ const SpeakingModule = (() => {
         <div class="p-6 rounded-3xl bg-slate-900 text-white space-y-6 shadow-inner">
           <div class="text-center space-y-1">
             <h4 class="text-base font-bold">Phòng Đối Chiếu Âm Thanh A / B (Replay Comparison)</h4>
-            <p class="text-xs text-slate-400">Thu âm giọng nói của bạn và so sánh trực tiếp với giọng đọc bản ngữ để tự chỉnh sửa phát âm.</p>
+            <p class="text-xs text-slate-400">Thu âm giọng nói của bạn và so sánh trực tiếp với giọng đọc mẫu để tự chỉnh sửa phát âm.</p>
           </div>
 
           <!-- Record Controls -->
@@ -123,9 +167,9 @@ const SpeakingModule = (() => {
 
           <!-- A/B Comparison Controls -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-            <!-- Audio A: Native Model -->
+            <!-- Audio A: Reference Model -->
             <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 space-y-2 text-center">
-              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block">Âm thanh A (Giọng bản xứ chuẩn)</span>
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block">Âm thanh A (Giọng phát âm mẫu)</span>
               <button class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors"
                       onclick="RussianSpeech.speak('${topic.sample_speech}', 0.85)">
                 <span>🔊 Nghe giọng mẫu (0.85x)</span>
@@ -206,11 +250,13 @@ const SpeakingModule = (() => {
       mediaRecorder.onstop = () => {
         const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
         recordedAudioUrl = URL.createObjectURL(audioBlob);
+        shadowingStep = 6;
         renderActiveTopic();
       };
 
       mediaRecorder.start();
       isRecording = true;
+      shadowingStep = 5;
       renderActiveTopic();
     } catch (e) {
       App.showToast('Không thể truy cập Microphone: ' + e.message, 'error');
@@ -232,6 +278,7 @@ const SpeakingModule = (() => {
   return {
     init,
     selectTopic,
+    setShadowingStep,
     toggleRecord
   };
 })();

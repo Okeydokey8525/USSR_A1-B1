@@ -1,9 +1,10 @@
 /**
  * WEB_USSR - Grammar, Verb Aspects & Motion Verbs Practice
+ * Situational Context Contrast & Directional Timeline Vectors
  */
 const GrammarPracticeModule = (() => {
   let grammarData = null;
-  let activeTab = 'aspects'; // 'aspects', 'motion', 'cases_quiz'
+  let activeTab = 'aspects'; // 'aspects', 'motion', 'prefixes'
 
   async function init() {
     try {
@@ -42,7 +43,19 @@ const GrammarPracticeModule = (() => {
     const container = document.getElementById('aspect-pairs-container');
     if (!container || !grammarData) return;
 
-    container.innerHTML = grammarData.aspect_pairs.map(pair => `
+    let guideHtml = '';
+    if (grammarData.pedagogical_guide) {
+      guideHtml = `
+        <div class="col-span-1 sm:col-span-2 p-5 rounded-3xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 space-y-2 text-xs sm:text-sm text-blue-950 dark:text-blue-200 mb-2">
+          <strong class="text-sm font-bold text-blue-800 dark:text-blue-300">🎯 ${grammarData.pedagogical_guide.title}:</strong>
+          <ul class="space-y-1.5 pl-4 list-disc font-medium">
+            ${grammarData.pedagogical_guide.core_principles.map(p => `<li>${p}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    container.innerHTML = guideHtml + grammarData.aspect_pairs.map(pair => `
       <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
         <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
           <span class="text-xs font-bold text-slate-400">Ý nghĩa: ${pair.meaning}</span>
@@ -84,7 +97,66 @@ const GrammarPracticeModule = (() => {
     const container = document.getElementById('motion-verbs-container');
     if (!container || !grammarData) return;
 
-    container.innerHTML = grammarData.motion_verbs.map(m => `
+    let timelineHtml = '';
+    if (grammarData.motion_timeline_guide) {
+      const g = grammarData.motion_timeline_guide;
+      timelineHtml = `
+        <div class="col-span-1 sm:col-span-2 p-5 rounded-3xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 space-y-4 text-xs sm:text-sm text-purple-950 dark:text-purple-200 mb-2">
+          <strong class="text-sm font-bold text-purple-900 dark:text-purple-300">🧭 ${g.title}:</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-purple-100 dark:border-purple-900 space-y-1">
+              <span class="font-extrabold text-blue-600 block">${g.unidirectional.symbol} ${g.unidirectional.name}</span>
+              <p class="text-xs text-slate-700 dark:text-slate-300">${g.unidirectional.meaning}</p>
+              <p class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-1">${g.unidirectional.example}</p>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-purple-100 dark:border-purple-900 space-y-1">
+              <span class="font-extrabold text-purple-600 block">${g.multidirectional.symbol} ${g.multidirectional.name}</span>
+              <p class="text-xs text-slate-700 dark:text-slate-300">${g.multidirectional.meaning}</p>
+              <p class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400 mt-1">${g.multidirectional.example}</p>
+            </div>
+          </div>
+
+          <!-- 4-Way Situational Comparison Matrix -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-purple-200 dark:border-purple-800 space-y-2">
+            <span class="text-xs font-bold text-purple-800 dark:text-purple-300 uppercase tracking-wider block">
+              📊 Đối chiếu 4 câu thực tế để hiểu bản chất:
+            </span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-blue-600 font-cyrillic block">1. Я иду́ в университе́т.</span>
+                  <span class="text-[11px] text-slate-500">Tôi đang trên đường đi bộ tới trường (➔).</span>
+                </div>
+                <button class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs" onclick="RussianSpeech.speak('Я иду в университет')">🔊</button>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-purple-600 font-cyrillic block">2. Я хожу́ в университе́т.</span>
+                  <span class="text-[11px] text-slate-500">Tôi đi học trường đại học hàng ngày (⇄).</span>
+                </div>
+                <button class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xs" onclick="RussianSpeech.speak('Я хожу в университет')">🔊</button>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-amber-600 font-cyrillic block">3. Я пошёл в университе́т.</span>
+                  <span class="text-[11px] text-slate-500">Tôi đã bắt đầu rời đi tới trường (bắt đầu ➔).</span>
+                </div>
+                <button class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs" onclick="RussianSpeech.speak('Я пошёл в университет')">🔊</button>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-emerald-600 font-cyrillic block">4. Я пришёл в университе́т.</span>
+                  <span class="text-[11px] text-slate-500">Tôi đã đến nơi trường đại học rồi (kết quả ✓).</span>
+                </div>
+                <button class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs" onclick="RussianSpeech.speak('Я пришёл в университет')">🔊</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    container.innerHTML = timelineHtml + grammarData.motion_verbs.map(m => `
       <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
         <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
           <span class="text-xs font-bold text-slate-400">Ý nghĩa: ${m.meaning}</span>

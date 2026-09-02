@@ -3,38 +3,172 @@
     {
       "module_id": "mod_pre_a1",
       "level": "Pre-A1",
-      "title": "Module 0: Nền Tảng Chữ Cái Cyrillic & Bậc Thang Đọc",
-      "description": "Làm chủ 33 chữ cái tiếng Nga, bậc thang ghép vần âm tiết và 4 quy tắc biến âm cốt lõi.",
+      "title": "Module 0: Nền Tảng Chữ Cái Cyrillic, Trọng Âm & Bậc Thang Đọc",
+      "description": "Làm chủ 33 chữ cái, trọng âm và biến âm.",
       "lessons": [
         {
           "id": "les_0_1",
+          "module_id": "mod_pre_a1",
+          "module_title": "Module 0: Nền Tảng Chữ Cái Cyrillic, Trọng Âm & Bậc Thang Đọc",
+          "level": "Pre-A1",
           "objective_code": "RUS-PRE-01",
-          "title": "Bài 0.1: Bảng Chữ Cái Cyrillic & 10 Nguyên Âm",
-          "why_learn": "Chữ cái Cyrillic là chìa khóa đầu tiên. Tiếng Nga đọc tương đối sát mặt chữ một khi bạn nắm vững 10 nguyên âm và các phụ âm cơ bản.",
-          "prerequisites": "Không cần kiến thức trước đó (Bắt đầu từ số 0).",
-          "theory_markdown": "Tiếng Nga có **33 chữ cái** bao gồm:\n- **10 nguyên âm**: 5 nguyên âm cứng (А, О, У, Ы, Э) và 5 nguyên âm iotated mềm (Я, Ё, Ю, И, Е).\n- **21 phụ âm**: chia thành phụ âm hữu thanh và vô thanh.\n- **2 dấu hiệu**: Dấu cứng (Ъ) và Dấu mềm (Ь).",
-          "context_examples": [
+          "title": "Bài 0.1: Bảng Chữ Cái Cyrillic, 10 Nguyên Âm & Trọng Âm Cốt Lõi",
+          "why_learn": "Chữ cái Cyrillic là nền móng đầu tiên. Tiếng Nga đọc rất sát mặt chữ một khi bạn phân biệt được 10 nguyên âm và hiểu rằng trọng âm (Ударение) quyết định toàn bộ cách phát âm của một từ.",
+          "prerequisites": "Không yêu cầu kiến thức trước đó (Khởi đầu từ số 0).",
+          "new_vocab": [
             {
-              "ru": "ма́ма",
+              "word": "ма́ма",
               "phonetic": "[ma-ma]",
-              "vi": "mẹ"
+              "meaning": "mẹ"
             },
             {
-              "ru": "па́па",
+              "word": "па́па",
               "phonetic": "[pa-pa]",
-              "vi": "bố"
+              "meaning": "bố"
             },
             {
-              "ru": "дом",
+              "word": "дом",
               "phonetic": "[dom]",
-              "vi": "ngôi nhà"
+              "meaning": "ngôi nhà"
             },
             {
-              "ru": "мир",
+              "word": "мир",
               "phonetic": "[mir]",
-              "vi": "hòa bình / thế giới"
+              "meaning": "thế giới / hòa bình"
+            },
+            {
+              "word": "кот",
+              "phonetic": "[kot]",
+              "meaning": "con mèo"
+            },
+            {
+              "word": "кни́га",
+              "phonetic": "[kni-ga]",
+              "meaning": "quyển sách"
             }
           ],
+          "grammar_discovery": [
+            {
+              "ru": "до́ма (ở nhà)",
+              "note": "Trọng âm rơi vào 'o' ➔ đọc rõ [o]"
+            },
+            {
+              "ru": "дома́ (những ngôi nhà)",
+              "note": "Trọng âm rơi vào 'a' ➔ 'o' giảm âm thành [a]"
+            }
+          ],
+          "theory_markdown": "### 1. Cấu trúc Bảng Chữ Cái Cyrillic (33 Chữ)\n- **10 Nguyên âm chia thành 5 cặp Cứng - Mềm:**\n  - Cứng: **А, О, У, Ы, Э**\n  - Mềm (Iotated): **Я, Ё, Ю, И, Е** (phát âm có âm lướt [y] đứng trước: ya, yo, yu, i, ye)\n- **21 Phụ âm:** chia thành hữu thanh và vô thanh.\n- **2 Dấu hiệu:** Dấu cứng (Ъ) và Dấu mềm (Ь) làm mềm phụ âm đứng trước.\n\n### 2. Trọng âm tiếng Nga (Ударение)\n- Trọng âm có thể rơi vào bất kỳ âm tiết nào.\n- **Âm tiết mang trọng âm** luôn được đọc to, rõ, ngân dài hơn.",
+          "context_examples": [
+            {
+              "ru": "Это ма́ма và па́па.",
+              "phonetic": "[e-ta ma-ma i pa-pa]",
+              "vi": "Đây là mẹ và bố."
+            },
+            {
+              "ru": "Вот наш дом.",
+              "phonetic": "[vot nash dom]",
+              "vi": "Kìa là ngôi nhà của chúng tôi."
+            },
+            {
+              "ru": "Это кот và кни́га.",
+              "phonetic": "[e-ta kot i kni-ga]",
+              "vi": "Đây là con mèo và quyển sách."
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Chữ cái nào sau đây là nguyên âm iotated (nguyên âm mềm)?",
+              "options": [
+                "А",
+                "О",
+                "Я",
+                "У"
+              ],
+              "correct": 2,
+              "why": "Chữ 'Я' là nguyên âm mềm tương ứng với 'А', phát âm là [ya]."
+            },
+            {
+              "q": "Trong từ 'ма́ма' (mẹ), trọng âm rơi vào âm tiết thứ mấy?",
+              "options": [
+                "Âm tiết thứ 1 (ма́-)",
+                "Âm tiết thứ 2 (-ма)"
+              ],
+              "correct": 0,
+              "why": "Dấu trọng âm đặt trên chữ 'а' thứ nhất, đọc là [má-ma]."
+            },
+            {
+              "q": "Từ nào sau đây có nguyên âm đọc là [o] rõ ràng nhất?",
+              "options": [
+                "дом (ngôi nhà)",
+                "окно́ (cửa sổ)",
+                "молоко́ (sữa)"
+              ],
+              "correct": 0,
+              "why": "Từ 'дом' chỉ có 1 âm tiết duy nhất nên chữ 'о' luôn mang trọng âm và đọc chuẩn [o]."
+            },
+            {
+              "q": "Cặp nguyên âm Cứng - Mềm nào sau đây là đúng tương ứng?",
+              "options": [
+                "А — Я",
+                "О — У",
+                "Ы — Э",
+                "У — Е"
+              ],
+              "correct": 0,
+              "why": "Cặp 'А' (nguyên âm cứng) và 'Я' (nguyên âm mềm) là cặp tương ứng trực tiếp."
+            },
+            {
+              "q": "Dấu mềm (Ь) trong tiếng Nga có tác dụng gì?",
+              "options": [
+                "Làm mềm phụ âm đứng ngay trước nó",
+                "Tạo ra một âm thanh độc lập",
+                "Thay đổi nguyên âm sau nó"
+              ],
+              "correct": 0,
+              "why": "Dấu mềm (Мягкий знак) không có âm đọc riêng, chỉ làm mềm âm của phụ âm đứng liền trước."
+            }
+          ],
+          "meaningful_practice": "Ghép các từ đơn giản với hình ảnh/ý nghĩa: дом (nhà), кот (mèo), ма́ма (mẹ), па́па (bố).",
+          "reading_snippet": "Это дом. Тут кот. Там ма́ма và па́па. Вот кни́га.",
+          "listening_snippet": "Это ма́ма. Это па́па. Вот наш дом.",
+          "speaking_prompt": "Nhìn vào chữ 'Это ма́ма' và tự phát âm to, rõ ràng vào micro.",
+          "production_prompt": "Hãy viết 2 câu tiếng Nga đơn giản sử dụng cấu trúc 'Это ...' và 'Вот ...' với các từ vừa học.",
+          "mistake_remediation": "Người Việt hay đọc chữ 'О' trong mọi vị trí như nhau. Hãy nhớ: chỉ đọc rõ [o] khi chữ 'О' có dấu trọng âm!",
+          "srs_items": [
+            "voc_001",
+            "voc_002",
+            "voc_003"
+          ],
+          "mastery_check": [
+            {
+              "q": "Chữ 'Е' trong tiếng Nga phát âm là gì?",
+              "options": [
+                "[ye] hoặc [e]",
+                "[o]",
+                "[u]"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Số lượng chữ cái trong bảng chữ cái tiếng Nga là bao nhiêu?",
+              "options": [
+                "33 chữ cái",
+                "26 chữ cái",
+                "30 chữ cái"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'мир' có nghĩa là gì?",
+              "options": [
+                "Hòa bình / Thế giới",
+                "Quyển sách",
+                "Con mèo"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_0_2",
           "practice_exercises": [
             {
               "q": "Chữ cái nào sau đây là nguyên âm iotated (nguyên âm mềm)?",
@@ -45,654 +179,3657 @@
                 "У"
               ],
               "correct": 2,
-              "why": "Chữ 'Я' là nguyên âm iotated mềm phát âm là [ya]."
+              "why": "Chữ 'Я' là nguyên âm mềm tương ứng với 'А', phát âm là [ya]."
             },
             {
-              "q": "Từ 'дом' (ngôi nhà) được phát âm như thế nào?",
+              "q": "Trong từ 'ма́ма' (mẹ), trọng âm rơi vào âm tiết thứ mấy?",
               "options": [
-                "[dom]",
-                "[dam]",
-                "[dum]"
+                "Âm tiết thứ 1 (ма́-)",
+                "Âm tiết thứ 2 (-ма)"
               ],
               "correct": 0,
-              "why": "Vì 'дом' chỉ có 1 âm tiết mang trọng âm nên chữ О đọc chuẩn là [o]."
+              "why": "Dấu trọng âm đặt trên chữ 'а' thứ nhất, đọc là [má-ma]."
+            },
+            {
+              "q": "Từ nào sau đây có nguyên âm đọc là [o] rõ ràng nhất?",
+              "options": [
+                "дом (ngôi nhà)",
+                "окно́ (cửa sổ)",
+                "молоко́ (sữa)"
+              ],
+              "correct": 0,
+              "why": "Từ 'дом' chỉ có 1 âm tiết duy nhất nên chữ 'о' luôn mang trọng âm và đọc chuẩn [o]."
+            },
+            {
+              "q": "Cặp nguyên âm Cứng - Mềm nào sau đây là đúng tương ứng?",
+              "options": [
+                "А — Я",
+                "О — У",
+                "Ы — Э",
+                "У — Е"
+              ],
+              "correct": 0,
+              "why": "Cặp 'А' (nguyên âm cứng) và 'Я' (nguyên âm mềm) là cặp tương ứng trực tiếp."
+            },
+            {
+              "q": "Dấu mềm (Ь) trong tiếng Nga có tác dụng gì?",
+              "options": [
+                "Làm mềm phụ âm đứng ngay trước nó",
+                "Tạo ra một âm thanh độc lập",
+                "Thay đổi nguyên âm sau nó"
+              ],
+              "correct": 0,
+              "why": "Dấu mềm (Мягкий знак) không có âm đọc riêng, chỉ làm mềm âm của phụ âm đứng liền trước."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_003",
-            "v_004",
-            "v_008"
-          ],
-          "integrated_speaking_phrase": "Здравствуйте! Меня зовут Луонг.",
-          "mastery_threshold": 80
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển từ danh từ số ít sang danh từ số nhiều:",
+              "prompt": "дом ➔ ...",
+              "answer": "дома́",
+              "why": "'дом' là danh từ giống đực có số nhiều đặc biệt đuôi -а mang trọng âm."
+            },
+            {
+              "instruction": "Thay đổi vị trí trọng âm để đổi nghĩa từ 'ổ khóa' thành 'lâu đài':",
+              "prompt": "замо́к (ổ khóa) ➔ ... (lâu đài)",
+              "answer": "за́мок",
+              "why": "Trọng âm chuyển lên âm tiết 1 'за́мок'."
+            }
+          ]
         },
         {
           "id": "les_0_2",
+          "module_id": "mod_pre_a1",
+          "module_title": "Module 0: Nền Tảng Chữ Cái Cyrillic, Trọng Âm & Bậc Thang Đọc",
+          "level": "Pre-A1",
           "objective_code": "RUS-PRE-02",
-          "title": "Bài 0.2: Bậc Thang Ghép Vần & Giảm Âm Chữ О",
-          "why_learn": "Trong tiếng Nga, trọng âm (Ударение) thay đổi hoàn toàn cách phát âm của từ. Không nhấn đúng trọng âm sẽ khiến người bản ngữ khó hiểu hoặc hiểu sai nghĩa.",
-          "prerequisites": "Đã học Bài 0.1.",
-          "theory_markdown": "### Quy tắc giảm âm chữ О:\n- Khi mang **trọng âm (́)**: phát âm rõ là **[о]**.\n- Khi **KHÔNG mang trọng âm**: có xu hướng giảm âm thành **[а]** nhẹ.\n\n*Ví dụ:* từ `молоко́` có 3 chữ 'o', chỉ chữ 'o' cuối mang trọng âm nên phát âm là `[ма-ла-ко́]`.",
+          "title": "Bài 0.2: Bậc Thang Ghép Vần & Quy Tắc Giảm Âm Chữ О / Е / Я",
+          "why_learn": "Người Nga không đọc từng chữ như robot viết. Khi nói tự nhiên, các nguyên âm không mang trọng âm sẽ bị giảm âm (Редукция гласных). Nắm quy tắc này giúp bạn nghe và nói như người bản xứ ngay từ ngày đầu.",
+          "prerequisites": "Đã thuộc 33 chữ cái và 10 nguyên âm từ Bài 0.1.",
+          "new_vocab": [
+            {
+              "word": "окно́",
+              "phonetic": "[ak-no]",
+              "meaning": "cửa sổ"
+            },
+            {
+              "word": "молоко́",
+              "phonetic": "[ma-la-ko]",
+              "meaning": "sữa"
+            },
+            {
+              "word": "вода́",
+              "phonetic": "[va-da]",
+              "meaning": "nước"
+            },
+            {
+              "word": "сестра́",
+              "phonetic": "[si-stra]",
+              "meaning": "chị/em gái"
+            },
+            {
+              "word": "язы́к",
+              "phonetic": "[yi-zyk]",
+              "meaning": "ngôn ngữ / cái lưỡi"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "окно́ ➔ đọc là [ак-но́]",
+              "note": "Chữ 'о' thứ nhất không trọng âm biến thành [а]"
+            },
+            {
+              "ru": "молоко́ ➔ đọc là [ма-ла-ко́]",
+              "note": "Hai chữ 'о' đầu giảm âm thành [а], chữ 'о' cuối giữ nguyên [о]"
+            }
+          ],
+          "theory_markdown": "### Quy Tắc Giảm Âm Vàng (Редукция):\n1. **Chữ О khi không mang trọng âm:**\n   - Ở âm tiết ngay trước trọng âm: phát âm thành âm **[а]** rõ.\n   - Ở các âm tiết xa hơn: phát âm thành âm **[ə]** nhẹ, lướt nhanh.\n   - *Ví dụ:* `молоко́` ➔ [ма-ла-ко́], `вода́` ➔ [ва-да́].\n2. **Chữ Е và Я khi không mang trọng âm:**\n   - Phát âm lướt nhẹ nghiêng về âm **[и]**.\n   - *Ví dụ:* `сестра́` ➔ [си-стра́], `язы́к` ➔ [йи-зы́к].",
           "context_examples": [
             {
-              "ru": "молоко́",
-              "phonetic": "[ma-la-ko]",
-              "vi": "sữa"
+              "ru": "Вот окно́.",
+              "phonetic": "[vot ak-no]",
+              "vi": "Kìa là cái cửa sổ."
             },
             {
-              "ru": "хорошо́",
-              "phonetic": "[kha-ra-sho]",
-              "vi": "tốt / được"
+              "ru": "Это вода́ và молоко́.",
+              "phonetic": "[e-ta va-da i ma-la-ko]",
+              "vi": "Đây là nước và sữa."
             },
             {
-              "ru": "окно́",
-              "phonetic": "[ak-no]",
-              "vi": "cửa sổ"
-            },
-            {
-              "ru": "соба́ка",
-              "phonetic": "[sa-ba-ka]",
-              "vi": "con chó"
+              "ru": "Моя́ сестра́ у́чит ру́сский язы́к.",
+              "phonetic": "[ma-ya si-stra u-chit rus-kiy yi-zyk]",
+              "vi": "Chị gái tôi học tiếng Nga."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Từ 'окно́' (cửa sổ) có cách phát âm chuẩn âm thanh là gì?",
+              "options": [
+                "[ак-но́]",
+                "[ок-но́]",
+                "[ук-но́]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'o' đầu không mang trọng âm nên giảm âm thành [а]."
+            },
+            {
+              "q": "Trong từ 'молоко́', chữ 'о' nào được phát âm rõ ràng là [o]?",
+              "options": [
+                "Chữ 'о' thứ 3 mang trọng âm",
+                "Chữ 'о' thứ 1",
+                "Chữ 'о' thứ 2"
+              ],
+              "correct": 0,
+              "why": "Chỉ có âm tiết mang trọng âm (-ко́) mới giữ nguyên nguyên âm [o]."
+            },
+            {
+              "q": "Từ 'вода́' (nước) được đọc chuẩn là:",
+              "options": [
+                "[ва-да́]",
+                "[во-да́]",
+                "[ву-да́]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'o' không trọng âm giảm thành [a]."
+            },
+            {
+              "q": "Trong từ 'сестра́' (chị gái), chữ 'е' đọc thành âm gì?",
+              "options": [
+                "[и] (lướt nhẹ)",
+                "[е] (ngân dài)",
+                "[а]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'е' không mang trọng âm giảm âm nghiêng về [и]."
+            },
+            {
+              "q": "Tại sao từ 'замо́к' (ổ khóa) và 'за́мок' (lâu đài) đọc khác nhau?",
+              "options": [
+                "Vì trọng âm khác nhau làm thay đổi cách đọc nguyên âm 'а' và 'о'",
+                "Vì nghĩa khác nhau",
+                "Vì số âm tiết khác nhau"
+              ],
+              "correct": 0,
+              "why": "Trong 'замо́к', trọng âm ở 'о' ➔ [за-мо́к]. Trong 'за́мок', trọng âm ở 'а' ➔ 'о' giảm âm thành [за́-мак]."
+            }
+          ],
+          "meaningful_practice": "Đọc to từng cặp từ và nhận diện sự khác biệt: до́ма [до́-ма] vs дома́ [да-ма́].",
+          "reading_snippet": "Там окно́. Тут вода́ và молоко́. Сестра́ пьёт молоко́.",
+          "listening_snippet": "Где вода́? Вода́ тут. Где молоко́? Молоко́ там.",
+          "speaking_prompt": "Đọc to câu: 'Это вода́ và молоко́' chú ý giảm âm hai chữ 'о' thành [а].",
+          "production_prompt": "Viết phiên âm cách đọc bằng chữ cái Latinh/IPA cho từ 'молоко' và 'окно'.",
+          "mistake_remediation": "Lỗi phổ biến: đọc chữ 'о' không trọng âm thành chữ 'ô/o' của tiếng Việt. Hãy thả lỏng cơ miệng và phát âm nhẹ như [a].",
+          "srs_items": [
+            "voc_004",
+            "voc_005",
+            "voc_006"
+          ],
+          "mastery_check": [
+            {
+              "q": "Chữ 'О' không mang trọng âm đọc thành gì?",
+              "options": [
+                "[a]",
+                "[o]",
+                "[u]"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'сестра' đọc chuẩn là gì?",
+              "options": [
+                "[си-стра]",
+                "[се-стра]",
+                "[са-стра]"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Trọng âm trong tiếng Nga có cố định ở một vị trí không?",
+              "options": [
+                "Không cố định, có thể ở bất kỳ vị trí nào",
+                "Luôn ở âm tiết đầu",
+                "Luôn ở âm tiết cuối"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_0_3",
           "practice_exercises": [
             {
-              "q": "Trong từ 'хорошо́', chữ 'o' nào được phát âm rõ là [o]?",
+              "q": "Từ 'окно́' (cửa sổ) có cách phát âm chuẩn âm thanh là gì?",
               "options": [
-                "Chữ 'o' thứ nhất",
-                "Chữ 'o' thứ hai",
-                "Chữ 'o' thứ ba"
+                "[ак-но́]",
+                "[ок-но́]",
+                "[ук-но́]"
               ],
-              "correct": 2,
-              "why": "Chỉ có chữ 'o' thứ 3 mang dấu trọng âm nên phát âm rõ là [o], 2 chữ đầu giảm âm thành [a]."
+              "correct": 0,
+              "why": "Chữ 'o' đầu không mang trọng âm nên giảm âm thành [а]."
+            },
+            {
+              "q": "Trong từ 'молоко́', chữ 'о' nào được phát âm rõ ràng là [o]?",
+              "options": [
+                "Chữ 'о' thứ 3 mang trọng âm",
+                "Chữ 'о' thứ 1",
+                "Chữ 'о' thứ 2"
+              ],
+              "correct": 0,
+              "why": "Chỉ có âm tiết mang trọng âm (-ко́) mới giữ nguyên nguyên âm [o]."
+            },
+            {
+              "q": "Từ 'вода́' (nước) được đọc chuẩn là:",
+              "options": [
+                "[ва-да́]",
+                "[во-да́]",
+                "[ву-да́]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'o' không trọng âm giảm thành [a]."
+            },
+            {
+              "q": "Trong từ 'сестра́' (chị gái), chữ 'е' đọc thành âm gì?",
+              "options": [
+                "[и] (lướt nhẹ)",
+                "[е] (ngân dài)",
+                "[а]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'е' không mang trọng âm giảm âm nghiêng về [и]."
+            },
+            {
+              "q": "Tại sao từ 'замо́к' (ổ khóa) và 'за́мок' (lâu đài) đọc khác nhau?",
+              "options": [
+                "Vì trọng âm khác nhau làm thay đổi cách đọc nguyên âm 'а' và 'о'",
+                "Vì nghĩa khác nhau",
+                "Vì số âm tiết khác nhau"
+              ],
+              "correct": 0,
+              "why": "Trong 'замо́к', trọng âm ở 'о' ➔ [за-мо́к]. Trong 'за́мок', trọng âm ở 'а' ➔ 'о' giảm âm thành [за́-мак]."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_009",
-            "v_010"
-          ],
-          "integrated_speaking_phrase": "Большое спасибо, всё очень хорошо!",
-          "mastery_threshold": 80
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển từ danh từ số ít sang danh từ số nhiều:",
+              "prompt": "дом ➔ ...",
+              "answer": "дома́",
+              "why": "'дом' là danh từ giống đực có số nhiều đặc biệt đuôi -а mang trọng âm."
+            },
+            {
+              "instruction": "Thay đổi vị trí trọng âm để đổi nghĩa từ 'ổ khóa' thành 'lâu đài':",
+              "prompt": "замо́к (ổ khóa) ➔ ... (lâu đài)",
+              "answer": "за́мок",
+              "why": "Trọng âm chuyển lên âm tiết 1 'за́мок'."
+            }
+          ]
         },
         {
           "id": "les_0_3",
+          "module_id": "mod_pre_a1",
+          "module_title": "Module 0: Nền Tảng Chữ Cái Cyrillic, Trọng Âm & Bậc Thang Đọc",
+          "level": "Pre-A1",
           "objective_code": "RUS-PRE-03",
-          "title": "Bài 0.3: Vô Thanh Hóa & Đồng Hóa Phụ Âm",
-          "why_learn": "Giúp bạn phát âm tự nhiên như người Nga khi gặp các phụ âm đứng cuối từ hoặc đứng cạnh nhau.",
-          "prerequisites": "Đã học Bài 0.1 và 0.2.",
-          "theory_markdown": "### 1. Vô thanh hóa cuối từ:\nPhụ âm hữu thanh đứng cuối từ bị biến đổi: `Б->П, В->Ф, Г->К, Д->Т, Ж->Ш, З->С`.\n- `хлеб` -> đọc là `[хлеп]` (bánh mì)\n- `друг` -> đọc là `[друк]` (người bạn)\n- `город` -> đọc là `[го́-рат]` (thành phố)",
+          "title": "Bài 0.3: Vô Thanh Hóa & Hữu Thanh Hóa Phụ Âm",
+          "why_learn": "Tại sao từ 'друг' (bạn bè) kết thúc bằng chữ 'г' nhưng người Nga lại đọc là [друк]? Đây là quy tắc vô thanh hóa phụ âm cuối từ (Оглушение согласных). Hiểu quy tắc này giúp bạn phát âm chuẩn xác và tự nhiên.",
+          "prerequisites": "Đã học phân biệt nguyên âm và giảm âm từ Bài 0.1 và 0.2.",
+          "new_vocab": [
+            {
+              "word": "друг",
+              "phonetic": "[druk]",
+              "meaning": "người bạn nam"
+            },
+            {
+              "word": "город",
+              "phonetic": "[go-rat]",
+              "meaning": "thành phố"
+            },
+            {
+              "word": "хлеб",
+              "phonetic": "[khlyep]",
+              "meaning": "bánh mì"
+            },
+            {
+              "word": "автобус",
+              "phonetic": "[af-to-bus]",
+              "meaning": "xe buýt"
+            },
+            {
+              "word": "футбол",
+              "phonetic": "[fud-bol]",
+              "meaning": "bóng đá"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "хлеб ➔ phát âm là [хлеп]",
+              "note": "Phụ âm 'б' hữu thanh ở cuối từ biến thành 'п' vô thanh"
+            },
+            {
+              "ru": "город ➔ phát âm là [го́-рат]",
+              "note": "Phụ âm 'д' ở cuối từ biến thành 'т', chữ 'о' thứ hai giảm thành [а]"
+            }
+          ],
+          "theory_markdown": "### 1. Cặp Phụ Âm Hữu Thanh — Vô Thanh:\n- **Hữu thanh (Звонкие):** Б, В, Г, Д, Ж, З\n- **Vô thanh (Глухие):** П, Ф, К, Т, Ш, С\n\n### 2. Quy tắc Biến âm Phụ âm:\n1. **Vô thanh hóa cuối từ (Оглушение):**\n   - Phụ âm hữu thanh đứng ở cuối từ biến thành phụ âm vô thanh tương ứng.\n   - `хлеб` ➔ [хлеп], `друг` ➔ [друк], `го́род` ➔ [го́-рат].\n2. **Đồng hóa trước phụ âm khác (Ассимиляция):**\n   - Hữu thanh đứng trước vô thanh ➔ biến thành vô thanh: `авто́бус` ➔ [аф-то́-бус].\n   - Vô thanh đứng trước hữu thanh ➔ biến thành hữu thanh: `футбо́л` ➔ [фуд-бо́л].",
           "context_examples": [
             {
-              "ru": "хлеб",
-              "phonetic": "[khlyep]",
-              "vi": "bánh mì"
+              "ru": "Это мой друг.",
+              "phonetic": "[e-ta moy druk]",
+              "vi": "Đây là bạn của tôi."
             },
             {
-              "ru": "друг",
-              "phonetic": "[druk]",
-              "vi": "người bạn"
+              "ru": "Вот наш краси́вый го́род.",
+              "phonetic": "[vot nash kra-si-vyy go-rat]",
+              "vi": "Kìa là thành phố xinh đẹp của chúng tôi."
             },
             {
-              "ru": "авто́бус",
-              "phonetic": "[af-to-bus]",
-              "vi": "xe buýt (в đứng trước т đọc thành ф)"
+              "ru": "Мы еди́м све́жий хлеб.",
+              "phonetic": "[my ye-dim svye-zhiy khlyep]",
+              "vi": "Chúng tôi ăn bánh mì tươi."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Từ 'хлеб' (bánh mì) có âm kết thúc được phát âm là:",
+              "options": [
+                "[п]",
+                "[б]",
+                "[в]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'б' đứng ở cuối từ bị vô thanh hóa thành [п]."
+            },
+            {
+              "q": "Từ 'друг' (người bạn) được phát âm chuẩn là:",
+              "options": [
+                "[друк]",
+                "[друг]",
+                "[драг]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'г' ở cuối từ vô thanh hóa thành âm [к]."
+            },
+            {
+              "q": "Trong từ 'авто́бус' (xe buýt), chữ 'в' được phát âm là gì?",
+              "options": [
+                "[ф]",
+                "[в]",
+                "[б]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'в' đứng trước phụ âm vô thanh 'т' nên bị đồng hóa thành âm vô thanh [ф]."
+            },
+            {
+              "q": "Trong từ 'футбо́л' (bóng đá), chữ 'т' được phát âm là gì?",
+              "options": [
+                "[д]",
+                "[т]",
+                "[с]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'т' đứng trước phụ âm hữu thanh 'б' nên bị hữu thanh hóa thành âm [д]."
+            },
+            {
+              "q": "Từ 'го́род' (thành phố) có cách phát âm chuẩn là:",
+              "options": [
+                "[го́-рат]",
+                "[го́-род]",
+                "[га-ро́д]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'о' thứ nhất mang trọng âm giữ nguyên [о], chữ 'о' thứ hai giảm thành [а], chữ 'д' cuối vô thanh hóa thành [т]."
+            }
+          ],
+          "meaningful_practice": "Luyện đọc chuỗi từ có biến âm: друг [друк], хлеб [хлеп], город [горат], автобус [автобус].",
+          "reading_snippet": "Это мой друг. Мы едем в го́род на авто́бусе. Там есть све́жий хлеб.",
+          "listening_snippet": "Вот го́род. Тут мой друг. Мы игра́ем в футбо́л.",
+          "speaking_prompt": "Tự ghi âm câu: 'Это мой друг và наш го́род' và kiểm tra xem đuôi [к] và [т] đã đọc rõ chưa.",
+          "production_prompt": "Viết lại cách phát âm thực tế (trong ngoặc vuông) cho 3 từ: друг [...], хлеб [...], город [...].",
+          "mistake_remediation": "Người học hay quên vô thanh hóa đuôi từ, khiến câu nói nghe bị gượng gạo. Hãy thả lỏng và bật nhẹ âm vô thanh [п, т, к] ở cuối từ.",
+          "srs_items": [
+            "voc_007",
+            "voc_008",
+            "voc_009"
+          ],
+          "mastery_check": [
+            {
+              "q": "Phụ âm hữu thanh 'Б' ở cuối từ đọc thành gì?",
+              "options": [
+                "[п]",
+                "[в]",
+                "[б]"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'автобус' đọc âm 'в' thành gì?",
+              "options": [
+                "[ф]",
+                "[в]",
+                "[б]"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'друг' có nghĩa là gì?",
+              "options": [
+                "Người bạn",
+                "Ngôi nhà",
+                "Thành phố"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_1_1",
           "practice_exercises": [
             {
-              "q": "Từ 'хлеб' (bánh mì) có chữ 'б' cuối được phát âm thành âm gì?",
+              "q": "Từ 'хлеб' (bánh mì) có âm kết thúc được phát âm là:",
               "options": [
-                "[б] (bờ)",
-                "[п] (pờ)",
-                "[м] (mờ)"
+                "[п]",
+                "[б]",
+                "[в]"
               ],
-              "correct": 1,
-              "why": "Phụ âm hữu thanh 'б' đứng cuối từ bị vô thanh hóa thành [п]."
+              "correct": 0,
+              "why": "Chữ 'б' đứng ở cuối từ bị vô thanh hóa thành [п]."
+            },
+            {
+              "q": "Từ 'друг' (người bạn) được phát âm chuẩn là:",
+              "options": [
+                "[друк]",
+                "[друг]",
+                "[драг]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'г' ở cuối từ vô thanh hóa thành âm [к]."
+            },
+            {
+              "q": "Trong từ 'авто́бус' (xe buýt), chữ 'в' được phát âm là gì?",
+              "options": [
+                "[ф]",
+                "[в]",
+                "[б]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'в' đứng trước phụ âm vô thanh 'т' nên bị đồng hóa thành âm vô thanh [ф]."
+            },
+            {
+              "q": "Trong từ 'футбо́л' (bóng đá), chữ 'т' được phát âm là gì?",
+              "options": [
+                "[д]",
+                "[т]",
+                "[с]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'т' đứng trước phụ âm hữu thanh 'б' nên bị hữu thanh hóa thành âm [д]."
+            },
+            {
+              "q": "Từ 'го́род' (thành phố) có cách phát âm chuẩn là:",
+              "options": [
+                "[го́-рат]",
+                "[го́-род]",
+                "[га-ро́д]"
+              ],
+              "correct": 0,
+              "why": "Chữ 'о' thứ nhất mang trọng âm giữ nguyên [о], chữ 'о' thứ hai giảm thành [а], chữ 'д' cuối vô thanh hóa thành [т]."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_001",
-            "v_002",
-            "v_006"
-          ],
-          "integrated_speaking_phrase": "Мой друг едет на автобусе.",
-          "mastery_threshold": 80
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển từ danh từ số ít sang danh từ số nhiều:",
+              "prompt": "дом ➔ ...",
+              "answer": "дома́",
+              "why": "'дом' là danh từ giống đực có số nhiều đặc biệt đuôi -а mang trọng âm."
+            },
+            {
+              "instruction": "Thay đổi vị trí trọng âm để đổi nghĩa từ 'ổ khóa' thành 'lâu đài':",
+              "prompt": "замо́к (ổ khóa) ➔ ... (lâu đài)",
+              "answer": "за́мок",
+              "why": "Trọng âm chuyển lên âm tiết 1 'за́мок'."
+            }
+          ]
         }
       ]
     },
     {
       "module_id": "mod_a1_1",
       "level": "A1.1",
-      "title": "Module 1: A1.1 Sơ Cấp Căn Bản (Đại Từ, Giống & Thì Hiện Tại)",
-      "description": "Nhận biết 3 giống danh từ, đại từ sở hữu và chia động từ nhóm 1 thì hiện tại.",
+      "title": "Module 1: A1.1 — Đại Từ, 3 Giống Danh Từ & Giao Tiếp Cơ Bản",
+      "description": "Đại từ nhân xưng, 3 giống danh từ, chuỗi hòa hợp giống.",
       "lessons": [
         {
           "id": "les_1_1",
+          "module_id": "mod_a1_1",
+          "module_title": "Module 1: A1.1 — Đại Từ, 3 Giống Danh Từ & Giao Tiếp Cơ Bản",
+          "level": "A1.1",
           "objective_code": "RUS-A1-01",
           "title": "Bài 1.1: Đại Từ Nhân Xưng & Mẫu Câu Tự Giới Thiệu",
-          "why_learn": "Xây dựng các câu giao tiếp cơ bản đầu tiên: Tôi là ai, bạn là ai, chúng ta đang ở đâu.",
-          "prerequisites": "Hoàn thành Module 0.",
-          "theory_markdown": "### Đại từ nhân xưng tiếng Nga:\n- **Я** (Tôi), **Ты** (Bạn - thân mật), **Он** (Anh ấy), **Она** (Cô ấy), **Оно** (Nó)\n- **Мы** (Chúng tôi), **Вы** (Các bạn / Ngài - lịch sự), **Они** (Họ)",
-          "context_examples": [
+          "why_learn": "Bạn muốn tự tin nói: 'Xin chào! Tôi là sinh viên, tôi đến từ Việt Nam'. Đây là bài học nền tảng giúp bạn xưng hô chuẩn xác và làm quen với người bản xứ.",
+          "prerequisites": "Đã hoàn thành Module 0 (Phát âm và ghép vần cơ bản).",
+          "new_vocab": [
             {
-              "ru": "Меня́ зову́т Луонг.",
-              "phonetic": "[me-nya za-vut lu-ong]",
-              "vi": "Tên tôi là Lương."
+              "word": "я",
+              "phonetic": "[ya]",
+              "meaning": "tôi"
             },
+            {
+              "word": "ты",
+              "phonetic": "[ty]",
+              "meaning": "bạn (thân mật)"
+            },
+            {
+              "word": "он",
+              "phonetic": "[on]",
+              "meaning": "anh ấy (giống đực)"
+            },
+            {
+              "word": "она́",
+              "phonetic": "[a-na]",
+              "meaning": "cô ấy (giống cái)"
+            },
+            {
+              "word": "оно́",
+              "phonetic": "[a-no]",
+              "meaning": "nó (giống trung)"
+            },
+            {
+              "word": "мы",
+              "phonetic": "[my]",
+              "meaning": "chúng tôi"
+            },
+            {
+              "word": "вы",
+              "phonetic": "[vy]",
+              "meaning": "các bạn / ngài (lịch sự)"
+            },
+            {
+              "word": "они́",
+              "phonetic": "[a-ni]",
+              "meaning": "họ (số nhiều)"
+            },
+            {
+              "word": "студе́нт",
+              "phonetic": "[stu-dyent]",
+              "meaning": "sinh viên nam"
+            },
+            {
+              "word": "студе́нтка",
+              "phonetic": "[stu-dyent-ka]",
+              "meaning": "sinh viên nữ"
+            }
+          ],
+          "grammar_discovery": [
             {
               "ru": "Я студе́нт.",
-              "phonetic": "[ya stu-dyent]",
-              "vi": "Tôi là sinh viên."
+              "note": "Tiếng Nga không dùng động từ 'to be' (là) ở thì hiện tại!"
             },
             {
-              "ru": "Они́ мои́ друзья́.",
-              "phonetic": "[a-ni ma-i druz-ya]",
-              "vi": "Họ là những người bạn của tôi."
+              "ru": "Она́ студе́нтка.",
+              "note": "Danh từ chỉ nghề nghiệp biến đổi theo giới tính tự nhiên."
             }
           ],
+          "theory_markdown": "### 1. Hệ Thống Đại Từ Nhân Xưng Tiếng Nga:\n| Đại từ (Nga) | Phiên âm | Ý nghĩa |\n| :--- | :--- | :--- |\n| **Я** | [ya] | Tôi (ngôi 1 số ít) |\n| **Ты** | [ty] | Bạn, cậu (ngôi 2 số ít, thân mật) |\n| **Он / Она́ / Оно́** | [on / a-na / a-no] | Anh ấy / Cô ấy / Nó |\n| **Мы** | [my] | Chúng tôi (ngôi 1 số nhiều) |\n| **Вы** | [vy] | Các bạn (số nhiều) hoặc Ngài (lịch thiệp) |\n| **Они́** | [a-ni] | Họ, chúng nó (ngôi 3 số nhiều) |\n\n### 2. Cấu trúc câu định danh không có động từ 'to be':\nTrong tiếng Nga hiện đại, **không có từ tương đương với 'is/am/are'** ở thì hiện tại.\n- *Công thức:* `[Chủ ngữ] + [Danh từ/Tính từ].`\n- *Ví dụ:* `Я Луо́нг. Я студе́нт.` (Tôi là Lương. Tôi là sinh viên.)",
+          "context_examples": [
+            {
+              "ru": "Здра́вствуйте! Меня́ зову́т Луо́нг.",
+              "phonetic": "[zdrast-vuy-tye mye-nya za-vut lu-ong]",
+              "vi": "Xin chào! Tên tôi là Lương."
+            },
+            {
+              "ru": "Я студе́нт. Я живу́ в Москве́.",
+              "phonetic": "[ya stu-dyent ya zhi-vu v mask-vye]",
+              "vi": "Tôi là sinh viên. Tôi sống ở Moscow."
+            },
+            {
+              "ru": "А как вас зову́т?",
+              "phonetic": "[a kak vas za-vut]",
+              "vi": "Còn bạn tên là gì?"
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Đại từ nào dùng để xưng hô lịch sự với người lớn tuổi hoặc người mới quen?",
+              "options": [
+                "Вы",
+                "Ты",
+                "Они",
+                "Мы"
+              ],
+              "correct": 0,
+              "why": "'Вы' là đại từ ngôi thứ 2 dùng để biểu thị sự kính trọng, lịch sự."
+            },
+            {
+              "q": "Điền vào chỗ trống: 'Анна — ... (sinh viên nữ)'.",
+              "options": [
+                "студе́нтка",
+                "студе́нт",
+                "студе́нты"
+              ],
+              "correct": 0,
+              "why": "Анна là nữ nên dùng danh từ chỉ giới tính nữ 'студентка'."
+            },
+            {
+              "q": "Câu 'Tôi là sinh viên' trong tiếng Nga được diễn đạt đúng là:",
+              "options": [
+                "Я студе́нт.",
+                "Я есть студе́нт.",
+                "Я быть студе́нт."
+              ],
+              "correct": 0,
+              "why": "Ở thì hiện tại, tiếng Nga lược bỏ động từ 'to be'."
+            },
+            {
+              "q": "Đại từ 'Они́' trong tiếng Nga có nghĩa là gì?",
+              "options": [
+                "Họ / Chúng nó",
+                "Chúng tôi",
+                "Các bạn",
+                "Cô ấy"
+              ],
+              "correct": 0,
+              "why": "'Они' là đại từ ngôi thứ 3 số nhiều."
+            },
+            {
+              "q": "Mẫu câu trả lời tên 'Меня́ зову́т ...' dịch sát nghĩa là gì?",
+              "options": [
+                "Người ta gọi tôi là...",
+                "Tôi là...",
+                "Tên của tôi là..."
+              ],
+              "correct": 0,
+              "why": "'Меня зовут' thực chất là thể vô nhân xưng: '(Họ) gọi tôi là...'."
+            }
+          ],
+          "meaningful_practice": "Thực hành đoạn hội thoại chào hỏi và tự giới thiệu tên, nghề nghiệp với bạn học.",
+          "reading_snippet": "Здра́вствуйте! Меня́ зову́т Луо́нг. Я студе́нт. Это Анна. Она́ то́же студе́нтка. Мы у́чимся вме́сте.",
+          "listening_snippet": "Привет! Я Иван. А ты кто? — Привет! Я Луонг, я студент.",
+          "speaking_prompt": "Thu âm đoạn giới thiệu bản thân 20 giây: Tên bạn là gì, bạn làm nghề gì, đến từ đâu.",
+          "production_prompt": "Hãy viết 3 câu tự giới thiệu bản thân bằng tiếng Nga: Tên của bạn, nghề nghiệp (sinh viên/kỹ sư) và quốc tịch.",
+          "mistake_remediation": "Lỗi phổ biến của người học tiếng Anh: cố gắng thêm từ 'есть' (is/are) vào câu hiện tại. 'Я есть студент' là sai! Chỉ cần nói 'Я студент'.",
+          "srs_items": [
+            "voc_010",
+            "voc_011",
+            "voc_012"
+          ],
+          "mastery_check": [
+            {
+              "q": "Để hỏi tên một cách lịch sự, ta nói câu gì?",
+              "options": [
+                "Как вас зовут?",
+                "Кто ты?",
+                "Где вы?"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Đại từ 'Мы' có nghĩa là gì?",
+              "options": [
+                "Chúng tôi",
+                "Họ",
+                "Tôi"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Câu 'Она студентка' đúng hay sai?",
+              "options": [
+                "Đúng hoàn toàn",
+                "Sai vì thiếu động từ",
+                "Sai danh từ"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_1_2",
           "practice_exercises": [
             {
-              "q": "Đại từ nào dùng để xưng hô lịch sự trang trọng với người lớn tuổi?",
+              "q": "Đại từ nào dùng để xưng hô lịch sự với người lớn tuổi hoặc người mới quen?",
               "options": [
-                "Ты",
                 "Вы",
-                "Он"
+                "Ты",
+                "Они",
+                "Мы"
               ],
-              "correct": 1,
-              "why": "'Вы' là đại từ ngôi thứ 2 số nhiều hoặc dùng trang trọng lịch sự."
+              "correct": 0,
+              "why": "'Вы' là đại từ ngôi thứ 2 dùng để biểu thị sự kính trọng, lịch sự."
+            },
+            {
+              "q": "Điền vào chỗ trống: 'Анна — ... (sinh viên nữ)'.",
+              "options": [
+                "студе́нтка",
+                "студе́нт",
+                "студе́нты"
+              ],
+              "correct": 0,
+              "why": "Анна là nữ nên dùng danh từ chỉ giới tính nữ 'студентка'."
+            },
+            {
+              "q": "Câu 'Tôi là sinh viên' trong tiếng Nga được diễn đạt đúng là:",
+              "options": [
+                "Я студе́нт.",
+                "Я есть студе́нт.",
+                "Я быть студе́нт."
+              ],
+              "correct": 0,
+              "why": "Ở thì hiện tại, tiếng Nga lược bỏ động từ 'to be'."
+            },
+            {
+              "q": "Đại từ 'Они́' trong tiếng Nga có nghĩa là gì?",
+              "options": [
+                "Họ / Chúng nó",
+                "Chúng tôi",
+                "Các bạn",
+                "Cô ấy"
+              ],
+              "correct": 0,
+              "why": "'Они' là đại từ ngôi thứ 3 số nhiều."
+            },
+            {
+              "q": "Mẫu câu trả lời tên 'Меня́ зову́т ...' dịch sát nghĩa là gì?",
+              "options": [
+                "Người ta gọi tôi là...",
+                "Tôi là...",
+                "Tên của tôi là..."
+              ],
+              "correct": 0,
+              "why": "'Меня зовут' thực chất là thể vô nhân xưng: '(Họ) gọi tôi là...'."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_001",
-            "v_007"
-          ],
-          "integrated_speaking_phrase": "Здравствуйте! Меня зовут Луонг, я студент.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Hòa hợp tính từ 'новый' theo danh từ giống cái 'книга':",
+              "prompt": "новый + книга ➔ ...",
+              "answer": "но́вая кни́га",
+              "why": "Tính từ giống cái đuôi -ая: 'новая книга'."
+            },
+            {
+              "instruction": "Chia động từ 'читать' ở ngôi 'Мы':",
+              "prompt": "Мы (читать) ➔ ...",
+              "answer": "Мы чита́ем",
+              "why": "Động từ nhóm 1 ngôi 'Мы' nhận đuôi -ем."
+            }
+          ]
         },
         {
           "id": "les_1_2",
+          "module_id": "mod_a1_1",
+          "module_title": "Module 1: A1.1 — Đại Từ, 3 Giống Danh Từ & Giao Tiếp Cơ Bản",
+          "level": "A1.1",
           "objective_code": "RUS-A1-02",
-          "title": "Bài 1.2: 3 Giống Danh Từ & Quy Tắc Số Nhiều",
-          "why_learn": "Mọi danh từ tiếng Nga đều có giống. Giống quyết định cách chia đuôi tính từ, đại từ và 6 cách sau này.",
-          "prerequisites": "Đã học Bài 1.1.",
-          "theory_markdown": "### Quy tắc xác định giống danh từ:\n- **Giống đực (Мужской род - он)**: Tận cùng bằng phụ âm cứng (стол, дом, студент), -й (музей), hoặc -ь (словарь).\n- **Giống cái (Женский род - она)**: Tận cùng bằng -а (книга, мама), -я (Россия, семья), hoặc -ь (тетрадь).\n- **Giống trung (Средний род - оно)**: Tận cùng bằng -о (окно, молоко), -е (море), hoặc -мя (время, имя).",
+          "title": "Bài 1.2: 3 Giống Danh Từ, Chuỗi Hòa Hợp Giống & Số Nhiều",
+          "why_learn": "Trong tiếng Nga, mọi danh từ đều có giới tính (Đực, Cái, Trung). Giống của danh từ quyết định đại từ sở hữu (мой/моя/моё), tính từ (новый/новая/новое) và cả động từ quá khứ. Nắm vững giống là chìa khóa mở toang ngữ pháp tiếng Nga!",
+          "prerequisites": "Đã nắm đại từ nhân xưng từ Bài 1.1.",
+          "new_vocab": [
+            {
+              "word": "дом",
+              "phonetic": "[dom]",
+              "meaning": "ngôi nhà (он - đực)"
+            },
+            {
+              "word": "кни́га",
+              "phonetic": "[kni-ga]",
+              "meaning": "quyển sách (она - cái)"
+            },
+            {
+              "word": "окно́",
+              "phonetic": "[ak-no]",
+              "meaning": "cửa sổ (оно - trung)"
+            },
+            {
+              "word": "но́вый",
+              "phonetic": "[no-vyy]",
+              "meaning": "mới (tính từ đực)"
+            },
+            {
+              "word": "но́вая",
+              "phonetic": "[no-va-ya]",
+              "meaning": "mới (tính từ cái)"
+            },
+            {
+              "word": "но́вое",
+              "phonetic": "[no-va-ye]",
+              "meaning": "mới (tính từ trung)"
+            },
+            {
+              "word": "мой",
+              "phonetic": "[moy]",
+              "meaning": "của tôi (đực)"
+            },
+            {
+              "word": "моя́",
+              "phonetic": "[ma-ya]",
+              "meaning": "của tôi (cái)"
+            },
+            {
+              "word": "моё",
+              "phonetic": "[ma-yo]",
+              "meaning": "của tôi (trung)"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "мой но́вый дом",
+              "note": "Giống ĐỰC: đuôi phụ âm cứng ➔ đại từ 'мой', tính từ '-ый'"
+            },
+            {
+              "ru": "моя́ но́вая кни́га",
+              "note": "Giống CÁI: đuôi '-а/-я' ➔ đại từ 'моя', tính từ '-ая'"
+            },
+            {
+              "ru": "моё но́вое окно́",
+              "note": "Giống TRUNG: đuôi '-о/-е' ➔ đại từ 'моё', tính từ '-ое'"
+            }
+          ],
+          "theory_markdown": "### 1. Bảng Nhận Diện 3 Giống Danh Từ Số Ít:\n| Giống | Dấu hiệu đuôi từ | Đại từ thay thế | Đại từ sở hữu | Ví dụ mẫu |\n| :--- | :--- | :---: | :---: | :--- |\n| **Giống Đực (Мужской - Он)** | Kết thúc bằng **Phụ âm**, **-й**, hoặc một số từ đuôi **-ь** | **Он** | **Мой** | `дом`, `студе́нт`, `музе́й` |\n| **Giống Cái (Женский - Она)** | Kết thúc bằng **-а**, **-я**, hoặc đuôi **-ь** | **Она́** | **Моя́** | `кни́га`, `пе́сня`, `тетра́дь` |\n| **Giống Trung (Средний - Оно)** | Kết thúc bằng **-о**, **-е**, **-мя** | **Оно́** | **Моё** | `окно́`, `мо́ре`, `и́мя` |\n\n### 2. Quy tắc tạo Số nhiều (Множественное число):\n- Giống Đực & Cái đuôi cứng ➔ đổi thành **-ы** (`дом` ➔ `дома́` [bất quy tắc], `студе́нт` ➔ `студе́нты`, `кни́га` ➔ `кни́ги` [quy tắc 7 chữ cái k, g, kh, zh, ch, sh, shch đi với -и]).\n- Giống Trung: đuôi `-о` đổi thành **-а**, đuôi `-е` đổi thành **-я** (`окно́` ➔ `о́кна`).",
           "context_examples": [
             {
-              "ru": "дом -> дома́ (Masc)",
-              "vi": "ngôi nhà -> những ngôi nhà"
+              "ru": "Это мой но́вый дом. Он о́чень большо́й.",
+              "phonetic": "[e-ta moy no-vyy dom on o-chen bal-shoy]",
+              "vi": "Đây là ngôi nhà mới của tôi. Nó rất to lớn."
             },
             {
-              "ru": "кни́га -> кни́ги (Fem)",
-              "vi": "quyển sách -> những quyển sách"
+              "ru": "Вот моя́ кни́га. Она́ о́чень интере́сная.",
+              "phonetic": "[vot ma-ya kni-ga a-na o-chen in-tye-ryes-na-ya]",
+              "vi": "Kìa là cuốn sách của tôi. Nó rất thú vị."
             },
             {
-              "ru": "окно́ -> о́кна (Neut)",
-              "vi": "cửa sổ -> những cửa sổ"
-            },
-            {
-              "ru": "друг -> друзья́ (Irregular)",
-              "vi": "bạn -> những người bạn"
+              "ru": "Это моё окно́. Оно́ чи́стое.",
+              "phonetic": "[e-ta ma-yo ak-no a-no chis-ta-ye]",
+              "vi": "Đây là cửa sổ của tôi. Nó sạch sẽ."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Từ 'кни́га' (quyển sách) thuộc giống gì?",
+              "options": [
+                "Giống Cái (Женский род — Она)",
+                "Giống Đực (Мужской род — Он)",
+                "Giống Trung (Средний род — Оно)"
+              ],
+              "correct": 0,
+              "why": "Từ 'книга' kết thúc bằng chữ 'а' nên thuộc giống cái."
+            },
+            {
+              "q": "Điền đại từ sở hữu đúng: '... (của tôi) окно́'.",
+              "options": [
+                "Моё",
+                "Мой",
+                "Моя",
+                "Мои"
+              ],
+              "correct": 0,
+              "why": "'Окно' kết thúc bằng 'о' là giống trung, nên đi với 'Моё'."
+            },
+            {
+              "q": "Điền tính từ đúng: 'Это ... (mới) дом'.",
+              "options": [
+                "но́вый",
+                "но́вая",
+                "но́вое",
+                "но́вые"
+              ],
+              "correct": 0,
+              "why": "'Дом' là danh từ giống đực, đi với tính từ đuôi '-ый' (новый)."
+            },
+            {
+              "q": "Dạng số nhiều của từ 'студе́нт' là gì?",
+              "options": [
+                "студе́нты",
+                "студе́нта",
+                "студе́нто",
+                "студе́нтки"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực đuôi phụ âm cứng đổi sang số nhiều thêm '-ы' ➔ студенты."
+            },
+            {
+              "q": "Dạng số nhiều của từ 'окно́' (cửa sổ) là:",
+              "options": [
+                "о́кна",
+                "окны́",
+                "окни́",
+                "окно́в"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống trung đuôi '-о' đổi sang số nhiều thành '-а' kèm chuyển trọng âm ➔ о́кна."
+            },
+            {
+              "q": "Tại sao 'кни́га' số nhiều là 'кни́ги' chứ không phải 'кни́гы'?",
+              "options": [
+                "Do quy tắc chính tả cấm viết 'ы' sau chữ 'г'",
+                "Do từ bất quy tắc",
+                "Do là giống cái"
+              ],
+              "correct": 0,
+              "why": "Quy tắc 7 phụ âm: Sau Г, К, Х, Ж, Ч, Ш, Щ không bao giờ viết Ы, luôn viết И!"
+            }
+          ],
+          "meaningful_practice": "Chọn đại từ thay thế (он/она/оно/они) cho danh từ cho trước: стол (он), лампа (она), письмо (оно), книги (они).",
+          "reading_snippet": "Вот моя́ ко́мната. Тут стои́т мой стол và мой сту́л. На столе́ лежи́т моя́ кни́га. Окно́ о́чень большо́е.",
+          "listening_snippet": "Чей это дом? — Это мой дом. А чья это машина? — Это моя машина.",
+          "speaking_prompt": "Chỉ vào 3 đồ vật trong phòng của bạn và nói câu: 'Это мой/моя/моё ...'.",
+          "production_prompt": "Viết 3 cụm từ hoàn chỉnh gồm: [Đại từ sở hữu 'của tôi'] + [Tính từ 'mới'] + [Danh từ] cho cả 3 giống (đực, cái, trung).",
+          "mistake_remediation": "Lỗi cực kỳ phổ biến: Nhầm lẫn giống của từ mượn như 'кофе' (cà phê là giống đực: горячий кофе) hoặc đuôi '-мя' như 'время, имя' (là giống trung).",
+          "srs_items": [
+            "voc_013",
+            "voc_014",
+            "voc_015"
+          ],
+          "mastery_check": [
+            {
+              "q": "Từ 'письмо' (bức thư) thuộc giống gì?",
+              "options": [
+                "Giống Trung (Оно)",
+                "Giống Đực (Он)",
+                "Giống Cái (Она)"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Cụm từ nào sau đây đúng ngữ pháp?",
+              "options": [
+                "Моя новая машина",
+                "Мой новая машина",
+                "Моё новая машина"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Số nhiều của 'стол' (cái bàn) là gì?",
+              "options": [
+                "столы́",
+                "стола́",
+                "сто́лы"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_1_3",
           "practice_exercises": [
             {
-              "q": "Từ 'окно́' (cửa sổ) thuộc giống nào?",
+              "q": "Từ 'кни́га' (quyển sách) thuộc giống gì?",
               "options": [
-                "Giống đực (он)",
-                "Giống cái (она)",
-                "Giống trung (оно)"
+                "Giống Cái (Женский род — Она)",
+                "Giống Đực (Мужской род — Он)",
+                "Giống Trung (Средний род — Оно)"
               ],
-              "correct": 2,
-              "why": "Vì tận cùng là đuôi -о nên 'окно' là danh từ giống trung (оно)."
+              "correct": 0,
+              "why": "Từ 'книга' kết thúc bằng chữ 'а' nên thuộc giống cái."
+            },
+            {
+              "q": "Điền đại từ sở hữu đúng: '... (của tôi) окно́'.",
+              "options": [
+                "Моё",
+                "Мой",
+                "Моя",
+                "Мои"
+              ],
+              "correct": 0,
+              "why": "'Окно' kết thúc bằng 'о' là giống trung, nên đi với 'Моё'."
+            },
+            {
+              "q": "Điền tính từ đúng: 'Это ... (mới) дом'.",
+              "options": [
+                "но́вый",
+                "но́вая",
+                "но́вое",
+                "но́вые"
+              ],
+              "correct": 0,
+              "why": "'Дом' là danh từ giống đực, đi với tính từ đuôi '-ый' (новый)."
+            },
+            {
+              "q": "Dạng số nhiều của từ 'студе́нт' là gì?",
+              "options": [
+                "студе́нты",
+                "студе́нта",
+                "студе́нто",
+                "студе́нтки"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực đuôi phụ âm cứng đổi sang số nhiều thêm '-ы' ➔ студенты."
+            },
+            {
+              "q": "Dạng số nhiều của từ 'окно́' (cửa sổ) là:",
+              "options": [
+                "о́кна",
+                "окны́",
+                "окни́",
+                "окно́в"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống trung đuôi '-о' đổi sang số nhiều thành '-а' kèm chuyển trọng âm ➔ о́кна."
+            },
+            {
+              "q": "Tại sao 'кни́га' số nhiều là 'кни́ги' chứ không phải 'кни́гы'?",
+              "options": [
+                "Do quy tắc chính tả cấm viết 'ы' sau chữ 'г'",
+                "Do từ bất quy tắc",
+                "Do là giống cái"
+              ],
+              "correct": 0,
+              "why": "Quy tắc 7 phụ âm: Sau Г, К, Х, Ж, Ч, Ш, Щ không bao giờ viết Ы, luôn viết И!"
             }
           ],
-          "integrated_vocab_ids": [
-            "v_008",
-            "v_009",
-            "v_010"
-          ],
-          "integrated_speaking_phrase": "Это мой дом, а это моя книга.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Hòa hợp tính từ 'новый' theo danh từ giống cái 'книга':",
+              "prompt": "новый + книга ➔ ...",
+              "answer": "но́вая кни́га",
+              "why": "Tính từ giống cái đuôi -ая: 'новая книга'."
+            },
+            {
+              "instruction": "Chia động từ 'читать' ở ngôi 'Мы':",
+              "prompt": "Мы (читать) ➔ ...",
+              "answer": "Мы чита́ем",
+              "why": "Động từ nhóm 1 ngôi 'Мы' nhận đuôi -ем."
+            }
+          ]
         },
         {
           "id": "les_1_3",
+          "module_id": "mod_a1_1",
+          "module_title": "Module 1: A1.1 — Đại Từ, 3 Giống Danh Từ & Giao Tiếp Cơ Bản",
+          "level": "A1.1",
           "objective_code": "RUS-A1-03",
-          "title": "Bài 1.3: Động Từ Nhóm 1 Thì Hiện Tại (-ать/-ять)",
-          "why_learn": "Cho phép bạn tạo câu diễn đạt hành động: tôi đọc, bạn hiểu, chúng tôi biết.",
-          "prerequisites": "Đã học Bài 1.2.",
-          "theory_markdown": "### Chia động từ nhóm 1 (ví dụ động từ читать - đọc):\n- Я чита́**ю**\n- Ты чита́**ешь**\n- Он / Она чита́**ет**\n- Мы чита́**ем**\n- Вы чита́**ете**\n- Они чита́**ют**",
+          "title": "Bài 1.3: Động Từ Nhóm 1 (-АТЬ/-ЯТЬ) & Thì Hiện Tại",
+          "why_learn": "Bạn muốn diễn đạt các hoạt động hàng ngày: 'Tôi đọc sách', 'Chúng tôi hiểu tiếng Nga', 'Họ đang làm việc'. Động từ nhóm 1 là nhóm động từ phổ biến nhất trong tiếng Nga.",
+          "prerequisites": "Đã nắm chắc đại từ nhân xưng từ Bài 1.1.",
+          "new_vocab": [
+            {
+              "word": "чита́ть",
+              "phonetic": "[chi-tat]",
+              "meaning": "đọc (động từ)"
+            },
+            {
+              "word": "понима́ть",
+              "phonetic": "[pa-ni-mat]",
+              "meaning": "hiểu (động từ)"
+            },
+            {
+              "word": "знать",
+              "phonetic": "[znat]",
+              "meaning": "biết (động từ)"
+            },
+            {
+              "word": "рабо́тать",
+              "phonetic": "[ra-bo-tat]",
+              "meaning": "làm việc (động từ)"
+            },
+            {
+              "word": "слу́шать",
+              "phonetic": "[slu-shat]",
+              "meaning": "lắng nghe (động từ)"
+            },
+            {
+              "word": "по-ру́сски",
+              "phonetic": "[pa rus-ki]",
+              "meaning": "bằng tiếng Nga"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "Я чита́-ю, ты чита́-ешь, он чита́-ет",
+              "note": "Bỏ đuôi nguyên mẫu '-ть', thêm đuôi chia tương ứng theo ngôi"
+            },
+            {
+              "ru": "Мы чита́-ем, вы чита́-ете, они́ чита́-ют",
+              "note": "Ngôi số nhiều có đuôi -ем, -ете, -ют"
+            }
+          ],
+          "theory_markdown": "### Bảng Chia Động Từ Nhóm 1 (I Спряжение -АТЬ):\n| Ngôi | Đuôi chia | Động từ `чита́ть` (đọc) | Động từ `понима́ть` (hiểu) |\n| :--- | :---: | :--- | :--- |\n| **Я** | **-ю** | `я чита́ю` | `я понима́ю` |\n| **Ты** | **-ешь** | `ты чита́ешь` | `ты понима́ешь` |\n| **Он / Она́** | **-ет** | `он чита́ет` | `она́ понима́ет` |\n| **Мы** | **-ем** | `мы чита́ем` | `мы понима́ем` |\n| **Вы** | **-ете** | `вы чита́ете` | `вы понима́ете` |\n| **Они́** | **-ют** | `они́ чита́ют` | `они́ понима́ют` |\n\n*Quy tắc vàng:* Lấy động từ nguyên mẫu (bỏ `-ть`), giữ lại thân động từ và gắn đuôi nhân xưng thích hợp.",
           "context_examples": [
             {
-              "ru": "Я чита́ю кни́гу ка́ждый день.",
-              "vi": "Tôi đọc sách mỗi ngày."
+              "ru": "Я хорошо́ понима́ю по-ру́сски.",
+              "phonetic": "[ya kha-ra-sho pa-ni-ma-yu pa rus-ki]",
+              "vi": "Tôi hiểu tiếng Nga rất tốt."
             },
             {
-              "ru": "Ты понима́ешь по-ру́сски?",
-              "vi": "Bạn có hiểu tiếng Nga không?"
+              "ru": "Что ты сейчас чита́ешь?",
+              "phonetic": "[shto ty se-chas chi-ta-yesh]",
+              "vi": "Bạn đang đọc cái gì thế?"
             },
             {
-              "ru": "Мы зна́ем э́тот го́род.",
-              "vi": "Chúng tôi biết thành phố này."
+              "ru": "Они́ рабо́тают в университе́те.",
+              "phonetic": "[a-ni ra-bo-ta-yut v u-ni-vye-rsi-tye-tye]",
+              "vi": "Họ làm việc ở trường đại học."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Chia động từ 'рабо́тать' với ngôi 'Я':",
+              "options": [
+                "я рабо́таю",
+                "я рабо́таешь",
+                "я рабо́тает",
+                "я рабо́тают"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Я' với động từ nhóm 1 chia đuôi '-ю' ➔ я работаю."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы хорошо́ ... (понима́ть) по-ру́сски'.",
+              "options": [
+                "понима́ем",
+                "понима́ю",
+                "понима́ет",
+                "понима́ете"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Мы' đi với đuôi '-ем' ➔ мы понимаем."
+            },
+            {
+              "q": "Điền dạng đúng: 'Что вы сейча́с ... (чита́ть)?'.",
+              "options": [
+                "чита́ете",
+                "чита́ешь",
+                "чита́ем",
+                "чита́ют"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Вы' đi với đuôi '-ете' ➔ вы читаете."
+            },
+            {
+              "q": "Chia động từ 'знать' với ngôi 'Они́':",
+              "options": [
+                "они́ зна́ют",
+                "они́ зна́ет",
+                "они́ зна́ем",
+                "они́ зна́ешь"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Они' đi với đuôi '-ют' ➔ они знают."
+            },
+            {
+              "q": "Câu 'Ты понима́ешь по-ру́сски?' có nghĩa là gì?",
+              "options": [
+                "Bạn có hiểu tiếng Nga không?",
+                "Bạn có nói tiếng Nga không?",
+                "Bạn đang đọc tiếng Nga à?"
+              ],
+              "correct": 0,
+              "why": "'Понимать' có nghĩa là hiểu."
+            }
+          ],
+          "meaningful_practice": "Đặt câu hỏi và trả lời: — Ты читаешь книгу? — Да, я читаю книгу.",
+          "reading_snippet": "Луо́нг — студе́нт. Он у́чит ру́сский язы́к. Ка́ждый день Луо́нг чита́ет те́ксты, слу́шает диало́ги và мно́го рабо́тает.",
+          "listening_snippet": "Вы понимаете по-русски? — Да, я немного понимаю và говорю по-русски.",
+          "speaking_prompt": "Nói 1 câu về việc bạn đang học và hiểu tiếng Nga: 'Я учу русский язык và хорошо понимаю'.",
+          "production_prompt": "Hãy viết 3 câu mô tả hoạt động của bạn và bạn bè bằng 3 động từ: читать, работать, слушать.",
+          "mistake_remediation": "Cẩn thận với đuôi ngôi 'Ты': viết là '-ешь' nhưng phát âm đuôi [ш] là âm cứng [ye-sh].",
+          "srs_items": [
+            "voc_016",
+            "voc_017",
+            "voc_018"
+          ],
+          "mastery_check": [
+            {
+              "q": "Ngôi 'Они' của động từ 'работать' là gì?",
+              "options": [
+                "работают",
+                "работает",
+                "работаем"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Động từ 'читать' có nghĩa là gì?",
+              "options": [
+                "Đọc",
+                "Nghe",
+                "Viết"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Chia động từ đúng: 'Анна ... (знать) ответ.'",
+              "options": [
+                "знает",
+                "знаю",
+                "знают"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_2_1",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'Они хорошо ... (понимать) по-русски.'",
+              "q": "Chia động từ 'рабо́тать' với ngôi 'Я':",
               "options": [
-                "понимает",
-                "понимаем",
-                "понимают"
+                "я рабо́таю",
+                "я рабо́таешь",
+                "я рабо́тает",
+                "я рабо́тают"
               ],
-              "correct": 2,
-              "why": "Chủ ngữ 'Они' đi với đuôi -ют: 'понимают'."
+              "correct": 0,
+              "why": "Ngôi 'Я' với động từ nhóm 1 chia đuôi '-ю' ➔ я работаю."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы хорошо́ ... (понима́ть) по-ру́сски'.",
+              "options": [
+                "понима́ем",
+                "понима́ю",
+                "понима́ет",
+                "понима́ете"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Мы' đi với đuôi '-ем' ➔ мы понимаем."
+            },
+            {
+              "q": "Điền dạng đúng: 'Что вы сейча́с ... (чита́ть)?'.",
+              "options": [
+                "чита́ете",
+                "чита́ешь",
+                "чита́ем",
+                "чита́ют"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Вы' đi với đuôi '-ете' ➔ вы читаете."
+            },
+            {
+              "q": "Chia động từ 'знать' với ngôi 'Они́':",
+              "options": [
+                "они́ зна́ют",
+                "они́ зна́ет",
+                "они́ зна́ем",
+                "они́ зна́ешь"
+              ],
+              "correct": 0,
+              "why": "Ngôi 'Они' đi với đuôi '-ют' ➔ они знают."
+            },
+            {
+              "q": "Câu 'Ты понима́ешь по-ру́сски?' có nghĩa là gì?",
+              "options": [
+                "Bạn có hiểu tiếng Nga không?",
+                "Bạn có nói tiếng Nga không?",
+                "Bạn đang đọc tiếng Nga à?"
+              ],
+              "correct": 0,
+              "why": "'Понимать' có nghĩa là hiểu."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_008"
-          ],
-          "integrated_reading_id": "read_a1_01",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Hòa hợp tính từ 'новый' theo danh từ giống cái 'книга':",
+              "prompt": "новый + книга ➔ ...",
+              "answer": "но́вая кни́га",
+              "why": "Tính từ giống cái đuôi -ая: 'новая книга'."
+            },
+            {
+              "instruction": "Chia động từ 'читать' ở ngôi 'Мы':",
+              "prompt": "Мы (читать) ➔ ...",
+              "answer": "Мы чита́ем",
+              "why": "Động từ nhóm 1 ngôi 'Мы' nhận đuôi -ем."
+            }
+          ]
         }
       ]
     },
     {
       "module_id": "mod_a1_2",
       "level": "A1.2",
-      "title": "Module 2: A1.2 Sơ Cấp Nâng Cao (Ma Trận 3 Cách: 4, 6, 2)",
-      "description": "Làm chủ Đối cách (Accusative), Giới cách địa điểm (Prepositional) và Sinh cách sở hữu/phủ định (Genitive).",
+      "title": "Module 2: A1.2 — Ma Trận 6 Cách Cơ Bản (Cách 6, Cách 4, Cách 2)",
+      "description": "Làm chủ 3 cách cốt lõi đầu tiên trong giao tiếp thực tế.",
       "lessons": [
         {
           "id": "les_2_1",
+          "module_id": "mod_a1_2",
+          "module_title": "Module 2: A1.2 — Ma Trận 6 Cách Cơ Bản (Cách 6, Cách 4, Cách 2)",
+          "level": "A1.2",
           "objective_code": "RUS-A1-04",
-          "title": "Bài 2.1: Cách 4 (Đối Cách - Винительный падеж)",
-          "why_learn": "Đối cách chỉ đối tượng trực tiếp chịu tác động của hành động: đọc cái gì? nhìn thấy ai? mua cái gì?",
-          "prerequisites": "Hoàn thành Module 1.",
-          "theory_markdown": "### Câu hỏi kích hoạt: Кого? Что? Куда?\n- Giống cái: đuôi `-а` đổi thành `-у`, đuôi `-я` đổi thành `-ю` (*книга -> книгу, Россия -> Россию*).\n- Giống đực bất động vật: Giữ nguyên như Cách 1 (*Я вижу стол, дом*).\n- Giống đực động vật: Thêm đuôi `-а/-я` giống Cách 2 (*Я вижу брата, друга*).",
+          "title": "Bài 2.1: Cách 6 (Giới Cách — Где?) — Vị Trí Ở Đâu & Giới Từ В / НА",
+          "why_learn": "Bạn muốn trả lời câu hỏi quen thuộc: 'Bạn đang sống ở đâu? Học ở đâu? Làm việc ở đâu?'. Cách 6 (Предложный падеж) là cách dễ học nhất và xuất hiện trong hầu hết mọi cuộc hội thoại thường ngày.",
+          "prerequisites": "Đã nắm vững 3 giống danh từ từ Bài 1.2.",
+          "new_vocab": [
+            {
+              "word": "в",
+              "phonetic": "[v]",
+              "meaning": "ở trong (giới từ)"
+            },
+            {
+              "word": "на",
+              "phonetic": "[na]",
+              "meaning": "ở trên / tại (sự kiện)"
+            },
+            {
+              "word": "Москва́",
+              "phonetic": "[mask-va]",
+              "meaning": "thủ đô Moscow"
+            },
+            {
+              "word": "университе́т",
+              "phonetic": "[u-ni-vye-rsi-tyet]",
+              "meaning": "trường đại học"
+            },
+            {
+              "word": "шко́ла",
+              "phonetic": "[shko-la]",
+              "meaning": "trường học phổ thông"
+            },
+            {
+              "word": "рабо́та",
+              "phonetic": "[ra-bo-ta]",
+              "meaning": "nơi làm việc / công việc"
+            },
+            {
+              "word": "ко́мната",
+              "phonetic": "[kom-na-ta]",
+              "meaning": "căn phòng"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "Москва́ ➔ в Москве́",
+              "note": "Danh từ giống cái '-а' đổi thành đuôi '-е'"
+            },
+            {
+              "ru": "университе́т ➔ в университе́те",
+              "note": "Danh từ giống đực phụ âm thêm đuôi '-е'"
+            },
+            {
+              "ru": "Росси́я ➔ в Росси́и",
+              "note": "Đuôi '-ия' đổi thành '-ии'"
+            }
+          ],
+          "theory_markdown": "### 1. Ý Nghĩa & Câu Hỏi Kích Hoạt:\n- **Câu hỏi:** **ГДЕ?** (Ở đâu?)\n- **Giới từ đi kèm:**\n  - **В:** Bên trong một không gian khép kín (`в ко́мнате`, `в го́роде`, `в университе́те`).\n  - **НА:** Trên bề mặt (`на столе́`, `на о́строве`) hoặc tại một sự kiện/nơi mở (`на рабо́те`, `на конце́рте`, `на стадио́не`).\n\n### 2. Quy Tắc Đuôi Biến Cách 6 Số Ít:\n| Giống danh từ | Dạng gốc (C1) | Dạng Cách 6 (Где?) | Quy tắc đổi |\n| :--- | :--- | :--- | :--- |\n| **Giống Đực** | `дом`, `университе́т` | `в до́ме`, `в университе́те` | Thêm đuôi **-е** |\n| **Giống Cái** | `шко́ла`, `комната` | `в шко́ле`, `в ко́мнате` | `-а/-я` đổi thành **-е** |\n| **Giống Trung** | `окно́`, `мо́ре` | `на окне́`, `в мо́ре` | `-о` đổi thành **-е**, `-е` giữ nguyên |\n| **Đặc biệt đuôi -ия/-ие** | `Росси́я`, `зда́ние` | `в Росси́и`, `в зда́нии` | Đổi thành **-ии** |",
           "context_examples": [
             {
-              "ru": "Я чита́ю интере́сную кни́гу.",
-              "vi": "Tôi đang đọc một cuốn sách hay."
+              "ru": "Я живу́ в Москве́ và учу́сь в университе́те.",
+              "phonetic": "[ya zhi-vu v mask-vye i u-chus v u-ni-vye-rsi-tye-tye]",
+              "vi": "Tôi sống ở Moscow và học tại trường đại học."
             },
             {
-              "ru": "Мы смо́трим но́вый фильм.",
-              "vi": "Chúng tôi đang xem bộ phim mới."
+              "ru": "Где сейча́с па́па? — Он на рабо́те.",
+              "phonetic": "[gdye se-chas pa-pa on na ra-bo-tye]",
+              "vi": "Bố đang ở đâu? — Bố đang ở chỗ làm việc."
             },
             {
-              "ru": "Анто́н ждёт дру́га.",
-              "vi": "Anton đang đợi người bạn."
+              "ru": "Кни́га лежи́т на столе́ в ко́мнате.",
+              "phonetic": "[kni-ga lye-zhit na sta-lye v kom-na-tye]",
+              "vi": "Quyển sách nằm ở trên bàn trong phòng."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Điền dạng đúng: 'Антон живёт в ... (Москва)'.",
+              "options": [
+                "Москве́",
+                "Москву́",
+                "Москвы́",
+                "Москва́"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái 'Москва' chỉ địa điểm ở đâu đi với 'в' đổi đuôi thành '-е' ➔ в Москве."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы учимся в ... (университет)'.",
+              "options": [
+                "университе́те",
+                "университе́та",
+                "университе́ту",
+                "университе́том"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực phụ âm thêm đuôi '-е' ở Cách 6 ➔ в университете."
+            },
+            {
+              "q": "Điền giới từ đúng: 'Мама сейчас ... (tại chỗ làm việc) работе'.",
+              "options": [
+                "на",
+                "в",
+                "из",
+                "к"
+              ],
+              "correct": 0,
+              "why": "'Работа' là danh từ chỉ hoạt động/nơi làm việc luôn đi với giới từ 'НА' ➔ на работе."
+            },
+            {
+              "q": "Điền dạng đúng: 'Они живут в ... (Россия)'.",
+              "options": [
+                "Росси́и",
+                "Росси́е",
+                "Росси́ю",
+                "Росси́я"
+              ],
+              "correct": 0,
+              "why": "Danh từ kết thúc bằng '-ия' đổi sang Cách 6 thành đuôi '-ии' ➔ в России."
+            },
+            {
+              "q": "Câu hỏi kích hoạt của Cách 6 chỉ địa điểm là gì?",
+              "options": [
+                "Где? (Ở đâu?)",
+                "Куда? (Đi đâu?)",
+                "Откуда? (Từ đâu đến?)",
+                "Кто? (Ai?)"
+              ],
+              "correct": 0,
+              "why": "Cách 6 chỉ vị trí tĩnh luôn trả lời cho câu hỏi 'Где?'."
+            }
+          ],
+          "meaningful_practice": "Đặt câu hỏi và trả lời về nơi chốn: — Где ты живёшь? — Я живу в Ханое / в Москве.",
+          "reading_snippet": "Меня зовут Луонг. Я живу в России, в городе Москве. Я учусь в университете на первом курсе. Мой друг живёт в общежитии.",
+          "listening_snippet": "Где ты сейчас? — Я в библиотеке. А ты где? — Я в кафе на Тверской улице.",
+          "speaking_prompt": "Tự trả lời câu hỏi: 'Где вы живёте và где учитесь?' bằng 2 câu hoàn chỉnh tiếng Nga.",
+          "production_prompt": "Hãy viết 3 câu hoàn chỉnh sử dụng giới từ 'в' hoặc 'на' để mô tả nơi bạn sống, nơi bạn học và đồ vật trên bàn.",
+          "mistake_remediation": "Lỗi kinh điển: Nhầm 'в работе' (sai! phải là 'на работе') hoặc nhầm 'в России' thành 'в Россы'/'в Россие'. Hãy nhớ đuôi '-ия' ➔ '-ии'.",
+          "srs_items": [
+            "voc_019",
+            "voc_020",
+            "voc_021"
+          ],
+          "mastery_check": [
+            {
+              "q": "Cụm từ nào sau đây đúng?",
+              "options": [
+                "на работе",
+                "в работе",
+                "из работе"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Danh từ 'школа' trong câu 'Я учусь в ...' chuyển thành gì?",
+              "options": [
+                "в школе",
+                "в школу",
+                "в школы"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'здание' (tòa nhà) ở Cách 6 đổi thành gì?",
+              "options": [
+                "в здании",
+                "в здание",
+                "в зданье"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_2_2",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'Анна покупает красивую ... (сумка).'",
+              "q": "Điền dạng đúng: 'Антон живёт в ... (Москва)'.",
               "options": [
-                "сумка",
-                "сумку",
-                "сумке"
+                "Москве́",
+                "Москву́",
+                "Москвы́",
+                "Москва́"
               ],
-              "correct": 1,
-              "why": "Danh từ giống cái 'сумка' sang Cách 4 đổi -а thành -у: 'сумку'."
+              "correct": 0,
+              "why": "Danh từ giống cái 'Москва' chỉ địa điểm ở đâu đi với 'в' đổi đuôi thành '-е' ➔ в Москве."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы учимся в ... (университет)'.",
+              "options": [
+                "университе́те",
+                "университе́та",
+                "университе́ту",
+                "университе́том"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực phụ âm thêm đuôi '-е' ở Cách 6 ➔ в университете."
+            },
+            {
+              "q": "Điền giới từ đúng: 'Мама сейчас ... (tại chỗ làm việc) работе'.",
+              "options": [
+                "на",
+                "в",
+                "из",
+                "к"
+              ],
+              "correct": 0,
+              "why": "'Работа' là danh từ chỉ hoạt động/nơi làm việc luôn đi với giới từ 'НА' ➔ на работе."
+            },
+            {
+              "q": "Điền dạng đúng: 'Они живут в ... (Россия)'.",
+              "options": [
+                "Росси́и",
+                "Росси́е",
+                "Росси́ю",
+                "Росси́я"
+              ],
+              "correct": 0,
+              "why": "Danh từ kết thúc bằng '-ия' đổi sang Cách 6 thành đuôi '-ии' ➔ в России."
+            },
+            {
+              "q": "Câu hỏi kích hoạt của Cách 6 chỉ địa điểm là gì?",
+              "options": [
+                "Где? (Ở đâu?)",
+                "Куда? (Đi đâu?)",
+                "Откуда? (Từ đâu đến?)",
+                "Кто? (Ai?)"
+              ],
+              "correct": 0,
+              "why": "Cách 6 chỉ vị trí tĩnh luôn trả lời cho câu hỏi 'Где?'."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_008",
-            "v_001"
-          ],
-          "integrated_speaking_phrase": "Я хочу купить эту книгу и этот словарь.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển cụm từ sang Đối cách (Cách 4) sau động từ 'Я вижу...':",
+              "prompt": "моя новая машина ➔ Я вижу ...",
+              "answer": "мою́ но́вую маши́ну",
+              "why": "Giống cái Cách 4 đổi -ая/-а thành -ую/-у."
+            },
+            {
+              "instruction": "Chuyển câu khẳng định sang câu phủ định có 'нет':",
+              "prompt": "У меня есть время ➔ У меня нет ...",
+              "answer": "вре́мени",
+              "why": "Danh từ đuôi -мя trong Cách 2 biến đổi thành -мени ('времени')."
+            }
+          ]
         },
         {
           "id": "les_2_2",
+          "module_id": "mod_a1_2",
+          "module_title": "Module 2: A1.2 — Ma Trận 6 Cách Cơ Bản (Cách 4, Cách 2)",
+          "level": "A1.2",
           "objective_code": "RUS-A1-05",
-          "title": "Bài 2.2: Cách 6 (Giới Cách - Предложный падеж)",
-          "why_learn": "Dùng để nói bạn đang ở đâu (Где?) và bạn đang nghĩ/nói về điều gì (О ком? О чём?).",
-          "prerequisites": "Đã học Bài 2.1.",
-          "theory_markdown": "### Giới từ: В (trong), НА (trên/tại), О (về)\nĐa số danh từ cả 3 giống số ít đều nhận đuôi **`-е`**:\n- *в Москве, в университете, на столе, на работе*\n- Ngoại lệ: tận cùng `-ия, -ие, -ь` nhận đuôi `-и` (*в России, в общежитии, в тетради*).",
+          "title": "Bài 2.2: Cách 4 (Đối Cách — Кого? Что?) — Bổ Ngữ Trực Tiếp & Phương Hướng (Куда?)",
+          "why_learn": "Bạn muốn nói: 'Tôi đọc sách', 'Tôi nhìn thấy Anna', 'Tôi đi đến trường đại học'. Khi một danh từ là đối tượng bị hành động tác động vào (tân ngữ trực tiếp), bạn bắt buộc phải dùng Cách 4 (Винительный падеж).",
+          "prerequisites": "Đã học động từ thì hiện tại (Bài 1.3) và giống danh từ.",
+          "new_vocab": [
+            {
+              "word": "ви́деть",
+              "phonetic": "[vi-dyet]",
+              "meaning": "nhìn thấy (động từ)"
+            },
+            {
+              "word": "люби́ть",
+              "phonetic": "[lyu-bit]",
+              "meaning": "yêu / thích (động từ)"
+            },
+            {
+              "word": "купи́ть",
+              "phonetic": "[ku-pit]",
+              "meaning": "mua (động từ)"
+            },
+            {
+              "word": "маши́на",
+              "phonetic": "[ma-shi-na]",
+              "meaning": "xe ô tô"
+            },
+            {
+              "word": "му́зыка",
+              "phonetic": "[mu-zy-ka]",
+              "meaning": "âm nhạc"
+            },
+            {
+              "word": "друг",
+              "phonetic": "[druk]",
+              "meaning": "người bạn"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "Я чита́ю кни́г-у.",
+              "note": "Danh từ giống cái bất động vật đuôi '-а' đổi thành '-у'"
+            },
+            {
+              "ru": "Я ви́жу друг-а.",
+              "note": "Danh từ giống đực ĐỘNG VẬT (chỉ người) thêm đuôi '-а' giống Cách 2!"
+            },
+            {
+              "ru": "Я ви́жу дом.",
+              "note": "Danh từ giống đực BẤT ĐỘNG VẬT (đồ vật) giữ nguyên như Cách 1!"
+            }
+          ],
+          "theory_markdown": "### 1. Câu Hỏi Kích Hoạt & Chức Năng:\n- **Кого?** (Nhìn thấy ai? - Người/Động vật sống)\n- **Что?** (Đọc/mua cái gì? - Đồ vật/Khái niệm)\n- **Куда?** (Đi đến đâu? - Phương hướng chuyển động `в/на + Cách 4`)\n\n### 2. Bảng Biến Đuôi Cách 4 Số Ít:\n| Loại danh từ | Dạng gốc (C1) | Dạng Cách 4 (Bổ ngữ) | Quy tắc |\n| :--- | :--- | :--- | :--- |\n| **Giống Cái (Bất động vật & Động vật)** | `кни́га`, `маши́на`, `Анна` | `кни́гу`, `маши́ну`, `Анну` | Đuôi **-а ➔ -у**, đuôi **-я ➔ -ю** |\n| **Giống Đực (Bất động vật - Đồ vật)** | `дом`, `стол`, `компью́тер` | `дом`, `стол`, `компью́тер` | **Giữ nguyên như Cách 1** |\n| **Giống Đực (Động vật - Chỉ người/con vật)** | `друг`, `брат`, `студе́нт` | `дру́га`, `бра́та`, `студе́нта` | **Thêm đuôi -а (như Cách 2)** |\n| **Giống Trung** | `окно́`, `письмо́` | `окно́`, `письмо́` | **Giữ nguyên như Cách 1** |",
           "context_examples": [
             {
-              "ru": "Мы живём в Москве́.",
-              "vi": "Chúng tôi sống ở Moscow."
+              "ru": "Ка́ждый день я чита́ю интере́сную кни́гу.",
+              "phonetic": "[kazh-dyy dyen ya chi-ta-yu in-tye-ryes-nu-yu kni-gu]",
+              "vi": "Mỗi ngày tôi đọc một cuốn sách thú vị."
             },
             {
-              "ru": "Студе́нты уча́тся в университе́те.",
-              "vi": "Sinh viên học ở trường đại học."
+              "ru": "Я о́чень люблю́ свою́ ма́му.",
+              "phonetic": "[ya o-chen lyu-blyu sva-yu ma-mu]",
+              "vi": "Tôi rất yêu mẹ của mình."
             },
             {
-              "ru": "Я ду́маю о тебе́.",
-              "vi": "Tôi đang nghĩ về bạn."
+              "ru": "Мы е́дем в Москву́ на по́езде.",
+              "phonetic": "[my ye-dyem v mask-vu na po-yez-dye]",
+              "vi": "Chúng tôi đi đến Moscow bằng tàu hỏa (chuyển động: Куда? ➔ в Москву)."
             }
           ],
-          "practice_exercises": [
+          "controlled_practice": [
             {
-              "q": "Điền dạng đúng: 'Моя семья живёт в ... (Россия).'",
+              "q": "Điền dạng đúng: 'Я читаю ... (книга)'.",
               "options": [
-                "России",
-                "Россию",
-                "Россией"
+                "кни́гу",
+                "кни́га",
+                "кни́ге",
+                "кни́гой"
               ],
               "correct": 0,
-              "why": "Danh từ tận cùng -ия đổi thành -и trong Cách 6: 'в России'."
+              "why": "Danh từ giống cái 'книга' làm tân ngữ trực tiếp đổi đuôi '-а' thành '-у' ➔ книгу."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я вижу ... (Анна)'.",
+              "options": [
+                "Анну",
+                "Анна",
+                "Анне",
+                "Анной"
+              ],
+              "correct": 0,
+              "why": "Tên riêng giống cái 'Анна' đổi đuôi thành '-у' (Анну)."
+            },
+            {
+              "q": "Điền dạng đúng: 'Вчера я встретил ... (друг - bạn nam)'.",
+              "options": [
+                "дру́га",
+                "друг",
+                "дру́гу",
+                "дру́гом"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực chỉ người (động vật) ở Cách 4 có đuôi giống Cách 2 (thêm '-а') ➔ друга."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы купили новый ... (компьютер)'.",
+              "options": [
+                "компью́тер",
+                "компью́тера",
+                "компью́теру",
+                "компью́тером"
+              ],
+              "correct": 0,
+              "why": "'Компьютер' là danh từ giống đực bất động vật (đồ vật) nên giữ nguyên dạng như Cách 1."
+            },
+            {
+              "q": "Phân biệt: 'Я живу в Москве (1)' vs 'Я еду в Москву (2)'. Câu (2) dùng cách gì và trả lời cho câu hỏi nào?",
+              "options": [
+                "Cách 4 (Куда? - Đi đến đâu?)",
+                "Cách 6 (Где? - Ở đâu?)",
+                "Cách 2 (Откуда? - Từ đâu?)"
+              ],
+              "correct": 0,
+              "why": "Khi có hành động chuyển động hướng tới đâu (Куда?), dùng giới từ 'в/на + Cách 4' (в Москву)."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_007",
-            "v_002"
+          "meaningful_practice": "Đặt câu hỏi: — Что ты любишь? — Я люблю русскую музыку và спорт.",
+          "reading_snippet": "Сегодня суббота. Луонг идёт в магазин. Он хочет купить новую куртку và подарок для мамы.",
+          "listening_snippet": "Что ты сейчас делаешь? — Я смотрю новый фильм. А вечером я буду читать книгу.",
+          "speaking_prompt": "Nói 2 câu về những gì bạn thích: 'Я люблю ... (âm nhạc, thể thao, tiếng Nga)'.",
+          "production_prompt": "Hãy viết 3 câu hoàn chỉnh có tân ngữ trực tiếp (Cách 4) với các động từ: читать, видеть, слушать.",
+          "mistake_remediation": "Lỗi kinh điển: Nhầm danh từ giống đực chỉ người và đồ vật ('Я вижу стол' [giữ nguyên] vs 'Я вижу студента' [thêm -а]).",
+          "srs_items": [
+            "voc_022",
+            "voc_023",
+            "voc_024"
           ],
-          "integrated_reading_id": "read_a1_02",
-          "mastery_threshold": 85
+          "mastery_check": [
+            {
+              "q": "Câu nào sau đây đúng?",
+              "options": [
+                "Я люблю музыку",
+                "Я люблю музыка",
+                "Я люблю музыке"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Danh từ 'брат' trong 'Я вижу ...' chuyển thành gì?",
+              "options": [
+                "брата",
+                "брат",
+                "брату"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "'Мы едем ... (город)' điền dạng nào khi chỉ hướng đi (Куда)?",
+              "options": [
+                "в город",
+                "в городе",
+                "из города"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_2_3",
+          "practice_exercises": [
+            {
+              "q": "Điền dạng đúng: 'Я читаю ... (книга)'.",
+              "options": [
+                "кни́гу",
+                "кни́га",
+                "кни́ге",
+                "кни́гой"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái 'книга' làm tân ngữ trực tiếp đổi đuôi '-а' thành '-у' ➔ книгу."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я вижу ... (Анна)'.",
+              "options": [
+                "Анну",
+                "Анна",
+                "Анне",
+                "Анной"
+              ],
+              "correct": 0,
+              "why": "Tên riêng giống cái 'Анна' đổi đuôi thành '-у' (Анну)."
+            },
+            {
+              "q": "Điền dạng đúng: 'Вчера я встретил ... (друг - bạn nam)'.",
+              "options": [
+                "дру́га",
+                "друг",
+                "дру́гу",
+                "дру́гом"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống đực chỉ người (động vật) ở Cách 4 có đuôi giống Cách 2 (thêm '-а') ➔ друга."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы купили новый ... (компьютер)'.",
+              "options": [
+                "компью́тер",
+                "компью́тера",
+                "компью́теру",
+                "компью́тером"
+              ],
+              "correct": 0,
+              "why": "'Компьютер' là danh từ giống đực bất động vật (đồ vật) nên giữ nguyên dạng như Cách 1."
+            },
+            {
+              "q": "Phân biệt: 'Я живу в Москве (1)' vs 'Я еду в Москву (2)'. Câu (2) dùng cách gì và trả lời cho câu hỏi nào?",
+              "options": [
+                "Cách 4 (Куда? - Đi đến đâu?)",
+                "Cách 6 (Где? - Ở đâu?)",
+                "Cách 2 (Откуда? - Từ đâu?)"
+              ],
+              "correct": 0,
+              "why": "Khi có hành động chuyển động hướng tới đâu (Куда?), dùng giới từ 'в/на + Cách 4' (в Москву)."
+            }
+          ],
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển cụm từ sang Đối cách (Cách 4) sau động từ 'Я вижу...':",
+              "prompt": "моя новая машина ➔ Я вижу ...",
+              "answer": "мою́ но́вую маши́ну",
+              "why": "Giống cái Cách 4 đổi -ая/-а thành -ую/-у."
+            },
+            {
+              "instruction": "Chuyển câu khẳng định sang câu phủ định có 'нет':",
+              "prompt": "У меня есть время ➔ У меня нет ...",
+              "answer": "вре́мени",
+              "why": "Danh từ đuôi -мя trong Cách 2 biến đổi thành -мени ('времени')."
+            }
+          ]
         },
         {
           "id": "les_2_3",
+          "module_id": "mod_a1_2",
+          "module_title": "Module 2: A1.2 — Ma Trận 6 Cách Cơ Bản (Cách 2)",
+          "level": "A1.2",
           "objective_code": "RUS-A1-06",
-          "title": "Bài 2.3: Cách 2 (Sinh Cách - Родительный падеж)",
-          "why_learn": "Dùng để chỉ sự sở hữu (của ai?), cấu trúc 'Không có' (НЕТ + Gen), và số lượng (2, 3, 4 + Gen số ít; 5 trở lên + Gen số nhiều).",
-          "prerequisites": "Đã học Bài 2.2.",
-          "theory_markdown": "### Câu hỏi kích hoạt: Кого? Чего? Чей? Сколько?\n- Đuôi danh từ số ít: Giống đực/trung thêm `-а/-я` (*дома, брата, окна*); Giống cái đổi thành `-ы/-и` (*книги, мамы*).\n- Cấu trúc không có: `У меня нет времени / книги / денег`.",
+          "title": "Bài 2.3: Cách 2 (Sinh Cách — Кого? Чего?) — Sở Hữu, Phủ Định (Нет) & Số Lượng",
+          "why_learn": "Bạn muốn nói: 'Tôi không có thời gian', 'Đây là phòng của giáo viên', 'Cho tôi 2 cốc cà phê'. Cách 2 (Родительный падеж) là cách có tần suất xuất hiện cao bậc nhất trong tiếng Nga.",
+          "prerequisites": "Đã nắm vững Cách 1 và Cách 4.",
+          "new_vocab": [
+            {
+              "word": "нет",
+              "phonetic": "[nyet]",
+              "meaning": "không có (đi với Cách 2)"
+            },
+            {
+              "word": "у меня есть",
+              "phonetic": "[u mye-nya yest]",
+              "meaning": "tôi có..."
+            },
+            {
+              "word": "вре́мя",
+              "phonetic": "[vrye-mya]",
+              "meaning": "thời gian (giống trung)"
+            },
+            {
+              "word": "деньги",
+              "phonetic": "[dyen-gi]",
+              "meaning": "tiền bạc (luôn ở số nhiều)"
+            },
+            {
+              "word": "чай",
+              "phonetic": "[chay]",
+              "meaning": "trà (giống đực)"
+            },
+            {
+              "word": "стака́н",
+              "phonetic": "[sta-kan]",
+              "meaning": "cái cốc / ly"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "У меня́ есть вре́мя (C1) ➔ У меня́ нет вре́мени (C2)",
+              "note": "Khi có 'нет' (không có), danh từ bắt buộc chuyển sang Cách 2!"
+            },
+            {
+              "ru": "Это кни́га учи́тел-я",
+              "note": "Sở hữu 'của ai': danh từ người sở hữu đứng sau ở Cách 2."
+            }
+          ],
+          "theory_markdown": "### 1. Các Chức Năng Cốt Lõi Của Cách 2:\n1. **Phủ định sự tồn tại (НЕТ + Cách 2):**\n   - `У меня́ нет вре́мени.` (Tôi không có thời gian.)\n   - `Здесь нет бра́та.` (Ở đây không có anh trai.)\n2. **Quan hệ sở hữu (Чей? Của ai?):**\n   - `Комната студе́нта.` (Căn phòng của sinh viên.)\n   - `Машина отца́.` (Xe của bố.)\n3. **Số lượng (Сколько? Bao nhiêu?):**\n   - Sau số **2, 3, 4** ➔ Danh từ ở **Cách 2 số ít** (`2 студе́нта`, `3 кни́ги`, `4 рубля́`).\n   - Sau số **5–20, много, мало** ➔ Danh từ ở **Cách 2 số nhiều** (`5 студе́нтов`, `мно́го книг`).\n\n### 2. Bảng Biến Đuôi Cách 2 Số Ít:\n| Giống | Đuôi C1 | Đuôi Cách 2 | Ví dụ |\n| :--- | :---: | :---: | :--- |\n| **Giống Đực** | Phụ âm, -й, -ь | **-а / -я** | `студе́нт ➔ студе́нта`, `чай ➔ ча́я`, `слова́рь ➔ словаря́` |\n| **Giống Cái** | -а, -я, -ь | **-ы / -и** | `кни́га ➔ кни́ги`, `сестра́ ➔ сестры́`, `тетра́дь ➔ тетра́ди` |\n| **Giống Trung** | -о, -е, -мя | **-а / -я / -мени** | `окно́ ➔ окна́`, `мо́ре ➔ мо́ря`, `вре́мя ➔ вре́мени` |",
           "context_examples": [
             {
-              "ru": "Э́то дом моего́ дру́га.",
-              "vi": "Đây là nhà của bạn tôi."
+              "ru": "У вас есть чай? — К сожале́нию, ча́я нет.",
+              "phonetic": "[u vas yest chay k sa-zha-lye-ni-yu cha-ya nyet]",
+              "vi": "Bạn có trà không? — Rất tiếc, không còn trà."
             },
             {
-              "ru": "У меня́ нет словаря́.",
-              "vi": "Tôi không có từ điển."
+              "ru": "Ско́лько сто́ит два биле́та?",
+              "phonetic": "[skol-ka sto-it dva bi-lye-ta]",
+              "vi": "Hai chiếc vé giá bao nhiêu? (số 2 + C2 số ít: билета)."
             },
             {
-              "ru": "В ко́мнате два окна́.",
-              "vi": "Trong phòng có 2 cửa sổ."
+              "ru": "Это ко́мната мое́й сестры́.",
+              "phonetic": "[e-ta kom-na-ta ma-yey sis-try]",
+              "vi": "Đây là căn phòng của chị gái tôi (sở hữu: сестры)."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Điền dạng đúng: 'У меня сейчас нет ... (время)'.",
+              "options": [
+                "вре́мени",
+                "вре́мя",
+                "вре́менем",
+                "вре́мена"
+              ],
+              "correct": 0,
+              "why": "Từ đuôi '-мя' (время) khi sang Cách 2 đổi thành 'времени'."
+            },
+            {
+              "q": "Điền dạng đúng: 'Здесь нет ... (Анна)'.",
+              "options": [
+                "Анны",
+                "Анну",
+                "Анне",
+                "Анной"
+              ],
+              "correct": 0,
+              "why": "Sau 'нет' danh từ giống cái 'Анна' chuyển sang Cách 2 thành 'Анны'."
+            },
+            {
+              "q": "Sau số '2, 3, 4' (ví dụ: 2, 3, 4 ...), danh từ đi ở dạng nào?",
+              "options": [
+                "Cách 2 số ít",
+                "Cách 2 số nhiều",
+                "Cách 1 số nhiều",
+                "Cách 4"
+              ],
+              "correct": 0,
+              "why": "Quy tắc ngữ pháp tiếng Nga: 2, 3, 4 + Danh từ Cách 2 số ít (два стола, три книги)."
+            },
+            {
+              "q": "Cụm từ 'Nhà của người bạn' được dịch chuẩn sang tiếng Nga là:",
+              "options": [
+                "Дом дру́га",
+                "Дом друг",
+                "Друг дом",
+                "Дом к другу"
+              ],
+              "correct": 0,
+              "why": "Người sở hữu đứng sau danh từ chính và chia ở Cách 2 ➔ Дом друга."
+            },
+            {
+              "q": "Điền dạng đúng: 'Дайте, пожалуйста, два ... (стакан) сока'.",
+              "options": [
+                "стака́на",
+                "стака́н",
+                "стака́нов",
+                "стака́не"
+              ],
+              "correct": 0,
+              "why": "Sau số 2 dùng Cách 2 số ít ➔ два стакана."
+            }
+          ],
+          "meaningful_practice": "Thực hành cấu trúc: — У тебя есть словарь? — Нет, словаря нет.",
+          "reading_snippet": "Сегодня у меня много работы. У меня совсем нет свободного времени. Я хочу выпить два стакана чая và отдохнуть.",
+          "listening_snippet": "У тебя есть ручка? — Нет, ручки нет, но есть карандаш.",
+          "speaking_prompt": "Nói 2 câu: Một câu bạn có gì ('У меня есть ...') và một câu bạn không có gì ('У меня нет ...').",
+          "production_prompt": "Hãy viết 3 câu hoàn chỉnh sử dụng từ 'нет' đi kèm danh từ ở Cách 2 (ví dụ: không có tiền, không có thời gian, không có sách).",
+          "mistake_remediation": "Lỗi phổ biến: Dùng Cách 1 sau 'нет' ('У меня нет время' ➔ SAI! Phải là 'нет времени').",
+          "srs_items": [
+            "voc_025",
+            "voc_026",
+            "voc_027"
+          ],
+          "mastery_check": [
+            {
+              "q": "Sau từ 'нет' danh từ chia ở cách mấy?",
+              "options": [
+                "Cách 2 (Родительный)",
+                "Cách 4 (Винительный)",
+                "Cách 6 (Предложный)"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Sau số '3', từ 'студент' chia như thế nào?",
+              "options": [
+                "три студента",
+                "три студентов",
+                "три студенты"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "'Машина брата' có nghĩa là gì?",
+              "options": [
+                "Xe của anh trai",
+                "Anh trai có xe",
+                "Anh trai lái xe"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_3_1",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'У Антона сегодня нет ... (урок).'",
+              "q": "Điền dạng đúng: 'У меня сейчас нет ... (время)'.",
               "options": [
-                "урок",
-                "урока",
-                "уроку"
+                "вре́мени",
+                "вре́мя",
+                "вре́менем",
+                "вре́мена"
               ],
-              "correct": 1,
-              "why": "Sau 'нет' danh từ giống đực nhận đuôi Sinh cách -а: 'урока'."
+              "correct": 0,
+              "why": "Từ đuôi '-мя' (время) khi sang Cách 2 đổi thành 'времени'."
+            },
+            {
+              "q": "Điền dạng đúng: 'Здесь нет ... (Анна)'.",
+              "options": [
+                "Анны",
+                "Анну",
+                "Анне",
+                "Анной"
+              ],
+              "correct": 0,
+              "why": "Sau 'нет' danh từ giống cái 'Анна' chuyển sang Cách 2 thành 'Анны'."
+            },
+            {
+              "q": "Sau số '2, 3, 4' (ví dụ: 2, 3, 4 ...), danh từ đi ở dạng nào?",
+              "options": [
+                "Cách 2 số ít",
+                "Cách 2 số nhiều",
+                "Cách 1 số nhiều",
+                "Cách 4"
+              ],
+              "correct": 0,
+              "why": "Quy tắc ngữ pháp tiếng Nga: 2, 3, 4 + Danh từ Cách 2 số ít (два стола, три книги)."
+            },
+            {
+              "q": "Cụm từ 'Nhà của người bạn' được dịch chuẩn sang tiếng Nga là:",
+              "options": [
+                "Дом дру́га",
+                "Дом друг",
+                "Друг дом",
+                "Дом к другу"
+              ],
+              "correct": 0,
+              "why": "Người sở hữu đứng sau danh từ chính và chia ở Cách 2 ➔ Дом друга."
+            },
+            {
+              "q": "Điền dạng đúng: 'Дайте, пожалуйста, два ... (стакан) сока'.",
+              "options": [
+                "стака́на",
+                "стака́н",
+                "стака́нов",
+                "стака́не"
+              ],
+              "correct": 0,
+              "why": "Sau số 2 dùng Cách 2 số ít ➔ два стакана."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_001",
-            "v_002",
-            "v_008"
-          ],
-          "integrated_writing_id": "write_a1_01",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển cụm từ sang Đối cách (Cách 4) sau động từ 'Я вижу...':",
+              "prompt": "моя новая машина ➔ Я вижу ...",
+              "answer": "мою́ но́вую маши́ну",
+              "why": "Giống cái Cách 4 đổi -ая/-а thành -ую/-у."
+            },
+            {
+              "instruction": "Chuyển câu khẳng định sang câu phủ định có 'нет':",
+              "prompt": "У меня есть время ➔ У меня нет ...",
+              "answer": "вре́мени",
+              "why": "Danh từ đuôi -мя trong Cách 2 biến đổi thành -мени ('времени')."
+            }
+          ]
         }
       ]
     },
     {
       "module_id": "mod_a2_1",
       "level": "A2.1",
-      "title": "Module 3: A2.1 Trung Cấp Sơ Khởi (Cách 3, Cách 5 & Thể Động Từ)",
-      "description": "Hoàn thiện hệ thống 6 Cách và làm chủ sự khác biệt giữa thể Chưa hoàn thành (НСВ) và Hoàn thành (СВ).",
+      "title": "Module 3: A2.1 — Dữ Cách (C3), Tạo Cách (C5) & Cặp Thể Động Từ",
+      "description": "Hệ thống hóa toàn diện 6 Cách và cặp thể động từ НСВ/СВ.",
       "lessons": [
         {
           "id": "les_3_1",
+          "module_id": "mod_a2_1",
+          "module_title": "Module 3: A2.1 — Dữ Cách (C3), Tạo Cách (C5) & Cặp Thể Động Từ",
+          "level": "A2.1",
           "objective_code": "RUS-A2-01",
-          "title": "Bài 3.1: Cách 3 (Dữ Cách - Дательный падеж)",
-          "why_learn": "Dùng để chỉ đối tượng tiếp nhận (tặng quà cho ai?), nói tuổi tác (мне 20 лет) và diễn đạt cảm xúc/trạng thái (мне нравится).",
-          "prerequisites": "Hoàn thành Module 2.",
-          "theory_markdown": "### Câu hỏi kích hoạt: Кому? Чему?\n- Giống đực/trung: thêm `-у / -ю` (*брату, другу, преподавателю*).\n- Giống cái: đổi thành `-е / -и` (*маме, сестре, России*).",
-          "context_examples": [
+          "title": "Bài 3.1: Cách 3 (Dữ Cách — Кому? Чему?) — Tuổi Tác, Tặng Quà & Trạng Thái (Надо/Можно)",
+          "why_learn": "Bạn muốn nói tuổi ('Tôi 20 tuổi'), gọi điện cho ai ('Tôi gọi cho mẹ'), hoặc nói về trạng thái ('Tôi cảm thấy lạnh', 'Tôi cần học'). Cách 3 (Дательный падеж) là cách biểu đạt cảm xúc và trạng thái tự nhiên nhất.",
+          "prerequisites": "Đã nắm vững Cách 1, 2, 4, 6.",
+          "new_vocab": [
+            {
+              "word": "звони́ть",
+              "phonetic": "[zva-nit]",
+              "meaning": "gọi điện thoại (đi với C3)"
+            },
+            {
+              "word": "помога́ть",
+              "phonetic": "[pa-ma-gat]",
+              "meaning": "giúp đỡ (đi với C3)"
+            },
+            {
+              "word": "на́до / ну́жно",
+              "phonetic": "[na-da / nuzh-na]",
+              "meaning": "cần phải (đi với C3)"
+            },
+            {
+              "word": "мо́жно",
+              "phonetic": "[mozh-na]",
+              "meaning": "có thể (đi với C3)"
+            },
+            {
+              "word": "нельзя́",
+              "phonetic": "[nyel-zya]",
+              "meaning": "cấm / không được phép"
+            },
+            {
+              "word": "хо́лодно",
+              "phonetic": "[kho-lad-na]",
+              "meaning": "lạnh (trạng từ)"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "Мне 20 лет.",
+              "note": "Nói tuổi: Người mang tuổi ở Cách 3 ('Мне', 'Ему', 'Ей')"
+            },
             {
               "ru": "Я звоню́ дру́гу.",
-              "vi": "Tôi gọi điện cho bạn."
-            },
-            {
-              "ru": "Мне два́дцать лет.",
-              "vi": "Tôi 20 tuổi."
-            },
-            {
-              "ru": "Анне нра́вится э́та му́зыка.",
-              "vi": "Anna rất thích bản nhạc này."
+              "note": "Gọi điện cho ai: người nhận ở Cách 3 (друг ➔ другу)"
             }
           ],
+          "theory_markdown": "### 1. Chức năng chính của Cách 3 (Дательный):\n1. **Đối tượng tiếp nhận gián tiếp (Кому? Cho ai?):**\n   - `Я даю́ кни́гу дру́гу.` (Tôi đưa sách cho bạn.)\n   - `Анна звони́т ма́ме.` (Anna gọi cho mẹ.)\n2. **Hỏi và nói Tuổi tác:**\n   - `Ско́лько вам лет? — Мне два́дцать лет.` (Bạn bao nhiêu tuổi? — Tôi 20 tuổi.)\n3. **Cấu trúc Vô nhân xưng chỉ nhu cầu & trạng thái:**\n   - `[Đại từ C3] + на́до / ну́жно / мо́жно / нельзя́ + [Động từ nguyên mẫu].`\n   - *Ví dụ:* `Мне на́до занима́ться.` (Tôi cần phải học bài.)\n\n### 2. Bảng Biến Đuôi Cách 3 Số Ít:\n| Giống | Đuôi C1 | Đuôi Cách 3 | Ví dụ |\n| :--- | :---: | :---: | :--- |\n| **Giống Đực** | Phụ âm, -й, -ь | **-у / -ю** | `друг ➔ дру́гу`, `учи́тель ➔ учи́телю` |\n| **Giống Cái** | -а, -я | **-е** | `ма́ма ➔ ма́ме`, `Анна ➔ Анне` |\n| **Giống Trung** | -о, -е | **-у / -ю** | `окно́ ➔ окну́`, `мо́ре ➔ мо́рю` |",
+          "context_examples": [
+            {
+              "ru": "Ско́лько лет ва́шему бра́ту? — Ему́ два́дцать пять лет.",
+              "phonetic": "[skol-ka lyet va-she-mu bra-tu ye-mu dvad-tsat pyat lyet]",
+              "vi": "Anh trai bạn bao nhiêu tuổi? — Anh ấy 25 tuổi."
+            },
+            {
+              "ru": "Мне на́до позвони́ть преподава́телю.",
+              "phonetic": "[mnye na-da paz-va-nit prye-pa-da-va-tye-lyu]",
+              "vi": "Tôi cần phải gọi điện cho thầy giáo."
+            },
+            {
+              "ru": "Здесь нельзя́ кури́ть.",
+              "phonetic": "[zdyes nyel-zya ku-rit]",
+              "vi": "Ở đây cấm hút thuốc."
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Điền dạng đúng: 'Сколько ... (ты) лет?'.",
+              "options": [
+                "тебе́",
+                "ты",
+                "тебя́",
+                "тобо́й"
+              ],
+              "correct": 0,
+              "why": "Khi hỏi tuổi, đại từ 'ты' chuyển sang Cách 3 thành 'тебе'."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я звоню ... (друг)'.",
+              "options": [
+                "дру́гу",
+                "друг",
+                "дру́га",
+                "дру́гом"
+              ],
+              "correct": 0,
+              "why": "Động từ 'звонить' yêu cầu tân ngữ ở Cách 3 (друг ➔ другу)."
+            },
+            {
+              "q": "Điền dạng đúng: '... (я) надо купить хлеб'.",
+              "options": [
+                "Мне",
+                "Я",
+                "Меня",
+                "Мной"
+              ],
+              "correct": 0,
+              "why": "Cấu trúc 'cần phải' với 'надо' đi với đại từ ngôi 'Я' ở Cách 3 là 'Мне'."
+            },
+            {
+              "q": "Danh từ giống cái 'мама' ở Cách 3 đổi thành gì?",
+              "options": [
+                "ма́ме",
+                "ма́му",
+                "ма́мы",
+                "ма́мой"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái đuôi '-а' ở Cách 3 đổi thành '-е' (маме)."
+            },
+            {
+              "q": "Câu 'Здесь можно курить?' có nghĩa là gì?",
+              "options": [
+                "Ở đây có được hút thuốc không?",
+                "Ở đây cấm hút thuốc phải không?",
+                "Ai đang hút thuốc ở đây?"
+              ],
+              "correct": 0,
+              "why": "'Можно' có nghĩa là có thể / được phép."
+            }
+          ],
+          "meaningful_practice": "Hỏi và trả lời tuổi của các thành viên trong gia đình: — Сколько лет твоей маме? — Моей маме 45 лет.",
+          "reading_snippet": "Сегодня у Ивана день рождения. Ему исполнилось 20 лет. Друзья дарят ему подарки và желают здоровья.",
+          "listening_snippet": "Алло! Кому ты звонишь? — Я звоню врачу, мне нужно посоветоваться.",
+          "speaking_prompt": "Nói tuổi của bạn và những việc bạn cần làm hôm nay: 'Мне ... лет. Сегодня мне надо ...'.",
+          "production_prompt": "Viết 3 câu sử dụng cấu trúc Cách 3: 1 câu nói tuổi, 1 câu gọi điện/giúp ai, 1 câu dùng từ 'мне надо'.",
+          "mistake_remediation": "Lỗi phổ biến: Dùng 'Я 20 лет' (Sai!). Tiếng Nga bắt buộc nói 'Мне 20 лет' (Cách 3).",
+          "srs_items": [
+            "voc_028",
+            "voc_029",
+            "voc_030"
+          ],
+          "mastery_check": [
+            {
+              "q": "Câu nói tuổi nào sau đây đúng?",
+              "options": [
+                "Мне 21 год",
+                "Я 21 год",
+                "У меня 21 год"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Động từ 'помогать' (giúp đỡ) đi với cách mấy?",
+              "options": [
+                "Cách 3 (Дательный)",
+                "Cách 4 (Винительный)",
+                "Cách 2 (Родительный)"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Đại từ 'он' ở Cách 3 đổi thành gì?",
+              "options": [
+                "ему́",
+                "его́",
+                "им"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_3_2",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'Луонг подарил цветы ... (мама).'",
+              "q": "Điền dạng đúng: 'Сколько ... (ты) лет?'.",
               "options": [
-                "маму",
-                "маме",
-                "мамой"
+                "тебе́",
+                "ты",
+                "тебя́",
+                "тобо́й"
               ],
-              "correct": 1,
-              "why": "Tặng hoa cho ai -> Dữ cách (Cách 3): 'маме'."
+              "correct": 0,
+              "why": "Khi hỏi tuổi, đại từ 'ты' chuyển sang Cách 3 thành 'тебе'."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я звоню ... (друг)'.",
+              "options": [
+                "дру́гу",
+                "друг",
+                "дру́га",
+                "дру́гом"
+              ],
+              "correct": 0,
+              "why": "Động từ 'звонить' yêu cầu tân ngữ ở Cách 3 (друг ➔ другу)."
+            },
+            {
+              "q": "Điền dạng đúng: '... (я) надо купить хлеб'.",
+              "options": [
+                "Мне",
+                "Я",
+                "Меня",
+                "Мной"
+              ],
+              "correct": 0,
+              "why": "Cấu trúc 'cần phải' với 'надо' đi với đại từ ngôi 'Я' ở Cách 3 là 'Мне'."
+            },
+            {
+              "q": "Danh từ giống cái 'мама' ở Cách 3 đổi thành gì?",
+              "options": [
+                "ма́ме",
+                "ма́му",
+                "ма́мы",
+                "ма́мой"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái đuôi '-а' ở Cách 3 đổi thành '-е' (маме)."
+            },
+            {
+              "q": "Câu 'Здесь можно курить?' có nghĩa là gì?",
+              "options": [
+                "Ở đây có được hút thuốc không?",
+                "Ở đây cấm hút thuốc phải không?",
+                "Ai đang hút thuốc ở đây?"
+              ],
+              "correct": 0,
+              "why": "'Можно' có nghĩa là có thể / được phép."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_003",
-            "v_004"
-          ],
-          "integrated_speaking_phrase": "Мне очень нравится изучать русский язык.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển động từ thể Chưa hoàn thành (НСВ) sang thể Hoàn thành (СВ):",
+              "prompt": "Я долго писал письмо ➔ Я наконец ... письмо",
+              "answer": "написа́л",
+              "why": "'написать' là động từ thể hoàn thành của 'писать'."
+            },
+            {
+              "instruction": "Chuyển danh từ sang Tạo cách (Cách 5) chỉ nghề nghiệp sau động từ 'работать':",
+              "prompt": "Он инженер ➔ Он работает ...",
+              "answer": "инжене́ром",
+              "why": "Giống đực Tạo cách nhận đuôi -ом."
+            }
+          ]
         },
         {
           "id": "les_3_2",
+          "module_id": "mod_a2_1",
+          "module_title": "Module 3: A2.1 — Dữ Cách (C3), Tạo Cách (C5) & Cặp Thể Động Từ",
+          "level": "A2.1",
           "objective_code": "RUS-A2-02",
-          "title": "Bài 3.2: Cách 5 (Tạo Cách - Творительный падеж)",
-          "why_learn": "Dùng để chỉ công cụ làm việc (bằng bút), đi cùng với ai (с другом), và nghề nghiệp sau động từ быть, стать, работать.",
-          "prerequisites": "Đã học Bài 3.1.",
-          "theory_markdown": "### Câu hỏi kích hoạt: Кем? Чем? С кем? С чем?\n- Giống đực: đuôi `-ом / -ем` (*врачом, студентом*).\n- Giống cái: đuôi `-ой / -ей` (*ручкой, подругой*).\n- Cụm từ cùng với ai: `с + Inst` (*Я гуляю с другом*).",
+          "title": "Bài 3.2: Cách 5 (Tạo Cách — С кем? Кем?) — Cùng Với Ai & Nghề Nghiệp (Работать кем?)",
+          "why_learn": "Bạn muốn nói: 'Tôi đi xem phim cùng với bạn gái', 'Bố tôi làm kỹ sư', 'Tôi thích ăn bánh mì với bơ'. Cách 5 (Творительный падеж) giúp bạn diễn đạt sự đồng hành, công cụ và nghề nghiệp.",
+          "prerequisites": "Đã học Cách 1 đến Cách 4.",
+          "new_vocab": [
+            {
+              "word": "с / со",
+              "phonetic": "[s / sa]",
+              "meaning": "cùng với (giới từ + C5)"
+            },
+            {
+              "word": "инженер",
+              "phonetic": "[in-zhe-nyer]",
+              "meaning": "kỹ sư"
+            },
+            {
+              "word": "врач",
+              "phonetic": "[vrach]",
+              "meaning": "bác sĩ"
+            },
+            {
+              "word": "учитель",
+              "phonetic": "[u-chi-tyel]",
+              "meaning": "thầy giáo"
+            },
+            {
+              "word": "чай с сахаром",
+              "phonetic": "[chay s sa-kha-ram]",
+              "meaning": "trà với đường"
+            },
+            {
+              "word": "интересоваться",
+              "phonetic": "[in-tye-rye-sa-vat-sya]",
+              "meaning": "quan tâm / hứng thú (+ C5)"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "Я говорю́ с дру́г-ом.",
+              "note": "Giống đực thêm đuôi '-ом' khi đi với giới từ 'с' (cùng với)"
+            },
+            {
+              "ru": "Мой па́па рабо́тает инжене́р-ом.",
+              "note": "Nói nghề nghiệp sau 'работать/быть' ➔ dùng Cách 5 không giới từ!"
+            }
+          ],
+          "theory_markdown": "### 1. Ý nghĩa và cấu trúc Cách 5 (Творительный):\n1. **Đồng hành cùng ai (С кем? С чем?):**\n   - `Я гуля́ю с дру́гом.` (Tôi đi dạo cùng với bạn.)\n   - `Ко́фе с молоко́м.` (Cà phê với sữa.)\n2. **Nghề nghiệp với động từ 'работать / быть / стать':**\n   - `Он рабо́тает инжене́ром.` (Anh ấy làm kỹ sư.)\n   - `Она́ хо́чет стать врачо́м.` (Cô ấy muốn trở thành bác sĩ.)\n\n### 2. Bảng Biến Đuôi Cách 5 Số Ít:\n| Giống | Đuôi C1 | Đuôi Cách 5 | Ví dụ |\n| :--- | :---: | :---: | :--- |\n| **Giống Đực** | Phụ âm, -й, -ь | **-ом / -ем / -ём** | `друг ➔ дру́гом`, `музе́й ➔ музе́ем`, `учи́тель ➔ учи́телем` |\n| **Giống Cái** | -а, -я, -ь | **-ой / -ей / -ью** | `ма́ма ➔ ма́мой`, `пе́сня ➔ пе́сней`, `ночь ➔ но́чью` |\n| **Giống Trung** | -о, -е | **-ом / -ем** | `молоко́ ➔ молоко́м`, `мо́ре ➔ мо́рем` |",
           "context_examples": [
             {
-              "ru": "Я пишу́ си́ней ру́чкой.",
-              "vi": "Tôi viết bằng cây bút màu xanh."
+              "ru": "Вчера́ я ходи́л в теа́тр с подру́гой.",
+              "phonetic": "[fche-ra ya kha-dil v tye-atr s pad-ru-gay]",
+              "vi": "Hôm qua tôi đi xem kịch cùng với bạn gái."
             },
             {
-              "ru": "Мой па́па рабо́тает инжене́ром.",
-              "vi": "Bố tôi làm việc với tư cách là kỹ sư."
+              "ru": "Моя́ сестра́ рабо́тает учи́тельницей в шко́ле.",
+              "phonetic": "[ma-ya sis-tra ra-bo-ta-yet u-chi-tyel-ni-tsey v shko-lye]",
+              "vi": "Chị gái tôi làm giáo viên ở trường học."
             },
             {
-              "ru": "Мы пьём чай с лимо́ном.",
-              "vi": "Chúng tôi uống trà với chanh."
+              "ru": "Я пью чай с лимо́ном và са́харом.",
+              "phonetic": "[ya pyu chay s li-mo-nam i sa-kha-ram]",
+              "vi": "Tôi uống trà với chanh và đường."
             }
           ],
+          "controlled_practice": [
+            {
+              "q": "Điền dạng đúng: 'Антон говорит с ... (друг)'.",
+              "options": [
+                "дру́гом",
+                "друг",
+                "дру́га",
+                "дру́гу"
+              ],
+              "correct": 0,
+              "why": "Sau giới từ 'с' chỉ sự đồng hành, danh từ giống đực đổi đuôi thành '-ом' (другом)."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мой отец работает ... (инженер)'.",
+              "options": [
+                "инжене́ром",
+                "инжене́р",
+                "инжене́ра",
+                "инжене́ру"
+              ],
+              "correct": 0,
+              "why": "Sau động từ 'работать' chỉ nghề nghiệp dùng danh từ ở Cách 5 ➔ инженером."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я пью кофе с ... (молоко)'.",
+              "options": [
+                "молоко́м",
+                "молоко́",
+                "молока́",
+                "молоке́"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống trung 'молоко' ở Cách 5 đổi thành 'молоком'."
+            },
+            {
+              "q": "Danh từ giống cái 'Анна' trong 'Я гуляю с ...' đổi thành gì?",
+              "options": [
+                "Анной",
+                "Анну",
+                "Анне",
+                "Анны"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái đuôi '-а' ở Cách 5 đổi thành '-ой' ➔ Анной."
+            },
+            {
+              "q": "Câu hỏi kích hoạt khi hỏi bạn đi cùng với ai là gì?",
+              "options": [
+                "С кем? (Với ai?)",
+                "Кому? (Cho ai?)",
+                "Кого? (Ai?)",
+                "Где? (Ở đâu?)"
+              ],
+              "correct": 0,
+              "why": "'С кем?' là câu hỏi đặc trưng của Cách 5 đi với giới từ 'с'."
+            }
+          ],
+          "meaningful_practice": "Hỏi và trả lời: — С кем ты вчера ужинал? — Я ужинал с семьёй.",
+          "reading_snippet": "Луонг познакомился с русским студентом Иваном. Они часто гуляют вместе по парку, пьют чай с пирожками và говорят о жизни.",
+          "listening_snippet": "Кем работает твой папа? — Он работает врачом в городской больнице.",
+          "speaking_prompt": "Nói 2 câu: Bạn thường đi chơi với ai ('Я гуляю с ...') và bạn uống trà/cà phê với cái gì.",
+          "production_prompt": "Hãy viết 3 câu hoàn chỉnh sử dụng Cách 5: 1 câu về người bạn đi cùng, 1 câu về nghề nghiệp, 1 câu về đồ ăn/thức uống kèm món khác.",
+          "mistake_remediation": "Lỗi phổ biến: Thêm giới từ 'с' khi nói nghề nghiệp ('Он работает с инженером' có nghĩa là 'Anh ấy làm việc CÙNG VỚI kỹ sư', không phải 'Anh ấy LÀ kỹ sư'). Muốn nói nghề nghiệp: bỏ 'с' ('Он работает инженером').",
+          "srs_items": [
+            "voc_031",
+            "voc_032",
+            "voc_033"
+          ],
+          "mastery_check": [
+            {
+              "q": "Câu nào nói về nghề nghiệp đúng?",
+              "options": [
+                "Он работает врачом",
+                "Он работает с врачом",
+                "Он врач работает"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "'Кофе с сахаром' có nghĩa là gì?",
+              "options": [
+                "Cà phê có đường",
+                "Cà phê không đường",
+                "Cà phê đen"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Đại từ 'я' ở Cách 5 đi với 'с' biến thành gì?",
+              "options": [
+                "со мной",
+                "с меня",
+                "со мне"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_3_3",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'Мой брат хочет стать ... (врач).'",
+              "q": "Điền dạng đúng: 'Антон говорит с ... (друг)'.",
               "options": [
-                "врач",
-                "врача",
-                "врачом"
+                "дру́гом",
+                "друг",
+                "дру́га",
+                "дру́гу"
               ],
-              "correct": 2,
-              "why": "Sau 'стать' (trở thành) danh từ chia Tạo cách (Cách 5): 'врачом'."
+              "correct": 0,
+              "why": "Sau giới từ 'с' chỉ sự đồng hành, danh từ giống đực đổi đuôi thành '-ом' (другом)."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мой отец работает ... (инженер)'.",
+              "options": [
+                "инжене́ром",
+                "инжене́р",
+                "инжене́ра",
+                "инжене́ру"
+              ],
+              "correct": 0,
+              "why": "Sau động từ 'работать' chỉ nghề nghiệp dùng danh từ ở Cách 5 ➔ инженером."
+            },
+            {
+              "q": "Điền dạng đúng: 'Я пью кофе с ... (молоко)'.",
+              "options": [
+                "молоко́м",
+                "молоко́",
+                "молока́",
+                "молоке́"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống trung 'молоко' ở Cách 5 đổi thành 'молоком'."
+            },
+            {
+              "q": "Danh từ giống cái 'Анна' trong 'Я гуляю с ...' đổi thành gì?",
+              "options": [
+                "Анной",
+                "Анну",
+                "Анне",
+                "Анны"
+              ],
+              "correct": 0,
+              "why": "Danh từ giống cái đuôi '-а' ở Cách 5 đổi thành '-ой' ➔ Анной."
+            },
+            {
+              "q": "Câu hỏi kích hoạt khi hỏi bạn đi cùng với ai là gì?",
+              "options": [
+                "С кем? (Với ai?)",
+                "Кому? (Cho ai?)",
+                "Кого? (Ai?)",
+                "Где? (Ở đâu?)"
+              ],
+              "correct": 0,
+              "why": "'С кем?' là câu hỏi đặc trưng của Cách 5 đi với giới từ 'с'."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_005",
-            "v_006"
-          ],
-          "integrated_speaking_phrase": "Я хочу стать хорошим специалистом.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển động từ thể Chưa hoàn thành (НСВ) sang thể Hoàn thành (СВ):",
+              "prompt": "Я долго писал письмо ➔ Я наконец ... письмо",
+              "answer": "написа́л",
+              "why": "'написать' là động từ thể hoàn thành của 'писать'."
+            },
+            {
+              "instruction": "Chuyển danh từ sang Tạo cách (Cách 5) chỉ nghề nghiệp sau động từ 'работать':",
+              "prompt": "Он инженер ➔ Он работает ...",
+              "answer": "инжене́ром",
+              "why": "Giống đực Tạo cách nhận đuôi -ом."
+            }
+          ]
         },
         {
           "id": "les_3_3",
+          "module_id": "mod_a2_1",
+          "module_title": "Module 3: A2.1 — Dữ Cách (C3), Tạo Cách (C5) & Cặp Thể Động Từ",
+          "level": "A2.1",
           "objective_code": "RUS-A2-03",
-          "title": "Bài 3.3: Thể Động Từ (НСВ vs СВ theo Ngữ Cảnh)",
-          "why_learn": "Thể động từ là linh hồn của ngữ pháp tiếng Nga. Chọn đúng thể giúp bạn truyền đạt chính xác hành động đang diễn ra hay đã hoàn thành có kết quả.",
-          "prerequisites": "Đã học Bài 3.2.",
-          "theory_markdown": "### Phân biệt thể Chưa hoàn thành (НСВ) vs Hoàn thành (СВ):\n- **НСВ (Несовершенный вид)**: Quá trình kéo dài (*весь вечер*), thói quen lặp lại (*каждый день, часто*), đồng thời (*когда я читал, он писал*).\n- **СВ (Совершенный вид)**: Kết quả cụ thể (*прочитал книгу*), hành động xảy ra 1 lần đạt mục đích (*вдруг, сразу, наконец*), chuỗi hành động kế tiếp nhau.",
-          "context_examples": [
+          "title": "Bài 3.3: Cặp Thể Động Từ (НСВ vs СВ) — Bản Chất Quá Trình, Thói Quen vs Kết Quả",
+          "why_learn": "Thể động từ (Вид глагола) là đặc sản và là 'trái tim' của ngữ pháp tiếng Nga. Không hiểu thể động từ, bạn sẽ không thể nói được thì quá khứ và tương lai một cách chính xác.",
+          "prerequisites": "Đã nắm vững chia động từ thì hiện tại và quá khứ.",
+          "new_vocab": [
             {
-              "ru": "Вчера́ я весь ве́чер чита́л рома́н (НСВ).",
-              "vi": "Hôm qua tôi đọc tiểu thuyết suốt cả buổi tối (quá trình)."
+              "word": "чита́ть / прочита́ть",
+              "phonetic": "[chi-tat / pra-chi-tat]",
+              "meaning": "đọc (НСВ / СВ)"
             },
             {
-              "ru": "Я прочита́л рома́н за два дня (СВ).",
-              "vi": "Tôi đã đọc xong cuốn tiểu thuyết trong 2 ngày (kết quả)."
+              "word": "писа́ть / написа́ть",
+              "phonetic": "[pi-sat / na-pi-sat]",
+              "meaning": "viết (НСВ / СВ)"
+            },
+            {
+              "word": "де́лать / сде́лать",
+              "phonetic": "[dye-lat / sdye-lat]",
+              "meaning": "làm (НСВ / СВ)"
+            },
+            {
+              "word": "покупа́ть / купи́ть",
+              "phonetic": "[pa-ku-pat / ku-pit]",
+              "meaning": "mua (НСВ / СВ)"
+            },
+            {
+              "word": "результа́т",
+              "phonetic": "[rye-zul-tat]",
+              "meaning": "kết quả"
+            },
+            {
+              "word": "ка́ждый день",
+              "phonetic": "[kazh-dyy dyen]",
+              "meaning": "mỗi ngày (dấu hiệu НСВ)"
             }
           ],
-          "practice_exercises": [
+          "grammar_discovery": [
             {
-              "q": "Điền thể đúng: 'Каждое утро я ... (пить / выпить) кофе.'",
+              "ru": "Вчера́ я весь ве́чер чита́л кни́гу (НСВ).",
+              "note": "Quá trình kéo dài cả buổi tối, nhấn mạnh việc đang diễn ra."
+            },
+            {
+              "ru": "Вчера́ я прочита́л кни́гу за 2 часа́ (СВ).",
+              "note": "Đã đọc xong toàn bộ cuốn sách, nhấn mạnh kết quả hoàn thành!"
+            }
+          ],
+          "theory_markdown": "### 1. Bản chất cốt lõi của 2 Thể Động Từ:\n| Tiêu chí | Thể Chưa Hoàn Thành (НСВ) | Thể Hoàn Thành (СВ) |\n| :--- | :--- | :--- |\n| **Bản chất** | Nhấn mạnh **Quá trình (Process)** hoặc **Tên hành động** | Nhấn mạnh **Kết quả trọn vẹn (Result)** |\n| **Tần suất** | Hành động **Lặp lại, thói quen** (`каждый день`, `часто`, `всегда`) | Hành động **Xảy ra 1 lần duy nhất đạt đích** (`вдруг`, `сразу`, `за 2 часа`) |\n| **Thời gian** | Có đủ 3 thì: Quá khứ, Hiện tại, Tương lai ghép (`буду читать`) | **Chỉ có 2 thì:** Quá khứ (`прочитал`) và Tương lai đơn (`прочитаю`) |\n\n### 2. Cấu trúc với Động từ Tình thái (Хотеть, Мочь, Должен):\n- `Я хочу́ чита́ть` (Tôi muốn ngồi đọc sách [thói quen/quá trình - НСВ]).\n- `Я хочу́ прочита́ть эту статью́` (Tôi muốn đọc cho xong bài báo này [kết quả - СВ]).",
+          "context_examples": [
+            {
+              "ru": "Что ты де́лал вчера́? — Я писа́л письмо́ (НСВ - quá trình).",
+              "phonetic": "[shto ty dye-lal fche-ra ya pi-sal pis-mo]",
+              "vi": "Hôm qua bạn làm gì? — Tôi ngồi viết thư."
+            },
+            {
+              "ru": "Ты уже́ написа́л письмо́? — Да, я написа́л và отпра́вил (СВ - kết quả).",
+              "phonetic": "[ty u-zhe na-pi-sal pis-mo da ya na-pi-sal i at-pra-vil]",
+              "vi": "Bạn đã viết xong thư chưa? — Rồi, tôi đã viết xong và gửi đi rồi."
+            },
+            {
+              "ru": "Ка́ждый день я покупа́ю хлеб (НСВ).",
+              "phonetic": "[kazh-dyy dyen ya pa-ku-pa-yu khlyep]",
+              "vi": "Mỗi ngày tôi đều mua bánh mì (lặp lại)."
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Chọn thể đúng: 'Вчера я весь вечер ... (читать / прочитать) роман'.",
               "options": [
-                "пью (НСВ)",
-                "выпью (СВ)"
+                "чита́л (НСВ)",
+                "прочита́л (СВ)",
+                "буду читать"
               ],
               "correct": 0,
-              "why": "Có dấu hiệu 'каждое утро' (thói quen lặp lại) nên bắt buộc dùng thể НСВ: 'пью'."
+              "why": "Dấu hiệu 'весь вечер' (cả buổi tối) chỉ quá trình kéo dài ➔ bắt buộc dùng НСВ (читал)."
+            },
+            {
+              "q": "Chọn thể đúng: 'Наконец-то я ... (делать / сделать) домашнее задание!'.",
+              "options": [
+                "сде́лал (СВ)",
+                "де́лал (НСВ)",
+                "делаю"
+              ],
+              "correct": 0,
+              "why": "Dấu hiệu 'наконец-то' (cuối cùng thì) nhấn mạnh kết quả hoàn thành ➔ dùng СВ (сделал)."
+            },
+            {
+              "q": "Thể hoàn thành (СВ) có thì hiện tại không?",
+              "options": [
+                "Không có thì hiện tại (chỉ có Quá khứ và Tương lai đơn)",
+                "Có thì hiện tại",
+                "Chỉ có thì tương lai"
+              ],
+              "correct": 0,
+              "why": "Thể СВ nhấn mạnh kết quả trọn vẹn nên không thể tồn tại ở thì hiện tại đang diễn ra."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы часто ... (покупать / купить) фрукты на рынке'.",
+              "options": [
+                "покупа́ем (НСВ)",
+                "ку́пим (СВ)",
+                "купи́ли"
+              ],
+              "correct": 0,
+              "why": "Từ 'часто' (thường xuyên) chỉ thói quen lặp lại ➔ dùng НСВ ở hiện tại (покупаем)."
+            },
+            {
+              "q": "Cặp động từ 'писать — написать' khác nhau như thế nào?",
+              "options": [
+                "писать là НСВ (quá trình/thói quen), написать là СВ (viết xong/kết quả)",
+                "писать là quá khứ, написать là tương lai",
+                "Không có khác biệt"
+              ],
+              "correct": 0,
+              "why": "Đây là cặp thể chuẩn hóa của động từ 'viết'."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_008"
+          "meaningful_practice": "Đối chiếu 2 câu hỏi: — Что вы делали вчера? (làm gì) vs — Что вы сделали вчера? (đã làm xong gì).",
+          "reading_snippet": "Вчера был трудный день. С утра Луонг учил новые слова. К обеду он выучил все 30 слов. Вечером он написал сочинение và показал его преподавателю.",
+          "listening_snippet": "Ты уже сделал домашнее задание? — Да, я всё сделал и теперь могу отдыхать.",
+          "speaking_prompt": "Kể lại 2 việc: 1 việc bạn đã làm trong một khoảng thời gian (НСВ) và 1 việc bạn đã hoàn thành xong xuôi (СВ).",
+          "production_prompt": "Hãy viết 2 câu đối chiếu cùng 1 cặp động từ (ví dụ делать/сделать hoặc читать/прочитать) để thể hiện rõ sự khác biệt giữa quá trình và kết quả.",
+          "mistake_remediation": "Sai lầm nguy hiểm: Dịch máy móc 'đang làm = НСВ, đã xong = СВ'. Hãy nhớ: Hành động lặp lại nhiều lần trong quá khứ dù đã xong vẫn dùng НСВ ('Раньше я часто читал книги').",
+          "srs_items": [
+            "voc_034",
+            "voc_035",
+            "voc_036"
           ],
-          "integrated_reading_id": "read_a2_01",
-          "mastery_threshold": 85
+          "mastery_check": [
+            {
+              "q": "Dấu hiệu 'каждый день' đi với thể nào?",
+              "options": [
+                "НСВ (Chưa hoàn thành)",
+                "СВ (Hoàn thành)"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Câu 'Я прочитал книгу за 1 час' nhấn mạnh điều gì?",
+              "options": [
+                "Kết quả đọc xong trong 1 tiếng",
+                "Quá trình đọc kéo dài",
+                "Thói quen đọc"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Động từ 'сделать' thuộc thể nào?",
+              "options": [
+                "СВ (Hoàn thành)",
+                "НСВ (Chưa hoàn thành)"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_4_1",
+          "practice_exercises": [
+            {
+              "q": "Chọn thể đúng: 'Вчера я весь вечер ... (читать / прочитать) роман'.",
+              "options": [
+                "чита́л (НСВ)",
+                "прочита́л (СВ)",
+                "буду читать"
+              ],
+              "correct": 0,
+              "why": "Dấu hiệu 'весь вечер' (cả buổi tối) chỉ quá trình kéo dài ➔ bắt buộc dùng НСВ (читал)."
+            },
+            {
+              "q": "Chọn thể đúng: 'Наконец-то я ... (делать / сделать) домашнее задание!'.",
+              "options": [
+                "сде́лал (СВ)",
+                "де́лал (НСВ)",
+                "делаю"
+              ],
+              "correct": 0,
+              "why": "Dấu hiệu 'наконец-то' (cuối cùng thì) nhấn mạnh kết quả hoàn thành ➔ dùng СВ (сделал)."
+            },
+            {
+              "q": "Thể hoàn thành (СВ) có thì hiện tại không?",
+              "options": [
+                "Không có thì hiện tại (chỉ có Quá khứ và Tương lai đơn)",
+                "Có thì hiện tại",
+                "Chỉ có thì tương lai"
+              ],
+              "correct": 0,
+              "why": "Thể СВ nhấn mạnh kết quả trọn vẹn nên không thể tồn tại ở thì hiện tại đang diễn ra."
+            },
+            {
+              "q": "Điền dạng đúng: 'Мы часто ... (покупать / купить) фрукты на рынке'.",
+              "options": [
+                "покупа́ем (НСВ)",
+                "ку́пим (СВ)",
+                "купи́ли"
+              ],
+              "correct": 0,
+              "why": "Từ 'часто' (thường xuyên) chỉ thói quen lặp lại ➔ dùng НСВ ở hiện tại (покупаем)."
+            },
+            {
+              "q": "Cặp động từ 'писать — написать' khác nhau như thế nào?",
+              "options": [
+                "писать là НСВ (quá trình/thói quen), написать là СВ (viết xong/kết quả)",
+                "писать là quá khứ, написать là tương lai",
+                "Không có khác biệt"
+              ],
+              "correct": 0,
+              "why": "Đây là cặp thể chuẩn hóa của động từ 'viết'."
+            }
+          ],
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển động từ thể Chưa hoàn thành (НСВ) sang thể Hoàn thành (СВ):",
+              "prompt": "Я долго писал письмо ➔ Я наконец ... письмо",
+              "answer": "написа́л",
+              "why": "'написать' là động từ thể hoàn thành của 'писать'."
+            },
+            {
+              "instruction": "Chuyển danh từ sang Tạo cách (Cách 5) chỉ nghề nghiệp sau động từ 'работать':",
+              "prompt": "Он инженер ➔ Он работает ...",
+              "answer": "инжене́ром",
+              "why": "Giống đực Tạo cách nhận đuôi -ом."
+            }
+          ]
         }
       ]
     },
     {
       "module_id": "mod_a2_2",
       "level": "A2.2",
-      "title": "Module 4: A2.2 Động Từ Chuyển Động & Tiền Tố Phương Hướng",
-      "description": "Làm chủ logic chuyển động 1 chiều vs đa chiều và 11 tiền tố phương hướng kinh điển.",
+      "title": "Module 4: A2.2 — Động Từ Chuyển Động & Tiền Tố Chỉ Hướng",
+      "description": "Phân biệt 1 chiều vs Đa chiều và 11 tiền tố không gian.",
       "lessons": [
         {
           "id": "les_4_1",
+          "module_id": "mod_a2_2",
+          "module_title": "Module 4: A2.2 — Động Từ Chuyển Động & Tiền Tố Chỉ Hướng",
+          "level": "A2.2",
           "objective_code": "RUS-A2-04",
-          "title": "Bài 4.1: Động Từ Chuyển Động (Идти/Ходить & Ехать/Ездить)",
-          "why_learn": "Tiếng Nga phân biệt rõ việc đi bộ hay đi bằng phương tiện, đi theo một hướng xác định hay đi lại thường xuyên.",
-          "prerequisites": "Hoàn thành Module 3.",
-          "theory_markdown": "### Logic chuyển động:\n- **Đi bộ**: `Идти` (1 chiều đang đi ➔) vs `Ходить` (đa chiều, thói quen, 2 chiều ⇄).\n- **Đi bằng phương tiện**: `Ехать` (1 chiều ➔) vs `Ездить` (đa chiều ⇄).",
-          "context_examples": [
+          "title": "Bài 4.1: Động Từ Chuyển Động Cơ Bản — Một Chiều (➔) vs Đa Chiều (⇄)",
+          "why_learn": "Trong tiếng Nga không chỉ có 1 từ 'đi'. Bạn đi bộ hay đi xe? Đang đi theo một hướng hay đi lại thường xuyên? Bài học này giúp bạn giải mã cặp động từ chuyển động kinh điển: Идти/Ходить và Ехать/Ездить.",
+          "prerequisites": "Đã học chia động từ và Cách 4 phương hướng (Куда?).",
+          "new_vocab": [
             {
-              "ru": "Смотри́! Анто́н идёт в библиоте́ку (1 chiều).",
-              "vi": "Nhìn kìa! Anton đang đi đến thư viện."
+              "word": "идти́",
+              "phonetic": "[it-ti]",
+              "meaning": "đi bộ một chiều (➔ đang đi)"
             },
             {
-              "ru": "Ка́ждый день я хожу́ в университе́т пешко́м (đa chiều).",
-              "vi": "Mỗi ngày tôi đều đi bộ đến trường đại học."
+              "word": "ходи́ть",
+              "phonetic": "[kha-dit]",
+              "meaning": "đi bộ đa chiều (⇄ đi lại thường xuyên)"
+            },
+            {
+              "word": "е́хать",
+              "phonetic": "[ye-khat]",
+              "meaning": "đi bằng phương tiện một chiều (➔)"
+            },
+            {
+              "word": "е́здить",
+              "phonetic": "[yez-dit]",
+              "meaning": "đi bằng phương tiện đa chiều (⇄)"
+            },
+            {
+              "word": "пешко́м",
+              "phonetic": "[pyesh-kom]",
+              "meaning": "đi bộ (bằng chân)"
+            },
+            {
+              "word": "на метро́",
+              "phonetic": "[na myet-ro]",
+              "meaning": "bằng tàu điện ngầm"
             }
           ],
+          "grammar_discovery": [
+            {
+              "ru": "Сейча́с я иду́ в университе́т (➔).",
+              "note": "Một chiều: Hành động đang diễn ra ngay lúc nói hướng tới mục tiêu cụ thể."
+            },
+            {
+              "ru": "Ка́ждый день я хожу́ в университе́т (⇄).",
+              "note": "Đa chiều: Hành động lặp lại hàng ngày (đi đến rồi đi về)."
+            }
+          ],
+          "theory_markdown": "### 1. Ma Trận Động Từ Chuyển Động Không Tiền Tố:\n| Cách thức di chuyển | Một chiều (Đang đi ➔) | Đa chiều (Thói quen / 2 chiều ⇄) |\n| :--- | :--- | :--- |\n| **Đi bộ (bằng chân - пешком)** | **ИДТИ́** (`я иду́, ты идёшь, они́ иду́т; шёл, шла`) | **ХОДИ́ТЬ** (`я хожу́, ты хо́дишь, они́ хо́дят; ходи́л`) |\n| **Đi bằng xe/tàu (на транспорте)** | **Е́ХАТЬ** (`я е́ду, ты е́дешь, они́ е́дут; е́хал`) | **Е́ЗДИТЬ** (`я е́зжу, ты е́здишь, они́ е́здят; е́здил`) |\n\n### 2. Nguyên tắc chọn động từ:\n1. **Dùng Một chiều (идти / ехать):** Đang trên đường đi về 1 hướng (`сейчас`, `в этот момент`, `посмотри`).\n2. **Dùng Đa chiều (ходить / ездить):**\n   - Thói quen lặp lại (`каждый день`, `часто`, `редко`).\n   - Đi đến nơi rồi đã quay về trọn vẹn trong quá khứ (`Вчера я ходил в театр` ➔ hôm qua đi xem kịch, giờ đã về nhà).",
+          "context_examples": [
+            {
+              "ru": "Куда́ ты сейча́с идёшь? — Я иду́ в библиоте́ку (➔).",
+              "phonetic": "[ku-da ty se-chas i-dyosh ya i-du v bib-li-a-tye-ku]",
+              "vi": "Bây giờ bạn đang đi đâu thế? — Tôi đang đi đến thư viện."
+            },
+            {
+              "ru": "Ка́ждое ле́то мы е́здим на мо́ре (⇄).",
+              "phonetic": "[kazh-da-ye lye-ta my yez-dim na mo-rye]",
+              "vi": "Mỗi mùa hè chúng tôi đều đi biển nghỉ dưỡng."
+            },
+            {
+              "ru": "Вчера́ мы ходи́ли на конце́рт (⇄ đã đi và đã về).",
+              "phonetic": "[fche-ra my kha-di-li na kan-tsert]",
+              "vi": "Hôm qua chúng tôi đã đi xem hòa nhạc."
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Chọn động từ đúng: 'Посмотри, Анна ... (идти / ходить) в школу'.",
+              "options": [
+                "идёт (Một chiều ➔)",
+                "хо́дит (Đa chiều ⇄)",
+                "ездит"
+              ],
+              "correct": 0,
+              "why": "'Посмотри' (Nhìn kìa) chỉ hành động đang diễn ra ngay trước mắt ➔ dùng Một chiều (идёт)."
+            },
+            {
+              "q": "Chọn động từ đúng: 'Каждый день мы ... (ехать / ездить) на работу на метро'.",
+              "options": [
+                "е́здим (Đa chiều ⇄)",
+                "е́дем (Một chiều ➔)",
+                "идём"
+              ],
+              "correct": 0,
+              "why": "'Каждый день' chỉ thói quen lặp lại bằng phương tiện ➔ dùng Đa chiều (ездим)."
+            },
+            {
+              "q": "Phân biệt: 'Вчера я ходил в музей' có nghĩa là:",
+              "options": [
+                "Hôm qua tôi đã đi bảo tàng và hiện tại đã trở về",
+                "Hôm qua tôi đang trên đường đi bảo tàng",
+                "Hôm qua tôi không đi được"
+              ],
+              "correct": 0,
+              "why": "Quá khứ của động từ đa chiều 'ходить' (ходил) diễn tả chuyến đi khứ hồi 2 chiều trọn vẹn."
+            },
+            {
+              "q": "Chia động từ 'ехать' với ngôi 'Я':",
+              "options": [
+                "я е́ду",
+                "я е́жу",
+                "я е́хаю",
+                "я е́зжу"
+              ],
+              "correct": 0,
+              "why": "Động từ 'ехать' chia bất quy tắc: я еду, ты едешь, они едут."
+            },
+            {
+              "q": "Quá khứ của động từ 'идти' (он / она) là gì?",
+              "options": [
+                "шёл / шла",
+                "идтил / идтила",
+                "ходи́л / ходи́ла"
+              ],
+              "correct": 0,
+              "why": "Động từ 'идти' có dạng quá khứ hoàn toàn đặc biệt: он шёл, она шла, они шли."
+            }
+          ],
+          "meaningful_practice": "Đối chiếu 2 câu hỏi: — Как ты обычно добираешься до работы? (đi bằng gì) vs — Куда ты сейчас едешь? (đang đi đâu).",
+          "reading_snippet": "Утром Иван встаёт в 7 часов. Обычно он ездит в университет на автобусе, но если погода хорошая, он идёт пешком. Вчера он ходил в бассейн.",
+          "listening_snippet": "Привет! Ты куда сейчас едешь? — Я еду на вокзал встречать друга.",
+          "speaking_prompt": "Nói 2 câu: Bạn thường đi học/đi làm bằng phương tiện gì và hôm qua bạn đã đi đâu.",
+          "production_prompt": "Hãy viết 3 câu hoàn chỉnh: 1 câu dùng 'идти', 1 câu dùng 'ходить', 1 câu dùng 'ехать/ездить'.",
+          "mistake_remediation": "Lỗi kinh điển: Nhầm 'ехать' (đi xe) và 'идти' (đi bộ). Đừng nói 'Я иду в Москву' nếu bạn đi từ Hà Nội sang Moscow bằng máy bay!",
+          "srs_items": [
+            "voc_037",
+            "voc_038",
+            "voc_039"
+          ],
+          "mastery_check": [
+            {
+              "q": "Động từ 'ходить' diễn tả chuyển động kiểu gì?",
+              "options": [
+                "Đa chiều / lặp lại / khứ hồi ⇄",
+                "Một chiều đang đi ➔"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Quá khứ giống đực của 'идти' là gì?",
+              "options": [
+                "шёл",
+                "идтил",
+                "ехал"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'пешком' có nghĩa là gì?",
+              "options": [
+                "Đi bộ bằng chân",
+                "Đi bằng xe buýt",
+                "Đi nhanh"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_4_2",
           "practice_exercises": [
             {
-              "q": "Điền dạng đúng: 'Каждое лето наша семья ... (ехать / ездить) на юг.'",
+              "q": "Chọn động từ đúng: 'Посмотри, Анна ... (идти / ходить) в школу'.",
               "options": [
-                "едет (1 chiều)",
-                "ездит (đa chiều)"
+                "идёт (Một chiều ➔)",
+                "хо́дит (Đa chiều ⇄)",
+                "ездит"
               ],
-              "correct": 1,
-              "why": "Có 'каждое лето' (thói quen định kỳ hàng năm) nên dùng động từ đa chiều 'ездит'."
+              "correct": 0,
+              "why": "'Посмотри' (Nhìn kìa) chỉ hành động đang diễn ra ngay trước mắt ➔ dùng Một chiều (идёт)."
+            },
+            {
+              "q": "Chọn động từ đúng: 'Каждый день мы ... (ехать / ездить) на работу на метро'.",
+              "options": [
+                "е́здим (Đa chiều ⇄)",
+                "е́дем (Một chiều ➔)",
+                "идём"
+              ],
+              "correct": 0,
+              "why": "'Каждый день' chỉ thói quen lặp lại bằng phương tiện ➔ dùng Đa chiều (ездим)."
+            },
+            {
+              "q": "Phân biệt: 'Вчера я ходил в музей' có nghĩa là:",
+              "options": [
+                "Hôm qua tôi đã đi bảo tàng và hiện tại đã trở về",
+                "Hôm qua tôi đang trên đường đi bảo tàng",
+                "Hôm qua tôi không đi được"
+              ],
+              "correct": 0,
+              "why": "Quá khứ của động từ đa chiều 'ходить' (ходил) diễn tả chuyến đi khứ hồi 2 chiều trọn vẹn."
+            },
+            {
+              "q": "Chia động từ 'ехать' với ngôi 'Я':",
+              "options": [
+                "я е́ду",
+                "я е́жу",
+                "я е́хаю",
+                "я е́зжу"
+              ],
+              "correct": 0,
+              "why": "Động từ 'ехать' chia bất quy tắc: я еду, ты едешь, они едут."
+            },
+            {
+              "q": "Quá khứ của động từ 'идти' (он / она) là gì?",
+              "options": [
+                "шёл / шла",
+                "идтил / идтила",
+                "ходи́л / ходи́ла"
+              ],
+              "correct": 0,
+              "why": "Động từ 'идти' có dạng quá khứ hoàn toàn đặc biệt: он шёл, она шла, они шли."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_006"
-          ],
-          "integrated_speaking_phrase": "Сейчас я еду на работу на метро.",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển động từ 1 chiều 'идти' sang động từ có tiền tố chỉ sự đến nơi 'прийти':",
+              "prompt": "Поезд идёт ➔ Поезд уже ... вовремя",
+              "answer": "пришёл",
+              "why": "Quá khứ của 'прийти' ở giống đực là 'пришёл'."
+            },
+            {
+              "instruction": "Chọn động từ phù hợp cho thói quen hàng ngày:",
+              "prompt": "Каждый день я (идти / ходить) в библиотеку ➔ ...",
+              "answer": "хожу́",
+              "why": "Thói quen lặp lại dùng động từ đa chiều 'ходить' (ngôi 'Я' là 'хожу')."
+            }
+          ]
         },
         {
           "id": "les_4_2",
+          "module_id": "mod_a2_2",
+          "module_title": "Module 4: A2.2 — Động Từ Chuyển Động & Tiền Tố Chỉ Hướng",
+          "level": "A2.2",
           "objective_code": "RUS-A2-05",
-          "title": "Bài 4.2: 11 Tiền Tố Chuyển Động Chỉ Hướng",
-          "why_learn": "Ghép tiền tố vào động từ chuyển động tạo ra hàng trăm động từ mới diễn tả chính xác mọi hướng di chuyển.",
-          "prerequisites": "Đã học Bài 4.1.",
-          "theory_markdown": "### Ý nghĩa các tiền tố cốt lõi:\n- **ПРИ-**: đến nơi (*прийти, приехать*)\n- **У-**: rời đi (*уйти, уехать*)\n- **В- (ВО-)**: đi vào trong (*войти, въехать*)\n- **ВЫ-**: đi ra ngoài (*выйти, выехать*)\n- **ПЕРЕ-**: băng qua đường / chuyển nhà (*перейти, переехать*)",
-          "context_examples": [
+          "title": "Bài 4.2: Động Từ Chuyển Động Có Tiền Tố — Bản Đồ Không Gian Không Giới Hạn",
+          "why_learn": "Chỉ cần gắn thêm một tiền tố (Prefix) nhỏ vào động từ chuyển động, bạn có thể diễn đạt hàng chục hướng di chuyển tinh tế: Đến nơi (при-), Rời đi (у-), Đi vào (в-), Đi ra (вы-), Băng qua đường (пере-).",
+          "prerequisites": "Đã nắm vững động từ chuyển động gốc từ Bài 4.1.",
+          "new_vocab": [
             {
-              "ru": "По́езд прибыва́ет на вокза́л в 10:00.",
-              "vi": "Tàu hỏa đến ga lúc 10:00."
+              "word": "прийти́ / приходи́ть",
+              "phonetic": "[priy-ti / pri-kha-dit]",
+              "meaning": "đến nơi (bằng chân)"
             },
             {
-              "ru": "Он вы́шел из ко́мнаты на мину́ту.",
-              "vi": "Anh ấy đã bước ra khỏi phòng một phút."
+              "word": "уйти́ / уходи́ть",
+              "phonetic": "[uy-ti / u-kha-dit]",
+              "meaning": "rời đi / đi khỏi nơi đó"
+            },
+            {
+              "word": "пойти́",
+              "phonetic": "[pay-ti]",
+              "meaning": "bắt đầu đi / rời bước"
+            },
+            {
+              "word": "прие́хать / приезжа́ть",
+              "phonetic": "[pri-ye-khat / pri-yez-zhat]",
+              "meaning": "đến nơi (bằng xe/tàu)"
+            },
+            {
+              "word": "уе́хать / уезжа́ть",
+              "phonetic": "[u-ye-khat / u-yez-zhat]",
+              "meaning": "rời đi khỏi thành phố (bằng xe)"
+            },
+            {
+              "word": "перейти́",
+              "phonetic": "[pye-ryey-ti]",
+              "meaning": "băng qua (đường, cầu)"
             }
           ],
+          "grammar_discovery": [
+            {
+              "ru": "Он пришёл в 9 часо́в.",
+              "note": "Tiền tố ПРИ- = Đã đến nơi đích thành công (kết quả)"
+            },
+            {
+              "ru": "Он ушёл домо́й.",
+              "note": "Tiền tố У- = Đã rời khỏi vị trí hiện tại"
+            }
+          ],
+          "theory_markdown": "### Bản Đồ Tiền Tố Chỉ Hướng (Prefixes Map):\n| Tiền tố | Hướng di chuyển | Ý nghĩa | Ví dụ mẫu |\n| :--- | :---: | :--- | :--- |\n| **ПО-** | `➔...` | Bắt đầu chuyển động / Rời bước | `Он встал и пошёл.` (Anh ấy đứng dậy và bước đi.) |\n| **ПРИ-** | `...➔|` | Đến nơi / Tới đích | `Поезд пришёл вовремя.` (Tàu đã đến đúng giờ.) |\n| **У-** | `|➔...` | Rời đi / Đi khỏi hẳn | `Преподаватель уже ушёл.` (Thầy giáo đã về rồi.) |\n| **В- (ВО-)** | `➔[ ]` | Đi vào bên trong (+ в) | `Он вошёл в комнату.` (Anh ấy bước vào phòng.) |\n| **ВЫ-** | `[ ]➔` | Đi ra ngoài (+ из) | `Она вышла из здания.` (Cô ấy đi ra khỏi tòa nhà.) |\n| **ПЕРЕ-** | `~~~➔` | Băng qua / Vượt qua (+ через) | `Перейти улицу.` (Băng qua đường.) |",
+          "context_examples": [
+            {
+              "ru": "Самолёт прилете́л в Москву́ во́время.",
+              "phonetic": "[sa-ma-lyot pri-lye-tyel v mask-vu vo-vrye-mya]",
+              "vi": "Máy bay đã bay đến Moscow đúng giờ."
+            },
+            {
+              "ru": "Иван уже́ ушёл с рабо́ты домо́й.",
+              "phonetic": "[i-van u-zhe u-shol s ra-bo-ty da-moy]",
+              "vi": "Ivan đã rời chỗ làm về nhà rồi."
+            },
+            {
+              "ru": "Осторо́жно переходи́те у́лицу!",
+              "phonetic": "[as-ta-rozh-na pye-rye-kha-di-tye u-li-tsu]",
+              "vi": "Hãy chú ý cẩn thận khi băng qua đường!"
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Tiền tố nào mang ý nghĩa 'đến nơi / tới đích'?",
+              "options": [
+                "ПРИ- (прийти, приехать)",
+                "У- (уйти, уехать)",
+                "ВЫ- (выйти)",
+                "ПЕРЕ-"
+              ],
+              "correct": 0,
+              "why": "Tiền tố 'ПРИ-' biểu thị sự chuyển động đến đích thành công."
+            },
+            {
+              "q": "Điền động từ đúng: 'Поезд ... (đã đến nơi) на станцию в 15:00'.",
+              "options": [
+                "прибыл / пришёл",
+                "ушёл",
+                "вышел",
+                "перешёл"
+              ],
+              "correct": 0,
+              "why": "Tàu đến ga dùng tiền tố 'при-' (пришёл / прибыл)."
+            },
+            {
+              "q": "Cụm từ 'выйти из комнаты' có nghĩa là gì?",
+              "options": [
+                "Đi ra khỏi phòng",
+                "Đi vào phòng",
+                "Đi ngang qua phòng",
+                "Quét dọn phòng"
+              ],
+              "correct": 0,
+              "why": "Tiền tố 'ВЫ-' mang ý nghĩa đi từ trong ra ngoài (đi với giới từ 'из')."
+            },
+            {
+              "q": "Điền động từ đúng: 'Он посмотрел на часы и ... (bắt đầu bước đi) в университет'.",
+              "options": [
+                "пошёл",
+                "пришёл",
+                "ушёл",
+                "перешёл"
+              ],
+              "correct": 0,
+              "why": "'Пошёл' mang tiền tố 'ПО-' chỉ sự bắt đầu di chuyển."
+            },
+            {
+              "q": "Cặp câu đối chiếu: 'Я иду в университет (1)' vs 'Я пришёл в университет (2)'. Câu (2) biểu thị điều gì?",
+              "options": [
+                "Đã đến trường thành công (kết quả trọn vẹn)",
+                "Đang trên đường đi",
+                "Chưa xuất phát"
+              ],
+              "correct": 0,
+              "why": "Tiền tố 'при-' biến động từ thành thể hoàn thành СВ chỉ kết quả đã đến nơi."
+            }
+          ],
+          "meaningful_practice": "Đặt câu hỏi và trả lời: — Когда ты вчера пришёл домой? — Я пришёл в 8 вечера.",
+          "reading_snippet": "Поезд номер 102 пришёл на третий путь. Пассажиры вышли из вагонов và пошли к выходу в город. Луонг встретил своего друга прямо у вагона.",
+          "listening_snippet": "Алло, ты где? — Я уже вышел из метро và подхожу к твоему дому.",
+          "speaking_prompt": "Kể lại một lịch trình ngắn: Bạn rời nhà lúc mấy giờ (ушёл) và đến trường lúc mấy giờ (пришёл).",
+          "production_prompt": "Hãy viết 3 câu sử dụng 3 tiền tố khác nhau: при- (đến), у- (rời đi), пере- (băng qua).",
+          "mistake_remediation": "Lỗi kinh điển: Nhầm cặp giới từ đi kèm tiền tố: 'В- đi với В' (войти в комнату) vs 'ВЫ- đi với ИЗ' (выйти из комнаты).",
+          "srs_items": [
+            "voc_040",
+            "voc_041",
+            "voc_042"
+          ],
+          "mastery_check": [
+            {
+              "q": "Tiền tố 'У-' trong 'уехать' có nghĩa là gì?",
+              "options": [
+                "Rời khỏi nơi đó đi xa",
+                "Đến nơi",
+                "Đi vào"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Để nói 'băng qua đường', ta dùng động từ nào?",
+              "options": [
+                "перейти улицу",
+                "войти улицу",
+                "уйти улицу"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Động từ 'прийти' thuộc thể nào?",
+              "options": [
+                "СВ (Hoàn thành)",
+                "НСВ (Chưa hoàn thành)"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_5_1",
           "practice_exercises": [
             {
-              "q": "Tiền tố nào mang ý nghĩa 'đi đến nơi'?",
+              "q": "Tiền tố nào mang ý nghĩa 'đến nơi / tới đích'?",
               "options": [
-                "У-",
-                "ПРИ-",
-                "ВЫ-"
+                "ПРИ- (прийти, приехать)",
+                "У- (уйти, уехать)",
+                "ВЫ- (выйти)",
+                "ПЕРЕ-"
               ],
-              "correct": 1,
-              "why": "Tiền tố 'ПРИ-' chỉ sự đến nơi (прийти, приехать)."
+              "correct": 0,
+              "why": "Tiền tố 'ПРИ-' biểu thị sự chuyển động đến đích thành công."
+            },
+            {
+              "q": "Điền động từ đúng: 'Поезд ... (đã đến nơi) на станцию в 15:00'.",
+              "options": [
+                "прибыл / пришёл",
+                "ушёл",
+                "вышел",
+                "перешёл"
+              ],
+              "correct": 0,
+              "why": "Tàu đến ga dùng tiền tố 'при-' (пришёл / прибыл)."
+            },
+            {
+              "q": "Cụm từ 'выйти из комнаты' có nghĩa là gì?",
+              "options": [
+                "Đi ra khỏi phòng",
+                "Đi vào phòng",
+                "Đi ngang qua phòng",
+                "Quét dọn phòng"
+              ],
+              "correct": 0,
+              "why": "Tiền tố 'ВЫ-' mang ý nghĩa đi từ trong ra ngoài (đi với giới từ 'из')."
+            },
+            {
+              "q": "Điền động từ đúng: 'Он посмотрел на часы и ... (bắt đầu bước đi) в университет'.",
+              "options": [
+                "пошёл",
+                "пришёл",
+                "ушёл",
+                "перешёл"
+              ],
+              "correct": 0,
+              "why": "'Пошёл' mang tiền tố 'ПО-' chỉ sự bắt đầu di chuyển."
+            },
+            {
+              "q": "Cặp câu đối chiếu: 'Я иду в университет (1)' vs 'Я пришёл в университет (2)'. Câu (2) biểu thị điều gì?",
+              "options": [
+                "Đã đến trường thành công (kết quả trọn vẹn)",
+                "Đang trên đường đi",
+                "Chưa xuất phát"
+              ],
+              "correct": 0,
+              "why": "Tiền tố 'при-' biến động từ thành thể hoàn thành СВ chỉ kết quả đã đến nơi."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_006"
-          ],
-          "integrated_writing_id": "write_a2_01",
-          "mastery_threshold": 85
+          "transformation_drills": [
+            {
+              "instruction": "Chuyển động từ 1 chiều 'идти' sang động từ có tiền tố chỉ sự đến nơi 'прийти':",
+              "prompt": "Поезд идёт ➔ Поезд уже ... вовремя",
+              "answer": "пришёл",
+              "why": "Quá khứ của 'прийти' ở giống đực là 'пришёл'."
+            },
+            {
+              "instruction": "Chọn động từ phù hợp cho thói quen hàng ngày:",
+              "prompt": "Каждый день я (идти / ходить) в библиотеку ➔ ...",
+              "answer": "хожу́",
+              "why": "Thói quen lặp lại dùng động từ đa chiều 'ходить' (ngôi 'Я' là 'хожу')."
+            }
+          ]
         }
       ]
     },
     {
       "module_id": "mod_b1_1",
       "level": "B1.1",
-      "title": "Module 5: B1.1 Trung Cấp Độc Lập & Luyện Thi TRKI-1",
-      "description": "Câu phức liên từ, diễn đạt lập luận học thuật và làm quen với đề thi chuẩn quốc gia TRKI-1.",
+      "title": "Module 5: B1.1 — Đọc Báo Chí, Tranh Luận & Luyện Thi TRKI-1",
+      "description": "Đọc hiểu văn bản học thuật, viết luận Redemittel và thi thử TRKI-1.",
       "lessons": [
         {
           "id": "les_5_1",
+          "module_id": "mod_b1_1",
+          "module_title": "Module 5: B1.1 — Đọc Báo Chí, Tranh Luận & Luyện Thi TRKI-1",
+          "level": "B1.1",
           "objective_code": "RUS-B1-01",
-          "title": "Bài 5.1: Câu Phức Liên Từ & Đại Từ 'Который'",
-          "why_learn": "Giúp bạn ghép nối các câu đơn thành đoạn văn mạch lạc, diễn đạt ý tưởng phức tạp và đọc hiểu các văn bản học thuật.",
-          "prerequisites": "Hoàn thành Module 4.",
-          "theory_markdown": "### Đại từ liên hệ 'Который':\n- Giống và số của `который` ăn khớp với danh từ nó bổ nghĩa ở mệnh đề trước.\n- Cách của `который` do vai trò ngữ pháp của nó trong mệnh đề phụ quyết định.",
-          "context_examples": [
+          "title": "Bài 5.1: Cấu Trúc Câu Phức Với Đại Từ Quan Hệ 'КОТОРЫЙ' Trong Cả 6 Cách & Mệnh Đề Định Ngữ Học Thuật",
+          "why_learn": "Ở trình độ B1 (TRKI-1), bạn không thể chỉ nói những câu đơn ngắn. Cấu trúc câu phức với 'который' cho phép bạn liên kết các mệnh đề học thuật, mô tả chi tiết người, sự vật và hiện tượng nghiên cứu một cách chính xác và lưu loát.",
+          "prerequisites": "Đã hoàn thành toàn bộ ngữ pháp nền tảng A1 và A2.",
+          "new_vocab": [
             {
-              "ru": "Студе́нт, кото́рый сиди́т сле́ва, прие́хал из Вьетна́ма.",
-              "vi": "Người sinh viên ngồi bên trái đến từ Việt Nam."
+              "word": "разви́тие",
+              "phonetic": "[raz-vi-ti-ye]",
+              "meaning": "sự phát triển"
             },
             {
-              "ru": "Кни́га, кото́рую я чита́ю, о́чень интере́сная.",
-              "vi": "Cuốn sách mà tôi đang đọc rất hay."
+              "word": "иссле́дование",
+              "phonetic": "[is-slye-da-va-ni-ye]",
+              "meaning": "công trình nghiên cứu"
+            },
+            {
+              "word": "техноло́гия",
+              "phonetic": "[tyekh-na-lo-gi-ya]",
+              "meaning": "công nghệ"
+            },
+            {
+              "word": "кото́рый",
+              "phonetic": "[ka-to-ryy]",
+              "meaning": "cái mà / người mà (đại từ quan hệ)"
+            },
+            {
+              "word": "благодаря́ тому́ что",
+              "phonetic": "[bla-ga-da-rya ta-mu shto]",
+              "meaning": "nhờ có việc là..."
+            },
+            {
+              "word": "несмотря́ на то что",
+              "phonetic": "[nye-smat-rya na to shto]",
+              "meaning": "mặc dù / bất chấp việc..."
             }
           ],
-          "practice_exercises": [
+          "grammar_discovery": [
             {
-              "q": "Điền dạng đúng: 'Город, в ... (который) мы живём, очень красивый.'",
+              "ru": "Студе́нт, кото́рый чита́ет кни́гу, прие́хал из Вьетна́ма.",
+              "note": "Đại từ 'который' hòa hợp giống/số với danh từ đứng trước, nhưng biến cách theo chức năng trong mệnh đề phụ!"
+            }
+          ],
+          "theory_markdown": "# MỆNH ĐỀ ĐỊNH NGỮ VỚI ĐẠI TỪ QUAN HỆ 'КОТОРЫЙ' (TRKI-1)\n\n## 1. Nguyên Tắc 2 Bước Bất Biến Khi Chia 'КОТОРЫЙ':\n- **Bước 1 (Xác định Giống và Số):** 'Который' lấy giống (он, она, оно) và số (ít/nhiều) từ **danh từ đứng ngay trước dấu phẩy** trong mệnh đề chính.\n- **Bước 2 (Xác định Cách):** 'Который' nhận **Cách (1–6)** do **động từ hoặc giới từ trong mệnh đề phụ** chi phối.\n\n## 2. Bảng Biến Cách 6 Cách Của 'КОТОРЫЙ' Trong Ngữ Cảnh Học Thuật:\n| Cách | Mẫu Câu Ví Dụ Thực Tế | Phân Tích Cú Pháp |\n|---|---|---|\n| **Cách 1 (Nom)** | Студе́нт, **кото́рый** у́чится в МГУ. | 'который' làm chủ ngữ trong mệnh đề phụ. |\n| **Cách 2 (Gen)** | Кни́га, а́втора **кото́рой** я зна́ю. | 'автора кого/чего?' -> Cách 2 giống cái. |\n| **Cách 3 (Dat)** | Друг, **кото́рому** я помога́ю. | 'помогать кому?' -> Cách 3 giống đực. |\n| **Cách 4 (Acc)** | Статья́, **кото́рую** я прочита́л. | 'читать что?' -> Đối cách giống cái. |\n| **Cách 5 (Inst)** | Профе́ссор, с **кото́рым** мы бесе́довали. | 'беседовать с кем?' -> Tạo cách với giới từ 'с'. |\n| **Cách 6 (Prep)** | Го́род, в **кото́ром** я живу́. | 'жить где? в чём?' -> Giới cách với 'в'. |\n\n## 3. Liên Từ Nguyên Nhân - Kết Quả - Nhượng Bộ Chuẩn B1:\n- **Благодаря тому что + Mệnh đề:** Nhờ có việc... (nguyên nhân tích cực dẫn đến thành công).\n- **Из-за того что + Mệnh đề:** Do việc... (nguyên nhân tiêu cực gây ra hậu quả xấu).\n- **Несмотря на то что + Mệnh đề:** Mặc dù... (mệnh đề nhượng bộ).\n",
+          "context_examples": [
+            {
+              "ru": "В совреме́нном ми́ре техноло́гии игра́ют важне́йшую роль в разви́тии о́бщества.",
+              "phonetic": "[v sav-rye-myen-nam mi-rye tyekh-na-lo-gi-i ig-ra-yut vazh-nye-yshu-yu rol v raz-vi-ti-i ob-shchest-va]",
+              "vi": "Trong thế giới hiện đại, công nghệ đóng vai trò tối quan trọng trong sự phát triển của xã hội."
+            },
+            {
+              "ru": "Учёные провели́ иссле́дование, результа́ты кото́рого удиви́ли всех.",
+              "phonetic": "[u-cho-ny-ye pra-vye-li is-slye-da-va-ni-ye rye-zul-ta-ty ka-to-ra-va u-di-vi-li vsyekh]",
+              "vi": "Các nhà khoa học đã tiến hành nghiên cứu mà kết quả của nó làm tất cả kinh ngạc."
+            }
+          ],
+          "controlled_practice": [
+            {
+              "q": "Điền dạng đúng của 'который': 'Вот университет, в ... (я учусь)'.",
               "options": [
-                "котором",
-                "которому",
-                "которого"
+                "кото́ром (C6 đực)",
+                "кото́рый",
+                "кото́рого",
+                "кото́рому"
               ],
               "correct": 0,
-              "why": "Sau giới từ 'в' chỉ địa điểm dùng Cách 6 giống đực: 'в котором'."
+              "why": "'В университете' ➔ đi với giới từ 'в' chỉ địa điểm ở đâu nên 'который' chia ở Cách 6 giống đực (котором)."
+            },
+            {
+              "q": "Điền dạng đúng của 'который': 'Это книга, ... (я прочитал вчера)'.",
+              "options": [
+                "кото́рую (C4 cái)",
+                "кото́рая",
+                "кото́рой",
+                "кото́рых"
+              ],
+              "correct": 0,
+              "why": "'Книга' là giống cái, trong mệnh đề phụ làm tân ngữ của 'прочитал' ➔ chia Cách 4 giống cái (которую)."
+            },
+            {
+              "q": "Liên từ 'благодаря тому что' biểu thị quan hệ gì?",
+              "options": [
+                "Nguyên nhân mang lại kết quả tích cực (Nhờ có...)",
+                "Nhượng bộ (Mặc dù)",
+                "Thời gian (Trước khi)"
+              ],
+              "correct": 0,
+              "why": "'Благодаря' luôn dùng cho nguyên nhân tích cực."
+            },
+            {
+              "q": "Từ 'развитие' trong tiếng Nga có nghĩa là gì?",
+              "options": [
+                "Sự phát triển",
+                "Sự suy thoái",
+                "Sự bắt đầu"
+              ],
+              "correct": 0,
+              "why": "'Развитие' có nghĩa là sự phát triển."
+            },
+            {
+              "q": "Điền liên từ đúng: '... (Mặc dù trời mưa) погода была плохая, мы пошли гулять'.",
+              "options": [
+                "Несмотря́ на то что",
+                "Благодаря тому что",
+                "Потому что"
+              ],
+              "correct": 0,
+              "why": "'Несмотря на то что' diễn đạt sự nhượng bộ (mặc dù... nhưng vẫn làm)."
             }
           ],
-          "integrated_vocab_ids": [
-            "v_002",
-            "v_008"
+          "meaningful_practice": "Nối 2 câu đơn thành 1 câu phức dùng 'который': 'Это город. Я родился в этом городе' ➔ 'Это город, в котором я родился'.",
+          "reading_snippet": "Искусственный интеллект и цифровизация меняют современное образование. Онлайн-платформы, которые предоставляют интерактивные курсы, позволяют миллионам людей учить иностранные языки эффективно и бесплатно.",
+          "listening_snippet": "Сегодня на конференции учёные обсуждали вопросы защиты окружающей среды и новые экологические технологии.",
+          "speaking_prompt": "Trình bày 30–45 giây quan điểm của bạn về lợi ích của công nghệ trong việc tự học ngoại ngữ.",
+          "production_prompt": "Hãy viết 2 câu phức sử dụng đại từ 'который' (1 câu chia Cách 6, 1 câu chia Cách 4) để miêu tả một địa điểm hoặc một cuốn sách bạn yêu thích.",
+          "mistake_remediation": "Lỗi kinh điển: Chia 'который' theo cách của danh từ đứng trước thay vì theo vai trò trong mệnh đề phụ. Hãy xác định: 'В этой книге' ➔ 'книга, в которой...'.",
+          "srs_items": [
+            "voc_043",
+            "voc_044",
+            "voc_045"
           ],
-          "integrated_reading_id": "read_b1_01",
-          "mastery_threshold": 90
+          "mastery_check": [
+            {
+              "q": "'Город, в котором...' — từ 'котором' ở cách mấy?",
+              "options": [
+                "Cách 6 (Предложный)",
+                "Cách 4 (Винительный)",
+                "Cách 2 (Родительный)"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Từ 'исследование' có nghĩa là gì?",
+              "options": [
+                "Công trình nghiên cứu",
+                "Chuyến du lịch",
+                "Bài phát biểu"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Liên từ 'несмотря на то что' có nghĩa là gì?",
+              "options": [
+                "Mặc dù",
+                "Bởi vì",
+                "Do đó"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": "les_5_2",
+          "practice_exercises": [
+            {
+              "q": "Điền dạng đúng của 'который': 'Вот университет, в ... (я учусь)'.",
+              "options": [
+                "кото́ром (C6 đực)",
+                "кото́рый",
+                "кото́рого",
+                "кото́рому"
+              ],
+              "correct": 0,
+              "why": "'В университете' ➔ đi với giới từ 'в' chỉ địa điểm ở đâu nên 'который' chia ở Cách 6 giống đực (котором)."
+            },
+            {
+              "q": "Điền dạng đúng của 'который': 'Это книга, ... (я прочитал вчера)'.",
+              "options": [
+                "кото́рую (C4 cái)",
+                "кото́рая",
+                "кото́рой",
+                "кото́рых"
+              ],
+              "correct": 0,
+              "why": "'Книга' là giống cái, trong mệnh đề phụ làm tân ngữ của 'прочитал' ➔ chia Cách 4 giống cái (которую)."
+            },
+            {
+              "q": "Liên từ 'благодаря тому что' biểu thị quan hệ gì?",
+              "options": [
+                "Nguyên nhân mang lại kết quả tích cực (Nhờ có...)",
+                "Nhượng bộ (Mặc dù)",
+                "Thời gian (Trước khi)"
+              ],
+              "correct": 0,
+              "why": "'Благодаря' luôn dùng cho nguyên nhân tích cực."
+            },
+            {
+              "q": "Từ 'развитие' trong tiếng Nga có nghĩa là gì?",
+              "options": [
+                "Sự phát triển",
+                "Sự suy thoái",
+                "Sự bắt đầu"
+              ],
+              "correct": 0,
+              "why": "'Развитие' có nghĩa là sự phát triển."
+            },
+            {
+              "q": "Điền liên từ đúng: '... (Mặc dù trời mưa) погода была плохая, мы пошли гулять'.",
+              "options": [
+                "Несмотря́ на то что",
+                "Благодаря тому что",
+                "Потому что"
+              ],
+              "correct": 0,
+              "why": "'Несмотря на то что' diễn đạt sự nhượng bộ (mặc dù... nhưng vẫn làm)."
+            }
+          ],
+          "transformation_drills": [
+            {
+              "instruction": "Gộp hai câu đơn thành một câu phức với đại từ quan hệ 'который':",
+              "prompt": "Это профессор. Я познакомился с профессором вчера. ➔ Это профессор, с ... я познакомился вчера.",
+              "answer": "кото́рым",
+              "why": "'познакомиться с кем' yêu cầu Cách 5 giống đực -> 'с которым'."
+            },
+            {
+              "instruction": "Chuyển mệnh đề nguyên nhân 'потому что' sang cấu trúc liên từ học thuật B1 'благодаря тому что':",
+              "prompt": "Он сдал экзамен, потому что много занимался ➔ Он сдал экзамен ... много занимался.",
+              "answer": "благодаря́ тому́ что",
+              "why": "Liên từ học thuật chỉ nguyên nhân tích cực."
+            }
+          ]
         },
         {
           "id": "les_5_2",
+          "module_id": "mod_b1_1",
+          "module_title": "Module 5: B1.1 — Đọc Báo Chí, Tranh Luận & Luyện Thi TRKI-1",
+          "level": "B1.1",
           "objective_code": "RUS-B1-02",
-          "title": "Bài 5.2: Diễn Đạt Lập Luận & Viết Luận Quan Điểm",
-          "why_learn": "B1 đòi hỏi khả năng bày tỏ ý kiến, so sánh hai mặt của một vấn đề và viết email/đoạn văn nghị luận hoàn chỉnh.",
-          "prerequisites": "Đã học Bài 5.1.",
-          "theory_markdown": "### Mẫu câu Redemittel học thuật B1:\n- **По моему мнению / На мой взгляд...** (Theo ý kiến của tôi...)\n- **С одной стороны..., но с другой стороны...** (Một mặt..., nhưng mặt khác...)\n- **Таким образом, можно сделать вывод...** (Như vậy, có thể rút ra kết luận...)",
+          "title": "Bài 5.2: Văn Hóa Tranh Luận Học Thuật, Trình Bày Luận Điểm & Hệ Thống Redemittel B1",
+          "why_learn": "Chứng chỉ B1 / TRKI-1 đòi hỏi thí sinh phải biết bảo vệ quan điểm, phân tích hai mặt của một vấn đề xã hội/khoa học, và sử dụng các cụm từ chuyển ý học thuật (Redemittel) chuẩn mực thay vì dịch từng từ từ tiếng Việt.",
+          "prerequisites": "Đã hoàn thành toàn bộ 15 bài học trước đó.",
+          "new_vocab": [
+            {
+              "word": "по моему мнению",
+              "phonetic": "[pa ma-ye-mu mnye-ni-yu]",
+              "meaning": "theo quan điểm của tôi"
+            },
+            {
+              "word": "с одной стороны..., но с другой стороны...",
+              "phonetic": "[s ad-noy sta-ra-ny no s dru-goy sta-ra-ny]",
+              "meaning": "một mặt..., nhưng mặt khác..."
+            },
+            {
+              "word": "таким образом",
+              "phonetic": "[ta-kim ab-ra-zam]",
+              "meaning": "như vậy / tóm lại"
+            },
+            {
+              "word": "преимущество",
+              "phonetic": "[pri-i-mu-shchest-va]",
+              "meaning": "ưu điểm / lợi thế"
+            },
+            {
+              "word": "недостаток",
+              "phonetic": "[nye-das-ta-tak]",
+              "meaning": "nhược điểm / hạn chế"
+            },
+            {
+              "word": "вывод",
+              "phonetic": "[vy-vat]",
+              "meaning": "kết luận"
+            }
+          ],
+          "grammar_discovery": [
+            {
+              "ru": "По моему мнению, онлайн-обучение имеет как плюсы, так и минусы.",
+              "note": "Cụm từ Redemittel mở đầu bài tranh luận học thuật B1"
+            }
+          ],
+          "theory_markdown": "# KỸ NĂNG TRANH LUẬN & LIÊN TỪ HỌC THUẬT B1 (КУЛЬТУРА ДИСКУССИИ)\n\n## 1. Cấu Trúc Khung Của Một Bài Luận / Phát Biểu B1:\n1. **Mở đầu & Nêu luận đề:** *В настоя́щее вре́мя актуа́льным явля́ется вопро́с о...* (Hiện nay vấn đề... đang rất cấp thiết).\n2. **Trình bày quan điểm cá nhân:** *По мое́му мне́нию... / На мой взгляд... / Я счита́ю, что...*\n3. **Phân tích hai mặt đối lập:** *С одно́й стороны́..., одна́ко с друго́й стороны́...*\n4. **Đưa dẫn chứng & Lập luận:** *Во-пе́рвых..., во-вторы́х..., сле́дует отме́тить, что...*\n5. **Kết luận tổng hợp:** *Таки́м о́бразом..., мо́жно сде́лать вы́вод, что...*\n\n## 2. Bảng Redemittel B1 Trọng Tâm:\n- **Diễn đạt quan điểm:** *Я убеждён, что... (Tôi tin chắc rằng...)*\n- **Bổ sung ý kiến:** *Кро́ме того́... (Ngoài ra...)*\n- **Nhượng bộ & Phản biện:** *Несмотря́ на э́то... (Mặc dù vậy...)*\n- **Kết luận:** *В заключе́ние хо́чется подчеркну́ть... (Để kết luận, xin nhấn mạnh rằng...)*\n",
           "context_examples": [
             {
-              "ru": "По моему́ мне́нию, онлайн-обуче́ние име́ет мно́го плю́сов.",
-              "vi": "Theo tôi, học trực tuyến có nhiều ưu điểm."
+              "ru": "По моему́ мне́нию, зна́ние иностра́нных языко́в открыва́ет огро́мные возмо́жности.",
+              "phonetic": "[pa ma-ye-mu mnye-ni-yu zna-ni-ye i-nas-tran-nykh ya-zy-kaf at-kry-va-yet ag-rom-ny-ye vaz-mozh-nas-ti]",
+              "vi": "Theo quan điểm của tôi, biết ngoại ngữ mở ra những cơ hội to lớn."
+            },
+            {
+              "ru": "С одно́й стороны́, жить в мегапо́лисе удо́бно, но с друго́й стороны́ — там о́чень шу́мно.",
+              "phonetic": "[s ad-noy sta-ra-ny zhit v mye-ga-po-li-sye u-dob-na no s dru-goy sta-ra-ny tam o-chen shum-na]",
+              "vi": "Một mặt, sống ở siêu đô thị rất tiện lợi, nhưng mặt khác ở đó lại rất ồn ào."
             }
           ],
-          "practice_exercises": [
+          "controlled_practice": [
             {
-              "q": "Cụm từ nào dùng để diễn đạt 'Một mặt..., nhưng mặt khác...'?",
+              "q": "Cụm từ học thuật nào dùng để mở đầu bày tỏ ý kiến cá nhân trong bài thi B1?",
               "options": [
-                "С одной стороны..., но с другой стороны...",
-                "Несмотря на это...",
-                "Благодаря тому, что..."
+                "По моему́ мне́нию... (Theo ý kiến của tôi...)",
+                "Конечно (Tất nhiên)",
+                "Может быть (Có thể)"
               ],
               "correct": 0,
-              "why": "'С одной стороны..., но с другой стороны...' là cấu trúc so sánh 2 mặt đối lập chuẩn B1."
+              "why": "'По моему мнению' là mẫu câu Redemittel trang trọng chuẩn mực."
+            },
+            {
+              "q": "Cặp liên từ nào dùng để đối chiếu 2 mặt của một vấn đề (ưu điểm vs nhược điểm)?",
+              "options": [
+                "С одной стороны..., но с другой стороны...",
+                "Потому что..., поэтому...",
+                "Если..., то..."
+              ],
+              "correct": 0,
+              "why": "'Một mặt..., nhưng mặt khác...' là cấu trúc so sánh đối chiếu chuẩn B1."
+            },
+            {
+              "q": "Từ nào dùng để mở đầu câu kết luận tổng kết bài luận?",
+              "options": [
+                "Таким образом... (Như vậy / Tóm lại...)",
+                "Например (Ví dụ)",
+                "Сначала (Đầu tiên)"
+              ],
+              "correct": 0,
+              "why": "'Таким образом' là liên từ kết luận trang trọng."
+            },
+            {
+              "q": "Từ 'преимущество' có nghĩa là gì?",
+              "options": [
+                "Ưu điểm / Lợi thế",
+                "Nhược điểm",
+                "Khó khăn"
+              ],
+              "correct": 0,
+              "why": "'Преимущество' có nghĩa là ưu điểm."
+            },
+            {
+              "q": "Để đạt điểm tối đa bài thi Viết TRKI-1, học viên cần đáp ứng điều gì?",
+              "options": [
+                "Bố cục 3 phần rõ ràng, sử dụng liên từ học thuật và chia đúng cách",
+                "Chỉ cần viết thật dài",
+                "Không cần chia thì động từ"
+              ],
+              "correct": 0,
+              "why": "Bài thi TRKI-1 chấm điểm dựa trên: Hoàn thành nhiệm vụ, Cấu trúc mạch lạc, Độ phong phú từ vựng và Độ chính xác ngữ pháp."
             }
           ],
-          "integrated_writing_id": "write_b1_01",
-          "integrated_speaking_id": "speak_01",
-          "mastery_threshold": 90
+          "meaningful_practice": "Viết đoạn văn ngắn 50 từ so sánh việc học tiếng Nga trên ứng dụng vs học với giáo viên trên lớp.",
+          "reading_snippet": "В современном обществе вопрос баланса между работой и личной жизнью становится всё более острым. По мнению социологов, гармоничный отдых повышает продуктивность труда на 30%.",
+          "listening_snippet": "Вы согласны с автором статьи? — С одной стороны, я согласен с его аргументами, но с другой стороны, реальная ситуация намного сложнее.",
+          "speaking_prompt": "Thực hành trả lời phỏng vấn TRKI-1 trong 1 phút: Bạn nghĩ sao về việc sống ở thành phố lớn so với nông thôn?",
+          "production_prompt": "Hãy viết 1 đoạn văn tranh luận ngắn (3 câu) sử dụng đầy đủ 3 cụm từ: 'По моему мнению...', 'С одной стороны..., но с другой стороны...', 'Таким образом...'.",
+          "mistake_remediation": "Lỗi phổ biến trong bài luận B1: Dùng từ ngữ quá suồng sã của văn nói (ví dụ: 'короче', 'ну вот') thay vì các liên từ học thuật ('таким образом', 'исходя из этого').",
+          "srs_items": [
+            "voc_046",
+            "voc_047",
+            "voc_048"
+          ],
+          "mastery_check": [
+            {
+              "q": "'Таким образом' dùng ở phần nào của bài viết?",
+              "options": [
+                "Kết luận (Заключение)",
+                "Mở bài (Введение)",
+                "Tiêu đề"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "'По моему мнению' có nghĩa là gì?",
+              "options": [
+                "Theo ý kiến tôi",
+                "Theo lời bạn",
+                "Không ai biết"
+              ],
+              "correct": 0
+            },
+            {
+              "q": "Sau khi hoàn thành bài này, bạn đã nắm trọn vẹn khung chương trình từ A0 đến B1 chưa?",
+              "options": [
+                "Đã hoàn thành toàn diện 16 bài học chuẩn CEFR / TRKI",
+                "Chưa học gì"
+              ],
+              "correct": 0
+            }
+          ],
+          "next_lesson_id": null,
+          "practice_exercises": [
+            {
+              "q": "Cụm từ học thuật nào dùng để mở đầu bày tỏ ý kiến cá nhân trong bài thi B1?",
+              "options": [
+                "По моему́ мне́нию... (Theo ý kiến của tôi...)",
+                "Конечно (Tất nhiên)",
+                "Может быть (Có thể)"
+              ],
+              "correct": 0,
+              "why": "'По моему мнению' là mẫu câu Redemittel trang trọng chuẩn mực."
+            },
+            {
+              "q": "Cặp liên từ nào dùng để đối chiếu 2 mặt của một vấn đề (ưu điểm vs nhược điểm)?",
+              "options": [
+                "С одной стороны..., но с другой стороны...",
+                "Потому что..., поэтому...",
+                "Если..., то..."
+              ],
+              "correct": 0,
+              "why": "'Một mặt..., nhưng mặt khác...' là cấu trúc so sánh đối chiếu chuẩn B1."
+            },
+            {
+              "q": "Từ nào dùng để mở đầu câu kết luận tổng kết bài luận?",
+              "options": [
+                "Таким образом... (Như vậy / Tóm lại...)",
+                "Например (Ví dụ)",
+                "Сначала (Đầu tiên)"
+              ],
+              "correct": 0,
+              "why": "'Таким образом' là liên từ kết luận trang trọng."
+            },
+            {
+              "q": "Từ 'преимущество' có nghĩa là gì?",
+              "options": [
+                "Ưu điểm / Lợi thế",
+                "Nhược điểm",
+                "Khó khăn"
+              ],
+              "correct": 0,
+              "why": "'Преимущество' có nghĩa là ưu điểm."
+            },
+            {
+              "q": "Để đạt điểm tối đa bài thi Viết TRKI-1, học viên cần đáp ứng điều gì?",
+              "options": [
+                "Bố cục 3 phần rõ ràng, sử dụng liên từ học thuật và chia đúng cách",
+                "Chỉ cần viết thật dài",
+                "Không cần chia thì động từ"
+              ],
+              "correct": 0,
+              "why": "Bài thi TRKI-1 chấm điểm dựa trên: Hoàn thành nhiệm vụ, Cấu trúc mạch lạc, Độ phong phú từ vựng và Độ chính xác ngữ pháp."
+            }
+          ],
+          "transformation_drills": [
+            {
+              "instruction": "Gộp hai câu đơn thành một câu phức với đại từ quan hệ 'который':",
+              "prompt": "Это профессор. Я познакомился с профессором вчера. ➔ Это профессор, с ... я познакомился вчера.",
+              "answer": "кото́рым",
+              "why": "'познакомиться с кем' yêu cầu Cách 5 giống đực -> 'с которым'."
+            },
+            {
+              "instruction": "Chuyển mệnh đề nguyên nhân 'потому что' sang cấu trúc liên từ học thuật B1 'благодаря тому что':",
+              "prompt": "Он сдал экзамен, потому что много занимался ➔ Он сдал экзамен ... много занимался.",
+              "answer": "благодаря́ тому́ что",
+              "why": "Liên từ học thuật chỉ nguyên nhân tích cực."
+            }
+          ]
         }
       ]
     }

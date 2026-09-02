@@ -1,10 +1,32 @@
 /**
  * WEB_USSR - Survival Russian (Русский для выживания)
+ * Features: Phrase Grid & Heuristic Role-Play Dialogue Arena
  */
 const SurvivalModule = (() => {
   let scenarios = [];
   let currentScenarioId = 'surv_shop';
   let searchTerm = '';
+
+  const roleplayPrompts = {
+    'surv_shop': {
+      npc_ask: "Здравствуйте! Чем я могу вам помочь?",
+      npc_ask_vi: "Xin chào! Tôi có thể giúp gì cho bạn?",
+      hint: "Hãy thử nói: 'Сколько стоит эта книга?' hoặc 'Дайте, пожалуйста, хлеб và молоко.'",
+      target_keywords: ["сколько", "стоит", "дайте", "пожалуйста", "хлеб", "молоко", "книга", "пакет", "рублей"]
+    },
+    'surv_restaurant': {
+      npc_ask: "Добрый день! Что вы будете заказывать?",
+      npc_ask_vi: "Chào bạn! Bạn muốn gọi món gì?",
+      hint: "Hãy thử nói: 'Принесите, пожалуйста, меню' hoặc 'Я буду кофе и борщ.'",
+      target_keywords: ["меню", "принесите", "буду", "кофе", "чай", "борщ", "счёт", "пожалуйста"]
+    },
+    'surv_hotel': {
+      npc_ask: "Здравствуйте! У вас забронирован номер?",
+      npc_ask_vi: "Xin chào! Bạn đã đặt phòng trước chưa?",
+      hint: "Hãy thử nói: 'Да, у меня бронь на имя Луонг' hoặc 'У вас есть свободные номера?'",
+      target_keywords: ["бронь", "номер", "имя", "паспорт", "ключ", "wi-fi", "пароль"]
+    }
+  };
 
   async function init() {
     try {
@@ -15,6 +37,7 @@ const SurvivalModule = (() => {
 
       renderScenarioTabs();
       renderPhrases();
+      renderRoleplayArena();
       setupSearch();
     } catch (e) {
       console.error('Failed to load survival data:', e);
@@ -44,6 +67,7 @@ const SurvivalModule = (() => {
     currentScenarioId = id;
     renderScenarioTabs();
     renderPhrases();
+    renderRoleplayArena();
   }
 
   function setupSearch() {
@@ -99,9 +123,99 @@ const SurvivalModule = (() => {
     `).join('');
   }
 
+  function renderRoleplayArena() {
+    let rpContainer = document.getElementById('survival-roleplay-arena');
+    if (!rpContainer) {
+      const parent = document.getElementById('tab-survival');
+      if (!parent) return;
+      rpContainer = document.createElement('div');
+      rpContainer.id = 'survival-roleplay-arena';
+      rpContainer.className = 'pt-6 border-t border-slate-200 dark:border-slate-700';
+      parent.appendChild(rpContainer);
+    }
+
+    const rp = roleplayPrompts[currentScenarioId] || roleplayPrompts['surv_shop'];
+
+    rpContainer.innerHTML = `
+      <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 text-[11px] font-extrabold rounded-full bg-blue-500/30 text-blue-300 border border-blue-400/40">
+              Role-Play Tương Tác
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Thực hành phản xạ tự do</span>
+          </div>
+          <button class="text-xs text-blue-300 hover:text-white" onclick="RussianSpeech.speak('${rp.npc_ask}')">
+            🔊 Nghe NPC nói
+          </button>
+        </div>
+
+        <!-- NPC Bubble -->
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/10 border border-white/15">
+          <span class="text-2xl">👤</span>
+          <div class="space-y-0.5">
+            <span class="text-xs font-bold text-blue-300">Người bản xứ hỏi bạn:</span>
+            <h4 class="text-base sm:text-lg font-bold font-cyrillic">${rp.npc_ask}</h4>
+            <p class="text-xs text-slate-300 italic">(${rp.npc_ask_vi})</p>
+          </div>
+        </div>
+
+        <!-- User Response Area -->
+        <div class="space-y-3">
+          <span class="text-xs font-bold text-slate-300 block">Câu trả lời tiếng Nga của bạn:</span>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="text" id="survival-roleplay-input" placeholder="Nhập câu trả lời bằng tiếng Nga..."
+                   class="flex-1 p-3.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-cyrillic text-sm focus:outline-none focus:border-blue-400">
+            <button class="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition-colors shadow-md"
+                    onclick="SurvivalModule.evaluateRoleplay()">
+              Gửi câu trả lời 🚀
+            </button>
+          </div>
+          <p class="text-xs text-slate-400 italic">💡 Gợi ý: ${rp.hint}</p>
+        </div>
+
+        <!-- Feedback Box -->
+        <div id="survival-roleplay-feedback" class="hidden p-4 rounded-2xl"></div>
+      </div>
+    `;
+  }
+
+  function evaluateRoleplay() {
+    const input = document.getElementById('survival-roleplay-input');
+    const fb = document.getElementById('survival-roleplay-feedback');
+    if (!input || !fb) return;
+
+    const val = input.value.trim().toLowerCase();
+    if (!val) {
+      App.showToast('Vui lòng nhập câu trả lời của bạn.', 'warning');
+      return;
+    }
+
+    const rp = roleplayPrompts[currentScenarioId] || roleplayPrompts['surv_shop'];
+    const matched = rp.target_keywords.filter(k => val.includes(k));
+
+    if (matched.length >= 1) {
+      fb.className = 'p-4 rounded-2xl bg-emerald-950/80 border border-emerald-600 text-emerald-200 text-xs space-y-1';
+      fb.innerHTML = `
+        <strong>✓ Đạt yêu cầu phản xạ!</strong>
+        <p>Hệ thống nhận diện được từ khóa giao tiếp phù hợp: <em>${matched.join(', ')}</em>.</p>
+      `;
+      fb.classList.remove('hidden');
+      App.triggerConfetti();
+    } else {
+      fb.className = 'p-4 rounded-2xl bg-amber-950/80 border border-amber-600 text-amber-200 text-xs space-y-1';
+      fb.innerHTML = `
+        <strong>💡 Đề xuất chỉnh sửa:</strong>
+        <p>Câu trả lời của bạn có thể diễn đạt tự nhiên hơn với mẫu câu gợi ý: <em>${rp.hint}</em></p>
+      `;
+      fb.classList.remove('hidden');
+    }
+  }
+
   return {
     init,
-    selectScenario
+    selectScenario,
+    evaluateRoleplay
   };
 })();
 

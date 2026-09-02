@@ -60,7 +60,10 @@
           "ru": "Это краси́вый го́род.",
           "vi": "Đây là một thành phố đẹp."
         }
-      ]
+      ],
+      "trigger_question": "Кто? Что? (Ai? Cái gì?)",
+      "communicative_role": "Chủ ngữ thực hiện hành động hoặc định danh sự vật/người",
+      "pedagogical_rule": "Luôn là dạng từ điển gốc của từ. Mọi biến cách khác đều xuất phát từ Cách 1."
     },
     {
       "id": 2,
@@ -100,7 +103,10 @@
           "ru": "Уро́к начина́ется по́сле обе́да.",
           "vi": "Tiết học bắt đầu sau bữa trưa."
         }
-      ]
+      ],
+      "trigger_question": "Кого? Чего? Чей? Сколько? (Của ai? Không có cái gì? Bao nhiêu?)",
+      "communicative_role": "Chỉ sự sở hữu (nhà của ai), cấu trúc phủ định vắng mặt (НЕТ + Gen), và sau số lượng (2,3,4 + Gen ít; 5+ + Gen nhiều)",
+      "pedagogical_rule": "Gặp 'НЕТ' (không có) hoặc 'ОКОЛО / ДЛЯ / ИЗ / ПОСЛЕ' -> Bắt buộc dùng Cách 2."
     },
     {
       "id": 3,
@@ -140,7 +146,10 @@
           "ru": "Мы идём в го́сти к ба́бушке.",
           "vi": "Chúng tôi đến nhà bà chơi."
         }
-      ]
+      ],
+      "trigger_question": "Кому? Чему? (Cho ai? Hướng tới ai?)",
+      "communicative_role": "Chỉ đối tượng tiếp nhận (tặng hoa cho mẹ), nói tuổi (мне 20 лет), và trạng thái thích thú (мне нравится)",
+      "pedagogical_rule": "Gặp 'ПОДАРИТЬ / ЗВОНИТЬ / ПОМОГАТЬ / НРАВИТСЯ' -> Bắt buộc dùng Cách 3."
     },
     {
       "id": 4,
@@ -182,7 +191,10 @@
           "ru": "Я встре́тил ста́рого дру́га.",
           "vi": "Tôi đã gặp lại một người bạn cũ."
         }
-      ]
+      ],
+      "trigger_question": "Кого? Что? Куда? (Nhìn thấy ai/cái gì? Đi đến đâu?)",
+      "communicative_role": "Chỉ bổ ngữ trực tiếp chịu tác động của ngoại động từ (đọc sách, xem phim, đợi bạn) và đích đến chuyển động (в/на + Acc)",
+      "pedagogical_rule": "Gặp 'ЧИТАТЬ / СМОТРЕТЬ / ВИДЕТЬ / КУПИТЬ' -> Bắt buộc dùng Cách 4. Phân biệt: Giống cái đổi đuôi -у/-ю; Giống đực động vật = C2, bất động vật = C1."
     },
     {
       "id": 5,
@@ -222,7 +234,10 @@
           "ru": "Мой брат хо́чет стать врачо́м.",
           "vi": "Anh trai tôi muốn trở thành bác sĩ."
         }
-      ]
+      ],
+      "trigger_question": "Кем? Чем? С кем? С чем? (Bằng cái gì? Làm nghề gì? Cùng với ai?)",
+      "communicative_role": "Chỉ công cụ phương tiện (viết bằng bút), nghề nghiệp sau 'быть / стать / работать', và cùng với ai (с + Inst)",
+      "pedagogical_rule": "Gặp 'РАБОТАТЬ / СТАТЬ / БЫТЬ' hoặc giới từ 'С/СО' (cùng với) -> Bắt buộc dùng Cách 5."
     },
     {
       "id": 6,
@@ -262,7 +277,10 @@
           "ru": "Я е́ду на рабо́ту на авто́бусе.",
           "vi": "Tôi đi làm bằng xe buýt."
         }
-      ]
+      ],
+      "trigger_question": "О ком? О чём? Где? (Nói/nghĩ về ai/cái gì? Đang ở đâu?)",
+      "communicative_role": "Chỉ vị trí địa điểm tĩnh (ở Moscow, ở trường) và đối tượng của suy nghĩ/lời nói (nghĩ về bạn)",
+      "pedagogical_rule": "Chỉ đi sau 5 giới từ: В, НА (ở đâu) và О/ОБ/ОБО (về ai/cái gì). Không bao giờ đứng một mình không có giới từ."
     }
   ],
   "pronouns_declension": [

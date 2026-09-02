@@ -1,0 +1,542 @@
+{
+  "framework": "CEFR / TORFL (ТРКИ)",
+  "levels": [
+    {
+      "level": "Pre-A1",
+      "name": "Nền tảng Ngữ âm & Chữ viết (Phonetic Foundation)",
+      "target_word_count": "150-250 words",
+      "objectives": [
+        {
+          "id": "RUS-PRE-01",
+          "skill": "Alphabet & Phonetics",
+          "objective": "Nhận biết 33 chữ cái Cyrillic, 10 nguyên âm và phân biệt nguyên âm cứng vs iotated mềm.",
+          "prerequisites": [
+            "Không yêu cầu kiến thức trước"
+          ],
+          "grammar": [
+            "Cấu trúc âm tiết tiếng Nga",
+            "Dấu cứng (ъ) và dấu mềm (ь)"
+          ],
+          "vocabulary": [
+            "мама",
+            "папа",
+            "дом",
+            "кот",
+            "мир",
+            "вода"
+          ],
+          "reading": [
+            "Đọc to từ đơn 1-2 âm tiết"
+          ],
+          "listening": [
+            "Phân biệt âm nguyên âm cứng [а, о, у] vs mềm [я, ё, ю]"
+          ],
+          "speaking": [
+            "Phát âm bảng chữ cái và từ chào hỏi cơ bản"
+          ],
+          "writing": [
+            "Viết chữ in và nhận diện chữ viết tay (cursive)"
+          ]
+        },
+        {
+          "id": "RUS-PRE-02",
+          "skill": "Stress & Vowel Reduction",
+          "objective": "Nắm vững quy tắc giảm âm chữ О, Е, Я khi không mang trọng âm (Ударение).",
+          "prerequisites": [
+            "RUS-PRE-01"
+          ],
+          "grammar": [
+            "Quy tắc trọng âm tiếng Nga",
+            "Quy tắc giảm âm bậc 1 và bậc 2"
+          ],
+          "vocabulary": [
+            "молоко́ [ма-ла-ко]",
+            "хорошо́ [ха-ра-шо]",
+            "окно́ [ак-но]"
+          ],
+          "reading": [
+            "Đọc từ có trọng âm rõ ràng"
+          ],
+          "listening": [
+            "Nghe phân biệt từ có trọng âm khác nhau (замо́к vs за́мок)"
+          ],
+          "speaking": [
+            "Nhấn đúng trọng âm các từ 2-3 âm tiết"
+          ],
+          "writing": [
+            "Đánh dấu trọng âm (́) vào từ mới"
+          ]
+        },
+        {
+          "id": "RUS-PRE-03",
+          "skill": "Consonant Voicing & Devoicing",
+          "objective": "Quy tắc vô thanh hóa phụ âm cuối từ (б->п, в->ф, г->к, д->т, ж->ш, з->с) và đồng hóa phụ âm.",
+          "prerequisites": [
+            "RUS-PRE-02"
+          ],
+          "grammar": [
+            "Phụ âm hữu thanh vs vô thanh",
+            "Hiện tượng vô thanh hóa và hữu thanh hóa"
+          ],
+          "vocabulary": [
+            "хлеб [хлеп]",
+            "друг [друк]",
+            "автобус [афтобус]"
+          ],
+          "reading": [
+            "Đọc câu ngắn chứa từ có phụ âm biến đổi"
+          ],
+          "listening": [
+            "Nhận diện âm thực tế khi người Nga phát âm"
+          ],
+          "speaking": [
+            "Phát âm tự nhiên chuẩn vô thanh hóa"
+          ],
+          "writing": [
+            "Chính tả đúng mặt chữ dù phát âm bị biến đổi"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "A1.1",
+      "name": "Sơ cấp Căn bản (Beginner Baseline)",
+      "target_word_count": "700-1000 cumulative words",
+      "objectives": [
+        {
+          "id": "RUS-A1-01",
+          "skill": "Personal Pronouns & Introductions",
+          "objective": "Sử dụng đại từ nhân xưng và cấu trúc chào hỏi, tự giới thiệu tên, quốc tịch, nghề nghiệp.",
+          "prerequisites": [
+            "RUS-PRE-03"
+          ],
+          "grammar": [
+            "Đại từ nhân xưng: я, ты, он, она, мы, вы, они",
+            "Cấu trúc Меня зовут... / Я студент..."
+          ],
+          "vocabulary": [
+            "студент",
+            "преподаватель",
+            "Россия",
+            "Вьетнам",
+            "здравствуйте",
+            "спасибо"
+          ],
+          "reading": [
+            "Đọc danh thiếp và đoạn tự giới thiệu bản thân 3-4 câu"
+          ],
+          "listening": [
+            "Nghe hiểu đoạn hội thoại chào hỏi và giới thiệu tên"
+          ],
+          "speaking": [
+            "Tự giới thiệu bản thân trong 30-45 giây"
+          ],
+          "writing": [
+            "Viết đoạn văn ngắn 30-40 từ giới thiệu bản thân"
+          ]
+        },
+        {
+          "id": "RUS-A1-02",
+          "skill": "Gender System & Plural Nouns",
+          "objective": "Xác định chính xác 3 giống của danh từ (он, она, оно) và quy tắc tạo số nhiều.",
+          "prerequisites": [
+            "RUS-A1-01"
+          ],
+          "grammar": [
+            "Đuôi danh từ giống đực (phụ âm, -й, -ь), giống cái (-а, -я, -ь), giống trung (-о, -е, -мя)",
+            "Số nhiều: -ы, -и, -а, -я"
+          ],
+          "vocabulary": [
+            "стол -> столы",
+            "книга -> книги",
+            "окно -> окна",
+            "друг -> друзья"
+          ],
+          "reading": [
+            "Nhận diện giống danh từ trong văn bản ngắn"
+          ],
+          "listening": [
+            "Nghe và phân loại danh từ theo giống"
+          ],
+          "speaking": [
+            "Sử dụng đúng đại từ thay thế (он, она, оно, они) khi nói"
+          ],
+          "writing": [
+            "Viết dạng số nhiều đúng trọng âm của các danh từ cơ bản"
+          ]
+        },
+        {
+          "id": "RUS-A1-03",
+          "skill": "Present Tense Verbs (Group 1)",
+          "objective": "Chia động từ nhóm 1 thì hiện tại (-ать / -ять) và đặt câu trần thuật, câu hỏi.",
+          "prerequisites": [
+            "RUS-A1-02"
+          ],
+          "grammar": [
+            "Đuôi động từ nhóm 1: -ю, -ешь, -ет, -ем, -ете, -ют",
+            "Trật tự từ trong câu khẳng định và nghi vấn"
+          ],
+          "vocabulary": [
+            "читать",
+            "понимать",
+            "знать",
+            "работать",
+            "отдыхать"
+          ],
+          "reading": [
+            "Đọc bài văn ngắn về hoạt động hàng ngày"
+          ],
+          "listening": [
+            "Nghe hiểu hoạt động một người làm mỗi ngày"
+          ],
+          "speaking": [
+            "Nói về công việc, học tập và thói quen hàng ngày"
+          ],
+          "writing": [
+            "Viết email ngắn kể về một ngày của tôi"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "A1.2",
+      "name": "Sơ cấp Hoàn chỉnh (Elementary Cases)",
+      "target_word_count": "1000-1200 cumulative words",
+      "objectives": [
+        {
+          "id": "RUS-A1-04",
+          "skill": "Case 4: Accusative (Direct Object)",
+          "objective": "Sử dụng Đối cách chỉ đối tượng trực tiếp của hành động (вижу кого/что, читаю что).",
+          "prerequisites": [
+            "RUS-A1-03"
+          ],
+          "grammar": [
+            "Đối cách danh từ giống cái: -а -> -у, -я -> -ю",
+            "Giống đực bất động vật giữ nguyên, động vật nhận đuôi -а/-я"
+          ],
+          "vocabulary": [
+            "книгу",
+            "газету",
+            "фильм",
+            "брата",
+            "друга",
+            "кофе"
+          ],
+          "reading": [
+            "Đọc đoạn văn mua sắm hoặc sở thích xem/đọc gì"
+          ],
+          "listening": [
+            "Nghe hiểu người nói muốn mua hoặc đang xem gì"
+          ],
+          "speaking": [
+            "Gọi món ăn trong nhà hàng và mua đồ tại cửa hàng"
+          ],
+          "writing": [
+            "Viết danh sách những thứ cần mua và các hoạt động yêu thích"
+          ]
+        },
+        {
+          "id": "RUS-A1-05",
+          "skill": "Case 6: Prepositional (Location & Topic)",
+          "objective": "Sử dụng Giới cách chỉ vị trí (где? в/на) và chủ đề suy nghĩ/nói chuyện (о ком? о чём?).",
+          "prerequisites": [
+            "RUS-A1-04"
+          ],
+          "grammar": [
+            "Đuôi -е cho hầu hết danh từ số ít",
+            "Ngoại lệ -и cho -ия, -ие, -ь",
+            "Phân biệt giới từ В vs НА"
+          ],
+          "vocabulary": [
+            "в городе",
+            "в Москве",
+            "на работе",
+            "на столе",
+            "о друге"
+          ],
+          "reading": [
+            "Đọc bảng chỉ dẫn địa điểm và thông báo nơi chốn"
+          ],
+          "listening": [
+            "Nghe hiểu vị trí đồ vật và nơi chốn mọi người đang ở"
+          ],
+          "speaking": [
+            "Hỏi đường và miêu tả địa điểm mình đang sinh sống"
+          ],
+          "writing": [
+            "Viết tin nhắn thông báo địa điểm hẹn gặp"
+          ]
+        },
+        {
+          "id": "RUS-A1-06",
+          "skill": "Case 2: Genitive (Possession & Absence)",
+          "objective": "Sử dụng Sinh cách chỉ sự sở hữu (чей?), cấu trúc phủ định không có (нет + Gen), và sau số lượng.",
+          "prerequisites": [
+            "RUS-A1-05"
+          ],
+          "grammar": [
+            "Đuôi số ít: đực/trung -а/-я, cái -ы/-и",
+            "Cấu trúc У меня есть... vs У меня нет...",
+            "Số đếm 2, 3, 4 + Gen ít; 5+ + Gen nhiều"
+          ],
+          "vocabulary": [
+            "нет времени",
+            "нет денег",
+            "дом друга",
+            "два брата",
+            "пять рублей"
+          ],
+          "reading": [
+            "Đọc hóa đơn, thông tin giá cả và quảng cáo"
+          ],
+          "listening": [
+            "Nghe hiểu các thông tin về số lượng và sự vắng mặt"
+          ],
+          "speaking": [
+            "Nói về gia đình, đồ đạc mình có hoặc không có"
+          ],
+          "writing": [
+            "Viết đoạn văn ngắn miêu tả gia đình và phòng ở"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "A2.1",
+      "name": "Trung cấp Sơ khởi (Intermediate Core)",
+      "target_word_count": "1500-2000 cumulative words",
+      "objectives": [
+        {
+          "id": "RUS-A2-01",
+          "skill": "Case 3: Dative (Recipient & Age)",
+          "objective": "Sử dụng Dữ cách chỉ đối tượng tiếp nhận (кому?), tuổi tác (мне 20 лет) và trạng thái thích thú (нравится).",
+          "prerequisites": [
+            "RUS-A1-06"
+          ],
+          "grammar": [
+            "Đuôi đực/trung: -у/-ю, đuôi cái: -е/-и",
+            "Cấu trúc tuổi tác và động từ нравиться"
+          ],
+          "vocabulary": [
+            "маме",
+            "другу",
+            "мне",
+            "тебе",
+            "нравится",
+            "помогать"
+          ],
+          "reading": [
+            "Đọc thiệp chúc mừng sinh nhật và tin nhắn cảm xúc"
+          ],
+          "listening": [
+            "Nghe hiểu đối tượng nhận quà và độ tuổi nhân vật"
+          ],
+          "speaking": [
+            "Bày tỏ sở thích, chúc mừng sinh nhật bạn bè"
+          ],
+          "writing": [
+            "Viết thiệp chúc mừng và đoạn văn về sở thích"
+          ]
+        },
+        {
+          "id": "RUS-A2-02",
+          "skill": "Case 5: Instrumental (Instrument, Profession & With)",
+          "objective": "Sử dụng Tạo cách chỉ công cụ làm việc (чем?), nghề nghiệp sau быть/стать (кем?) và cùng với ai (с кем?).",
+          "prerequisites": [
+            "RUS-A2-01"
+          ],
+          "grammar": [
+            "Đuôi đực: -ом/-ем, đuôi cái: -ой/-ей",
+            "Giới từ С/СО + Inst",
+            "Vị ngữ danh từ sau быть/работать"
+          ],
+          "vocabulary": [
+            "врачом",
+            "инженером",
+            "ручкой",
+            "с другом",
+            "с удовольствием"
+          ],
+          "reading": [
+            "Đọc bài phỏng vấn nghề nghiệp và sơ yếu lý lịch"
+          ],
+          "listening": [
+            "Nghe hiểu nghề nghiệp và mối quan hệ đi cùng ai"
+          ],
+          "speaking": [
+            "Nói về ước mơ nghề nghiệp và các hoạt động cùng bạn bè"
+          ],
+          "writing": [
+            "Viết bài giới thiệu về nghề nghiệp tương lai"
+          ]
+        },
+        {
+          "id": "RUS-A2-03",
+          "skill": "Verbal Aspect (НСВ vs СВ in Context)",
+          "objective": "Phân biệt và sử dụng đúng cặp thể động từ Chưa hoàn thành (НСВ) vs Hoàn thành (СВ) theo ngữ cảnh.",
+          "prerequisites": [
+            "RUS-A2-02"
+          ],
+          "grammar": [
+            "НСВ: Quá trình, thói quen lặp lại, đồng thời",
+            "СВ: Kết quả, 1 lần đạt mục đích, kế tiếp"
+          ],
+          "vocabulary": [
+            "читать/прочитать",
+            "писать/написать",
+            "решать/решить",
+            "делать/сделать"
+          ],
+          "reading": [
+            "Đọc câu chuyện ngắn có sự xen kẽ giữa quá trình và kết quả"
+          ],
+          "listening": [
+            "Nghe hiểu hành động đã hoàn tất hay vẫn đang diễn ra"
+          ],
+          "speaking": [
+            "Kể lại một sự việc đã xảy ra trong quá khứ"
+          ],
+          "writing": [
+            "Viết nhật ký tường thuật các việc đã làm xong hôm nay"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "A2.2",
+      "name": "Động từ Chuyển động & Tiền tố (Motion Verbs System)",
+      "target_word_count": "2000-2500 cumulative words",
+      "objectives": [
+        {
+          "id": "RUS-A2-04",
+          "skill": "Motion Verbs without Prefixes",
+          "objective": "Làm chủ logic chuyển động 1 chiều (идти/ехать) vs đa chiều (ходить/ездить).",
+          "prerequisites": [
+            "RUS-A2-03"
+          ],
+          "grammar": [
+            "Phân biệt đi bộ vs đi phương tiện",
+            "Phân biệt 1 hướng đang diễn ra vs thói quen/2 chiều đi về"
+          ],
+          "vocabulary": [
+            "идти/ходить",
+            "ехать/ездить",
+            "пешком",
+            "на метро",
+            "на автобусе"
+          ],
+          "reading": [
+            "Đọc bài miêu tả lộ trình di chuyển hàng ngày"
+          ],
+          "listening": [
+            "Nghe hiểu phương tiện và hướng di chuyển"
+          ],
+          "speaking": [
+            "Miêu tả cách thức bạn đi học hoặc đi làm mỗi ngày"
+          ],
+          "writing": [
+            "Viết email hướng dẫn bạn bè cách di chuyển đến nhà mình"
+          ]
+        },
+        {
+          "id": "RUS-A2-05",
+          "skill": "Prefixed Motion Verbs",
+          "objective": "Sử dụng 11 tiền tố chuyển động (при-, у-, в-, вы-, под-, от-, пере-, за-, до-, про-, по-).",
+          "prerequisites": [
+            "RUS-A2-04"
+          ],
+          "grammar": [
+            "Ý nghĩa tiền tố chỉ hướng kết hợp với giới từ tương ứng (прийти в, уйти из, перейти через)"
+          ],
+          "vocabulary": [
+            "прийти",
+            "уехать",
+            "войти",
+            "выйти",
+            "перейти",
+            "подойти"
+          ],
+          "reading": [
+            "Đọc thông báo chuyến bay, lịch trình tàu xe"
+          ],
+          "listening": [
+            "Nghe hiểu thông báo tại nhà ga, sân bay"
+          ],
+          "speaking": [
+            "Hỏi và trả lời về giờ đến, giờ đi của các chuyến xe"
+          ],
+          "writing": [
+            "Viết thông báo về lịch trình chuyến đi du lịch"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "B1.1",
+      "name": "Trung cấp Độc lập & TRKI-1 (Threshold Competence)",
+      "target_word_count": "2500-3500+ cumulative words",
+      "objectives": [
+        {
+          "id": "RUS-B1-01",
+          "skill": "Complex Sentences & Relative Pronouns",
+          "objective": "Sử dụng đại từ liên hệ 'который' chia 6 cách và các liên từ phức (чтобы, если, хотя, потому что).",
+          "prerequisites": [
+            "RUS-A2-05"
+          ],
+          "grammar": [
+            "Hòa hợp giống/số của который với mệnh đề chính, cách của который theo mệnh đề phụ"
+          ],
+          "vocabulary": [
+            "который",
+            "чтобы",
+            "хотя",
+            "несмотря на то что",
+            "благодаря тому что"
+          ],
+          "reading": [
+            "Đọc các bài báo khoa học phổ thông và bài luận"
+          ],
+          "listening": [
+            "Nghe hiểu các bài phóng sự truyền hình và phỏng vấn"
+          ],
+          "speaking": [
+            "Diễn đạt suy nghĩ phức tạp và giải thích nguyên nhân/kết quả"
+          ],
+          "writing": [
+            "Viết bài văn nghị luận có liên kết câu chặt chẽ"
+          ]
+        },
+        {
+          "id": "RUS-B1-02",
+          "skill": "Academic Argumentation & Opinion Essays",
+          "objective": "Sử dụng mẫu câu Redemittel học thuật B1 để viết luận so sánh hai mặt vấn đề và tranh luận.",
+          "prerequisites": [
+            "RUS-B1-01"
+          ],
+          "grammar": [
+            "Mẫu câu lập luận: По моему мнению, С одной стороны... но с другой стороны..., Таким образом"
+          ],
+          "vocabulary": [
+            "преимущество",
+            "недостаток",
+            "точка зрения",
+            "вывод",
+            "аргумент"
+          ],
+          "reading": [
+            "Đọc bài xã luận nêu quan điểm trái chiều"
+          ],
+          "listening": [
+            "Nghe tọa đàm thảo luận về các vấn đề xã hội"
+          ],
+          "speaking": [
+            "Trình bày bài thuyết trình 2-3 phút về một chủ đề xã hội"
+          ],
+          "writing": [
+            "Viết bài luận nghị luận 150-200 từ chuẩn TRKI-1"
+          ]
+        }
+      ]
+    }
+  ]
+}

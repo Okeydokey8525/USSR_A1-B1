@@ -144,6 +144,33 @@
           "phonetic": "[gdye na-kho-dit-sya pa-sol-stva vyet-na-ma]"
         }
       ]
+    },
+    {
+      "id": "surv_pharmacy",
+      "icon": "💊",
+      "title": "В аптеке (Tại hiệu thuốc & Sức khỏe)",
+      "phrases": [
+        {
+          "ru": "У вас есть лекарство от головной боли?",
+          "vi": "Bạn có thuốc giảm đau đầu không?",
+          "phonetic": "[u vas yest lye-kar-stva at ga-lav-noy bo-li]"
+        },
+        {
+          "ru": "У меня высокая температура и кашель.",
+          "vi": "Tôi bị sốt cao và ho.",
+          "phonetic": "[u mye-nya vy-so-ka-ya tyem-pye-ra-tu-ra i ka-shel]"
+        },
+        {
+          "ru": "Как принимать это лекарство?",
+          "vi": "Uống thuốc này như thế nào?",
+          "phonetic": "[kak pri-ni-mat e-ta lye-kar-stva]"
+        },
+        {
+          "ru": "По одной таблетке два раза в день после еды.",
+          "vi": "Mỗi lần 1 viên, ngày 2 lần sau khi ăn.",
+          "phonetic": "[pa ad-noy tab-lyet-kye dva ra-za v dyen pos-lye ye-dy]"
+        }
+      ]
     }
   ]
 }

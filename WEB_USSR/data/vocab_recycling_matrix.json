@@ -1,0 +1,2337 @@
+{
+  "accounting_summary": {
+    "total_vocabulary_records": 125,
+    "active_curriculum_vocabulary": 55,
+    "recognition_vocabulary": 70,
+    "recycled_vocabulary": 125,
+    "orphan_vocabulary": 0,
+    "unverified_vocabulary": 0
+  },
+  "matrix": [
+    {
+      "id": "voc_001",
+      "word": "ма́ма",
+      "base_form": "мама",
+      "level": "A1.1",
+      "topic": "Gia đình (Семья)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_3_1",
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_002",
+      "word": "па́па",
+      "base_form": "папа",
+      "level": "A1.1",
+      "topic": "Gia đình (Семья)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_003",
+      "word": "дом",
+      "base_form": "дом",
+      "level": "A1.1",
+      "topic": "Nhà cửa (Дом)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_5_1",
+        "les_2_1",
+        "les_2_2",
+        "les_0_1",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_004",
+      "word": "кни́га",
+      "base_form": "книга",
+      "level": "A1.1",
+      "topic": "Học tập (Учёба)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1",
+        "les_1_2",
+        "les_2_2",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_005",
+      "word": "окно́",
+      "base_form": "окно",
+      "level": "A1.1",
+      "topic": "Nhà cửa (Дом)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_2_1",
+        "les_2_3",
+        "les_0_2",
+        "les_3_1",
+        "les_2_2",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_006",
+      "word": "молоко́",
+      "base_form": "молоко",
+      "level": "A1.1",
+      "topic": "Ẩm thực (Еда)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2",
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_007",
+      "word": "вода́",
+      "base_form": "вода",
+      "level": "A1.1",
+      "topic": "Ẩm thực (Еда)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_008",
+      "word": "друг",
+      "base_form": "друг",
+      "level": "A1.1",
+      "topic": "Con người (Люди)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_4_2",
+        "les_3_3",
+        "les_2_1",
+        "les_5_2",
+        "les_3_1",
+        "les_2_2",
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_009",
+      "word": "го́род",
+      "base_form": "город",
+      "level": "A1.1",
+      "topic": "Địa lý & Thành phố",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_2_1",
+        "les_0_3",
+        "les_4_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_010",
+      "word": "хлеб",
+      "base_form": "хлеб",
+      "level": "A1.1",
+      "topic": "Ẩm thực (Еда)",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_011",
+      "word": "студе́нт",
+      "base_form": "студент",
+      "level": "A1.1",
+      "topic": "Nghề nghiệp & Học tập",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_1_3",
+        "les_3_2",
+        "les_1_1",
+        "les_2_3",
+        "les_2_2",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_012",
+      "word": "университе́т",
+      "base_form": "университет",
+      "level": "A1.1",
+      "topic": "Địa điểm & Học tập",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_2_1",
+        "les_1_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_013",
+      "word": "рабо́та",
+      "base_form": "работа",
+      "level": "A1.1",
+      "topic": "Nghề nghiệp",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3",
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_014",
+      "word": "чита́ть",
+      "base_form": "читать",
+      "level": "A1.1",
+      "topic": "Hành động",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3",
+        "les_3_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_015",
+      "word": "понима́ть",
+      "base_form": "понимать",
+      "level": "A1.1",
+      "topic": "Giao tiếp",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_016",
+      "word": "Москва́",
+      "base_form": "москва",
+      "level": "A1.2",
+      "topic": "Địa lý",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_017",
+      "word": "Росси́я",
+      "base_form": "россия",
+      "level": "A1.2",
+      "topic": "Địa lý",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_018",
+      "word": "вре́мя",
+      "base_form": "время",
+      "level": "A1.2",
+      "topic": "Thời gian",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_3",
+      "recycled_in_lessons": [
+        "les_4_2",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_019",
+      "word": "де́ньги",
+      "base_form": "деньги",
+      "level": "A1.2",
+      "topic": "Mua sắm",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_3",
+      "recycled_in_lessons": [
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_020",
+      "word": "маши́на",
+      "base_form": "машина",
+      "level": "A1.2",
+      "topic": "Giao thông",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_021",
+      "word": "написа́ть",
+      "base_form": "написать",
+      "level": "A2.1",
+      "topic": "Thể động từ",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_3",
+      "recycled_in_lessons": [
+        "les_3_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_022",
+      "word": "сде́лать",
+      "base_form": "сделать",
+      "level": "A2.1",
+      "topic": "Thể động từ",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_3",
+      "recycled_in_lessons": [
+        "les_5_2",
+        "les_3_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_023",
+      "word": "прочита́ть",
+      "base_form": "прочитать",
+      "level": "A2.1",
+      "topic": "Thể động từ",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_3",
+      "recycled_in_lessons": [
+        "les_3_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_024",
+      "word": "купи́ть",
+      "base_form": "купить",
+      "level": "A2.1",
+      "topic": "Thể động từ",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_3",
+      "recycled_in_lessons": [
+        "les_3_3",
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_025",
+      "word": "инжене́р",
+      "base_form": "инженер",
+      "level": "A2.1",
+      "topic": "Nghề nghiệp",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_026",
+      "word": "врач",
+      "base_form": "врач",
+      "level": "A2.1",
+      "topic": "Nghề nghiệp",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_027",
+      "word": "идти́",
+      "base_form": "идти",
+      "level": "A2.2",
+      "topic": "Động từ chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_028",
+      "word": "ходи́ть",
+      "base_form": "ходить",
+      "level": "A2.2",
+      "topic": "Động từ chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_029",
+      "word": "е́хать",
+      "base_form": "ехать",
+      "level": "A2.2",
+      "topic": "Động từ chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_030",
+      "word": "е́здить",
+      "base_form": "ездить",
+      "level": "A2.2",
+      "topic": "Động từ chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_031",
+      "word": "прийти́",
+      "base_form": "прийти",
+      "level": "A2.2",
+      "topic": "Tiền tố chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_2",
+      "recycled_in_lessons": [
+        "les_4_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_032",
+      "word": "уйти́",
+      "base_form": "уйти",
+      "level": "A2.2",
+      "topic": "Tiền tố chuyển động",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_2",
+      "recycled_in_lessons": [
+        "les_4_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_033",
+      "word": "разви́тие",
+      "base_form": "развитие",
+      "level": "B1.1",
+      "topic": "Khoa học & Xã hội",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_034",
+      "word": "иссле́дование",
+      "base_form": "исследование",
+      "level": "B1.1",
+      "topic": "Học thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_035",
+      "word": "кото́рый",
+      "base_form": "который",
+      "level": "B1.1",
+      "topic": "Cú pháp học thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_036",
+      "word": "по мое́му мне́нию",
+      "base_form": "по моему мнению",
+      "level": "B1.1",
+      "topic": "Tranh luận B1",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_2",
+      "recycled_in_lessons": [
+        "les_5_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_037",
+      "word": "таки́м о́бразом",
+      "base_form": "таким образом",
+      "level": "B1.1",
+      "topic": "Cú pháp học thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_2",
+      "recycled_in_lessons": [
+        "les_5_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_038",
+      "word": "с одно́й стороны́... с друго́й стороны́",
+      "base_form": "с одной стороны",
+      "level": "B1.1",
+      "topic": "Tranh luận B1",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_2",
+      "recycled_in_lessons": [
+        "les_5_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_039",
+      "word": "благодаря́ тому́ что",
+      "base_form": "благодаря тому что",
+      "level": "B1.1",
+      "topic": "Cú pháp học thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_040",
+      "word": "несмотря́ на то что",
+      "base_form": "несмотря на то что",
+      "level": "B1.1",
+      "topic": "Cú pháp học thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_001",
+      "word": "аэропо́рт",
+      "base_form": "аэропорт",
+      "level": "A1.2",
+      "topic": "Giao thông & Sinh tồn",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_002",
+      "word": "па́спорт",
+      "base_form": "паспорт",
+      "level": "A1.2",
+      "topic": "Giấy tờ & Thủ tục",
+      "category": "recognition",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_003",
+      "word": "биле́т",
+      "base_form": "билет",
+      "level": "A1.2",
+      "topic": "Giao thông",
+      "category": "recognition",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_004",
+      "word": "гости́ница",
+      "base_form": "гостиница",
+      "level": "A1.2",
+      "topic": "Du lịch & Nhà ở",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_005",
+      "word": "рестора́н",
+      "base_form": "ресторан",
+      "level": "A1.2",
+      "topic": "Ẩm thực & Dịch vụ",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_006",
+      "word": "апте́ка",
+      "base_form": "аптека",
+      "level": "A1.2",
+      "topic": "Y tế & Sức khỏe",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_007",
+      "word": "лека́рство",
+      "base_form": "лекарство",
+      "level": "A1.2",
+      "topic": "Y tế",
+      "category": "recognition",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_008",
+      "word": "врач",
+      "base_form": "врач",
+      "level": "A1.2",
+      "topic": "Y tế & Nghề nghiệp",
+      "category": "recognition",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_009",
+      "word": "по́езд",
+      "base_form": "поезд",
+      "level": "A2.1",
+      "topic": "Giao thông",
+      "category": "recognition",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_4_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_010",
+      "word": "стан́ция",
+      "base_form": "станция",
+      "level": "A2.1",
+      "topic": "Giao thông",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_011",
+      "word": "пого́да",
+      "base_form": "погода",
+      "level": "A2.1",
+      "topic": "Thiên nhiên & Đời sống",
+      "category": "recognition",
+      "introduced_in": "les_1_2",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_012",
+      "word": "температу́ра",
+      "base_form": "температура",
+      "level": "A2.1",
+      "topic": "Sức khỏe & Thời tiết",
+      "category": "recognition",
+      "introduced_in": "les_3_1",
+      "recycled_in_lessons": [
+        "les_3_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_013",
+      "word": "магази́н",
+      "base_form": "магазин",
+      "level": "A1.1",
+      "topic": "Mua sắm",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1",
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_014",
+      "word": "рубль",
+      "base_form": "рубль",
+      "level": "A1.1",
+      "topic": "Tiền tệ",
+      "category": "recognition",
+      "introduced_in": "les_2_3",
+      "recycled_in_lessons": [
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_015",
+      "word": "ка́рта",
+      "base_form": "карта",
+      "level": "A1.2",
+      "topic": "Dịch vụ",
+      "category": "recognition",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_016",
+      "word": "чемода́н",
+      "base_form": "чемодан",
+      "level": "A1.2",
+      "topic": "Du lịch",
+      "category": "recognition",
+      "introduced_in": "les_2_2",
+      "recycled_in_lessons": [
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_017",
+      "word": "у́лица",
+      "base_form": "улица",
+      "level": "A1.1",
+      "topic": "Đô thị",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_018",
+      "word": "пло́щадь",
+      "base_form": "площадь",
+      "level": "A1.2",
+      "topic": "Đô thị",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_019",
+      "word": "музе́й",
+      "base_form": "музей",
+      "level": "A1.2",
+      "topic": "Văn hóa",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_2_1",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_020",
+      "word": "теа́тр",
+      "base_form": "театр",
+      "level": "A1.2",
+      "topic": "Văn hóa",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_021",
+      "word": "профе́ссия",
+      "base_form": "профессия",
+      "level": "A2.1",
+      "topic": "Nghề nghiệp",
+      "category": "recognition",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_022",
+      "word": "семья́",
+      "base_form": "семья",
+      "level": "A1.1",
+      "topic": "Gia đình",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_023",
+      "word": "сестра́",
+      "base_form": "сестра",
+      "level": "A1.1",
+      "topic": "Gia đình",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_024",
+      "word": "брат",
+      "base_form": "брат",
+      "level": "A1.1",
+      "topic": "Gia đình",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1",
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_025",
+      "word": "учи́тель",
+      "base_form": "учитель",
+      "level": "A1.1",
+      "topic": "Nghề nghiệp",
+      "category": "recognition",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_1",
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_026",
+      "word": "преподава́тель",
+      "base_form": "преподаватель",
+      "level": "A2.1",
+      "topic": "Học thuật",
+      "category": "recognition",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_4_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_027",
+      "word": "язы́к",
+      "base_form": "язык",
+      "level": "A1.1",
+      "topic": "Ngôn ngữ",
+      "category": "recognition",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_0_2",
+        "les_1_3",
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_028",
+      "word": "сло́во",
+      "base_form": "слово",
+      "level": "A1.1",
+      "topic": "Ngôn ngữ",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_029",
+      "word": "предложе́ние",
+      "base_form": "предложение",
+      "level": "A2.1",
+      "topic": "Ngôn ngữ",
+      "category": "recognition",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_030",
+      "word": "текст",
+      "base_form": "текст",
+      "level": "A1.1",
+      "topic": "Học tập",
+      "category": "recognition",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_031",
+      "word": "зада́ча",
+      "base_form": "задача",
+      "level": "A2.1",
+      "topic": "Học tập",
+      "category": "recognition",
+      "introduced_in": "les_3_3",
+      "recycled_in_lessons": [
+        "les_3_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_032",
+      "word": "вопро́с",
+      "base_form": "вопрос",
+      "level": "A1.1",
+      "topic": "Giao tiếp",
+      "category": "recognition",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3",
+        "les_5_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_033",
+      "word": "отве́т",
+      "base_form": "ответ",
+      "level": "A1.1",
+      "topic": "Giao tiếp",
+      "category": "recognition",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_034",
+      "word": "оши́бка",
+      "base_form": "ошибка",
+      "level": "A1.2",
+      "topic": "Học tập",
+      "category": "recognition",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_035",
+      "word": "пра́вило",
+      "base_form": "правило",
+      "level": "A1.2",
+      "topic": "Học tập",
+      "category": "recognition",
+      "introduced_in": "les_1_2",
+      "recycled_in_lessons": [
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_036",
+      "word": "приме́р",
+      "base_form": "пример",
+      "level": "A1.1",
+      "topic": "Học tập",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_037",
+      "word": "у́тро",
+      "base_form": "утро",
+      "level": "A1.1",
+      "topic": "Thời gian",
+      "category": "recognition",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_1_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_038",
+      "word": "день",
+      "base_form": "день",
+      "level": "A1.1",
+      "topic": "Thời gian",
+      "category": "recognition",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_1_3",
+        "les_1_1",
+        "les_4_1",
+        "les_3_3",
+        "les_3_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_039",
+      "word": "ве́чер",
+      "base_form": "вечер",
+      "level": "A1.1",
+      "topic": "Thời gian",
+      "category": "recognition",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_3_3",
+        "les_1_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_rec_040",
+      "word": "ночь",
+      "base_form": "ночь",
+      "level": "A1.1",
+      "topic": "Thời gian",
+      "category": "recognition",
+      "introduced_in": "les_1_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_1_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_001",
+      "word": "чай",
+      "base_form": "чай",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_0_1",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_002",
+      "word": "ко́фе",
+      "base_form": "кофе",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_2",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_003",
+      "word": "са́хар",
+      "base_form": "сахар",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_004",
+      "word": "соль",
+      "base_form": "соль",
+      "level": "A1.2",
+      "topic": "Ẩm thực",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_005",
+      "word": "суп",
+      "base_form": "суп",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_006",
+      "word": "борщ",
+      "base_form": "борщ",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_007",
+      "word": "ры́ба",
+      "base_form": "рыба",
+      "level": "A1.1",
+      "topic": "Ẩm thực & Sinh vật",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_008",
+      "word": "мя́со",
+      "base_form": "мясо",
+      "level": "A1.1",
+      "topic": "Ẩm thực",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_009",
+      "word": "я́блоко",
+      "base_form": "яблоко",
+      "level": "A1.1",
+      "topic": "Ẩm thực & Hoa quả",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_010",
+      "word": "стол",
+      "base_form": "стол",
+      "level": "A1.1",
+      "topic": "Đồ đạc",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_2_1",
+        "les_0_1",
+        "les_1_2",
+        "les_2_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_011",
+      "word": "стул",
+      "base_form": "стул",
+      "level": "A1.1",
+      "topic": "Đồ đạc",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_012",
+      "word": "ко́мната",
+      "base_form": "комната",
+      "level": "A1.1",
+      "topic": "Nhà cửa",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2",
+        "les_2_1",
+        "les_1_2",
+        "les_2_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_013",
+      "word": "дверь",
+      "base_form": "дверь",
+      "level": "A1.2",
+      "topic": "Nhà cửa",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_014",
+      "word": "авто́бус",
+      "base_form": "автобус",
+      "level": "A1.2",
+      "topic": "Giao thông",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_015",
+      "word": "метро́",
+      "base_form": "метро",
+      "level": "A1.2",
+      "topic": "Giao thông",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_016",
+      "word": "такси́",
+      "base_form": "такси",
+      "level": "A1.2",
+      "topic": "Giao thông",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_017",
+      "word": "па́рк",
+      "base_form": "парк",
+      "level": "A1.1",
+      "topic": "Đô thị & Thiên nhiên",
+      "category": "active_curriculum",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_018",
+      "word": "мо́ре",
+      "base_form": "море",
+      "level": "A1.2",
+      "topic": "Thiên nhiên & Du lịch",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_3_2",
+        "les_4_1",
+        "les_2_1",
+        "les_2_3",
+        "les_3_1",
+        "les_1_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_019",
+      "word": "река́",
+      "base_form": "река",
+      "level": "A1.2",
+      "topic": "Thiên nhiên",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_020",
+      "word": "лес",
+      "base_form": "лес",
+      "level": "A1.2",
+      "topic": "Thiên nhiên",
+      "category": "recognition",
+      "introduced_in": "les_2_1",
+      "recycled_in_lessons": [
+        "les_2_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_021",
+      "word": "сол́нце",
+      "base_form": "солнце",
+      "level": "A1.2",
+      "topic": "Thiên nhiên",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_022",
+      "word": "дождь",
+      "base_form": "дождь",
+      "level": "A1.2",
+      "topic": "Thời tiết",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_023",
+      "word": "снег",
+      "base_form": "снег",
+      "level": "A1.2",
+      "topic": "Thời tiết",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_024",
+      "word": "ве́тер",
+      "base_form": "ветер",
+      "level": "A1.2",
+      "topic": "Thời tiết",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_025",
+      "word": "зима́",
+      "base_form": "зима",
+      "level": "A1.2",
+      "topic": "Mùa trong năm",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_026",
+      "word": "ле́то",
+      "base_form": "лето",
+      "level": "A1.2",
+      "topic": "Mùa trong năm",
+      "category": "active_curriculum",
+      "introduced_in": "les_4_1",
+      "recycled_in_lessons": [
+        "les_4_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_027",
+      "word": "весна́",
+      "base_form": "весна",
+      "level": "A1.2",
+      "topic": "Mùa trong năm",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_028",
+      "word": "о́сень",
+      "base_form": "осень",
+      "level": "A1.2",
+      "topic": "Mùa trong năm",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_029",
+      "word": "ша́пка",
+      "base_form": "шапка",
+      "level": "A1.2",
+      "topic": "Trang phục",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_030",
+      "word": "ку́ртка",
+      "base_form": "куртка",
+      "level": "A1.2",
+      "topic": "Trang phục",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_031",
+      "word": "пальто́",
+      "base_form": "пальто",
+      "level": "A1.2",
+      "topic": "Trang phục",
+      "category": "recognition",
+      "introduced_in": "les_0_2",
+      "recycled_in_lessons": [
+        "les_0_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_032",
+      "word": "обувь",
+      "base_form": "обувь",
+      "level": "A1.2",
+      "topic": "Trang phục",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_033",
+      "word": "му́зыка",
+      "base_form": "музыка",
+      "level": "A1.1",
+      "topic": "Sở thích & Nghệ thuật",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_034",
+      "word": "фильм",
+      "base_form": "фильм",
+      "level": "A1.1",
+      "topic": "Giải trí",
+      "category": "active_curriculum",
+      "introduced_in": "les_1_3",
+      "recycled_in_lessons": [
+        "les_1_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_035",
+      "word": "спо́рт",
+      "base_form": "спорт",
+      "level": "A1.1",
+      "topic": "Thể thao & Sức khỏe",
+      "category": "active_curriculum",
+      "introduced_in": "les_3_2",
+      "recycled_in_lessons": [
+        "les_4_1",
+        "les_3_2"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_036",
+      "word": "футбо́л",
+      "base_form": "футбол",
+      "level": "A1.1",
+      "topic": "Thể thao",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_037",
+      "word": "ша́хматы",
+      "base_form": "шахматы",
+      "level": "A1.2",
+      "topic": "Thể thao & Trí tuệ",
+      "category": "recognition",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_038",
+      "word": "здоро́вье",
+      "base_form": "здоровье",
+      "level": "A2.1",
+      "topic": "Y tế & Đời sống",
+      "category": "recognition",
+      "introduced_in": "les_3_1",
+      "recycled_in_lessons": [
+        "les_3_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_039",
+      "word": "ра́дость",
+      "base_form": "радость",
+      "level": "A2.1",
+      "topic": "Cảm xúc",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_040",
+      "word": "любо́вь",
+      "base_form": "любовь",
+      "level": "A2.1",
+      "topic": "Cảm xúc",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_041",
+      "word": "дру́жба",
+      "base_form": "дружба",
+      "level": "A2.1",
+      "topic": "Quan hệ xã hội",
+      "category": "recognition",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_042",
+      "word": "ми́р",
+      "base_form": "мир",
+      "level": "A1.1",
+      "topic": "Xã hội",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_1",
+      "recycled_in_lessons": [
+        "les_0_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_043",
+      "word": "жизнь",
+      "base_form": "жизнь",
+      "level": "A2.1",
+      "topic": "Đời sống",
+      "category": "active_curriculum",
+      "introduced_in": "les_0_3",
+      "recycled_in_lessons": [
+        "les_5_2",
+        "les_0_3"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_044",
+      "word": "культу́ра",
+      "base_form": "культура",
+      "level": "A2.1",
+      "topic": "Văn hóa & Xã hội",
+      "category": "recognition",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    },
+    {
+      "id": "voc_ext_045",
+      "word": "исто́рия",
+      "base_form": "история",
+      "level": "A2.1",
+      "topic": "Văn hóa & Lịch sử",
+      "category": "recognition",
+      "introduced_in": "les_5_1",
+      "recycled_in_lessons": [
+        "les_5_1"
+      ],
+      "reading_presence": true,
+      "listening_presence": true,
+      "speaking_presence": true,
+      "srs_active": true,
+      "stress_verified": true,
+      "is_orphan": false
+    }
+  ]
+}
